@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>设置text-overflow為ellipsis后引起的文本对齐问题 | 哎呀我找不到标题</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="设置text-overflow: ellipsis后引起的文本对齐问题最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。">
+  <meta name="description" content="最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设置text-overflow為ellipsis后引起的文本对齐问题">
 <meta property="og:url" content="http://noteawesome.com/2016/05/10/设置-text-overflow-ellipsis-后引起的文本对齐问题/index.html">
 <meta property="og:site_name" content="哎呀我找不到标题">
-<meta property="og:description" content="设置text-overflow: ellipsis后引起的文本对齐问题最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。">
+<meta property="og:description" content="最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。">
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/852232/201601/852232-20160106180012621-339338620.png">
-<meta property="og:updated_time" content="2016-05-10T08:09:31.962Z">
+<meta property="og:updated_time" content="2016-05-10T10:53:18.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设置text-overflow為ellipsis后引起的文本对齐问题">
-<meta name="twitter:description" content="设置text-overflow: ellipsis后引起的文本对齐问题最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。">
+<meta name="twitter:description" content="最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。">
 <meta name="twitter:image" content="http://images2015.cnblogs.com/blog/852232/201601/852232-20160106180012621-339338620.png">
   
     <link rel="alternative" href="/atom.xml" title="哎呀我找不到标题" type="application/atom+xml">
@@ -71,7 +71,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -205,7 +205,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="设置text-overflow-ellipsis后引起的文本对齐问题"><a href="#设置text-overflow-ellipsis后引起的文本对齐问题" class="headerlink" title="设置text-overflow: ellipsis后引起的文本对齐问题"></a>设置<code>text-overflow: ellipsis</code>后引起的文本对齐问题</h1><p>最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。<br><a id="more"></a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>Hello Hello Hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>xhaha<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+        <p>最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。<br><a id="more"></a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>Hello Hello Hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>xhaha<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">40%</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">40%</span>;</span><br><span class="line">  <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.right</span>&#123;</span><br><span class="line">  <span class="comment">/* overflow: hidden; */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><a href="https://jsfiddle.net/pskpcfc8/1/" target="_blank" rel="external">查看DEMO</a></p>
 <p>按以上代码最后得到的显示效果是，<code>span.left</code>和<code>span.right</code>没有对齐。右边的会沉下去点，这个在demo里面可以看到。</p>
