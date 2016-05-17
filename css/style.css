@@ -1647,6 +1647,9 @@ pre .css ~ * .id {
   padding: 0px 75px 30px 40px;
   margin-bottom: 15px;
 }
+.share_jia {
+  margin-left: 30px;
+}
 .back_home {
   float: right;
 }
