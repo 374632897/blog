@@ -970,7 +970,7 @@ a {
   padding-left: 30px;
 }
 .article-entry p {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .article-entry p code,
 .article-entry li code {
@@ -1652,7 +1652,7 @@ pre .css ~ * .id {
 }
 @media screen and (max-width: 768px) {
   .share_jia {
-    margin-left: 0;
+    margin-left: 10px;
   }
 }
 .back_home {
