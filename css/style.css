@@ -1,3 +1,7 @@
+::selection {
+  color: #fff;
+  background: #f66;
+}
 body {
   width: 100%;
 }
@@ -971,6 +975,7 @@ a {
 }
 .article-entry p {
   margin-top: 30px;
+  text-indent: 2em;
 }
 .article-entry p code,
 .article-entry li code {
