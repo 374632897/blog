@@ -1650,6 +1650,11 @@ pre .css ~ * .id {
 .share_jia {
   margin-left: 30px;
 }
+@media screen and (max-width: 768px) {
+  .share_jia {
+    margin-left: 0;
+  }
+}
 .back_home {
   float: right;
 }
