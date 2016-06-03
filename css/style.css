@@ -879,6 +879,13 @@ a {
 }
 .article img {
   max-width: 100%;
+  max-width: 100%;
+  padding: 5px;
+  margin: 5px;
+  -webkit-box-shadow: 0 3px 9px 0px rgba(0,0,0,0.21);
+  box-shadow: 0 3px 9px 0px rgba(0,0,0,0.21);
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 @-webkit-keyframes cd-bounce-1 {
   0% {
@@ -973,9 +980,6 @@ a {
   padding-right: 30px;
   padding-left: 30px;
 }
-.article-entry ul {
-  padding-left: 3em;
-}
 .article-entry p {
   margin-top: 30px;
   text-indent: 2em;
@@ -1021,6 +1025,7 @@ a {
 .article-entry ol {
   font-size: 14px;
   margin: 10px 0px;
+  padding-left: 3em;
 }
 .article-entry li ul,
 .article-entry li ol {
