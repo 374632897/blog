@@ -6,18 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>记一次事件捕获的妙用 | 哎呀标题迷路了</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用addEventListener注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 由于平时我们事件一般都是注册在冒泡阶段的， 所以第三个参数一般都是传递的false， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。">
+  <meta name="description" content="JavaScript事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用addEventListener注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 平时我们事件大多都是注册在冒泡阶段的， 所以第三个参数一般都是传递的false， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一次事件捕获的妙用">
 <meta property="og:url" content="http://noteawesome.com/2016/06/03/记一次事件捕获的妙用/index.html">
 <meta property="og:site_name" content="哎呀标题迷路了">
-<meta property="og:description" content="JavaScript事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用addEventListener注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 由于平时我们事件一般都是注册在冒泡阶段的， 所以第三个参数一般都是传递的false， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。">
+<meta property="og:description" content="JavaScript事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用addEventListener注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 平时我们事件大多都是注册在冒泡阶段的， 所以第三个参数一般都是传递的false， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。">
 <meta property="og:image" content="http://o869zxhjd.bkt.clouddn.com/inside-modal.png">
 <meta property="og:image" content="http://o869zxhjd.bkt.clouddn.com/%E6%96%87%E4%BB%B6%E9%A2%84%E8%A7%88.png">
-<meta property="og:updated_time" content="2016-06-03T02:12:39.444Z">
+<meta property="og:updated_time" content="2016-06-03T10:31:27.216Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次事件捕获的妙用">
-<meta name="twitter:description" content="JavaScript事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用addEventListener注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 由于平时我们事件一般都是注册在冒泡阶段的， 所以第三个参数一般都是传递的false， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。">
+<meta name="twitter:description" content="JavaScript事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用addEventListener注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 平时我们事件大多都是注册在冒泡阶段的， 所以第三个参数一般都是传递的false， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。">
 <meta name="twitter:image" content="http://o869zxhjd.bkt.clouddn.com/inside-modal.png">
   
     <link rel="alternative" href="/atom.xml" title="哎呀标题迷路了" type="application/atom+xml">
@@ -206,7 +206,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><code>JavaScript</code>事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用<code>addEventListener</code>注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 由于平时我们事件一般都是注册在冒泡阶段的， 所以第三个参数一般都是传递的<code>false</code>， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。<br><a id="more"></a></p>
+        <p><code>JavaScript</code>事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用<code>addEventListener</code>注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 平时我们事件大多都是注册在冒泡阶段的， 所以第三个参数一般都是传递的<code>false</code>， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。<br><a id="more"></a></p>
 <p>在之前的业务中， 碰到了一个关于弹窗的关闭顺序的问题。 </p>
 <p>由于在系统中使用了<code>popover</code>， <code>inside-modal</code>, <code>modal</code>, <code>dropdown</code>等弹窗， 并且存在级联<code>popover</code>， 然后为了方便管理<code>esc</code>关闭弹窗的功能， 同事做了一个<code>esc</code>事件队列管理器， 其原理就是对<code>document</code>进行代理， 在按下<code>esc</code>的时候， 优先触发最后绑定的事件。</p>
 <p>本来这个功能用的好好的， 但是后来发现了一个问题。我们系统中所使用的第三方的文件预览插件<code>Magnific-Popup</code>所附带的弹窗也是在<code>document</code>上绑定了<code>esc</code>退出功能的， 但是由于该插件并没有具体地集成到系统中， 所以他绑定的事件是没有加入到事件队列管理器里面的。这样造成的问题是， 在文件（<code>inside-modal</code>弹窗）中点击文件预览的时候， 打开了弹窗， 当按下<code>esc</code>的时候， 本来期望的只是关闭预览弹窗， 但是由于队列管理器对事件触发顺序进行了处理， 最后结果是先关闭了文件（<code>inside-modal</code>）弹窗， 然后才会关闭预览弹窗。毫无疑问， 这个问题的影响是比较严重的。</p>
