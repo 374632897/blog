@@ -973,6 +973,9 @@ a {
   padding-right: 30px;
   padding-left: 30px;
 }
+.article-entry ul {
+  padding-left: 3em;
+}
 .article-entry p {
   margin-top: 30px;
   text-indent: 2em;
