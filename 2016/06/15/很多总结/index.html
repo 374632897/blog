@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>哎呀标题迷路了</title>
+  <title>很多总结 | 哎呀标题迷路了</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="哎呀标题迷路了">
-<meta property="og:url" content="http://noteawesome.com/index.html">
+  <meta name="description" content="just-some-tips前端学习中积攒的一些小经验2015-12-10==========
+
+在一个页面的制作中，如果是定宽的就统一定宽，或者使用百分比，假设文档中有5行，其中三行是用的百分比来规定宽度，另外两行是直接定了宽度的    话 ，那么在页面缩放的时候，那三行的宽度会变成可视区的宽度，但是另外两行的宽度不会变化，这样，另外两行就会把页面给撑开，从而导致页面底    部出现滚动条，当把">
+<meta property="og:type" content="article">
+<meta property="og:title" content="很多总结">
+<meta property="og:url" content="http://noteawesome.com/2016/06/15/很多总结/index.html">
 <meta property="og:site_name" content="哎呀标题迷路了">
-<meta property="og:description">
+<meta property="og:description" content="just-some-tips前端学习中积攒的一些小经验2015-12-10==========
+
+在一个页面的制作中，如果是定宽的就统一定宽，或者使用百分比，假设文档中有5行，其中三行是用的百分比来规定宽度，另外两行是直接定了宽度的    话 ，那么在页面缩放的时候，那三行的宽度会变成可视区的宽度，但是另外两行的宽度不会变化，这样，另外两行就会把页面给撑开，从而导致页面底    部出现滚动条，当把">
+<meta property="og:updated_time" content="2016-06-15T06:08:35.446Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="哎呀标题迷路了">
-<meta name="twitter:description">
+<meta name="twitter:title" content="很多总结">
+<meta name="twitter:description" content="just-some-tips前端学习中积攒的一些小经验2015-12-10==========
+
+在一个页面的制作中，如果是定宽的就统一定宽，或者使用百分比，假设文档中有5行，其中三行是用的百分比来规定宽度，另外两行是直接定了宽度的    话 ，那么在页面缩放的时候，那三行的宽度会变成可视区的宽度，但是另外两行的宽度不会变化，这样，另外两行就会把页面给撑开，从而导致页面底    部出现滚动条，当把">
   
     <link rel="alternative" href="/atom.xml" title="哎呀标题迷路了" type="application/atom+xml">
   
@@ -165,86 +172,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/15/正则表达式/" class="article-date">
-  	<time datetime="2016-06-15T05:56:14.000Z" itemprop="datePublished">2016-06-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/15/正则表达式/">正则表达式</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="RegExp学习总结"><a href="#RegExp学习总结" class="headerlink" title="RegExp学习总结"></a>RegExp学习总结</h1><h2 id="字符集合（Character-Sets）"><a href="#字符集合（Character-Sets）" class="headerlink" title="字符集合（Character Sets）"></a>字符集合（Character Sets）</h2><ul>
-<li><p>[xyz] 字符组|字符集合， 匹配集合中的任意一个字符， 可以使用连字符’-‘来指定一个范围。 如<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* [^xyz] 反义字符组， 匹配中括号中不存在的内容</span><br><span class="line">## 字符边界 (Boundaries)</span><br><span class="line">* ^  匹配字符串开头</span><br><span class="line">* $  匹配字符串结尾</span><br><span class="line">* \b 匹配一个零宽单词边界 如一个字母和一个空格之间， 一个字符串的开头和结尾</span><br><span class="line">    </span><br><span class="line">  ```js</span><br><span class="line">  &apos;et&apos;.match(/\bet/); // [&quot;et&quot;]</span><br><span class="line">  &apos;testfsad&apos;.match(/\bet/) // null</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>\B 匹配一个零宽非单词边界， 如两个字母之间或两个空格之间</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'   '</span>.match(<span class="regexp">/\B/</span>); <span class="comment">// four white-spaces</span></span><br><span class="line"><span class="comment">// ["", "", "", ""];</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="分组-Grouping-和-反向引用-back-references"><a href="#分组-Grouping-和-反向引用-back-references" class="headerlink" title="分组(Grouping) 和 反向引用(back references)"></a>分组(Grouping) 和 反向引用(back references)</h2><ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">匹配x并且捕获匹配项。 捕获组(Capturing groups)有性能惩罚， 再次访问被捕获的子字符串最好使用非捕获符号</span><br><span class="line"> </span><br><span class="line"> ```js</span><br><span class="line"> var str = &apos;Yes, I wanna earn more money&apos;;</span><br><span class="line"> /(\S)*\s/.test(str); </span><br><span class="line"> RegExp.$1 // &quot;,&quot;</span><br><span class="line"> </span><br><span class="line"> /(\S*)\s/.test(str);</span><br><span class="line"> RegExp.$1 // &apos;&quot;Yes,&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  n是一个正整数。 指向正则表达式中第n个括号（从左边开始数）中匹配的字符串 **这里有点问题**</span><br><span class="line">* ```(?:x)```  </span><br><span class="line">  匹配x不会捕获匹配项， 非匹配项不能通过RegExp的$1-$9属性访问到。 </span><br><span class="line">## 数量词</span><br><span class="line">* ```x*```   </span><br><span class="line">  匹配前面的模式x 0次或多次</span><br><span class="line">* ```x+```  </span><br><span class="line">  匹配前面的模式x 1次或多次， 等价于&#123;1,&#125;</span><br><span class="line">* ```x*?```, ```x+?```  </span><br><span class="line">  匹配前面的模式， 但是是执行最小可能匹配</span><br><span class="line">   </span><br><span class="line">  ```js</span><br><span class="line">  var str = &quot;Yes, I wanna earn more money&quot;;</span><br><span class="line">  str.match(/\w*?/); // [&quot;&quot;]    // 最小匹配模式， 可匹配0次</span><br><span class="line">  str.match(/\w*/);  // [&quot;Yes&quot;]  </span><br><span class="line"></span><br><span class="line">  str.match(/\w+/);  // [&quot;Yes&quot;]</span><br><span class="line">  str.match(/\w+?/); // [&quot;Y&quot;]   // 最小匹配模式， 只匹配1次</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  匹配前面的模式x 0次或1次 。 如果在数量词```*```, ```+```, ```?```或者```&#123;&#125;```任意一个后面添加该符号（?）, 将会使匹配模式变为非贪婪模式(non-greedy)， 即匹配次数最小化， 默认匹配模式是贪婪模式， 即匹配次数最大化。 </span><br><span class="line"></span><br><span class="line">* ```x(?=y)</span><br></pre></td></tr></table></figure>
-<p>只有当x后面紧跟着y的时候才会进行匹配， 但是y不会成为匹配内容的一部分  . 注意要加括号</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> str = <span class="string">'hello world, I feel so good today'</span>;</span><br><span class="line">  str.match(<span class="regexp">/feel(?= so)/</span>); <span class="comment">// ["feel"]</span></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">  <span class="string">``</span><span class="string">` </span><br><span class="line"></span><br><span class="line">* `</span><span class="string">``</span>x(?!y)</span><br></pre></td></tr></table></figure>
-<p>只有当x后面不是紧跟着y的时候才会进行匹配</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.match(<span class="regexp">/feel(?!so)/</span>); <span class="comment">// ["feel"] // 注意： 中间没有空格</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">匹配x或者y  </span><br><span class="line">```js</span><br><span class="line">str.match(/hello|world/);         // [&quot;hello&quot;]</span><br><span class="line"></span><br><span class="line">// 此时匹配的是[]内的每一个可能值， 只匹配1次的话就匹配到了&apos;h&apos;， 而此时&apos;|&apos;也只被当成一个普通的字符</span><br><span class="line">str.match(/[hello|world]/);       // [&quot;h&quot;] </span><br><span class="line">&apos;jfsdalk|sajd&apos;.match(/[fa|fj]/g); // [&quot;j&quot;, &quot;f&quot;, &quot;a&quot;, &quot;|&quot;, &quot;a&quot;, &quot;j&quot;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  n是一个正整数， 前面的模式连续出现n次时匹配</span><br><span class="line"></span><br><span class="line">* ```x&#123;n,&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> **Note:** 这里n和y之间不能有空格  </span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line">// 从url中提取子域名</span><br><span class="line">var url = &quot;http://xxx.domain.com&quot;;</span><br><span class="line">url.replace(/https?:\/\/([^.]*)\..*/, &apos;$1&apos;); // &quot;xxx&quot;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-很多总结" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-很多总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/06/15/很多总结/" class="article-date">
@@ -260,12 +188,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/15/很多总结/">很多总结</a>
+    <h1 class="article-title" itemprop="name">
+      很多总结
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -1690,535 +1629,77 @@ npm install express mongoose jade --save</code></li>
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-关于overflow-x的一点小东西" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/12/关于overflow-x的一点小东西/" class="article-date">
-  	<time datetime="2016-06-12T01:59:26.000Z" itemprop="datePublished">2016-06-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+<nav id="article-nav">
+  
+    <a href="/2016/06/15/正则表达式/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/12/关于overflow-x的一点小东西/">关于overflow-x的一点小东西</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://jsfiddle.net/">DEMO地址</a></p>
-<p>绝对定位元素虽然脱离文档流了， 但是依然会受到父元素或者祖先元素的<code>overflow</code>属性的影响。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/06/12/关于overflow-x的一点小东西/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-GitHub仓库绑定二级域名" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/03/GitHub仓库绑定二级域名/" class="article-date">
-  	<time datetime="2016-06-03T05:04:53.000Z" itemprop="datePublished">2016-06-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          正则表达式
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/03/GitHub仓库绑定二级域名/">GitHub仓库绑定二级域名</a>
-    </h1>
   
+    <a href="/2016/06/12/关于overflow-x的一点小东西/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于overflow-x的一点小东西</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li><p>在仓库创建<code>gh-pages</code>分支</p>
-</li>
-<li><p>在该分支根目录下添加<code>CNAME</code>文件，文件内容是你希望指向的域名，需要注意的是不需要加协议，如期望网址是<code>http://algorithms.noteawesome.com</code>的话， 就直接写<code>algorithms.noteawesome.com</code>.</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub-Pages/">GitHub Pages</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/06/03/GitHub仓库绑定二级域名/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-记一次事件捕获的妙用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/03/记一次事件捕获的妙用/" class="article-date">
-  	<time datetime="2016-06-03T00:59:04.000Z" itemprop="datePublished">2016-06-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/03/记一次事件捕获的妙用/">记一次事件捕获的妙用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><code>JavaScript</code>事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用<code>addEventListener</code>注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 平时我们事件大多都是注册在冒泡阶段的， 所以第三个参数一般都是传递的<code>false</code>， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-      
 
-      
-        <p class="article-more-link">
-          <a  href="/2016/06/03/记一次事件捕获的妙用/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
 
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="很多总结" data-title="很多总结" data-url="http://noteawesome.com/2016/06/15/很多总结/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-  
-    <article id="post-近期学习计划及总结" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/17/近期学习计划及总结/" class="article-date">
-  	<time datetime="2016-05-17T08:32:25.000Z" itemprop="datePublished">2016-05-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/17/近期学习计划及总结/">近期学习计划及总结</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近大概又是进入了一个迷茫期。   </p>
-<p>虽然自己也知道贪多嚼不烂的道理， 但是却总是觉得应该优先提升自己知识上的广度， 等对前后端服务器有了一个宏观上的认识了， 再去提升知识的深度。 所以这段时间把<code>CSS</code>, <code>JS</code>一类的东西给放下了， 开始学习<code>php</code>, <code>mysql</code>， 原本的打算是先学着这个， 弄熟悉了打好基础了， 再去学其他的。 结果呢， 学了一些基础的东西后， 又想要开始学算法， 然后买了本算法书， 结果算法书的里面用的语言是<code>java</code>, 然后我又继续开始学<code>JAVA</code>。 虽然说里面的有些东西用JS也是可以实现的， 但是总觉得照着书本上先尝试一遍才能更好的理解。<strong>5.24注： 现在感觉还是用JS先实现一遍比较好→＿←→＿←→＿←</strong> 然而我现在算法还没学完， 就想要开始学<code>linux</code>和<code>nginx</code>了。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/17/近期学习计划及总结/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-我的时间都去哪儿了" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/17/我的时间都去哪儿了/" class="article-date">
-  	<time datetime="2016-05-17T01:05:49.000Z" itemprop="datePublished">2016-05-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/17/我的时间都去哪儿了/">我的时间都去哪儿了</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前段时间把网给停了， 理由是在有网的情况下， 我每天在回到家后都把为数不多的时间浪费在上网上面去了， 虽然能有所收获，但是总体而言是弊大于利的， 毕竟大部分的时间里我都是在做着一些无关紧要的事情。所以我把网停了， 希望能够借助这种手段来强迫自己不断地学习新的东西。 效果是有的， 然而我依然对自己不是很满意。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/17/我的时间都去哪儿了/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-设置-text-overflow-ellipsis-后引起的文本对齐问题" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/10/设置-text-overflow-ellipsis-后引起的文本对齐问题/" class="article-date">
-  	<time datetime="2016-05-10T07:16:23.000Z" itemprop="datePublished">2016-05-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/10/设置-text-overflow-ellipsis-后引起的文本对齐问题/">设置text-overflow為ellipsis后引起的文本对齐问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/10/设置-text-overflow-ellipsis-后引起的文本对齐问题/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-纯CSS实现单击锚点平滑切换的效果" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/10/纯CSS实现单击锚点平滑切换的效果/" class="article-date">
-  	<time datetime="2016-05-10T06:36:25.000Z" itemprop="datePublished">2016-05-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/10/纯CSS实现单击锚点平滑切换的效果/">纯CSS实现单击锚点平滑切换的效果</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>有时想实现一个功能，比如想让页面不出现滚动条，但是却能装下更多的东西，这个时候我们会对某个容器设 置<code>overflow: hidden</code>，然后通过锚点来实现单击切换页面（其实只是控制显示的内容）的效果。但是通过锚点来跳到指定内容的不足之处在于，没有什么过渡效果，很突兀的就跳到了目标点。当然，也可以通过JS或者jQuery来实现自己想要的动态切换效果，这一类的文章一搜一大堆，这里就不赘述了。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/10/纯CSS实现单击锚点平滑切换的效果/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-用来放一些tips中的DEMO" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/10/用来放一些tips中的DEMO/" class="article-date">
-  	<time datetime="2016-05-10T05:12:56.000Z" itemprop="datePublished">2016-05-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/10/用来放一些tips中的DEMO/">用来放一些tips中的DEMO</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ul>
-<li><a href="http://374632897.github.io/just-some-tips/DEMO/测试显示隐藏的两种实现方式的性能.html" target="_blank" rel="external">测试显示隐藏的两种实现方式的性能</a></li>
-</ul>
-<h2 id="CSS-amp-HTML"><a href="#CSS-amp-HTML" class="headerlink" title="CSS &amp; HTML"></a>CSS &amp; HTML</h2><ul>
-<li><a href="http://374632897.github.io/rgrms/" target="_blank" rel="external">仿制的第一个站（前东家官网）</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/DEMO/testGradint.html" target="_blank" rel="external">实现慕课网官网楼层动态效果</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/DEMO/index123.html" target="_blank" rel="external">对指定文字设置样式</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/DEMO/drawAEgg.html" target="_blank" rel="external">画个鸡蛋吧</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/games/color.html" target="_blank" rel="external">颜色块儿</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/games/bonus.html" target="_blank" rel="external">点个转盘</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/layout/3Columns.html" target="_blank" rel="external">3列布局， 左右定宽，中间自适应</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/richTextEditor.html" target="_blank" rel="external">一个简单的富文本编辑器</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/html5APIs/FullScreen.html" target="_blank" rel="external">全屏</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/测试居中.html" target="_blank" rel="external">居中</a></li>
-<li><a href="http://noteawesome.com/just-some-tips/src/keyCode.html">键码</a></li>
-<li><a href="http://noteawesome.com/algorithms/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%92%E5%BA%8F/%E5%88%9D%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html">算法学习</a></li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/乱七八糟/">乱七八糟</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -2246,8 +1727,8 @@ npm install express mongoose jade --save</code></li>
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
