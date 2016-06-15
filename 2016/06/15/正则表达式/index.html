@@ -6,19 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>正则表达式 | 哎呀标题迷路了</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="RegExp学习总结字符集合（Character Sets）
-[xyz] 字符组|字符集合， 匹配集合中的任意一个字符， 可以使用连字符’-‘来指定一个范围。 如1234567891011* [^xyz] 反义字符组， 匹配中括号中不存在的内容&amp;lt;!-- more --&amp;gt;## 字符边界 (Boundaries)* ^  匹配字符串开头* $  匹配字符串结尾* \b 匹配一个零宽单词边界">
+  <meta name="description" content="RegExp学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式">
 <meta property="og:url" content="http://noteawesome.com/2016/06/15/正则表达式/index.html">
 <meta property="og:site_name" content="哎呀标题迷路了">
-<meta property="og:description" content="RegExp学习总结字符集合（Character Sets）
-[xyz] 字符组|字符集合， 匹配集合中的任意一个字符， 可以使用连字符’-‘来指定一个范围。 如1234567891011* [^xyz] 反义字符组， 匹配中括号中不存在的内容&amp;lt;!-- more --&amp;gt;## 字符边界 (Boundaries)* ^  匹配字符串开头* $  匹配字符串结尾* \b 匹配一个零宽单词边界">
-<meta property="og:updated_time" content="2016-06-15T06:14:12.082Z">
+<meta property="og:description" content="RegExp学习总结">
+<meta property="og:updated_time" content="2016-06-15T06:38:56.080Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式">
-<meta name="twitter:description" content="RegExp学习总结字符集合（Character Sets）
-[xyz] 字符组|字符集合， 匹配集合中的任意一个字符， 可以使用连字符’-‘来指定一个范围。 如1234567891011* [^xyz] 反义字符组， 匹配中括号中不存在的内容&amp;lt;!-- more --&amp;gt;## 字符边界 (Boundaries)* ^  匹配字符串开头* $  匹配字符串结尾* \b 匹配一个零宽单词边界">
+<meta name="twitter:description" content="RegExp学习总结">
   
     <link rel="alternative" href="/atom.xml" title="哎呀标题迷路了" type="application/atom+xml">
   
@@ -72,7 +69,7 @@
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -202,29 +199,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="RegExp学习总结"><a href="#RegExp学习总结" class="headerlink" title="RegExp学习总结"></a>RegExp学习总结</h1><h2 id="字符集合（Character-Sets）"><a href="#字符集合（Character-Sets）" class="headerlink" title="字符集合（Character Sets）"></a>字符集合（Character Sets）</h2><ul>
-<li><p>[xyz] 字符组|字符集合， 匹配集合中的任意一个字符， 可以使用连字符’-‘来指定一个范围。 如<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">* [^xyz] 反义字符组， 匹配中括号中不存在的内容</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line">## 字符边界 (Boundaries)</span><br><span class="line">* ^  匹配字符串开头</span><br><span class="line">* $  匹配字符串结尾</span><br><span class="line">* \b 匹配一个零宽单词边界 如一个字母和一个空格之间， 一个字符串的开头和结尾</span><br><span class="line">    </span><br><span class="line">  ```js</span><br><span class="line">  &apos;et&apos;.match(/\bet/); // [&quot;et&quot;]</span><br><span class="line">  &apos;testfsad&apos;.match(/\bet/) // null</span><br></pre></td></tr></table></figure></p>
+        <h1 id="RegExp学习总结"><a href="#RegExp学习总结" class="headerlink" title="RegExp学习总结"></a>RegExp学习总结</h1><a id="more"></a>
+<h2 id="字符集合（Character-Sets）"><a href="#字符集合（Character-Sets）" class="headerlink" title="字符集合（Character Sets）"></a>字符集合（Character Sets）</h2><ul>
+<li>[xyz] 字符组|字符集合， 匹配集合中的任意一个字符， 可以使用连字符’-‘来指定一个范围。 如<code>[abcd]</code>可以表示为<code>[a-d]</code>。</li>
+<li>[^xyz] 反义字符组， 匹配中括号中不存在的内容</li>
+</ul>
+<h2 id="字符边界-Boundaries"><a href="#字符边界-Boundaries" class="headerlink" title="字符边界 (Boundaries)"></a>字符边界 (Boundaries)</h2><ul>
+<li>^  匹配字符串开头</li>
+<li>$  匹配字符串结尾</li>
+<li><p>\b 匹配一个零宽单词边界 如一个字母和一个空格之间， 一个字符串的开头和结尾</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'et'</span>.match(<span class="regexp">/\bet/</span>); <span class="comment">// ["et"]</span></span><br><span class="line"><span class="string">'testfsad'</span>.match(<span class="regexp">/\bet/</span>) <span class="comment">// null</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>\B 匹配一个零宽非单词边界， 如两个字母之间或两个空格之间</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'   '</span>.match(<span class="regexp">/\B/</span>); <span class="comment">// four white-spaces</span></span><br><span class="line"><span class="comment">// ["", "", "", ""];</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="分组-Grouping-和-反向引用-back-references"><a href="#分组-Grouping-和-反向引用-back-references" class="headerlink" title="分组(Grouping) 和 反向引用(back references)"></a>分组(Grouping) 和 反向引用(back references)</h2><ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">匹配x并且捕获匹配项。 捕获组(Capturing groups)有性能惩罚， 再次访问被捕获的子字符串最好使用非捕获符号</span><br><span class="line"> </span><br><span class="line"> ```js</span><br><span class="line"> var str = &apos;Yes, I wanna earn more money&apos;;</span><br><span class="line"> /(\S)*\s/.test(str); </span><br><span class="line"> RegExp.$1 // &quot;,&quot;</span><br><span class="line"> </span><br><span class="line"> /(\S*)\s/.test(str);</span><br><span class="line"> RegExp.$1 // &apos;&quot;Yes,&quot;</span><br></pre></td></tr></table></figure>
+<li><p><code>(x)</code>  </p>
+<p>匹配x并且捕获匹配项。 捕获组(Capturing groups)有性能惩罚， 再次访问被捕获的子字符串最好使用非捕获符号</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'Yes, I wanna earn more money'</span>;</span><br><span class="line"><span class="regexp">/(\S)*\s/</span>.test(str); </span><br><span class="line"><span class="built_in">RegExp</span>.$<span class="number">1</span> <span class="comment">// ","</span></span><br><span class="line"></span><br><span class="line">/(\S*)\s/.test(str);</span><br><span class="line"><span class="built_in">RegExp</span>.$<span class="number">1</span> <span class="comment">// '"Yes,"</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  n是一个正整数。 指向正则表达式中第n个括号（从左边开始数）中匹配的字符串 **这里有点问题**</span><br><span class="line">* ```(?:x)```  </span><br><span class="line">  匹配x不会捕获匹配项， 非匹配项不能通过RegExp的$1-$9属性访问到。 </span><br><span class="line">## 数量词</span><br><span class="line">* ```x*```   </span><br><span class="line">  匹配前面的模式x 0次或多次</span><br><span class="line">* ```x+```  </span><br><span class="line">  匹配前面的模式x 1次或多次， 等价于&#123;1,&#125;</span><br><span class="line">* ```x*?```, ```x+?```  </span><br><span class="line">  匹配前面的模式， 但是是执行最小可能匹配</span><br><span class="line">   </span><br><span class="line">  ```js</span><br><span class="line">  var str = &quot;Yes, I wanna earn more money&quot;;</span><br><span class="line">  str.match(/\w*?/); // [&quot;&quot;]    // 最小匹配模式， 可匹配0次</span><br><span class="line">  str.match(/\w*/);  // [&quot;Yes&quot;]  </span><br><span class="line"></span><br><span class="line">  str.match(/\w+/);  // [&quot;Yes&quot;]</span><br><span class="line">  str.match(/\w+?/); // [&quot;Y&quot;]   // 最小匹配模式， 只匹配1次</span><br></pre></td></tr></table></figure>
+<li><p><code>\n</code><br>n是一个正整数。 指向正则表达式中第n个括号（从左边开始数）中匹配的字符串 <strong>这里有点问题</strong></p>
 </li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  匹配前面的模式x 0次或1次 。 如果在数量词```*```, ```+```, ```?```或者```&#123;&#125;```任意一个后面添加该符号（?）, 将会使匹配模式变为非贪婪模式(non-greedy)， 即匹配次数最小化， 默认匹配模式是贪婪模式， 即匹配次数最大化。 </span><br><span class="line"></span><br><span class="line">* ```x(?=y)</span><br></pre></td></tr></table></figure>
-<p>只有当x后面紧跟着y的时候才会进行匹配， 但是y不会成为匹配内容的一部分  . 注意要加括号</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> str = <span class="string">'hello world, I feel so good today'</span>;</span><br><span class="line">  str.match(<span class="regexp">/feel(?= so)/</span>); <span class="comment">// ["feel"]</span></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">  <span class="string">``</span><span class="string">` </span><br><span class="line"></span><br><span class="line">* `</span><span class="string">``</span>x(?!y)</span><br></pre></td></tr></table></figure>
-<p>只有当x后面不是紧跟着y的时候才会进行匹配</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.match(<span class="regexp">/feel(?!so)/</span>); <span class="comment">// ["feel"] // 注意： 中间没有空格</span></span><br></pre></td></tr></table></figure>
+<li><code>(?:x)</code><br>匹配x不会捕获匹配项， 非匹配项不能通过RegExp的$1-$9属性访问到。 <h2 id="数量词"><a href="#数量词" class="headerlink" title="数量词"></a>数量词</h2></li>
+<li><code>x*</code><br>匹配前面的模式x 0次或多次</li>
+<li><code>x+</code><br>匹配前面的模式x 1次或多次， 等价于{1,}</li>
+<li><p><code>x*?</code>, <code>x+?</code><br>匹配前面的模式， 但是是执行最小可能匹配</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"Yes, I wanna earn more money"</span>;</span><br><span class="line">str.match(<span class="regexp">/\w*?/</span>); <span class="comment">// [""]    // 最小匹配模式， 可匹配0次</span></span><br><span class="line">str.match(<span class="regexp">/\w*/</span>);  <span class="comment">// ["Yes"]  </span></span><br><span class="line"></span><br><span class="line">str.match(<span class="regexp">/\w+/</span>);  <span class="comment">// ["Yes"]</span></span><br><span class="line">str.match(<span class="regexp">/\w+?/</span>); <span class="comment">// ["Y"]   // 最小匹配模式， 只匹配1次</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">匹配x或者y  </span><br><span class="line">```js</span><br><span class="line">str.match(/hello|world/);         // [&quot;hello&quot;]</span><br><span class="line"></span><br><span class="line">// 此时匹配的是[]内的每一个可能值， 只匹配1次的话就匹配到了&apos;h&apos;， 而此时&apos;|&apos;也只被当成一个普通的字符</span><br><span class="line">str.match(/[hello|world]/);       // [&quot;h&quot;] </span><br><span class="line">&apos;jfsdalk|sajd&apos;.match(/[fa|fj]/g); // [&quot;j&quot;, &quot;f&quot;, &quot;a&quot;, &quot;|&quot;, &quot;a&quot;, &quot;j&quot;]</span><br></pre></td></tr></table></figure>
+<li><p><code>x?</code><br>匹配前面的模式x 0次或1次 。 如果在数量词<code>*</code>, <code>+</code>, <code>?</code>或者<code>{}</code>任意一个后面添加该符号（?）, 将会使匹配模式变为非贪婪模式(non-greedy)， 即匹配次数最小化， 默认匹配模式是贪婪模式， 即匹配次数最大化。 </p>
 </li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  n是一个正整数， 前面的模式连续出现n次时匹配</span><br><span class="line"></span><br><span class="line">* ```x&#123;n,&#125;</span><br></pre></td></tr></table></figure>
+<li><p><code>x(?=y)</code> 只有当x后面紧跟着y的时候才会进行匹配， 但是y不会成为匹配内容的一部分  . 注意要加括号</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> str = <span class="string">'hello world, I feel so good today'</span>;</span><br><span class="line">  str.match(<span class="regexp">/feel(?= so)/</span>); <span class="comment">// ["feel"]</span></span><br><span class="line">  <span class="string">``</span><span class="string">` </span><br><span class="line"></span><br><span class="line">* `</span>x(?!y)<span class="string">`</span><br><span class="line">  只有当x后面不是紧跟着y的时候才会进行匹配</span><br><span class="line">  </span><br><span class="line">  `</span><span class="string">``</span>js</span><br><span class="line">  str.match(<span class="regexp">/feel(?!so)/</span>); <span class="comment">// ["feel"] // 注意： 中间没有空格</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> **Note:** 这里n和y之间不能有空格  </span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line">// 从url中提取子域名</span><br><span class="line">var url = &quot;http://xxx.domain.com&quot;;</span><br><span class="line">url.replace(/https?:\/\/([^.]*)\..*/, &apos;$1&apos;); // &quot;xxx&quot;</span><br></pre></td></tr></table></figure>
+<li><p><code>x|y</code><br>匹配x或者y  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str.match(<span class="regexp">/hello|world/</span>);         <span class="comment">// ["hello"]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 此时匹配的是[]内的每一个可能值， 只匹配1次的话就匹配到了'h'， 而此时'|'也只被当成一个普通的字符</span></span><br><span class="line">str.match(<span class="regexp">/[hello|world]/</span>);       <span class="comment">// ["h"] </span></span><br><span class="line"><span class="string">'jfsdalk|sajd'</span>.match(<span class="regexp">/[fa|fj]/g</span>); <span class="comment">// ["j", "f", "a", "|", "a", "j"]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>x{n}</code><br>n是一个正整数， 前面的模式连续出现n次时匹配</p>
+</li>
+<li><p><code>x{n,}</code></p>
+</li>
+<li><p><code>x{n,y}</code><br> <strong>Note:</strong> 这里n和y之间不能有空格  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从url中提取子域名</span></span><br><span class="line"><span class="keyword">var</span> url = <span class="string">"http://xxx.domain.com"</span>;</span><br><span class="line">url.replace(<span class="regexp">/https?:\/\/([^.]*)\..*/</span>, <span class="string">'$1'</span>); <span class="comment">// "xxx"</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
