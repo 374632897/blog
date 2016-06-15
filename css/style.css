@@ -1205,6 +1205,18 @@ a {
 #article-nav #article-nav-older {
   float: right;
 }
+@media screen and (max-width: 768px) {
+  .article-entry ul,
+  .article-entry ol {
+    padding-left: 20px;
+  }
+  .article-entry p {
+    text-indent: 0;
+  }
+  .article img {
+    margin-left: -5px;
+  }
+}
 @-moz-keyframes cd-bounce-1 {
   0% {
     opacity: 0;
