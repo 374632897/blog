@@ -6,22 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>JS控制光标移动 | 哎呀标题迷路了</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网上的那些人也真的是够了， 复制粘贴什么的都习以为常， 就算是抄一个东西， 难道不也该先验证一下人家的是不是对的么， 走网上搜一个光标移动位置的问题， 搜索结果一帕拉， 而且都是惊人地相似， 但是放到浏览器里面， 根本就不能够跑！！！！！！！！！！！！！！
-然后自己最后还是老老实实地看书， 恩， 找到了一个方法哈。 
-123456const sel = window.getSelection(),">
+  <meta name="description" content="网上的那些人也真的是够了， 复制粘贴什么的都习以为常， 就算是抄一个东西， 难道不也该先验证一下人家的是不是对的么， 走网上搜一个光标移动位置的问题， 搜索结果一帕拉， 而且都是惊人地相似， 但是放到浏览器里面， 根本就不能够跑！！！！！！！！！！！！！！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS控制光标移动">
 <meta property="og:url" content="http://noteawesome.com/2016/07/04/JS控制光标移动/index.html">
 <meta property="og:site_name" content="哎呀标题迷路了">
-<meta property="og:description" content="网上的那些人也真的是够了， 复制粘贴什么的都习以为常， 就算是抄一个东西， 难道不也该先验证一下人家的是不是对的么， 走网上搜一个光标移动位置的问题， 搜索结果一帕拉， 而且都是惊人地相似， 但是放到浏览器里面， 根本就不能够跑！！！！！！！！！！！！！！
-然后自己最后还是老老实实地看书， 恩， 找到了一个方法哈。 
-123456const sel = window.getSelection(),">
-<meta property="og:updated_time" content="2016-07-04T01:12:06.411Z">
+<meta property="og:description" content="网上的那些人也真的是够了， 复制粘贴什么的都习以为常， 就算是抄一个东西， 难道不也该先验证一下人家的是不是对的么， 走网上搜一个光标移动位置的问题， 搜索结果一帕拉， 而且都是惊人地相似， 但是放到浏览器里面， 根本就不能够跑！！！！！！！！！！！！！！">
+<meta property="og:updated_time" content="2016-07-04T01:19:54.793Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS控制光标移动">
-<meta name="twitter:description" content="网上的那些人也真的是够了， 复制粘贴什么的都习以为常， 就算是抄一个东西， 难道不也该先验证一下人家的是不是对的么， 走网上搜一个光标移动位置的问题， 搜索结果一帕拉， 而且都是惊人地相似， 但是放到浏览器里面， 根本就不能够跑！！！！！！！！！！！！！！
-然后自己最后还是老老实实地看书， 恩， 找到了一个方法哈。 
-123456const sel = window.getSelection(),">
+<meta name="twitter:description" content="网上的那些人也真的是够了， 复制粘贴什么的都习以为常， 就算是抄一个东西， 难道不也该先验证一下人家的是不是对的么， 走网上搜一个光标移动位置的问题， 搜索结果一帕拉， 而且都是惊人地相似， 但是放到浏览器里面， 根本就不能够跑！！！！！！！！！！！！！！">
   
     <link rel="alternative" href="/atom.xml" title="哎呀标题迷路了" type="application/atom+xml">
   
@@ -209,11 +203,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>网上的那些人也真的是够了， 复制粘贴什么的都习以为常， 就算是抄一个东西， 难道不也该先验证一下人家的是不是对的么， 走网上搜一个光标移动位置的问题， 搜索结果一帕拉， 而且都是惊人地相似， 但是放到浏览器里面， 根本就不能够跑！！！！！！！！！！！！！！</p>
-<p>然后自己最后还是老老实实地看书， 恩， 找到了一个方法哈。 </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sel = <span class="built_in">window</span>.getSelection(),</span><br><span class="line">      range  = <span class="built_in">document</span>.createRange(),</span><br><span class="line">      div = $(<span class="string">'div'</span>);</span><br><span class="line">range.selectNodeContents(div);</span><br><span class="line">sel.addRange(range);</span><br><span class="line">sel.collapseToEnd();</span><br></pre></td></tr></table></figure>
-<p>这个针对<code>contenteditable</code>元素是有效的， 但是在<code>textarea</code>下， 使用<code>range</code>好像选不了其范围， 所以不能够操作， 不知道是不是方法错了， 不过在选中了文本框文本的情况下， 还是可以移动光标的。<br>```js<br>const textarea = $(‘textarea’);<br>textarea.select();<br>window.getSelection().collapseToStart(); // 光标移动到开始位置</p>
-
+        <p>网上的那些人也真的是够了， 复制粘贴什么的都习以为常， 就算是抄一个东西， 难道不也该先验证一下人家的是不是对的么， 走网上搜一个光标移动位置的问题， 搜索结果一帕拉， 而且都是惊人地相似， 但是放到浏览器里面， 根本就不能够跑！！！！！！！！！！！！！！<br><a id="more"></a><br>然后自己最后还是老老实实地看书， 恩， 找到了一个方法哈。 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sel = <span class="built_in">window</span>.getSelection(),</span><br><span class="line">  range = <span class="built_in">document</span>.createRange(),</span><br><span class="line">  div = $(<span class="string">'div'</span>);</span><br><span class="line"></span><br><span class="line">range.selectNodeContents(div);</span><br><span class="line">sel.addRange(range);</span><br><span class="line">sel.collapseToEnd();</span><br></pre></td></tr></table></figure>
+<p>这个针对<code>contenteditable</code>元素是有效的， 但是在<code>textarea</code>下， 使用<code>range</code>好像选不了其范围， 所以不能够操作， 不知道是不是方法错了， 不过在选中了文本框文本的情况下， 还是可以移动光标的。 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> textarea = $(<span class="string">'textarea'</span>);</span><br><span class="line">textarea.select();</span><br><span class="line"><span class="built_in">window</span>.getSelection().collapseToStart(); <span class="comment">// 光标移动到开始位置</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
