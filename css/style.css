@@ -886,6 +886,9 @@ a {
   box-shadow: 0 3px 9px 0px rgba(0,0,0,0.21);
   -webkit-border-radius: 2px;
   border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 @-webkit-keyframes cd-bounce-1 {
   0% {
@@ -1215,6 +1218,10 @@ a {
   }
   .article img {
     margin-left: -5px;
+  }
+  #ds-reset,
+  #ds-related-reads {
+    padding: 15px 0;
   }
 }
 @-moz-keyframes cd-bounce-1 {
