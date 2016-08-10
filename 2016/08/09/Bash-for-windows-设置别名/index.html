@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://noteawesome.com/2016/08/09/Bash-for-windows-设置别名/index.html">
 <meta property="og:site_name" content="哎呀标题迷路了">
 <meta property="og:description" content="平时在windows上做开发的时候， 总觉得其命令行不好用， 所以使用命令行的时候， 都是用的git bash。然后每次需要提交代码的时候， 总是会git add ., git commit -m &amp;#39;..&amp;#39; , git push, 至少都要输入这么三条命令，实在是麻烦。 那么有没有什么办法可以简化操作呢？">
-<meta property="og:updated_time" content="2016-08-10T04:31:01.475Z">
+<meta property="og:updated_time" content="2016-08-10T04:35:36.610Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bash for windows 设置别名">
 <meta name="twitter:description" content="平时在windows上做开发的时候， 总觉得其命令行不好用， 所以使用命令行的时候， 都是用的git bash。然后每次需要提交代码的时候， 总是会git add ., git commit -m &amp;#39;..&amp;#39; , git push, 至少都要输入这么三条命令，实在是麻烦。 那么有没有什么办法可以简化操作呢？">
@@ -69,7 +69,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -170,7 +170,7 @@
   
     <div class="article-meta">
       <a href="/2016/08/09/Bash-for-windows-设置别名/" class="article-date">
-  	<time datetime="2016-08-09T09:42:22.000Z" itemprop="datePublished">2016-08-09</time>
+  	<time datetime="2016-08-09T10:42:22.000Z" itemprop="datePublished">2016-08-09</time>
 </a>
     </div>
   
@@ -211,7 +211,7 @@
 <p>然后就加了别名</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># alias</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> ls=<span class="string">'ls --color=auto'</span>;</span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">'ls -lh'</span>;</span><br><span class="line"><span class="built_in">alias</span> all=<span class="string">'git add --all &amp;&amp; git commit -m ":smirk:" &amp;&amp; git push'</span>;</span><br><span class="line"><span class="built_in">alias</span> ..=<span class="string">'cd ..'</span>;</span><br><span class="line"><span class="built_in">alias</span> ....=<span class="string">'cd ../../'</span>;</span><br><span class="line"><span class="built_in">alias</span> ld=<span class="string">'ll | grep "^d"'</span>;</span><br><span class="line"><span class="built_in">alias</span> psw=<span class="string">'ps -a --windows'</span>;</span><br><span class="line"><span class="built_in">alias</span> vi=<span class="string">'vim'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下是cygwin下针对快速切换到挂载目录设置的别名</span></span><br><span class="line"><span class="built_in">alias</span> d=<span class="string">'cd /cygdrive/d'</span>;</span><br><span class="line"><span class="built_in">alias</span> ng=<span class="string">'cd /cygdrive/d/nginx-1.6.0'</span>;</span><br><span class="line"><span class="built_in">alias</span> gi=<span class="string">'cd /cygdrive/d/JGX/GitHub'</span>;</span><br></pre></td></tr></table></figure>
 <p>重启下bash , 然后就能够使用了。</p>
-<p>虽然<code>git bash</code>用着也还行， 不过还是对不少的linux命令没有提供支持， 另外一个软件<code>cygwin</code>也挺不错， 支持也挺多的， 如果安装<code>cygwin</code>的话， 需要注意一点， 也就是它默认不会安装<code>vim</code>， 所以在选择软件的时候需要留意一下。</p>
+<p>虽然<code>git bash</code>用着也还行， 不过还是对不少的linux命令没有提供支持， 另外一个软件<code>cygwin</code>也挺不错， 支持也挺多的， 如果安装<code>cygwin</code>的话， 需要注意一点， 也就是它默认不会安装<code>vim</code>， 所以在选择软件的时候需要留意一下。另外， <code>git bash</code>好像会比<code>cygwin</code>快一点， <code>cygwin</code>在运行未运行过的程序的时候， 反应会比较慢（查找去了？）， 另外， 关于<code>git</code>, 在<code>cygwin</code>下好像也需要重新配置。</p>
 
       
     </div>
