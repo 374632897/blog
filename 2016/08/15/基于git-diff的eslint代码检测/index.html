@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>基于git diff的eslint代码检测 | 哎呀标题迷路了</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="基于git diff进行的eslint代码检测随着代码的不断增加， eslint进行代码检测的时间也越来越久。每次检测的时候， 需要检测的文件和实际检测的文件极度不对称，所以便基于git diff写了这样一个小工具。
+源代码
+启动脚本(lint.sh)
+
+12345678910111213141516171819#!/bin/bashINFO=&apos;\033[36m&apos;;NOR=&apos;\033[0m&apos;;ER">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于git diff的eslint代码检测">
+<meta property="og:url" content="http://noteawesome.com/2016/08/15/基于git-diff的eslint代码检测/index.html">
+<meta property="og:site_name" content="哎呀标题迷路了">
+<meta property="og:description" content="基于git diff进行的eslint代码检测随着代码的不断增加， eslint进行代码检测的时间也越来越久。每次检测的时候， 需要检测的文件和实际检测的文件极度不对称，所以便基于git diff写了这样一个小工具。
+源代码
+启动脚本(lint.sh)
+
+12345678910111213141516171819#!/bin/bashINFO=&apos;\033[36m&apos;;NOR=&apos;\033[0m&apos;;ER">
+<meta property="og:updated_time" content="2016-08-15T01:33:13.257Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于git diff的eslint代码检测">
+<meta name="twitter:description" content="基于git diff进行的eslint代码检测随着代码的不断增加， eslint进行代码检测的时间也越来越久。每次检测的时候， 需要检测的文件和实际检测的文件极度不对称，所以便基于git diff写了这样一个小工具。
+源代码
+启动脚本(lint.sh)
+
+12345678910111213141516171819#!/bin/bashINFO=&apos;\033[36m&apos;;NOR=&apos;\033[0m&apos;;ER">
+  
+    <link rel="alternative" href="/atom.xml" title="哎呀标题迷路了" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://i2.buimg.com/0810ed23ab760978.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">前端小虾蟹</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/374632897" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/374632897" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/GitHub-Pages/" style="font-size: 10px;">GitHub Pages</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/electron/" style="font-size: 10px;">electron</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/js/" style="font-size: 16.67px;">js</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/乱七八糟/" style="font-size: 10px;">乱七八糟</a> <a href="/tags/读书/" style="font-size: 13.33px;">读书</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">都说喜欢一个人久了， 你就会越来越像她， 可是土豆它并不是一个人啊→＿←。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">前端小虾蟹</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://i2.buimg.com/0810ed23ab760978.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">前端小虾蟹</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/374632897" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/374632897" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-基于git-diff的eslint代码检测" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/15/基于git-diff的eslint代码检测/" class="article-date">
+  	<time datetime="2016-08-15T01:32:54.000Z" itemprop="datePublished">2016-08-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基于git diff的eslint代码检测
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="基于git-diff进行的eslint代码检测"><a href="#基于git-diff进行的eslint代码检测" class="headerlink" title="基于git diff进行的eslint代码检测"></a>基于git diff进行的eslint代码检测</h1><p>随着代码的不断增加， eslint进行代码检测的时间也越来越久。每次检测的时候， 需要检测的文件和实际检测的文件极度不对称，所以便基于<code>git diff</code>写了这样一个小工具。</p>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><ul>
+<li>启动脚本(<code>lint.sh</code>)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">INFO=<span class="string">'\033[36m'</span>;</span><br><span class="line">NOR=<span class="string">'\033[0m'</span>;</span><br><span class="line">ERR=<span class="string">'\033[31m'</span>;</span><br><span class="line">br=<span class="string">'dev'</span>;</span><br><span class="line"><span class="keyword">if</span> [ ! -z <span class="variable">$1</span> ]; <span class="keyword">then</span></span><br><span class="line">  br=<span class="variable">$1</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line"><span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"<span class="variable">$&#123;INFO&#125;</span>run lint now ... just wait a moment ...<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line">git diff origin/<span class="variable">$&#123;br&#125;</span> &gt; diff.log;</span><br><span class="line"><span class="built_in">log</span>=`cat diff.log | grep <span class="string">'diff --git a/src'</span>`;</span><br><span class="line"><span class="keyword">if</span> [[ -z <span class="variable">$&#123;log&#125;</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"<span class="variable">$&#123;INFO&#125;</span>没有文件发生变化<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">echo</span> <span class="string">''</span>;</span><br><span class="line">  node ./lint-by-diff.js;</span><br><span class="line">  <span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"<span class="variable">$&#123;INFO&#125;</span>done ...<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line">rm diff.log change.log 2&gt; /dev/null;</span><br><span class="line"><span class="built_in">read</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>检测工具(<code>lint-by-diff.js</code>)</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">const</span> shelljs = <span class="built_in">require</span>(<span class="string">'shelljs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> jsFiles = [],</span><br><span class="line">  LOG__PATH   = <span class="string">'./diff.log'</span>,</span><br><span class="line">  FILE = <span class="regexp">/diff --git a([\s\S]*?) /g</span>,</span><br><span class="line">  data = fs.readFileSync(LOG__PATH).toString(),</span><br><span class="line">  _files = data.match(FILE),</span><br><span class="line">  len = _files.length;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; len) &#123;</span><br><span class="line">  <span class="keyword">const</span> _item = _files[i++].trim();</span><br><span class="line">  <span class="keyword">if</span> (!<span class="regexp">/.js$/</span>.test(_item)) <span class="keyword">continue</span>;</span><br><span class="line">  <span class="keyword">const</span> item = <span class="string">'./'</span> + _item.slice(<span class="number">13</span>);</span><br><span class="line">  <span class="keyword">if</span> (!<span class="regexp">/^\.\/src\//</span>.test(item)) <span class="keyword">continue</span>; <span class="comment">// src为项目需要进行eslint检测的目录</span></span><br><span class="line">  <span class="keyword">if</span> (!fs.existsSync(item)) <span class="keyword">continue</span>;</span><br><span class="line">  jsFiles.push(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'     以下文件发生改变： '</span>);</span><br><span class="line"><span class="built_in">console</span>.log(jsFiles.join(<span class="string">'\n'</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line">shelljs.exec(<span class="string">'node ./node_modules/eslint/bin/eslint.js '</span> + jsFiles.join(<span class="string">' '</span>));</span><br></pre></td></tr></table></figure>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>通过<code>git diff origin/branch</code>获取到和指定分支的不同， 从而知道哪些文件需要进行代码检测（dev上的是通过检测的）， 然后运行eslint的时候就指定这部分文件。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在项目根目录下输入<code>./lint.sh</code>或者<code>bash ./lint.sh</code>, 默认分支为<code>dev</code>分支， 如果需要指定其他分支， 可以在运行的时候传入参数， 如： <code>bash ./lint.sh master</code>.</p>
+<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><ul>
+<li><p>使用了bash导致这个看起来有点不伦不类， 使用纯js也许会更好， 但是我毕竟半吊子， 写不出来→＿←</p>
+</li>
+<li><p>没有对<code>error</code>进行高亮显示， 所以看起来会比较费力</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/09/Bash-for-windows-设置别名/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git bash 设置别名</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="基于git-diff的eslint代码检测" data-title="基于git diff的eslint代码检测" data-url="http://noteawesome.com/2016/08/15/基于git-diff的eslint代码检测/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 前端小虾蟹
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+  <p>本站总访问量<span id="busuanzi_value_site_pv"></span>次
+本站访客数<span id="busuanzi_value_site_uv"></span>人次
+本文总阅读量<span id="busuanzi_value_page_pv"></span>次</p>
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
