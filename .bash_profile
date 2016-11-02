@@ -1,0 +1,34 @@
+#! /bin/bash
+alias ls='ls -G';
+alias ll='ls -lh';
+alias la='ls -a';
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl';
+alias bashrc='subl ~/.bash_profile';
+alias ld='ll | grep "^d"';
+alias nconf='subl /usr/local/nginx/conf/nginx.conf';
+alias ng='cd /usr/local/nginx';
+alias fpm='sudo php-fpm';
+alias stopfpm='sudo pkill php-fpm';
+alias server='fpm && stargng';
+alias stopserver='stopfpm & stopng';
+alias startng='sudo /usr/local/nginx/sbin/nginx';
+alias stopng='sudo /usr/local/nginx/sbin/nginx -s stop';
+alias ..='cd ..';
+alias ip='ifconfig | grep 192';
+alias ....='cd ../../';
+alias is="ps aux | grep $1 -c";
+alias gs="git status";
+alias pe='cd ~/project/personal';
+alias co='cd ~/project/company';
+alias fr='co && cd ./rishiqing-front';
+alias xxnet='/Users/Jason/Downloads/XX-Net/start';
+alias reload='source ~/.bash_profile';
+alias all='bash ~/bin/commit.sh';
+alias naccess='ng && tail logs/access.log && cd -';
+alias nerror='ng && tail logs/error.log && cd -';
+alias br='git branch';
+alias delbr='git branch -D';
+export="/usr/local/sbin:$PATH";
+export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node"；
+export NVM_DIR="/Users/Jason/.nvm";
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh";
