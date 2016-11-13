@@ -12,7 +12,7 @@ alias grep='grep --color=auto';
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl';
 alias vi=vim;
 
-# open project with sublime
+# Open project with sublime
 alias sr='co && subl rishiqing-front';
 alias sw='co && subl webpage';
 alias sb='co && subl rishiqing-blog';
@@ -32,7 +32,7 @@ alias pe='cd ~/project/personal';
 alias co='cd ~/project/company';
 alias r='co && cd ./rishiqing-front';
 alias b='co && cd ./rishiqing-blog';
-# The command w will show the login users.
+# The command `w` will show the current login users.
 alias we='co && cd ./webpage';
 alias tip='pe && cd ./just-some-tips';
 
@@ -44,6 +44,7 @@ alias stopserver='stopfpm && stopng';
 alias startng='sudo /usr/local/nginx/sbin/nginx';
 alias stopng='sudo /usr/local/nginx/sbin/nginx -s stop';
 alias nginx='stopserver 2> /dev/null && server';
+# Toggle the proxy server
 alias toggle='stopng && bash ~/bin/toggle.sh && startng';
 alias lint='[ -r lint.sh ] && bash lint.sh';
 alias s='npm start';
@@ -56,14 +57,16 @@ alias delbr='git branch -D';
 alias all='bash ~/bin/commit.sh';
 
 # Common
+# Show your internal ip address
 alias ip='ifconfig | grep 192';
 # output the counts of the current given process
 alias is="ps aux | grep  -v \"grep\" | grep  -c  $1";
 alias xxnet='/Users/Jason/Downloads/XX-Net/start';
+# Use this cmd to avoid type too many letters after each time you update bashrc 
 alias reload='source ~/.bash_profile';
 
 # PATH
-export="/usr/local/sbin:$PATH";
+export="/usr/local/sbin:$PATH"; 
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist;
 # export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node"；
 export NVM_DIR="/Users/Jason/.nvm";
