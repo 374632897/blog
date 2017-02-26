@@ -12,4 +12,4 @@ clr () {
 
 export clone;
 export md;
-export cl;
+export clr;
