@@ -1,6 +1,7 @@
 for file in ~/.{aliases.sh,functions.sh};do
   [ -r $file ] && source $file
 done;
+
 # iterm2
 CLICOLOR=1
 LSCOLORS=gxfxcxdxbxegedabagacad
