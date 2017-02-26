@@ -1,4 +1,4 @@
-for file in ~/.{aliases.sh,functions.sh};do
+for file in ~/.{aliases,functions}.sh;do
   [ -r $file ] && source $file
 done;
 
