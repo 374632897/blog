@@ -67,6 +67,7 @@ alias sn='git diff origin/dev --name-only';
 
 # Common
 alias ip='ifconfig | grep 192';
+alias p_ip='curl ip.cn';
 # output the counts of the current given process
 alias is="ps aux | grep  -v \"grep\" | grep  -c  $1";
 alias xxnet='/Users/Jason/Downloads/XX-Net/start';
@@ -84,8 +85,10 @@ alias d='docker';
 alias di='docker images';
 alias db='docker build';
 alias dr='docker run -it';
-alias rm_docker_container='docker rm `docker ps -aq`';
+alias rm_docker_containers='docker rm `docker ps -aq`';
 alias rm_docker_images='docker rmi `docker images -qf dangling=true`';
+alias rm_dc=rm_docker_containers;
+alias rm_di=rm_docker_images;
 alias d_c='docker-compose';
 
 # PATH
