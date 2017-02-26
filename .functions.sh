@@ -6,5 +6,10 @@ clone () {
 md () {
   mkdir "$1" && cd "$1";
 }
+clr () {
+  cat /dev/null > "$1";
+}
+
 export clone;
 export md;
+export cl;
