@@ -50,6 +50,7 @@ alias s='npm start';
 alias s1='r && nvm use 4.5 && s';
 alias s2='b && nvm use 4.2 && s';
 alias pserver='python -m SimpleHTTPServer';
+alias ass="gcc -O1 -S $1";
 # alias r1='stopserver && server && is "nginx"';
 alias r1='stopng && startng';
 
@@ -61,7 +62,7 @@ alias delbr='git branch -D';
 alias all='bash ~/bin/commit.sh';
 alias pn='git push --set-upstream origin';
 alias pu='git push';
-alias cm='git commit';
+alias cm='git commit -am';
 alias ss='git diff origin/dev --shortstat';
 alias sn='git diff origin/dev --name-only';
 
