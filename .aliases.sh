@@ -69,7 +69,7 @@ alias sn='git diff origin/dev --name-only';
 # Common
 alias ip='ifconfig | grep 192';
 alias p_ip='curl ip.cn';
-# output the counts of the current given process
+# output the count of the current given process
 alias is="ps aux | grep  -v \"grep\" | grep  -c  $1";
 alias xxnet='/Users/Jason/Downloads/XX-Net/start';
 alias reload='source ~/.bash_profile';
