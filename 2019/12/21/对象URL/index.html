@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="学习地址：https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web&#x2F;API&#x2F;URL">
@@ -112,6 +112,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -126,11 +127,6 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
 
   </li>
-        <li class="menu-item menu-item-关于">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
         <li class="menu-item menu-item-标签">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
@@ -141,17 +137,50 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
 
     
   <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 
     <main class="main">
@@ -210,9 +239,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>学习地址：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/URL" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/URL</a></p>
+        <p>学习地址：<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL1VSTA==">https://developer.mozilla.org/zh-CN/docs/Web/API/URL<i class="fa fa-external-link-alt"></i></span></p>
 <a id="more"></a> 
-<p>实例代码地址：<a href="https://github.com/374632897/demos/blob/master/html/object-url/compare.html" target="_blank" rel="noopener">GitHub</a>、<a href="https://codepen.io/374632897/pen/RwNpXPd?editors=1111" target="_blank" rel="noopener">CodePen</a></p>
+<p>实例代码地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Ny9kZW1vcy9ibG9iL21hc3Rlci9odG1sL29iamVjdC11cmwvY29tcGFyZS5odG1s">GitHub<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLzM3NDYzMjg5Ny9wZW4vUndOcFhQZD9lZGl0b3JzPTExMTE=">CodePen<i class="fa fa-external-link-alt"></i></span></p>
 <p>URL 为 window 的一个属性， 具有三种用法：</p>
 <ul>
 <li>URL 作为构造函数使用 - new URL(url, [base])</li>
@@ -226,9 +255,9 @@
 <p><a name="00O9z"></a></p>
 <h3 id="URL-createObjectURL-blob"><a href="#URL-createObjectURL-blob" class="headerlink" title="URL.createObjectURL(blob)"></a>URL.createObjectURL(blob)</h3><p>通常来讲， 需要使用本方法的时候是手动在前端进行了文件上传，并且希望及时的进行预览。除了本方法之外，在用户选择文件之后，可以通过FileReader对文件进行阅读， 使用readAsDataURL的方式，将文件内容转换为base64的形式，并将其作为img 的 src 以进行展示。然而该方法具有以下问题：</p>
 <ul>
-<li>需要先使用FileReader对文件进行读取到JavaScript中，当文件内容比较大的时候，中间的时间难以保证（参见<a href="https://codepen.io/374632897/pen/RwNpXPd?editors=1111" target="_blank" rel="noopener">DEMO</a>，针对4M的文件， base64比object url 慢了10倍左右 )</li>
+<li>需要先使用FileReader对文件进行读取到JavaScript中，当文件内容比较大的时候，中间的时间难以保证（参见<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLzM3NDYzMjg5Ny9wZW4vUndOcFhQZD9lZGl0b3JzPTExMTE=">DEMO<i class="fa fa-external-link-alt"></i></span>，针对4M的文件， base64比object url 慢了10倍左右 )</li>
 <li>生成的base64字符串可能会十分庞大，插入到DOM以后会多了很多无意义的内容</li>
-<li>使用 base64 会占用对应的堆空间（参见<a href="https://codepen.io/374632897/pen/RwNpXPd?editors=1111" target="_blank" rel="noopener">DEMO</a>）</li>
+<li>使用 base64 会占用对应的堆空间（参见<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLzM3NDYzMjg5Ny9wZW4vUndOcFhQZD9lZGl0b3JzPTExMTE=">DEMO<i class="fa fa-external-link-alt"></i></span>）</li>
 </ul>
 <p>因此，针对需要在前端进行展示的场景，应尽可能地使用URL.createObjectURL()的方式来进行展示，而不是使用base64。通过该方式，最后获取到的是一个指向内存的相应地址，因为该字符串是一个URL，因此可以直接在DOM中使用，同时，也不用先将文件读取到JavaScript中。</p>
 <p>兼容性如下：<br><img align=left height=413 width=1031 data-src="https://cdn.nlark.com/yuque/0/2019/png/434020/1576922437474-6d9e345f-cce9-4f8f-b93d-7c49717d55fc.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>可以看到，IE10以上的浏览器均兼容。</p>
@@ -351,10 +380,10 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/374632897" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Nw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/374632897" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMzc0NjMyODk3" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897"><i class="fab fa-weibo fa-fw"></i>Weibo</span>
       </span>
   </div>
 
@@ -389,7 +418,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">前端小虾蟹</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9waXNjZXMudGhlbWUtbmV4dC5vcmc=">NexT.Pisces</span> 强力驱动
   </div>
 
         
@@ -419,10 +448,21 @@
 
 <script src="/js/next-boot.js"></script>
 
+<script src="/js/bookmark.js"></script>
+
 
 
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
 
@@ -446,6 +486,10 @@
     })();
   }
   </script>
+
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

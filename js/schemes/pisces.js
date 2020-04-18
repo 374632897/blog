@@ -86,7 +86,7 @@ const init = function () {
 if (document.readyState !== 'loading') {
   init()
 } else {
-  window.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     init()
   }, false);
   window.addEventListener('load', init, false);

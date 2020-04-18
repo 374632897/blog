@@ -117,5 +117,5 @@ const handleLoad = () => {
   NexT.boot.hasLoad = true;
 }
 
-window.addEventListener('DOMContentLoaded', handleLoad, false);
+document.addEventListener('DOMContentLoaded', handleLoad, false);
 window.addEventListener('load', handleLoad, false);

@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。">
@@ -109,6 +109,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -123,11 +124,6 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
 
   </li>
-        <li class="menu-item menu-item-关于">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
         <li class="menu-item menu-item-标签">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
@@ -138,17 +134,50 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
 
     
   <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 
     <main class="main">
@@ -212,9 +241,9 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>Hello Hello Hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>xhaha<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">40%</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">40%</span>;</span><br><span class="line">  <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.right</span>&#123;</span><br><span class="line">  <span class="comment">/* overflow: hidden; */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><a href="https://jsfiddle.net/pskpcfc8/1/" target="_blank" rel="noopener">查看DEMO</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvcHNrcGNmYzgvMS8=">查看DEMO<i class="fa fa-external-link-alt"></i></span></p>
 <p>按以上代码最后得到的显示效果是，<code>span.left</code>和<code>span.right</code>没有对齐。右边的会沉下去点，这个在demo里面可以看到。</p>
-<p>然后我就想这是什么原因造成的，在调试器里勾选掉<code>.left</code>的<code>overflow: hidden</code>后，就显示正常了（当然，省略号儿也没了），然后我就捉摸着这是不是BFC的问题，因为平时自己清除浮动什么的，都喜欢用<code>overflow:hidden</code>来触发BFC，以便包裹元素的来着。当然了，给.right设置<code>overflow: hidden</code>或者<code>float: right</code>之后，也确实会显示正常（<code>float: right</code>会让文字右浮动，不过对齐的效果确实是达到了)，之后我就在BFC的问题上纠结了好久，因为<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener">MDN</a>上说了，<code>inline-block</code>元素本身就是会触发BFC的，那么前面所说的和BFC有关，就不那么准确了。</p>
+<p>然后我就想这是什么原因造成的，在调试器里勾选掉<code>.left</code>的<code>overflow: hidden</code>后，就显示正常了（当然，省略号儿也没了），然后我就捉摸着这是不是BFC的问题，因为平时自己清除浮动什么的，都喜欢用<code>overflow:hidden</code>来触发BFC，以便包裹元素的来着。当然了，给.right设置<code>overflow: hidden</code>或者<code>float: right</code>之后，也确实会显示正常（<code>float: right</code>会让文字右浮动，不过对齐的效果确实是达到了)，之后我就在BFC的问题上纠结了好久，因为<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvR3VpZGUvQ1NTL0Jsb2NrX2Zvcm1hdHRpbmdfY29udGV4dA==">MDN<i class="fa fa-external-link-alt"></i></span>上说了，<code>inline-block</code>元素本身就是会触发BFC的，那么前面所说的和BFC有关，就不那么准确了。</p>
 <p>后来在stackoverflow上得到了答案，对<code>span</code>加上一个<code>vertical-align: top</code>然后就会对齐了。</p>
 <p>至于原因，是因为<code>inline-block</code>元素默认的对齐方式是基线对齐，那么基线是什么呢？　如果一个<code>inline-block</code>盒子是空的，或者说他的<code>overflow</code>属性不为<code>visible</code>, 那么他的基线就是其下边距边缘，否则的话，就是其内部最后一个内联元素的基线（文字就是内联元素咯。。）</p>
 <p>如下所示：</p>
@@ -227,7 +256,7 @@
 <p>然后使用右浮动之后，因为浮动会使盒子的<code>display</code>属性变为<code>block</code>，所以就不是<code>inline-block</code>元素，自然就不会受到前面的规则的影响了。</p>
 <p>之后是使用<code>overflow: hidden</code>，这个属性使得inline-block元素的基线发生了改变，变得和左边元素一样，所以也能对齐。</p>
 <p>最后来个小总结吧： 好的文章一定要多读几遍，每一遍都会有所收获。</p>
-<p>参见：<br><a href="http://stackoverflow.com/questions/12950479/why-does-inline-block-element-having-content-not-vertically-aligned" target="_blank" rel="noopener">stackoverflow- inline-block元素垂直对齐问题</a><br><a href="http://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/" target="_blank" rel="noopener">张鑫旭-CSS深入理解vertical-align和line-height的基友关系</a></p>
+<p>参见：<br><span class="exturl" data-url="aHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy8xMjk1MDQ3OS93aHktZG9lcy1pbmxpbmUtYmxvY2stZWxlbWVudC1oYXZpbmctY29udGVudC1ub3QtdmVydGljYWxseS1hbGlnbmVk">stackoverflow- inline-block元素垂直对齐问题<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cDovL3d3dy56aGFuZ3hpbnh1LmNvbS93b3JkcHJlc3MvMjAxNS8wOC9jc3MtZGVlcC11bmRlcnN0YW5kLXZlcnRpY2FsLWFsaWduLWFuZC1saW5lLWhlaWdodC8=">张鑫旭-CSS深入理解vertical-align和line-height的基友关系<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -344,10 +373,10 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/374632897" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Nw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/374632897" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMzc0NjMyODk3" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897"><i class="fab fa-weibo fa-fw"></i>Weibo</span>
       </span>
   </div>
 
@@ -382,7 +411,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">前端小虾蟹</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9waXNjZXMudGhlbWUtbmV4dC5vcmc=">NexT.Pisces</span> 强力驱动
   </div>
 
         
@@ -412,10 +441,21 @@
 
 <script src="/js/next-boot.js"></script>
 
+<script src="/js/bookmark.js"></script>
+
 
 
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
 
@@ -439,6 +479,10 @@
     })();
   }
   </script>
+
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="JavaScript 测试显示隐藏的两种实现方式的性能  CSS &amp; HTML 仿制的第一个站（前东家官网） 实现慕课网官网楼层动态效果 对指定文字设置样式 画个鸡蛋吧 颜色块儿 点个转盘 3列布局， 左右定宽，中间自适应 一个简单的富文本编辑器 全屏 居中 键码 算法学习">
@@ -107,6 +107,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -121,11 +122,6 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
 
   </li>
-        <li class="menu-item menu-item-关于">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
         <li class="menu-item menu-item-标签">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
@@ -136,17 +132,50 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
 
     
   <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 
     <main class="main">
@@ -206,19 +235,19 @@
 
       
         <h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ul>
-<li><a href="http://374632897.github.io/just-some-tips/DEMO/测试显示隐藏的两种实现方式的性能.html" target="_blank" rel="noopener">测试显示隐藏的两种实现方式的性能</a></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy/mtYvor5XmmL7npLrpmpDol4/nmoTkuKTnp43lrp7njrDmlrnlvI/nmoTmgKfog70uaHRtbA==">测试显示隐藏的两种实现方式的性能<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <h2 id="CSS-amp-HTML"><a href="#CSS-amp-HTML" class="headerlink" title="CSS &amp; HTML"></a>CSS &amp; HTML</h2><ul>
-<li><a href="http://374632897.github.io/rgrms/" target="_blank" rel="noopener">仿制的第一个站（前东家官网）</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/DEMO/testGradint.html" target="_blank" rel="noopener">实现慕课网官网楼层动态效果</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/DEMO/index123.html" target="_blank" rel="noopener">对指定文字设置样式</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/DEMO/drawAEgg.html" target="_blank" rel="noopener">画个鸡蛋吧</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/games/color.html" target="_blank" rel="noopener">颜色块儿</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/games/bonus.html" target="_blank" rel="noopener">点个转盘</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/layout/3Columns.html" target="_blank" rel="noopener">3列布局， 左右定宽，中间自适应</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/richTextEditor.html" target="_blank" rel="noopener">一个简单的富文本编辑器</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/html5APIs/FullScreen.html" target="_blank" rel="noopener">全屏</a></li>
-<li><a href="http://374632897.github.io/just-some-tips/src/测试居中.html" target="_blank" rel="noopener">居中</a></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vcmdybXMv">仿制的第一个站（前东家官网）<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy90ZXN0R3JhZGludC5odG1s">实现慕课网官网楼层动态效果<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy9pbmRleDEyMy5odG1s">对指定文字设置样式<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy9kcmF3QUVnZy5odG1s">画个鸡蛋吧<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2dhbWVzL2NvbG9yLmh0bWw=">颜色块儿<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2dhbWVzL2JvbnVzLmh0bWw=">点个转盘<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2xheW91dC8zQ29sdW1ucy5odG1s">3列布局， 左右定宽，中间自适应<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL3JpY2hUZXh0RWRpdG9yLmh0bWw=">一个简单的富文本编辑器<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2h0bWw1QVBJcy9GdWxsU2NyZWVuLmh0bWw=">全屏<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL+a1i+ivleWxheS4rS5odG1s">居中<i class="fa fa-external-link-alt"></i></span></li>
 <li><a href="http://noteawesome.com/just-some-tips/src/keyCode.html">键码</a></li>
 <li><a href="http://noteawesome.com/algorithms/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%92%E5%BA%8F/%E5%88%9D%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html">算法学习</a></li>
 </ul>
@@ -339,10 +368,10 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/374632897" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Nw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/374632897" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMzc0NjMyODk3" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897"><i class="fab fa-weibo fa-fw"></i>Weibo</span>
       </span>
   </div>
 
@@ -377,7 +406,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">前端小虾蟹</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9waXNjZXMudGhlbWUtbmV4dC5vcmc=">NexT.Pisces</span> 强力驱动
   </div>
 
         
@@ -407,10 +436,21 @@
 
 <script src="/js/next-boot.js"></script>
 
+<script src="/js/bookmark.js"></script>
+
 
 
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
 
@@ -434,6 +474,10 @@
     })();
   }
   </script>
+
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

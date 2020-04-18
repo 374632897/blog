@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="伪类">
@@ -109,6 +109,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -123,11 +124,6 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
 
   </li>
-        <li class="menu-item menu-item-关于">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
         <li class="menu-item menu-item-标签">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
@@ -138,17 +134,50 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
 
     
   <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 
     <main class="main">
@@ -208,7 +237,7 @@
 
       
         <p><a name="fpf9D"></a></p>
-<h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes" target="_blank" rel="noopener">伪类</a></h2><p><a name="WYyXj"></a></p>
+<h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTL1BzZXVkby1jbGFzc2Vz">伪类<i class="fa fa-external-link-alt"></i></span></h2><p><a name="WYyXj"></a></p>
 <a id="more"></a> 
 <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>伪类（pseudo）是添加到选择器的关键字，指定<strong>要选择的元素的特殊状态</strong></p>
 <blockquote>
@@ -229,36 +258,36 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:active" target="_blank" rel="noopener">:active</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzphY3RpdmU=">:active<i class="fa fa-external-link-alt"></i></span></td>
 <td>被用户激活的元素，用鼠标交互时，代表的是用户按下按键和松开按键之间的时间；在多键鼠标的系统中，<strong>只匹配主键</strong></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:host" target="_blank" rel="noopener">:host</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpob3N0">:host<i class="fa fa-external-link-alt"></i></span></td>
 <td>CSS伪类选择包含其内部使用的CSS的shadow DOM的根元素 - 换句话说，这允许你从其shadow DOM中选择一个自定义元素</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:only-child" target="_blank" rel="noopener">:only-child</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpvbmx5LWNoaWxk">:only-child<i class="fa fa-external-link-alt"></i></span></td>
 <td>匹配没有任何兄弟元素的元素（只有1个元素）</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:any-link" target="_blank" rel="noopener">:any-link</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzphbnktbGluaw==">:any-link<i class="fa fa-external-link-alt"></i></span></td>
 <td>代表一个有链接锚点的元素，而不管它是否被访问过，也就是说，它会匹配每一个有 <code>href</code> 属性的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a" target="_blank" rel="noopener"><code>&lt;a&gt;</code></a>、<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area" target="_blank" rel="noopener"><code>&lt;area&gt;</code></a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link" target="_blank" rel="noopener"><code>&lt;link&gt;</code></a> 元素。因此，它会匹配到所有的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:link" target="_blank" rel="noopener"><code>:link</code></a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:visited" target="_blank" rel="noopener"><code>:visited</code></a>。</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:host()" target="_blank" rel="noopener">:host()</a></td>
-<td>选择包含使用这段 CSS 的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Web_Components/Using_shadow_DOM" target="_blank" rel="noopener">Shadow DOM</a> 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）—— 但前提是该函数的参数与选择的阴影宿主相匹配。</td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpob3N0KCk=">:host()<i class="fa fa-external-link-alt"></i></span></td>
+<td>选择包含使用这段 CSS 的 <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvV2ViX0NvbXBvbmVudHMvVXNpbmdfc2hhZG93X0RPTQ==">Shadow DOM<i class="fa fa-external-link-alt"></i></span> 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）—— 但前提是该函数的参数与选择的阴影宿主相匹配。</td>
 <td></td>
 <td></td>
 <td></td>
@@ -271,46 +300,46 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:only-of-type" target="_blank" rel="noopener">:only-of-type</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpvbmx5LW9mLXR5cGU=">:only-of-type<i class="fa fa-external-link-alt"></i></span></td>
 <td><code>:only-of-type</code> 代表了任意一个元素，这个元素没有其他相同类型的兄弟元素。</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:-moz-only-whitespace" target="_blank" rel="noopener">:blank</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzotbW96LW9ubHktd2hpdGVzcGFjZQ==">:blank<i class="fa fa-external-link-alt"></i></span></td>
 <td>匹配没有子节点、仅有空的文本节点、仅有空白符的文本节点的节点</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:optional" target="_blank" rel="noopener">:optional</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpvcHRpb25hbA==">:optional<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示没有required 属性的 input select 或者 textarea</td>
 <td></td>
 <td></td>
-<td><a href="https://jsbin.com/leledulido/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9qc2Jpbi5jb20vbGVsZWR1bGlkby9lZGl0P2h0bWwsY3NzLG91dHB1dA==">demo<i class="fa fa-external-link-alt"></i></span></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:checked" target="_blank" rel="noopener">:checked</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpjaGVja2Vk">:checked<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示任何处于选中状态的<strong>radio</strong>(<code>&lt;input type=&quot;radio&quot;&gt;</code>), <strong>checkbox **(<code>&lt;input type=&quot;checkbox&quot;&gt;</code>) 或(“select”) 元素中的</strong>option **HTML元素(“option”)。</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:hover" target="_blank" rel="noopener">:hover</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpob3Zlcg==">:hover<i class="fa fa-external-link-alt"></i></span></td>
 <td>用户移动到一个元素上（还未激活）；触摸屏上 hover 基本不可用，不同的浏览器上表现不同；</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:out-of-range" target="_blank" rel="noopener">:out-of-range</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpvdXQtb2YtcmFuZ2U=">:out-of-range<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示一个input元素，当值处于属性min和max限定的范围之外; <strong>只适用于拥有范围设定的元素；type = number、range、date、datetime、datetime-local、month、time、week；</strong></td>
 <td></td>
 <td></td>
-<td><a href="https://jsbin.com/mepofaqava/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9qc2Jpbi5jb20vbWVwb2ZhcWF2YS9lZGl0P2h0bWwsY3NzLG91dHB1dA==">demo<i class="fa fa-external-link-alt"></i></span></td>
 </tr>
 <tr>
 <td>:in-range</td>
@@ -320,175 +349,175 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:indeterminate" target="_blank" rel="noopener">:indeterminate</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzppbmRldGVybWluYXRl">:indeterminate<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示状态不确定的表单元素；如表单元素的indeterminate属性值被设置为true；radio中具有相同name值的所有单选按钮都未被选中；处于不确定状态的progress；</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:default" target="_blank" rel="noopener">:default</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpkZWZhdWx0">:default<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示一组相关元素中的默认表单元素</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:defined" target="_blank" rel="noopener">:defined</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpkZWZpbmVk">:defined<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素，shadow DOM</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:invalid" target="_blank" rel="noopener">:invalid</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzppbnZhbGlk">:invalid<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示任意内容未通过验证的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input" target="_blank" rel="noopener"><code>&lt;input&gt;</code></a> 或其他 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form" target="_blank" rel="noopener"><code>&lt;form&gt;</code></a> 元素 .</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:read-only" target="_blank" rel="noopener">:read-only</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpyZWFkLW9ubHk=">:read-only<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示元素不可被用户编辑的状态（如锁定的文本输入框）；注意：该选择器会选择作用域下所有的用户只读的内容，如p、div、span</td>
 <td></td>
 <td></td>
-<td><a href="https://jsbin.com/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9qc2Jpbi5jb20vZWRpdD9odG1sLGNzcyxvdXRwdXQ=">demo<i class="fa fa-external-link-alt"></i></span></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:read-write" target="_blank" rel="noopener">:read-write</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpyZWFkLXdyaXRl">:read-write<i class="fa fa-external-link-alt"></i></span></td>
 <td>同上，只不过用户可以编辑；</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:disabled" target="_blank" rel="noopener">:disabled</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpkaXNhYmxlZA==">:disabled<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示任何被禁用的元素；如果一个元素不能被激活（选择、点击、接受文本输入、获取焦点），则该元素处于禁用状态；对于pointer-events:none 的元素不生效；</td>
 <td></td>
 <td></td>
-<td><a href="https://jsbin.com/gewogurebi/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9qc2Jpbi5jb20vZ2V3b2d1cmViaS9lZGl0P2h0bWwsY3NzLG91dHB1dA==">demo<i class="fa fa-external-link-alt"></i></span></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:lang" target="_blank" rel="noopener">:lang</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpsYW5n">:lang<i class="fa fa-external-link-alt"></i></span></td>
 <td>基于元素语言来匹配页面元素</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:required" target="_blank" rel="noopener">:required</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpyZXF1aXJlZA==">:required<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示拥有required的表单元素</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:last-child" target="_blank" rel="noopener">:last-child</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpsYXN0LWNoaWxk">:last-child<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示作用域下的最后一个子元素</td>
 <td></td>
 <td></td>
-<td><a href="https://jsbin.com/jodanofepe/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9qc2Jpbi5jb20vam9kYW5vZmVwZS9lZGl0P2h0bWwsY3NzLG91dHB1dA==">demo<i class="fa fa-external-link-alt"></i></span></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:empty" target="_blank" rel="noopener">:empty</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzplbXB0eQ==">:empty<i class="fa fa-external-link-alt"></i></span></td>
 <td>代表没有子元素的元素。子元素只可以是元素节点或文本（包括空格）。注释或处理指令都不会产生影响。简单来讲，只要元素中<strong>包含了空格、非注释节点</strong>，就无法匹配上（<strong>不含伪元素，只有伪元素也能匹配</strong>）</td>
 <td></td>
 <td></td>
-<td><a href="https://jsbin.com/batecezako/3/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9qc2Jpbi5jb20vYmF0ZWNlemFrby8zL2VkaXQ/aHRtbCxjc3Msb3V0cHV0">demo<i class="fa fa-external-link-alt"></i></span></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:last-of-type" target="_blank" rel="noopener">:last-of-type</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpsYXN0LW9mLXR5cGU=">:last-of-type<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示作用域下给定类型的最后一个元素</td>
 <td></td>
 <td></td>
-<td><a href="https://jsbin.com/qujogojiyi/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9qc2Jpbi5jb20vcXVqb2dvaml5aS9lZGl0P2h0bWwsY3NzLG91dHB1dA==">demo<i class="fa fa-external-link-alt"></i></span></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:root" target="_blank" rel="noopener">:root</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpyb290">:root<i class="fa fa-external-link-alt"></i></span></td>
 <td>匹配文档元素的根元素，对于HTML来说， :root 就表示html，只不过优先级更高（相比于html）；实际上，html[lang=””] 来选择的话，优先级就高于:root了；</td>
 <td></td>
 <td></td>
-<td><a href="https://jsbin.com/yoxujocibo/1/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9qc2Jpbi5jb20veW94dWpvY2liby8xL2VkaXQ/aHRtbCxjc3Msb3V0cHV0">demo<i class="fa fa-external-link-alt"></i></span></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:enabled" target="_blank" rel="noopener">:enabled</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzplbmFibGVk">:enabled<i class="fa fa-external-link-alt"></i></span></td>
 <td>对比上面的:disabled</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:scope" target="_blank" rel="noopener">:scope</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpzY29wZQ==">:scope<i class="fa fa-external-link-alt"></i></span></td>
 <td>一般在js中使用，用于选择元素本身，如querySelectorAll(‘:scope &gt; div’)</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:target" target="_blank" rel="noopener">:target</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzp0YXJnZXQ=">:target<i class="fa fa-external-link-alt"></i></span></td>
 <td>代表唯一的一个页面元素，其id与当前URL片段匹配；配合锚点可以做很多有趣的事情，参见示例</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:first-child" target="_blank" rel="noopener">:first-child</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpmaXJzdC1jaGlsZA==">:first-child<i class="fa fa-external-link-alt"></i></span></td>
 <td>一组兄弟元素中的第一个元素</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:first-of-type" target="_blank" rel="noopener">:fist-of-type</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpmaXJzdC1vZi10eXBl">:fist-of-type<i class="fa fa-external-link-alt"></i></span></td>
 <td>一组兄弟元素中其类型的第一个元素</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:not" target="_blank" rel="noopener">:not</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpub3Q=">:not<i class="fa fa-external-link-alt"></i></span></td>
 <td>用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为_反选伪类<em>（</em>negation pseudo-class_）。</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-child" target="_blank" rel="noopener">:nth-child(an+b)</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpudGgtY2hpbGQ=">:nth-child(an+b)<i class="fa fa-external-link-alt"></i></span></td>
 <td>从1开始排序，匹配 an + b（n = 0, 1, 2, 3, 4） 的元素；可以选择odd/even(偶数)</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:valid" target="_blank" rel="noopener">:valid</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzp2YWxpZA==">:valid<i class="fa fa-external-link-alt"></i></span></td>
 <td>参考:invalid</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus" target="_blank" rel="noopener">:focus</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpmb2N1cw==">:focus<i class="fa fa-external-link-alt"></i></span></td>
 <td>获得焦点的元素，仅适用于焦点元素本身</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-last-child" target="_blank" rel="noopener">:nth-last-child()</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpudGgtbGFzdC1jaGlsZA==">:nth-last-child()<i class="fa fa-external-link-alt"></i></span></td>
 <td>从兄弟节点从后往前匹配</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-within" target="_blank" rel="noopener">:focus-within</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpmb2N1cy13aXRoaW4=">:focus-within<i class="fa fa-external-link-alt"></i></span></td>
 <td>表示一个元素获得焦点或者一个元素的后代元素获得焦点</td>
 <td></td>
 <td></td>
-<td><a href="https://jsbin.com/qipocipuha/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9qc2Jpbi5jb20vcWlwb2NpcHVoYS9lZGl0P2h0bWwsY3NzLG91dHB1dA==">demo<i class="fa fa-external-link-alt"></i></span></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-last-of-type" target="_blank" rel="noopener">:nth-last-of-type</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpudGgtbGFzdC1vZi10eXBl">:nth-last-of-type<i class="fa fa-external-link-alt"></i></span></td>
 <td>从结尾处开始计数</td>
 <td></td>
 <td></td>
@@ -502,7 +531,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-of-type" target="_blank" rel="noopener">:nth-of-type</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpudGgtb2YtdHlwZQ==">:nth-of-type<i class="fa fa-external-link-alt"></i></span></td>
 <td>针对具有一组兄弟节点的标签, 用 n 来筛选出在一组兄弟节点的位置。</td>
 <td></td>
 <td></td>
@@ -517,18 +546,18 @@
 <ul>
 <li><strong>元素的选中</strong></li>
 </ul>
-<p>如果 <code>&lt;selector&gt;:pseudo-class</code> 选中的是 <code>&lt;selector&gt;</code> 本身， <code>&lt;selector&gt; :pseudo-class</code> 才       会选中后代元素，参见<a href="https://jsbin.com/peberefosu/1/edit?html,css,output" target="_blank" rel="noopener">demo</a></p>
+<p>如果 <code>&lt;selector&gt;:pseudo-class</code> 选中的是 <code>&lt;selector&gt;</code> 本身， <code>&lt;selector&gt; :pseudo-class</code> 才       会选中后代元素，参见<span class="exturl" data-url="aHR0cHM6Ly9qc2Jpbi5jb20vcGViZXJlZm9zdS8xL2VkaXQ/aHRtbCxjc3Msb3V0cHV0">demo<i class="fa fa-external-link-alt"></i></span></p>
 <ul>
 <li>文本打印<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:left" target="_blank" rel="noopener">left</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:right" target="_blank" rel="noopener">right</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:first" target="_blank" rel="noopener">first</a> - 打印文档的时候，第一页的样式</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpsZWZ0">left<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpyaWdodA==">right<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQ1NTLzpmaXJzdA==">first<i class="fa fa-external-link-alt"></i></span> - 打印文档的时候，第一页的样式</li>
 <li></li>
 </ul>
 </li>
 </ul>
 <p><a name="zgfUF"></a></p>
-<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a><a href="https://drafts.csswg.org/selectors-3/#pseudo-elements" target="_blank" rel="noopener">伪元素</a></h2><p><a name="K11G0"></a></p>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a><span class="exturl" data-url="aHR0cHM6Ly9kcmFmdHMuY3Nzd2cub3JnL3NlbGVjdG9ycy0zLyNwc2V1ZG8tZWxlbWVudHM=">伪元素<i class="fa fa-external-link-alt"></i></span></h2><p><a name="K11G0"></a></p>
 <h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>伪元素（pseudo-element）是一个附加至选择器末的关键词，允许你对被选择元素的特定部分修改样式。</p>
 <blockquote>
 <p>Pseudo-elements create abstractions about the document tree beyond those specified by the document language. For instance, document languages do not offer mechanisms to access the first letter or first line of an element’s content. Pseudo-elements allow authors to refer to this otherwise inaccessible information. Pseudo-elements may also provide authors a way to refer to content that does not exist in the source document (e.g., the <a href="https://drafts.csswg.org/selectors-3/#sel-before" target="_blank" rel="noopener"><code>::before</code></a> and <a href="https://drafts.csswg.org/selectors-3/#sel-after" target="_blank" rel="noopener"><code>::after</code></a> pseudo-elements give access to generated content).<br>A pseudo-element is made of two colons (<code>::</code>) followed by the name of the pseudo-element.</p>
@@ -537,7 +566,7 @@
 <p>This <code>::</code> notation is introduced by the current document in order to establish a discrimination between pseudo-classes and pseudo-elements. For compatibility with existing style sheets, user agents must also accept the previous one-colon notation for pseudo-elements introduced in CSS levels 1 and 2 (namely, <a href="https://drafts.csswg.org/selectors-3/#sel-first-line" target="_blank" rel="noopener"><code>:first-line</code></a>, <a href="https://drafts.csswg.org/selectors-3/#first-letter0" target="_blank" rel="noopener"><code>:first-letter</code></a>, <a href="https://drafts.csswg.org/selectors-3/#sel-before" target="_blank" rel="noopener"><code>:before</code></a> and <a href="https://drafts.csswg.org/selectors-3/#sel-after" target="_blank" rel="noopener"><code>:after</code></a>). This compatibility is not allowed for the new pseudo-elements introduced in this specification.</p>
 </blockquote>
 <blockquote>
-<p>Only one pseudo-element may appear per selector, and if present it must appear after the sequence of simple selectors that represents the <a href="https://drafts.csswg.org/selectors-3/#subject" target="_blank" rel="noopener">subjects</a> of the selector. </p>
+<p>Only one pseudo-element may appear per selector, and if present it must appear after the sequence of simple selectors that represents the <span class="exturl" data-url="aHR0cHM6Ly9kcmFmdHMuY3Nzd2cub3JnL3NlbGVjdG9ycy0zLyNzdWJqZWN0">subjects<i class="fa fa-external-link-alt"></i></span> of the selector. </p>
 </blockquote>
 <p><a name="vFkWg"></a></p>
 <h3 id="类别-1"><a href="#类别-1" class="headerlink" title="类别"></a>类别</h3><table>
@@ -612,7 +641,7 @@
 <h2 id="伪类和伪元素的区别"><a href="#伪类和伪元素的区别" class="headerlink" title="伪类和伪元素的区别"></a>伪类和伪元素的区别</h2><p>区别在于最后是否产生一个真实的DOM节点（这个节点可能对用户可见， 如::before、::after，也有可能对用户不可见，如::first-letter、::first-line），如::first-letter虽然对DOM  不可见，但是用户代理实际上是对满足条件的元素增加了一个虚拟标签</p>
 <p>参考：</p>
 <ul>
-<li><a href="https://drafts.csswg.org/selectors-3/" target="_blank" rel="noopener">CSS 3 规范</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kcmFmdHMuY3Nzd2cub3JnL3NlbGVjdG9ycy0zLw==">CSS 3 规范<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 
     </div>
@@ -728,10 +757,10 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/374632897" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Nw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/374632897" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMzc0NjMyODk3" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897"><i class="fab fa-weibo fa-fw"></i>Weibo</span>
       </span>
   </div>
 
@@ -766,7 +795,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">前端小虾蟹</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9waXNjZXMudGhlbWUtbmV4dC5vcmc=">NexT.Pisces</span> 强力驱动
   </div>
 
         
@@ -796,10 +825,21 @@
 
 <script src="/js/next-boot.js"></script>
 
+<script src="/js/bookmark.js"></script>
+
 
 
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
 
@@ -823,6 +863,10 @@
     })();
   }
   </script>
+
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

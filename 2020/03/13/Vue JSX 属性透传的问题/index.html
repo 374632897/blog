@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="参见以下代码： 123456789101112131415161718function createButtons &#x3D; (h, buttons) &#x3D;&gt; props &#x3D;&gt; &amp;#123;	return (    &lt;span style&#x3D;&quot;display: flex; justify-content: space-between;&quot;&gt;&lt;!-- more --&gt;">
@@ -113,6 +113,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -127,11 +128,6 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
 
   </li>
-        <li class="menu-item menu-item-关于">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
         <li class="menu-item menu-item-标签">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
@@ -142,17 +138,50 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
 
     
   <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 
     <main class="main">
@@ -228,7 +257,7 @@
 <p>handleModify 很好理解，就是我们希望绑定的事件，但是在上面的listeners里面，还添加了click事件，其对应的函数为<br><img align=left height=183 width=358 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069576328-6b080a8d-1272-44ed-b2fa-6549000dbc63.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
 <p>因此，上面的方式，最后会把 onClick 封装到 attrs里面。</p>
 <p>在 Vue 组件挂载会后，首次更新时，Vue 会把相应的属性更新到 DOM 上.<br><img align=left height=566 width=1243 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584094932644-aef4e315-6d46-4990-a672-57ceadae838a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<p>因此，最后会调用 ele.setAttribute(key, value) 来设置组件的属性。这里的key value 都应该是一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DOMString" target="_blank" rel="noopener">DOM String</a>。在这里的场景下， key 是对应的 onClick 字符串，而 value 是一个函数，它被定义为了 Vue 组件上的一个方法。而 Vue 在实例化组件的时候，通过initMethods方法，把对应的 method 通过bind 的方式绑定了vm的上下文。因此，这里的 value，最后是一个Bound function。因此这里会把相应的函数转换为DOM String，具体的转换方法没有找到相应的文档，但是从转换结果来看，是调用了函数的toString方法。而bind返回的函数，它的toString方法，最后会返回一个表示native代码的字符串，也就是</p>
+<p>因此，最后会调用 ele.setAttribute(key, value) 来设置组件的属性。这里的key value 都应该是一个<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL0RPTVN0cmluZw==">DOM String<i class="fa fa-external-link-alt"></i></span>。在这里的场景下， key 是对应的 onClick 字符串，而 value 是一个函数，它被定义为了 Vue 组件上的一个方法。而 Vue 在实例化组件的时候，通过initMethods方法，把对应的 method 通过bind 的方式绑定了vm的上下文。因此，这里的 value，最后是一个Bound function。因此这里会把相应的函数转换为DOM String，具体的转换方法没有找到相应的文档，但是从转换结果来看，是调用了函数的toString方法。而bind返回的函数，它的toString方法，最后会返回一个表示native代码的字符串，也就是</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
 
 <p>因此，最后输出到html里的就变成了以下内容：</p>
@@ -241,8 +270,8 @@
 <p>总结：<br>当出现问题并且不知道导致问题发生的因素时，应先通过<strong>二分法</strong>快速定位到导致问题的代码，然后通过<strong>控制变量，减少场景的影响因子，在控制变量的时候，更需要注意双边其他因子的一致性，</strong>找到问题出现的原因，待解决问题后，再寻根溯源，找到产生问题的根本因素。</p>
 <p>参考： </p>
 <ul>
-<li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick" target="_blank" rel="noopener">https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick</a></li>
-<li><a href="https://w3c.github.io/uievents/#event-type-click" target="_blank" rel="noopener">https://w3c.github.io/uievents/#event-type-click</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9odG1sLnNwZWMud2hhdHdnLm9yZy9tdWx0aXBhZ2Uvd2ViYXBwYXBpcy5odG1sI2hhbmRsZXItb25jbGljaw==">https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93M2MuZ2l0aHViLmlvL3VpZXZlbnRzLyNldmVudC10eXBlLWNsaWNr">https://w3c.github.io/uievents/#event-type-click<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 
     </div>
@@ -360,10 +389,10 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/374632897" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Nw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/374632897" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMzc0NjMyODk3" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897"><i class="fab fa-weibo fa-fw"></i>Weibo</span>
       </span>
   </div>
 
@@ -398,7 +427,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">前端小虾蟹</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9waXNjZXMudGhlbWUtbmV4dC5vcmc=">NexT.Pisces</span> 强力驱动
   </div>
 
         
@@ -428,10 +457,21 @@
 
 <script src="/js/next-boot.js"></script>
 
+<script src="/js/bookmark.js"></script>
+
 
 
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
 
@@ -455,6 +495,10 @@
     })();
   }
   </script>
+
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
