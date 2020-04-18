@@ -1,6 +1,8 @@
 /* global NexT, CONFIG, Velocity */
 
-NexT.boot = {};
+NexT.boot = {
+  hasLoad: false
+};
 
 NexT.boot.registerEvents = function() {
 
@@ -107,8 +109,13 @@ NexT.boot.motion = function() {
   NexT.utils.updateSidebarPosition();
 };
 
-window.addEventListener('DOMContentLoaded', () => {
+const handleLoad = () => {
+  if (NexT.boot.hasLoad) return;
   NexT.boot.registerEvents();
   NexT.boot.refresh();
   NexT.boot.motion();
-});
+  NexT.boot.hasLoad = true;
+}
+
+window.addEventListener('DOMContentLoaded', handleLoad, false);
+window.addEventListener('load', handleLoad, false);

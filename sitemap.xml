@@ -16,14 +16,14 @@
   </url>
   
   <url>
-    <loc>https://noteawesome.com/categories/index.html</loc>
+    <loc>https://noteawesome.com/tags/index.html</loc>
     
     <lastmod>2020-04-18T11:36:41.317Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://noteawesome.com/tags/index.html</loc>
+    <loc>https://noteawesome.com/categories/index.html</loc>
     
     <lastmod>2020-04-18T11:36:41.317Z</lastmod>
     
@@ -44,13 +44,6 @@
   </url>
   
   <url>
-    <loc>https://noteawesome.com/2016/06/03/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E7%9A%84%E5%A6%99%E7%94%A8/</loc>
-    
-    <lastmod>2020-04-18T11:36:41.316Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://noteawesome.com/2016/05/10/%E8%AE%BE%E7%BD%AE-text-overflow-ellipsis-%E5%90%8E%E5%BC%95%E8%B5%B7%E7%9A%84%E6%96%87%E6%9C%AC%E5%AF%B9%E9%BD%90%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2020-04-18T11:36:41.316Z</lastmod>
@@ -58,9 +51,9 @@
   </url>
   
   <url>
-    <loc>https://noteawesome.com/2016/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    <loc>https://noteawesome.com/2016/06/03/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E7%9A%84%E5%A6%99%E7%94%A8/</loc>
     
-    <lastmod>2020-04-18T11:36:41.315Z</lastmod>
+    <lastmod>2020-04-18T11:36:41.316Z</lastmod>
     
   </url>
   
@@ -79,6 +72,13 @@
   </url>
   
   <url>
+    <loc>https://noteawesome.com/2016/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    
+    <lastmod>2020-04-18T11:36:41.315Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://noteawesome.com/2016/05/10/%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E5%8D%95%E5%87%BB%E9%94%9A%E7%82%B9%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%9A%84%E6%95%88%E6%9E%9C/</loc>
     
     <lastmod>2020-04-18T11:36:41.315Z</lastmod>
@@ -86,14 +86,14 @@
   </url>
   
   <url>
-    <loc>https://noteawesome.com/2016/08/15/%E5%9F%BA%E4%BA%8Egit-diff%E7%9A%84eslint%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/</loc>
+    <loc>https://noteawesome.com/2016/07/04/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</loc>
     
     <lastmod>2020-04-18T11:36:41.314Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://noteawesome.com/2016/07/04/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</loc>
+    <loc>https://noteawesome.com/2016/08/15/%E5%9F%BA%E4%BA%8Egit-diff%E7%9A%84eslint%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/</loc>
     
     <lastmod>2020-04-18T11:36:41.314Z</lastmod>
     
@@ -142,6 +142,13 @@
   </url>
   
   <url>
+    <loc>https://noteawesome.com/2016/06/15/chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7timeline%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2020-04-18T11:36:41.312Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://noteawesome.com/2020/03/13/Vue%20JSX%20%E5%B1%9E%E6%80%A7%E9%80%8F%E4%BC%A0%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2020-04-18T11:36:41.312Z</lastmod>
@@ -156,21 +163,7 @@
   </url>
   
   <url>
-    <loc>https://noteawesome.com/2016/06/15/chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7timeline%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2020-04-18T11:36:41.312Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://noteawesome.com/2016/06/03/GitHub%E4%BB%93%E5%BA%93%E7%BB%91%E5%AE%9A%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/</loc>
-    
-    <lastmod>2020-04-18T11:36:41.311Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://noteawesome.com/2016/08/09/Bash-for-windows-%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</loc>
     
     <lastmod>2020-04-18T11:36:41.311Z</lastmod>
     
@@ -185,6 +178,13 @@
   
   <url>
     <loc>https://noteawesome.com/2016/07/04/JS%E6%8E%A7%E5%88%B6%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8/</loc>
+    
+    <lastmod>2020-04-18T11:36:41.311Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://noteawesome.com/2016/08/09/Bash-for-windows-%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</loc>
     
     <lastmod>2020-04-18T11:36:41.311Z</lastmod>
     
