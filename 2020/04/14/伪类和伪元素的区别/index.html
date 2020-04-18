@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="伪类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="伪类和伪元素的区别">
+<meta property="og:url" content="https://noteawesome.com/2020/04/14/%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">
+<meta property="og:site_name" content="藏虚">
+<meta property="og:description" content="伪类">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/434020/1586917127588-4a5da5d6-265b-4d43-ae71-6bb64e30efbe.png">
+<meta property="article:published_time" content="2020-04-14T03:24:24.000Z">
+<meta property="article:modified_time" content="2020-04-18T11:31:53.267Z">
+<meta property="article:author" content="前端小虾蟹">
+<meta property="article:tag" content="每天学习一丢丢~">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/434020/1586917127588-4a5da5d6-265b-4d43-ae71-6bb64e30efbe.png">
+
+<link rel="canonical" href="https://noteawesome.com/2020/04/14/%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>伪类和伪元素的区别 | 藏虚</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">藏虚</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://noteawesome.com/2020/04/14/%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="前端小虾蟹">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏虚">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          伪类和伪元素的区别
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-14 11:24:24" itemprop="dateCreated datePublished" datetime="2020-04-14T11:24:24+08:00">2020-04-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-18 19:31:53" itemprop="dateModified" datetime="2020-04-18T19:31:53+08:00">2020-04-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><a name="fpf9D"></a></p>
+<h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes" target="_blank" rel="noopener">伪类</a></h2><p><a name="WYyXj"></a></p>
+<a id="more"></a> 
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>伪类（pseudo）是添加到选择器的关键字，指定<strong>要选择的元素的特殊状态</strong></p>
+<blockquote>
+<p>The pseudo-class concept is introduced to permit selection based on information that lies outside of the document tree or that cannot be expressed using the other simple selectors.<br>A pseudo-class always consists of a “colon” (<code>:</code>) followed by the name of the pseudo-class and optionally by a value between parentheses.</p>
+</blockquote>
+<blockquote>
+<p>Pseudo-classes are allowed in all sequences of simple selectors contained in a selector. Pseudo-classes are allowed anywhere in sequences of simple selectors, after the leading type selector or universal selector (possibly omitted). Pseudo-class names are case-insensitive. Some pseudo-classes are mutually exclusive, while others can be applied simultaneously to the same element. Pseudo-classes may be dynamic, in the sense that an element may acquire or lose a pseudo-class while a user interacts with the document.</p>
+</blockquote>
+<p><a name="97aHJ"></a></p>
+<h3 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h3><table>
+<thead>
+<tr>
+<th>伪类</th>
+<th>含义</th>
+<th></th>
+<th></th>
+<th>demo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:active" target="_blank" rel="noopener">:active</a></td>
+<td>被用户激活的元素，用鼠标交互时，代表的是用户按下按键和松开按键之间的时间；在多键鼠标的系统中，<strong>只匹配主键</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:host" target="_blank" rel="noopener">:host</a></td>
+<td>CSS伪类选择包含其内部使用的CSS的shadow DOM的根元素 - 换句话说，这允许你从其shadow DOM中选择一个自定义元素</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:only-child" target="_blank" rel="noopener">:only-child</a></td>
+<td>匹配没有任何兄弟元素的元素（只有1个元素）</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:any-link" target="_blank" rel="noopener">:any-link</a></td>
+<td>代表一个有链接锚点的元素，而不管它是否被访问过，也就是说，它会匹配每一个有 <code>href</code> 属性的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a" target="_blank" rel="noopener"><code>&lt;a&gt;</code></a>、<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/area" target="_blank" rel="noopener"><code>&lt;area&gt;</code></a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link" target="_blank" rel="noopener"><code>&lt;link&gt;</code></a> 元素。因此，它会匹配到所有的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:link" target="_blank" rel="noopener"><code>:link</code></a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:visited" target="_blank" rel="noopener"><code>:visited</code></a>。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:host()" target="_blank" rel="noopener">:host()</a></td>
+<td>选择包含使用这段 CSS 的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Web_Components/Using_shadow_DOM" target="_blank" rel="noopener">Shadow DOM</a> 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）—— 但前提是该函数的参数与选择的阴影宿主相匹配。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>最简单的用法是仅将类名放在某些自定义元素实例上，然后将相关的类选择器作为函数参数包含在内。不能将它与后代选择器表达式一起使用，以仅选择特定祖先内部的自定义元素的实例。这是 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:host-context()" target="_blank" rel="noopener"><code>:host-context()</code></a> 的作用。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:only-of-type" target="_blank" rel="noopener">:only-of-type</a></td>
+<td><code>:only-of-type</code> 代表了任意一个元素，这个元素没有其他相同类型的兄弟元素。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:-moz-only-whitespace" target="_blank" rel="noopener">:blank</a></td>
+<td>匹配没有子节点、仅有空的文本节点、仅有空白符的文本节点的节点</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:optional" target="_blank" rel="noopener">:optional</a></td>
+<td>表示没有required 属性的 input select 或者 textarea</td>
+<td></td>
+<td></td>
+<td><a href="https://jsbin.com/leledulido/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:checked" target="_blank" rel="noopener">:checked</a></td>
+<td>表示任何处于选中状态的<strong>radio</strong>(<code>&lt;input type=&quot;radio&quot;&gt;</code>), <strong>checkbox **(<code>&lt;input type=&quot;checkbox&quot;&gt;</code>) 或(“select”) 元素中的</strong>option **HTML元素(“option”)。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:hover" target="_blank" rel="noopener">:hover</a></td>
+<td>用户移动到一个元素上（还未激活）；触摸屏上 hover 基本不可用，不同的浏览器上表现不同；</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:out-of-range" target="_blank" rel="noopener">:out-of-range</a></td>
+<td>表示一个input元素，当值处于属性min和max限定的范围之外; <strong>只适用于拥有范围设定的元素；type = number、range、date、datetime、datetime-local、month、time、week；</strong></td>
+<td></td>
+<td></td>
+<td><a href="https://jsbin.com/mepofaqava/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+</tr>
+<tr>
+<td>:in-range</td>
+<td>同上，只不过刚好相反</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:indeterminate" target="_blank" rel="noopener">:indeterminate</a></td>
+<td>表示状态不确定的表单元素；如表单元素的indeterminate属性值被设置为true；radio中具有相同name值的所有单选按钮都未被选中；处于不确定状态的progress；</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:default" target="_blank" rel="noopener">:default</a></td>
+<td>表示一组相关元素中的默认表单元素</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:defined" target="_blank" rel="noopener">:defined</a></td>
+<td>表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素，shadow DOM</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:invalid" target="_blank" rel="noopener">:invalid</a></td>
+<td>表示任意内容未通过验证的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input" target="_blank" rel="noopener"><code>&lt;input&gt;</code></a> 或其他 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form" target="_blank" rel="noopener"><code>&lt;form&gt;</code></a> 元素 .</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:read-only" target="_blank" rel="noopener">:read-only</a></td>
+<td>表示元素不可被用户编辑的状态（如锁定的文本输入框）；注意：该选择器会选择作用域下所有的用户只读的内容，如p、div、span</td>
+<td></td>
+<td></td>
+<td><a href="https://jsbin.com/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:read-write" target="_blank" rel="noopener">:read-write</a></td>
+<td>同上，只不过用户可以编辑；</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:disabled" target="_blank" rel="noopener">:disabled</a></td>
+<td>表示任何被禁用的元素；如果一个元素不能被激活（选择、点击、接受文本输入、获取焦点），则该元素处于禁用状态；对于pointer-events:none 的元素不生效；</td>
+<td></td>
+<td></td>
+<td><a href="https://jsbin.com/gewogurebi/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:lang" target="_blank" rel="noopener">:lang</a></td>
+<td>基于元素语言来匹配页面元素</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:required" target="_blank" rel="noopener">:required</a></td>
+<td>表示拥有required的表单元素</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:last-child" target="_blank" rel="noopener">:last-child</a></td>
+<td>表示作用域下的最后一个子元素</td>
+<td></td>
+<td></td>
+<td><a href="https://jsbin.com/jodanofepe/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:empty" target="_blank" rel="noopener">:empty</a></td>
+<td>代表没有子元素的元素。子元素只可以是元素节点或文本（包括空格）。注释或处理指令都不会产生影响。简单来讲，只要元素中<strong>包含了空格、非注释节点</strong>，就无法匹配上（<strong>不含伪元素，只有伪元素也能匹配</strong>）</td>
+<td></td>
+<td></td>
+<td><a href="https://jsbin.com/batecezako/3/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:last-of-type" target="_blank" rel="noopener">:last-of-type</a></td>
+<td>表示作用域下给定类型的最后一个元素</td>
+<td></td>
+<td></td>
+<td><a href="https://jsbin.com/qujogojiyi/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:root" target="_blank" rel="noopener">:root</a></td>
+<td>匹配文档元素的根元素，对于HTML来说， :root 就表示html，只不过优先级更高（相比于html）；实际上，html[lang=””] 来选择的话，优先级就高于:root了；</td>
+<td></td>
+<td></td>
+<td><a href="https://jsbin.com/yoxujocibo/1/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:enabled" target="_blank" rel="noopener">:enabled</a></td>
+<td>对比上面的:disabled</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:scope" target="_blank" rel="noopener">:scope</a></td>
+<td>一般在js中使用，用于选择元素本身，如querySelectorAll(‘:scope &gt; div’)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:target" target="_blank" rel="noopener">:target</a></td>
+<td>代表唯一的一个页面元素，其id与当前URL片段匹配；配合锚点可以做很多有趣的事情，参见示例</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:first-child" target="_blank" rel="noopener">:first-child</a></td>
+<td>一组兄弟元素中的第一个元素</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:first-of-type" target="_blank" rel="noopener">:fist-of-type</a></td>
+<td>一组兄弟元素中其类型的第一个元素</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:not" target="_blank" rel="noopener">:not</a></td>
+<td>用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为_反选伪类<em>（</em>negation pseudo-class_）。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-child" target="_blank" rel="noopener">:nth-child(an+b)</a></td>
+<td>从1开始排序，匹配 an + b（n = 0, 1, 2, 3, 4） 的元素；可以选择odd/even(偶数)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:valid" target="_blank" rel="noopener">:valid</a></td>
+<td>参考:invalid</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus" target="_blank" rel="noopener">:focus</a></td>
+<td>获得焦点的元素，仅适用于焦点元素本身</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-last-child" target="_blank" rel="noopener">:nth-last-child()</a></td>
+<td>从兄弟节点从后往前匹配</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-within" target="_blank" rel="noopener">:focus-within</a></td>
+<td>表示一个元素获得焦点或者一个元素的后代元素获得焦点</td>
+<td></td>
+<td></td>
+<td><a href="https://jsbin.com/qipocipuha/edit?html,css,output" target="_blank" rel="noopener">demo</a></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-last-of-type" target="_blank" rel="noopener">:nth-last-of-type</a></td>
+<td>从结尾处开始计数</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-of-type" target="_blank" rel="noopener">:nth-of-type</a></td>
+<td>针对具有一组兄弟节点的标签, 用 n 来筛选出在一组兄弟节点的位置。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><a name="l3DPA"></a></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>链接的几种状态处理（:link、:visited、:hover、:active）</li>
+</ul>
+<p>由于这几种状态可能会被后续声明的规则覆盖，因此为保证样式生效，需要协调好优先级，其设置顺序称之为LVHA顺序 —— <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code></p>
+<ul>
+<li><strong>元素的选中</strong></li>
+</ul>
+<p>如果 <code>&lt;selector&gt;:pseudo-class</code> 选中的是 <code>&lt;selector&gt;</code> 本身， <code>&lt;selector&gt; :pseudo-class</code> 才       会选中后代元素，参见<a href="https://jsbin.com/peberefosu/1/edit?html,css,output" target="_blank" rel="noopener">demo</a></p>
+<ul>
+<li>文本打印<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:left" target="_blank" rel="noopener">left</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:right" target="_blank" rel="noopener">right</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:first" target="_blank" rel="noopener">first</a> - 打印文档的时候，第一页的样式</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p><a name="zgfUF"></a></p>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a><a href="https://drafts.csswg.org/selectors-3/#pseudo-elements" target="_blank" rel="noopener">伪元素</a></h2><p><a name="K11G0"></a></p>
+<h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>伪元素（pseudo-element）是一个附加至选择器末的关键词，允许你对被选择元素的特定部分修改样式。</p>
+<blockquote>
+<p>Pseudo-elements create abstractions about the document tree beyond those specified by the document language. For instance, document languages do not offer mechanisms to access the first letter or first line of an element’s content. Pseudo-elements allow authors to refer to this otherwise inaccessible information. Pseudo-elements may also provide authors a way to refer to content that does not exist in the source document (e.g., the <a href="https://drafts.csswg.org/selectors-3/#sel-before" target="_blank" rel="noopener"><code>::before</code></a> and <a href="https://drafts.csswg.org/selectors-3/#sel-after" target="_blank" rel="noopener"><code>::after</code></a> pseudo-elements give access to generated content).<br>A pseudo-element is made of two colons (<code>::</code>) followed by the name of the pseudo-element.</p>
+</blockquote>
+<blockquote>
+<p>This <code>::</code> notation is introduced by the current document in order to establish a discrimination between pseudo-classes and pseudo-elements. For compatibility with existing style sheets, user agents must also accept the previous one-colon notation for pseudo-elements introduced in CSS levels 1 and 2 (namely, <a href="https://drafts.csswg.org/selectors-3/#sel-first-line" target="_blank" rel="noopener"><code>:first-line</code></a>, <a href="https://drafts.csswg.org/selectors-3/#first-letter0" target="_blank" rel="noopener"><code>:first-letter</code></a>, <a href="https://drafts.csswg.org/selectors-3/#sel-before" target="_blank" rel="noopener"><code>:before</code></a> and <a href="https://drafts.csswg.org/selectors-3/#sel-after" target="_blank" rel="noopener"><code>:after</code></a>). This compatibility is not allowed for the new pseudo-elements introduced in this specification.</p>
+</blockquote>
+<blockquote>
+<p>Only one pseudo-element may appear per selector, and if present it must appear after the sequence of simple selectors that represents the <a href="https://drafts.csswg.org/selectors-3/#subject" target="_blank" rel="noopener">subjects</a> of the selector. </p>
+</blockquote>
+<p><a name="vFkWg"></a></p>
+<h3 id="类别-1"><a href="#类别-1" class="headerlink" title="类别"></a>类别</h3><table>
+<thead>
+<tr>
+<th>伪类</th>
+<th>含义</th>
+<th></th>
+<th></th>
+<th>demo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>::after</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>::before</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>::first-line</td>
+<td>first-line 不会匹配任何真实的DOM元素，只会匹配由用户代理插入的元素（该行为不可见，用户代理会自动插入相应的虚拟标签）</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img align=left height=142 width=567 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1586917127588-4a5da5d6-265b-4d43-ae71-6bb64e30efbe.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>需要注意的是，该选择器只对默认block的元素生效。默认行内的元素，即使设置了该属性，也不会生效。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>::first-letter</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>::selection</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><a name="JJCBD"></a></p>
+<h3 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h3><p><a name="aOpki"></a></p>
+<h2 id="伪类和伪元素的区别"><a href="#伪类和伪元素的区别" class="headerlink" title="伪类和伪元素的区别"></a>伪类和伪元素的区别</h2><p>区别在于最后是否产生一个真实的DOM节点（这个节点可能对用户可见， 如::before、::after，也有可能对用户不可见，如::first-letter、::first-line），如::first-letter虽然对DOM  不可见，但是用户代理实际上是对满足条件的元素增加了一个虚拟标签</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://drafts.csswg.org/selectors-3/" target="_blank" rel="noopener">CSS 3 规范</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%AF%8F%E5%A4%A9%E5%AD%A6%E4%B9%A0%E4%B8%80%E4%B8%A2%E4%B8%A2/" rel="tag"># 每天学习一丢丢~</a>
+          </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/01/%E8%81%8A%E4%B8%80%E8%81%8A%20Same-Site/" rel="prev" title="聊一聊 Same-Site">
+      <i class="fa fa-chevron-left"></i> 聊一聊 Same-Site
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#伪类"><span class="nav-number">1.</span> <span class="nav-text">伪类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类别"><span class="nav-number">1.2.</span> <span class="nav-text">类别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">1.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪元素"><span class="nav-number">2.</span> <span class="nav-text">伪元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类别-1"><span class="nav-number">2.2.</span> <span class="nav-text">类别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他-1"><span class="nav-number">2.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪类和伪元素的区别"><span class="nav-number">3.</span> <span class="nav-text">伪类和伪元素的区别</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="前端小虾蟹"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">前端小虾蟹</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/374632897" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/374632897" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">前端小虾蟹</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id    : 22652,
+      el    : 'wpac-rating',
+      color : 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'c6d5a9589cebe7e64c62',
+      clientSecret: '1c8d945d937fad172818708c39870c08acb43616',
+      repo        : 'star',
+      owner       : '374632897',
+      admin       : ['374632897'],
+      id          : 'c5cdf705d813bb8838bf276a165df4c7',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

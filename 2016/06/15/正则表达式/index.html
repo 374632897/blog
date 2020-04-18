@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="RegExp学习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="https://noteawesome.com/2016/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:site_name" content="藏虚">
+<meta property="og:description" content="RegExp学习总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-06-15T05:56:14.000Z">
+<meta property="article:modified_time" content="2020-04-18T11:31:53.269Z">
+<meta property="article:author" content="前端小虾蟹">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://noteawesome.com/2016/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>正则表达式 | 藏虚</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">藏虚</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://noteawesome.com/2016/06/15/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="前端小虾蟹">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏虚">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          正则表达式
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-06-15 13:56:14" itemprop="dateCreated datePublished" datetime="2016-06-15T13:56:14+08:00">2016-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-18 19:31:53" itemprop="dateModified" datetime="2020-04-18T19:31:53+08:00">2020-04-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="RegExp学习总结"><a href="#RegExp学习总结" class="headerlink" title="RegExp学习总结"></a>RegExp学习总结</h1><a id="more"></a>
+
+<h2 id="字符集合（Character-Sets）"><a href="#字符集合（Character-Sets）" class="headerlink" title="字符集合（Character Sets）"></a>字符集合（Character Sets）</h2><ul>
+<li>[xyz] 字符组|字符集合， 匹配集合中的任意一个字符， 可以使用连字符’-‘来指定一个范围。 如<code>[abcd]</code>可以表示为<code>[a-d]</code>。</li>
+<li>[^xyz] 反义字符组， 匹配中括号中不存在的内容</li>
+</ul>
+<h2 id="字符边界-Boundaries"><a href="#字符边界-Boundaries" class="headerlink" title="字符边界 (Boundaries)"></a>字符边界 (Boundaries)</h2><ul>
+<li><p>^  匹配字符串开头</p>
+</li>
+<li><p>$  匹配字符串结尾</p>
+</li>
+<li><p>\b 匹配一个零宽单词边界 如一个字母和一个空格之间， 一个字符串的开头和结尾</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'et'</span>.match(<span class="regexp">/\bet/</span>); <span class="comment">// ["et"]</span></span><br><span class="line"><span class="string">'testfsad'</span>.match(<span class="regexp">/\bet/</span>) <span class="comment">// null</span></span><br></pre></td></tr></table></figure></li>
+<li><p>\B 匹配一个零宽非单词边界， 如两个字母之间或两个空格之间</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'   '</span>.match(<span class="regexp">/\B/</span>); <span class="comment">// four white-spaces</span></span><br><span class="line"><span class="comment">// ["", "", "", ""];</span></span><br></pre></td></tr></table></figure>
+<h2 id="分组-Grouping-和-反向引用-back-references"><a href="#分组-Grouping-和-反向引用-back-references" class="headerlink" title="分组(Grouping) 和 反向引用(back references)"></a>分组(Grouping) 和 反向引用(back references)</h2></li>
+<li><p><code>(x)</code>  </p>
+<p>匹配x并且捕获匹配项。 捕获组(Capturing groups)有性能惩罚， 再次访问被捕获的子字符串最好使用非捕获符号</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'Yes, I wanna earn more money'</span>;</span><br><span class="line">/(\S)*\s/.test(str); </span><br><span class="line"><span class="built_in">RegExp</span>.$<span class="number">1</span> <span class="comment">// ","</span></span><br><span class="line"></span><br><span class="line">/(\S*)\s/.test(str);</span><br><span class="line"><span class="built_in">RegExp</span>.$<span class="number">1</span> <span class="comment">// '"Yes,"</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>\n</code><br>n是一个正整数。 指向正则表达式中第n个括号（从左边开始数）中匹配的字符串 <strong>这里有点问题</strong></p>
+</li>
+<li><p><code>(?:x)</code><br>匹配x不会捕获匹配项， 非匹配项不能通过RegExp的$1-$9属性访问到。 </p>
+<h2 id="数量词"><a href="#数量词" class="headerlink" title="数量词"></a>数量词</h2></li>
+<li><p><code>x*</code><br>匹配前面的模式x 0次或多次</p>
+</li>
+<li><p><code>x+</code><br>匹配前面的模式x 1次或多次， 等价于{1,}</p>
+</li>
+<li><p><code>x*?</code>, <code>x+?</code><br>匹配前面的模式， 但是是执行最小可能匹配</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"Yes, I wanna earn more money"</span>;</span><br><span class="line">str.match(<span class="regexp">/\w*?/</span>); <span class="comment">// [""]    // 最小匹配模式， 可匹配0次</span></span><br><span class="line">str.match(<span class="regexp">/\w*/</span>);  <span class="comment">// ["Yes"]  </span></span><br><span class="line"></span><br><span class="line">str.match(<span class="regexp">/\w+/</span>);  <span class="comment">// ["Yes"]</span></span><br><span class="line">str.match(<span class="regexp">/\w+?/</span>); <span class="comment">// ["Y"]   // 最小匹配模式， 只匹配1次</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>x?</code><br>匹配前面的模式x 0次或1次 。 如果在数量词<code>*</code>, <code>+</code>, <code>?</code>或者<code>{}</code>任意一个后面添加该符号（?）, 将会使匹配模式变为非贪婪模式(non-greedy)， 即匹配次数最小化， 默认匹配模式是贪婪模式， 即匹配次数最大化。 </p>
+</li>
+<li><p><code>x(?=y)</code> 只有当x后面紧跟着y的时候才会进行匹配， 但是y不会成为匹配内容的一部分  . 注意要加括号</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> str = <span class="string">'hello world, I feel so good today'</span>;</span><br><span class="line">  str.match(<span class="regexp">/feel(?= so)/</span>); <span class="comment">// ["feel"]</span></span><br><span class="line">  <span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">* `</span>x(?!y)<span class="string">`</span></span><br><span class="line"><span class="string">  只有当x后面不是紧跟着y的时候才会进行匹配</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br><span class="line">  str.match(<span class="regexp">/feel(?!so)/</span>); <span class="comment">// ["feel"] // 注意： 中间没有空格</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>x|y</code><br>匹配x或者y  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str.match(<span class="regexp">/hello|world/</span>);         <span class="comment">// ["hello"]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 此时匹配的是[]内的每一个可能值， 只匹配1次的话就匹配到了'h'， 而此时'|'也只被当成一个普通的字符</span></span><br><span class="line">str.match(<span class="regexp">/[hello|world]/</span>);       <span class="comment">// ["h"] </span></span><br><span class="line"><span class="string">'jfsdalk|sajd'</span>.match(<span class="regexp">/[fa|fj]/g</span>); <span class="comment">// ["j", "f", "a", "|", "a", "j"]</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>x{n}</code><br>n是一个正整数， 前面的模式连续出现n次时匹配</p>
+</li>
+<li><p><code>x{n,}</code></p>
+</li>
+<li><p><code>x{n,y}</code><br> <strong>Note:</strong> 这里n和y之间不能有空格  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从url中提取子域名</span></span><br><span class="line"><span class="keyword">var</span> url = <span class="string">"http://xxx.domain.com"</span>;</span><br><span class="line">url.replace(<span class="regexp">/https?:\/\/([^.]*)\..*/</span>, <span class="string">'$1'</span>); <span class="comment">// "xxx"</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>参见  <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank" rel="noopener">MDN – 正则表达式</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/06/12/%E5%85%B3%E4%BA%8Eoverflow-x%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E4%B8%9C%E8%A5%BF/" rel="prev" title="关于overflow-x的一点小东西">
+      <i class="fa fa-chevron-left"></i> 关于overflow-x的一点小东西
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/06/15/chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7timeline%E4%BD%BF%E7%94%A8/" rel="next" title="chrome开发工具timeline使用">
+      chrome开发工具timeline使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RegExp学习总结"><span class="nav-number">1.</span> <span class="nav-text">RegExp学习总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符集合（Character-Sets）"><span class="nav-number">1.1.</span> <span class="nav-text">字符集合（Character Sets）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符边界-Boundaries"><span class="nav-number">1.2.</span> <span class="nav-text">字符边界 (Boundaries)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组-Grouping-和-反向引用-back-references"><span class="nav-number">1.3.</span> <span class="nav-text">分组(Grouping) 和 反向引用(back references)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数量词"><span class="nav-number">1.4.</span> <span class="nav-text">数量词</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="前端小虾蟹"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">前端小虾蟹</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/374632897" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/374632897" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">前端小虾蟹</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id    : 22652,
+      el    : 'wpac-rating',
+      color : 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'c6d5a9589cebe7e64c62',
+      clientSecret: '1c8d945d937fad172818708c39870c08acb43616',
+      repo        : 'star',
+      owner       : '374632897',
+      admin       : ['374632897'],
+      id          : '1d5ea4a5c070369fdca2aa3936d378bc',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

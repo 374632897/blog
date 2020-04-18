@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="什么是SameSite?    A request is “same-site” if its target’s URI’s origin’s registrable">
+<meta property="og:type" content="article">
+<meta property="og:title" content="聊一聊 Same-Site">
+<meta property="og:url" content="https://noteawesome.com/2020/04/01/%E8%81%8A%E4%B8%80%E8%81%8A%20Same-Site/index.html">
+<meta property="og:site_name" content="藏虚">
+<meta property="og:description" content="什么是SameSite?    A request is “same-site” if its target’s URI’s origin’s registrable">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/434020/1585746235216-bb779b81-b398-4299-a233-f0bf550bf837.png">
+<meta property="article:published_time" content="2020-04-01T04:52:06.000Z">
+<meta property="article:modified_time" content="2020-04-18T11:31:53.270Z">
+<meta property="article:author" content="前端小虾蟹">
+<meta property="article:tag" content="每天学习一丢丢~">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/434020/1585746235216-bb779b81-b398-4299-a233-f0bf550bf837.png">
+
+<link rel="canonical" href="https://noteawesome.com/2020/04/01/%E8%81%8A%E4%B8%80%E8%81%8A%20Same-Site/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>聊一聊 Same-Site | 藏虚</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">藏虚</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://noteawesome.com/2020/04/01/%E8%81%8A%E4%B8%80%E8%81%8A%20Same-Site/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="前端小虾蟹">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏虚">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          聊一聊 Same-Site
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-01 12:52:06" itemprop="dateCreated datePublished" datetime="2020-04-01T12:52:06+08:00">2020-04-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-18 19:31:53" itemprop="dateModified" datetime="2020-04-18T19:31:53+08:00">2020-04-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><a name="xYJLg"></a></p>
+<h2 id="什么是SameSite"><a href="#什么是SameSite" class="headerlink" title="什么是SameSite?"></a>什么是SameSite?</h2><blockquote>
+<p>   A request is “same-site” if its target’s URI’s origin’s registrable</p>
+</blockquote>
+<a id="more"></a> 
+<blockquote>
+<p>   domain is an exact match for the request’s client’s “site for<br>   cookies”, or if the request has no client.  The request is otherwise</p>
+</blockquote>
+<blockquote>
+<p>   “cross-site”.</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<blockquote>
+<p>   For a given request (“request”), the following algorithm returns</p>
+</blockquote>
+<blockquote>
+<p>   “same-site” or “cross-site”:</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<blockquote>
+<ol>
+<li>If “request”‘s client is “null”, return “same-site”.</li>
+</ol>
+</blockquote>
+<blockquote>
+</blockquote>
+<blockquote>
+<pre><code>Note that this is the case for navigation triggered by the user</code></pre></blockquote>
+<blockquote>
+<pre><code>directly (e.g. by typing directly into a user agent&apos;s address</code></pre></blockquote>
+<blockquote>
+<pre><code>bar).</code></pre></blockquote>
+<blockquote>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Let “site” be “request”‘s client’s “site for cookies” (as defined</li>
+</ol>
+</blockquote>
+<blockquote>
+<pre><code>in the following sections).</code></pre></blockquote>
+<blockquote>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Let “target” be the registrable domain of “request”‘s current</li>
+</ol>
+</blockquote>
+<blockquote>
+<pre><code>url.</code></pre><ol start="4">
+<li>If “site” is an exact match for “target”, return “same-site”.</li>
+</ol>
+</blockquote>
+<blockquote>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Return “cross-site”.</li>
+</ol>
+</blockquote>
+<blockquote>
+</blockquote>
+<blockquote>
+<p>   The request’s client’s “site for cookies” is calculated depending</p>
+</blockquote>
+<blockquote>
+<p>   upon its client’s type, as described in the following subsections:</p>
+</blockquote>
+<p>如上文所示，只有当请求的站点的 origin 和 当前浏览器站点地址origin 完全匹配时，才叫做 same-site，具体采用以下策略：</p>
+<ul>
+<li>request client 为null（如用户直接在浏览器中输入url），则为same-site</li>
+</ul>
+<p><a name="caR0y"></a></p>
+<h3 id="请求类型"><a href="#请求类型" class="headerlink" title="请求类型"></a>请求类型</h3><p><a name="9HzOh"></a></p>
+<h4 id="文档请求（Document-based-requests）"><a href="#文档请求（Document-based-requests）" class="headerlink" title="文档请求（Document-based requests）"></a>文档请求（Document-based requests）</h4><p>只有用户自己输入的URL才是暴露给用户的唯一安全的上下文。该URL对应的domain也应该是用户信任的站点。我们将其标记为 top-level-site。</p>
+<p>因此，对于这样的请求，其 “site for cookies” 可以认为就是 top-level-site。</p>
+<p>对于top-level-site中嵌套的上下文，只有当每一个文档及其祖先文档的origin与当前top-level-site相同时，site-for-cookies才等于top-level-site，否则则为空字符串。</p>
+<p><a name="HJ9BT"></a></p>
+<h4 id="Worker-请求"><a href="#Worker-请求" class="headerlink" title="Worker 请求"></a>Worker 请求</h4><p><a name="P3k1S"></a></p>
+<h5 id="专用以及共享的worker"><a href="#专用以及共享的worker" class="headerlink" title="专用以及共享的worker"></a>专用以及共享的worker</h5><p>专用的worker都绑定了唯一的文档，因此这种类型的worker发出的请求（importScripts、XHR、fetch等）其site-for-cookies 就是绑定文档的site。</p>
+<p>共享的worker可能一次性绑定了多个文档，这些文档的 “site-for-cookies”值可能都不一致，在这种情况下，最后会返回一个空字符串，当所有值都相同的时候，则返回相同的这个值。</p>
+<p>简而言之，只要有一个文档的 document-site 和 worker 注册的site 不一致，那么就返回空字符串。</p>
+<p><a name="rarjN"></a></p>
+<h5 id="ServiceWorker"><a href="#ServiceWorker" class="headerlink" title="ServiceWorker"></a>ServiceWorker</h5><p>返回注册 worker 的 origin 的host</p>
+<p>从 Chrome 51 开始，浏览器的 Cookie 新增加了一个SameSite属性，用来防止 CSRF 攻击和用户追踪。</p>
+<p><code>**Set-Cookie: CookieName=CookieValue; SameSite=Strict;**</code> </p>
+<p>该属性有三个值：Strict、Lax、None</p>
+<p><a name="S1loy"></a></p>
+<h2 id="值"><a href="#值" class="headerlink" title="值"></a>值</h2><p><a name="zlrzJ"></a></p>
+<h3 id="Strict"><a href="#Strict" class="headerlink" title="Strict"></a>Strict</h3><p>只有在第一方（宿主）上下文才会发送Cookie。第三方站点初始化的请求都不会携带Cookie。包含从宿主环境打开的链接 —— 如在a.b.com打开了，a.c.com的页面，那么在刚刚打开的这个页面中， SameSite 为 Strict 的 Cookie也不会被发送， 因为它是由B打开的。只有用户主动输入a.c.com的链接的情况下，SameSite 为 Strict 的Cookie才会被发送。</p>
+<blockquote>
+<p>不确定是否是根据document.referrer判断的，因为该属性为只读属性</p>
+</blockquote>
+<p><a name="AjbJH"></a></p>
+<h3 id="Lax"><a href="#Lax" class="headerlink" title="Lax"></a>Lax</h3><p>TOP-LEVEL NAVIGATIONS 下的请求允许发送Cookie；以及被第三方站点初始化的get请求（导航到目标网址的 Get 请求）也允许发送 Cookie；现代浏览器默认为它。<br><img align=left height=673 width=1920 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1585746235216-bb779b81-b398-4299-a233-f0bf550bf837.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p><a name="TNDSs"></a></p>
+<h3 id="None"><a href="#None" class="headerlink" title="None"></a>None</h3><p>在所有的上下文当中 Cookie 都允许被发送，跨域也允许。<br>None 值在以前作为浏览器的默认值，但是在最近浏览器默认值变为了Lax，以防范CSRF攻击。<br>最新的浏览器要求在指定SameSite为None的同时，要求指定Secure属性；</p>
+<p><a name="ljITx"></a></p>
+<h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><ul>
+<li>Node 要发送多个相同名称的Header（如Set Cookie）的haul，需要使用 <code>res.setHeader(headerName, valueArray)</code> 的方式，并且如果后续调用writeHead的话，不能重复添加相应的Header</li>
+</ul>
+<p><a name="xsiL8"></a></p>
+<h3 id="示例代码："><a href="#示例代码：" class="headerlink" title="示例代码："></a>示例代码：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="keyword">const</span> content = <span class="built_in">require</span>(<span class="string">'fs'</span>).readFileSync(<span class="string">'./index.html'</span>, <span class="string">'utf-8'</span>)</span><br><span class="line"><span class="keyword">const</span> body = <span class="string">``</span></span><br><span class="line"></span><br><span class="line">http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(req.headers)</span><br><span class="line">  res.setHeader(<span class="string">'Set-Cookie'</span>, [<span class="string">'lax=lax; SameSite=Lax'</span>, <span class="string">'strict=strict; SameSite=Strict'</span>, <span class="string">'uid5555=100;domain=.com;'</span>])</span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;</span><br><span class="line">    <span class="string">'Content-Type'</span>: <span class="string">'application/json'</span>,</span><br><span class="line">    <span class="comment">// 请求携带凭据的时候，这里不能为*</span></span><br><span class="line">    <span class="string">'Access-Control-Allow-Origin'</span>: <span class="string">'http://a.b.com'</span>,</span><br><span class="line">    <span class="comment">// 当没有该请求头，但是实际请求发生的时候携带了凭证的话，也会报错</span></span><br><span class="line">    <span class="string">'Access-Control-Allow-Credentials'</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'Access-Control-Allow-Methods'</span>: <span class="string">'GET,POST'</span>,</span><br><span class="line">    <span class="comment">// allow-headers 非必须；传递了也不会有影响；</span></span><br><span class="line">    <span class="comment">// 'Access-Control-Allow-Headers': 'content-type,x-requested-with', /</span></span><br><span class="line">    <span class="comment">// 'Set-Cookie': ,</span></span><br><span class="line">  &#125;)</span><br><span class="line">  res.end(<span class="built_in">JSON</span>.stringify(&#123; <span class="attr">status</span>: <span class="string">'ok'</span> &#125;))</span><br><span class="line">&#125;).listen(<span class="number">3002</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="keyword">const</span> content = <span class="built_in">require</span>(<span class="string">'fs'</span>).readFileSync(<span class="string">'./index.html'</span>, <span class="string">'utf-8'</span>)</span><br><span class="line"><span class="keyword">const</span> body = <span class="string">``</span></span><br><span class="line"></span><br><span class="line">http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'here......'</span>)</span><br><span class="line">  <span class="comment">// res.statusCode = 301</span></span><br><span class="line">  <span class="comment">// res.setHeader('Location', 'http://localhost')</span></span><br><span class="line">  res.statusCode = <span class="number">200</span>;</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">'fs'</span>).createReadStream(<span class="string">'./index.html'</span>).pipe(res)</span><br><span class="line">  <span class="comment">// res.end(content)</span></span><br><span class="line">&#125;).listen(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>测试跨域233<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span> 点我跨域<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"post"</span>&gt;</span> 点我跨域POST<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://a.meituan.com/c/age"</span>&gt;</span>这是一个标签<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>).onclick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="actionscript">    fetch(<span class="string">'http://a.meituan.com/getUser'</span>, &#123;</span></span><br><span class="line"><span class="actionscript">      credentials: <span class="string">'include'</span>,</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="javascript">  <span class="built_in">document</span>.getElementById(<span class="string">'post'</span>).onclick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="actionscript">    fetch(<span class="string">'http://a.meituan.com/getUser'</span>, &#123;</span></span><br><span class="line"><span class="actionscript">      method: <span class="string">'post'</span>,</span></span><br><span class="line"><span class="actionscript">      credentials: <span class="string">'include'</span>,</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>参考文档：</p>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite" target="_blank" rel="noopener">SameSite</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%AF%8F%E5%A4%A9%E5%AD%A6%E4%B9%A0%E4%B8%80%E4%B8%A2%E4%B8%A2/" rel="tag"># 每天学习一丢丢~</a>
+          </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/13/Vue%20JSX%20%E5%B1%9E%E6%80%A7%E9%80%8F%E4%BC%A0%E7%9A%84%E9%97%AE%E9%A2%98/" rel="prev" title="Vue JSX 属性透传的问题">
+      <i class="fa fa-chevron-left"></i> Vue JSX 属性透传的问题
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/14/%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB/" rel="next" title="伪类和伪元素的区别">
+      伪类和伪元素的区别 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是SameSite"><span class="nav-number">1.</span> <span class="nav-text">什么是SameSite?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#请求类型"><span class="nav-number">1.1.</span> <span class="nav-text">请求类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文档请求（Document-based-requests）"><span class="nav-number">1.1.1.</span> <span class="nav-text">文档请求（Document-based requests）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Worker-请求"><span class="nav-number">1.1.2.</span> <span class="nav-text">Worker 请求</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#专用以及共享的worker"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">专用以及共享的worker</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ServiceWorker"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">ServiceWorker</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#值"><span class="nav-number">2.</span> <span class="nav-text">值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Strict"><span class="nav-number">2.1.</span> <span class="nav-text">Strict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lax"><span class="nav-number">2.2.</span> <span class="nav-text">Lax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#None"><span class="nav-number">2.3.</span> <span class="nav-text">None</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备注"><span class="nav-number">3.</span> <span class="nav-text">备注</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#示例代码："><span class="nav-number">3.1.</span> <span class="nav-text">示例代码：</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="前端小虾蟹"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">前端小虾蟹</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/374632897" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/374632897" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">前端小虾蟹</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id    : 22652,
+      el    : 'wpac-rating',
+      color : 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'c6d5a9589cebe7e64c62',
+      clientSecret: '1c8d945d937fad172818708c39870c08acb43616',
+      repo        : 'star',
+      owner       : '374632897',
+      admin       : ['374632897'],
+      id          : '877bc9dd7fa70f4c246173de9d078dfd',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
