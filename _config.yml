@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 哎呀标题迷路了
+title: 藏虚
 subtitle:
 description:
 author: 前端小虾蟹
@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://noteawesome.com
+url: https://noteawesome.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -45,8 +45,8 @@ highlight:
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
+category_map: true
+tag_map: true
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -63,7 +63,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+## git clone git@github.com:iissnan/hexo-theme-next.git --depth=1
+## https://github.com/theme-next/hexo-theme-next/releases
+theme: next-plus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
