@@ -1,0 +1,23 @@
+a {
+  transition: color ease-out .2s;
+}
+@media (max-width: 991px) {
+  .content-wrap  {
+    min-height: calc(100vh - 74px - 96px);
+  }
+}
+
+@media (min-width: 991px) {
+  .content-wrap  {
+    min-height: calc(100vh - 96px);
+  }
+}
+
+p {
+  overflow: auto;
+}
+a.fancybox::after{
+  content: '';
+  display: table;
+  clear: both;
+}

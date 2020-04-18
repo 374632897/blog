@@ -6,9 +6,14 @@
     "version": "4.2.0"
   },
   "scripts": {
-    "sync": "node ./node_modules/yuque2hexo/src/",
+    "sync": "y2hsync",
     "start": "hexo server",
-    "build": "hexo g"
+    "build": "hexo g",
+    "deploy": "hexo deploy"
+  },
+  "yuqueToHexo": {
+    "more": "100",
+    "include": "ec5qup,wskwb4,mcdq8k,dsxet2,ign13y,xzy5tt,igqwte"
   },
   "dependencies": {
     "hexo": "4.2.0",
@@ -22,5 +27,8 @@
     "hexo-renderer-marked": "1.0.0",
     "hexo-renderer-stylus": "1.0.0",
     "hexo-server": "1.0.0"
+  },
+  "devDependencies": {
+    "yuque-to-hexo": "1.0.1"
   }
 }
