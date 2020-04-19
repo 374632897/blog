@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.0">
-<link rel="preconnect" href="https://zz.bdstatic.com" >
+<link rel="dns-prefetch" href="https://zz.bdstatic.com" >
 <link rel="preconnect" href="https://hm.baidu.com" >
 <link rel="preconnect" href="https://www.google-analytics.com" >
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -103,6 +103,7 @@
   .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
+
 
 </head>
 
@@ -638,5 +639,14 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
 });
 </script>
 
+  <script>
+  // Check that service workers are supported
+  if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+  </script>
 </body>
 </html>
