@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2015小记</title>
-    <url>/2016/02/01/2015%E5%B0%8F%E8%AE%B0/</url>
-    <content><![CDATA[<p>算算日子，从9月份接触前端至今，已经过了有5个月了。到现在，想到自己走上程序员这条路的缘由，都觉得满是惊奇。 </p>
-<p>仔细说起来，还得从大四的那段时间开始说起。原本自己是准备去当兵的，为此，还在大二的时候做了近视手术（话说从来很少向家里开口要钱的我，当初要钱做手术的时候，都觉得脸上烧的不行）。因为有了这样的念想，大四也没怎么找工作，其实也有找过，可是核电几巨头都看不上俺o╯□╰o。虽然传说中大学生当兵，只要没太大的问题，一般都能过的，不过为了以防万一，我还是随便签了一份工作。哦，对了，在3月份的时候，因为觉得没什么事情做，还去考了个公务员，虽然也进面了，但是因为和当兵体检的时间冲突，就没有报名面试。</p>
-<a id="more"></a>  
-
-
-<p>毕业之后，等到7月1号体检完了便回了家，然后等啊等，等到了8月3号，通知我去复检。这个时候我还抱着幻想，以为只是上面的抽查而已，应该能过的。 结果去了之后，告诉我心电图不正常，要重新检查一遍，检查完之后又让我回去等消息，这一等便等到了18号，告诉我没有通过体检。当时的心情，怎么说呢，感觉自己整个人一下子就被人给掏空了。盼了这么久，却没盼到自己想要的结果。之后我便慌了， 毕竟已经毕业有一个多月了，原本捉摸着能够成功去部队的话，这段时间我还可以用陪伴家人的理由来宽慰自己。可是现在部队也去不成了，自己也是成年人了，如果继续在家里呆着啃老的话，我是无论如何也不肯的。想起自己当初签的那份工作，便打了电话给那边的HR， 结果HR说她现在不方便，让我直接联系老总（后来才知道，原来她已经辞职走了），我又给老总打了电话，他告诉我这个事情需要公司协商一下，让我等消息。等到了19号的时候，那边通知我过去的时候给他们说一声，随后我便买了21号去北京的票。或许当时也是心里太慌了吧， 做起事情来都是火急火燎的， 巴不得马上离开家出去打拼去。 </p>
-<p>到了这边之后， 因为是刚刚来，没什么事情做，然后整天就在办公室里坐着，看着一大堆的说明书，还全是英文的，头大啊→_→，每天上下班时间也是规定死的，又因为住的地方就在公司楼上，所以一天到晚大把大把的时间。一想到自己都是出来工作的人了，总不能白白虚度光阴吧。然后便开始找东西看。。。忘了是从哪儿听到的网易云课堂，总之是在上面找了一些视频来看，看了许多，最后对十八哥的div + css布局的内容比较感兴趣， 便好好的看了， 结果好像到现在都没把那段视频看完。总之知道了那是web前端的内容之后便直接去了百度贴吧（当初考公务员的时候就是从贴吧里边找资源的来着），希望在里面看看别人是怎么学的。。。结果还淘到了好东西——网易前端微专业的课程， 官方售价好像是1000多， 我是直接用百度云下下来看了。。。 还走w3school上面看了html,css,javascript的教程什么， 现在也时不时地上去看。</p>
-<p>对这个行业接触了一段时间之后， 我发现我是深深的喜欢上了它，甚至有几次因为碰到了问题找不到原因，结果连饭都忘记吃了，等我问题解决完了想起吃饭的时候，饭也已经冷了。在这样一条道路上，最大的问题便是没有人带，靠自己一个人摸索，碰到了问题，也得自己百度， 或者走群里面问或者就是自己改改改，虽然麻烦了点，不过收获也是巨大的，巩固了知识点，同时那种依靠自己成功解决问题之后的快乐也是极为让人享受的。 </p>
-<p>然后9月底的时候买了JAVASCRIPT高级程序设计，原本是准备国庆七天的时间把书给啃完的，结果好像那几天赶上琅琊榜热播？？反正最后7天完了之后我连一半都没啃到， 等到国庆节快结束的时候， 我这心里可是。。。担心不已啊。。</p>
-<p>久了之后， 公司自然也就给安排活儿了。一般就是跑腿儿，不过这一跑跑的有点远，从密云跑到房山，也就是从北京东北方向跑到西南方向，坐车也要坐两三个小时。  其实最开始的时候， 我以为我是能够适应出差的（虽然这只是小差）， 毕竟出差多好啊，公司给报销， 自己还能到处跑，见识各个地方的风土人情，真是爽。可是当自己真正的出过几次之后，就觉得自己实在是不能接受出差了。一来以我这挑食的尿性，出一次差，连吃饭都是个问题了，一般早上随便吃一点儿，然后饿到回来之后自己弄，二来，觉得一出差就得坐车坐车坐车，大好青春就浪费在坐车上了，实在是不划算。再加上那一段时间觉得自己学的前端知识勉勉强强能看了，并且有了瓶颈，心里太浮躁， 并且也找不到学习的方向了， 再这样下去自己也只是重复做着某一件事情而已， 不会有太大的提升的。 于是我便有了辞职的打算。 </p>
-<p>然后我开始投简历啊， 51， 智联，拉勾，周伯通，大街，哦，对了还有个5858这玩意儿响应速度就是快，当天投的，当天就收到了回应，只不过人家不是招你去工作的， 而是招你去培训的， 培训费都得1W+ 呢。。本来对58的印象就不是很好，结果这一来就更讨厌58了。 走智联上投了那么多，是没有一家回我的，毕竟以我这非科班的出身，又才接触行业一个多月的经历，谁会要我呢是吧。了两三天没收到通知之后，自己也就老老实实地跑去搬砖去了（确实是搬砖，铅砖，普通砖头大小，一块儿26斤，o╯□╰o。期间也收到了两次面试通知， 可是人家都只在工作日面试，而我这么一新来的，也不好意思开口跟领导说，领导，我请个小假去面个小试行不行是吧，所以最后这事儿也是不了了之了，我捉摸着还是继续巩固一下知识吧。结果这没过多久自己心里又悸动了，因为觉得自己无法忍受现在这样的重复的看不到未来的工作，并且自己那段时间也确实没学到什么东西，于是便下定决心，破釜沉舟，直接把工作辞掉然后再找工作，因为如果要是像这样继续下去，就算自己再收到面试邀请的话，也没有去面试的时间，所以还不如直接辞了赌一把呢。于是说干就干，当天便开始新一轮投简历攻势，我居然又投了58，没事儿，骚扰电话就骚扰电话吧，万一一不小心，瞎猫碰到死耗子，我真被HR给相中了呢。同时也开始找房子， 毕竟现在住的是公司的房子，而且工作之后也肯定是会换地方的。结果谁曾想，这一次的效率这么高，头一天投了简历，第二天就收到了HR的私信，而且还都是大街上的，让我给他们发自己的个人简历和作品过去，随后我就把自己仿制的公司的官网给打包发了过去。 等了大概有一天左右吧，有一家公司就打电话问我一些问题啊什么的，后来还问我什么时候能够面试，最后约了周六，而另外一家公司就不了了之了。 </p>
-<p>具体的面试过程就不说了， 最后我是来到了这家公司， 也很感谢现东家不嫌弃我这个当时只有两个月的自学经历的小菜鸟。 </p>
-<p>到了这边之后 ， 感觉好像一下子有人引导了（其实也没啥引导，还是自学，只是有了个方向而已，毕竟大家平时都有着自己的事情），总之觉得自己需要学的东西太多太多了，然后就被需求牵着鼻子走，需要什么就补什么。。。其实刚来那段时间都是在学Backbone。值得庆幸的是， 我来到的第一家公司，产品是web应用，做UI的也是用的sketch，因此我并没有沦为一个苦逼的切图仔，所以可以花更多的时间来学习一些必要的东西，而不是重复的切图切图切图，测量测量测量。那段时间，自己整个人都是干劲满满。觉得这样的生活才有意义。 甚至我还因此而为大学四年虚度的光阴懊悔不已，如果我能够早一日接触到前端的话，或许。。或许。。。也没那么多或许。还是老老实实地码代码吧。 </p>
-<p>最近这两天自己的心里又开始浮躁了，因为自己不是科班出身的，觉得自己要比别人更努力才能超越别人，所以总是给自己太多的压力， 想要一口气吃成一个大胖子， 连JS都还没啃完呢， 就想要开始啃php,nodejs了。而只是前端这一块儿，也还有那么多需要学习的东西， 各种框架（虽说原生JS好， 可是框架这玩意儿找工作的时候能加分啊）层出不穷， 还有ES6， 打包管理工具，微信开发， 移动开发 等等等等一大堆东西，所以自己这一口下去，饭是吃到了，却差点把自己给噎死，得不偿失，什么都没学到，反而把自己给折磨得没个人样儿了 。所以这两天心里总是浮躁的紧呢。也就把这一篇自己一直想写却又不知道怎么写的东西给磨出来了。算是借此平息一下自己那悸动的内心吧。 </p>
-<p>每次纳兹碰到比自己强大的对手， 被对方打的不要不要的的时候，总会飚一句，“我燃起来了”。我感觉我现在也燃起来了，只不过我面对的不是对手，而是一个又一个的挑战，是那一个又一个的晋级的阶梯，迈过它们，我的职业技能会有所提升，未来也就会更加明朗。最大的挑战还是自己，别搞到最后，自己把自己给折磨死了，那可就闹了个大笑话了。因为有了渴望拥有和想要守护的东西，所以，2016，加油吧， 希望新的一年里， 自己的能力能有质的提升。 </p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2019.12.23（关键词：Socket）</title>
     <url>/2019/12/23/2019.12.23%EF%BC%88%E5%85%B3%E9%94%AE%E8%AF%8D%EF%BC%9ASocket%EF%BC%89/</url>
     <content><![CDATA[<p><a name="7NnIC"></a></p>
@@ -57,6 +34,22 @@
 ]]></content>
       <tags>
         <tag>每天学习一丢丢~</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS控制光标移动</title>
+    <url>/2016/07/04/JS%E6%8E%A7%E5%88%B6%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8/</url>
+    <content><![CDATA[<p>网上的那些人也真的是够了， 复制粘贴什么的都习以为常， 就算是抄一个东西， 难道不也该先验证一下人家的是不是对的么， 走网上搜一个光标移动位置的问题， 搜索结果一帕拉， 而且都是惊人地相似， 但是放到浏览器里面， 根本就不能够跑！！！！！！！！！！！！！！</p>
+<a id="more"></a>
+<p>然后自己最后还是老老实实地看书， 恩， 找到了一个方法哈。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> sel = <span class="built_in">window</span>.getSelection(),</span><br><span class="line">  range = <span class="built_in">document</span>.createRange(),</span><br><span class="line">  div = $(<span class="string">'div'</span>);</span><br><span class="line"></span><br><span class="line">range.selectNodeContents(div);</span><br><span class="line">sel.addRange(range);</span><br><span class="line">sel.collapseToEnd();</span><br></pre></td></tr></table></figure>
+
+
+<p>这个针对<code>contenteditable</code>元素是有效的， 但是在<code>textarea</code>下， 使用<code>range</code>好像选不了其范围， 所以不能够操作， 不知道是不是方法错了， 不过在选中了文本框文本的情况下， 还是可以移动光标的。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> textarea = $(<span class="string">'textarea'</span>);</span><br><span class="line">textarea.select();</span><br><span class="line"><span class="comment">// 也可以使用这段代码来设置选中范围， 然后就方便控制其光标位置了。</span></span><br><span class="line"><span class="comment">// textarea.setSelectionRange(0, 12); // 选中文本框内容的0, 12</span></span><br><span class="line"><span class="built_in">window</span>.getSelection().collapseToStart(); <span class="comment">// 光标移动到开始位置</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -129,6 +122,118 @@
       <tags>
         <tag>GitHub Pages</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Vue JSX 属性透传的问题</title>
+    <url>/2020/03/13/Vue%20JSX%20%E5%B1%9E%E6%80%A7%E9%80%8F%E4%BC%A0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>参见以下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createButtons</span> = (<span class="params">h, buttons</span>) =&gt; <span class="title">props</span> =&gt; </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (</span><br><span class="line">    &lt;span style=<span class="string">"display: flex; justify-content: space-between;"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt; </span><br><span class="line">      &#123;buttons.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">        &lt;mtd-button</span><br><span class="line">          &#123;...&#123; <span class="attr">attrs</span>: item &#125;&#125;</span><br><span class="line">          key=&#123;index&#125;</span><br><span class="line">          onClick=&#123;() =&gt; item.onClick(props)&#125;</span><br><span class="line">          disabled=&#123;item.__disabled&#125;</span><br><span class="line">        &gt;</span><br><span class="line">          &#123;item.text&#125;</span><br><span class="line">        &lt;<span class="regexp">/mtd-button&gt;</span></span><br><span class="line"><span class="regexp">      ))&#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>span&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">createButtons(<span class="keyword">this</span>.$createElement, [</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">'修改'</span>,</span><br><span class="line">    onClick: <span class="keyword">this</span>.handleModify,</span><br><span class="line">    size: <span class="string">'small'</span>,</span><br><span class="line">    disabled: <span class="function"><span class="params">props</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> auditStatus.isOffline(props.row.status)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
+<p>编译后</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">renderedButtons.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'function'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled(props);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'boolean'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> h(<span class="string">"span"</span>, &#123;</span><br><span class="line">      <span class="string">"style"</span>: <span class="string">"display: flex; justify-content: space-between;"</span></span><br><span class="line">    &#125;, [renderedButtons.map(<span class="function"><span class="keyword">function</span> (<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> h(<span class="string">"mtd-button"</span>, &#123;</span><br><span class="line">        <span class="string">"attrs"</span>: _objectSpread(&#123;&#125;, item, &#123;</span><br><span class="line">          <span class="string">"disabled"</span>: item.__disabled</span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="string">"key"</span>: index,</span><br><span class="line">        <span class="string">"on"</span>: &#123;</span><br><span class="line">          <span class="string">"click"</span>: <span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> item.onClick === <span class="string">'function'</span>) &#123;</span><br><span class="line">              item.onClick(props);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, [item.text]);</span><br><span class="line">    &#125;)]);</span><br></pre></td></tr></table></figure>
+
+<p>最后，在我们点击修改按钮的时候，控制台报错：<br><img align=left height=44 width=661 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069608768-4858754d-5ab5-49f5-9d04-4e7c7f806705.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Uncaught <span class="built_in">SyntaxError</span>: <span class="built_in">Function</span> statements <span class="built_in">require</span> a <span class="function"><span class="keyword">function</span> <span class="title">name</span></span></span><br></pre></td></tr></table></figure>
+
+<p>在这里createButtons 中的某一项传递了onClick这个参数，那么在对应的渲染函数里面，最后传递给组件的是什么样的呢？</p>
+<img align=left height=236 width=458 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069494907-9d16d049-804e-4233-aee2-cd6089530db5.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" />
+
+<p>handleModify 很好理解，就是我们希望绑定的事件，但是在上面的listeners里面，还添加了click事件，其对应的函数为<br><img align=left height=183 width=358 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069576328-6b080a8d-1272-44ed-b2fa-6549000dbc63.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p>因此，上面的方式，最后会把 onClick 封装到 attrs里面。</p>
+<p>在 Vue 组件挂载会后，首次更新时，Vue 会把相应的属性更新到 DOM 上.<br><img align=left height=566 width=1243 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584094932644-aef4e315-6d46-4990-a672-57ceadae838a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p>因此，最后会调用 ele.setAttribute(key, value) 来设置组件的属性。这里的key value 都应该是一个<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL0RPTVN0cmluZw==">DOM String<i class="fa fa-external-link-alt"></i></span>。在这里的场景下， key 是对应的 onClick 字符串，而 value 是一个函数，它被定义为了 Vue 组件上的一个方法。而 Vue 在实例化组件的时候，通过initMethods方法，把对应的 method 通过bind 的方式绑定了vm的上下文。因此，这里的 value，最后是一个Bound function。因此这里会把相应的函数转换为DOM String，具体的转换方法没有找到相应的文档，但是从转换结果来看，是调用了函数的toString方法。而bind返回的函数，它的toString方法，最后会返回一个表示native代码的字符串，也就是</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
+
+<p>因此，最后输出到html里的就变成了以下内容：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"function () &#123; [native code] &#125;"</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>我们知道，在一个元素定义了onclick属性的情况下，点击的时候，会将其属性值当作js脚本来执行。因此，当我们点击按钮的时候，会执行上面的脚本</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
+
+<p>然而这个脚本是非法的，不说函数体，定义一个函数有函数表达式和函数声明两种方式，而上面的这种方式只能作为匿名函数被调用，在这里被当成了函数声明，因此就报错了。<br><img align=left height=33 width=721 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584096578955-c936ce31-0948-4739-84c2-f977fa0a900a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>Vue updateAttrs<br>el.setAttribute(key, value)</p>
+<p>总结：<br>当出现问题并且不知道导致问题发生的因素时，应先通过<strong>二分法</strong>快速定位到导致问题的代码，然后通过<strong>控制变量，减少场景的影响因子，在控制变量的时候，更需要注意双边其他因子的一致性，</strong>找到问题出现的原因，待解决问题后，再寻根溯源，找到产生问题的根本因素。</p>
+<p>参考： </p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9odG1sLnNwZWMud2hhdHdnLm9yZy9tdWx0aXBhZ2Uvd2ViYXBwYXBpcy5odG1sI2hhbmRsZXItb25jbGljaw==">https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93M2MuZ2l0aHViLmlvL3VpZXZlbnRzLyNldmVudC10eXBlLWNsaWNr">https://w3c.github.io/uievents/#event-type-click<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>每天学习一丢丢~</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>base64了解一下</title>
+    <url>/2019/12/22/base64%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B/</url>
+    <content><![CDATA[<p>代码：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Ny9kZW1vcy9ibG9iL21hc3Rlci9lbmNyeXB0L2Jhc2U2NC5qcw==">https://github.com/374632897/demos/blob/master/encrypt/base64.js<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a> 
+
+<p>在平时的工作中，base64使用场景比较多，比如文件上传。那么，base64到底是个什么东西？</p>
+<p>通常来讲，我们平时使用的字符集是utf-8，而对于JavaScript中的binary string 而言，其使用的是ASCII扩展字符集。标准的ASCII字符集只有128个字符（2^7），而ASCII扩展字符集则包含了256个字符。</p>
+<p>使用String.prototype.charCodeAt 方法，可以获取到相应字符的码点。</p>
+<p>而base64，其字面意思就是使用64个字符来对输入内容进行描述（实际上应该是65个字符，A-Za-z0-9，以及+/总共64个字符，但是最后可能还需要使用=进行补位）。对于二进制字符串来说，可能包含256个字符，所以当使用base64来对二进制字符串进行编码的时候，就需要将256个字符描述的内容使用64个字符来进行描述。</p>
+<p>简单来讲，就是<strong>把3个8bit的数据用4个6bit的数据来进行表示。</strong></p>
+<p>我们知道， 256 = 2 ^8，64 = 2 ^6, 因此当我们把二进制字符串的每个字符使用二进制来进行描述，并确保其填充到8位之后，再将相应的字符串以6位为单位进行分组，针对分组后的字符串再进行填充，填充到8位，这样就可以用64位字符编码来对其进行描述了。</p>
+<p><strong>在电子邮件中，每隔76个字符，还需要添加一个回车来进行换行。</strong></p>
+<p>以下以字符串“He”为模板进行步骤描述：</p>
+<ol>
+<li><p>输入字符串 ‘He’</p>
+</li>
+<li><p>针对每个字符串，调用<code>String.prototype.charCodeAt</code>方法，获取其码点   </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> charsCode = <span class="string">'He'</span>.split(<span class="string">''</span>).map(<span class="function"><span class="params">item</span> =&gt;</span> item.charCodeAt(<span class="number">0</span>))</span><br><span class="line"><span class="comment">// [72, 101]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将获取到的码点用二进制来表示，并填充成8位</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> binaryAry = charsCode.map(<span class="function"><span class="params">item</span> =&gt;</span> item.toString(<span class="number">2</span>))</span><br><span class="line"><span class="comment">// ["1001000", "1100101"]</span></span><br><span class="line"><span class="comment">// ["01001000", "01100101"]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将获得的二进制字符串数组进行合并并以6个为单位进行分组，在这里需要注意的是，<strong>如果合并后的二进制字符串不是3的整数的话，那么需要在末尾用0来进行填充</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">"01001000"</span>, <span class="string">"01100101"</span>]</span><br><span class="line"><span class="string">'0100100001100101'</span>.length <span class="comment">// 16</span></span><br><span class="line"><span class="string">'010010000110010100'</span> <span class="comment">// 末尾填充</span></span><br><span class="line"><span class="comment">// 010010 000110 010100</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><del>针对分组后的字符串，使用0将其填充到8位</del></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 010010 000110 010100</span></span><br><span class="line"><span class="comment">// 00010010 00000110 00010100</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将最后得到的二进制字符串转换为十进制</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 010010 000110 010100</span></span><br><span class="line"><span class="string">'010010 000110 010100'</span>.split(<span class="string">' '</span>).map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">parseInt</span>(item, <span class="number">2</span>))</span><br><span class="line"><span class="comment">// [18, 6, 20]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将得到的十进制数字从base64字母表中进行查找，得到对应的字符</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">a.map(<span class="function"><span class="params">item</span> =&gt;</span> b64Ary[item])</span><br><span class="line"><span class="comment">// ["S", "G", "U"]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>判断得到的结果是否为4的倍数，如果不是，使用=号进行补位 或者说 原数据的长度是否为3的倍数，如果不是则补位（为1，则为两个==，为2则为1个=）</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ["S", "G", "U"]</span></span><br><span class="line"><span class="comment">// SGU</span></span><br><span class="line"><span class="comment">// SGU=</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>最后，转换完成，将 He 转换为了 SGU=</p>
+<p>从上面的步骤来看，可能我们会有以下疑问：</p>
+<ul>
+<li>第4步中为什么合并后的字符串需要是3的倍数？</li>
+</ul>
+<p>因为需要将3个字节编码为4个字节</p>
+<ul>
+<li>第8步中为什么最后的base64字符串需要为4的倍数？</li>
+</ul>
+<p>同上，最后一段base64编码代表的是若干个字符，而编码规则便是以4为单位的</p>
+<ul>
+<li>以上考虑的是针对二进制的，那么针对utf-8的字符串，要做base64处理的话，应该怎么做呢？</li>
+</ul>
+<p><strong>在使用base64编码后，编码后的数据相比于原数据会多出大概1/3的内容，因为原本的3个字符变成了4个字符，因此（4 - 3）/ 3 = 1/3</strong><br>**<br>另外一种实现方式：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hdGhpYXNieW5lbnMvYmFzZTY0L2Jsb2IvbWFzdGVyL3NyYy9iYXNlNjQuanM=">https://github.com/mathiasbynens/base64/blob/master/src/base64.js<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpYm9va3Mub3JnL3dpa2kvQWxnb3JpdGhtX0ltcGxlbWVudGF0aW9uL01pc2NlbGxhbmVvdXMvQmFzZTY0I0phdmFzY3JpcHQ=">带注释的版本<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> encode = <span class="function"><span class="keyword">function</span>(<span class="params">input</span>) </span>&#123;</span><br><span class="line">		input = <span class="built_in">String</span>(input);</span><br><span class="line">		<span class="keyword">if</span> (<span class="regexp">/[^\0-\xFF]/</span>.test(input)) &#123;</span><br><span class="line">			<span class="comment">// Note: no need to special-case astral symbols here, as surrogates are</span></span><br><span class="line">			<span class="comment">// matched, and the input is supposed to only contain ASCII anyway.</span></span><br><span class="line">			error(</span><br><span class="line">				<span class="string">'The string to be encoded contains characters outside of the '</span> +</span><br><span class="line">				<span class="string">'Latin1 range.'</span></span><br><span class="line">			);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">var</span> padding = input.length % <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">var</span> output = <span class="string">''</span>;</span><br><span class="line">		<span class="keyword">var</span> position = <span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">var</span> a;</span><br><span class="line">		<span class="keyword">var</span> b;</span><br><span class="line">		<span class="keyword">var</span> c;</span><br><span class="line">		<span class="keyword">var</span> buffer;</span><br><span class="line">		<span class="comment">// Make sure any padding is handled outside of the loop.</span></span><br><span class="line">		<span class="keyword">var</span> length = input.length - padding;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">while</span> (++position &lt; length) &#123;</span><br><span class="line">			<span class="comment">// Read three bytes, i.e. 24 bits.</span></span><br><span class="line">			a = input.charCodeAt(position) &lt;&lt; <span class="number">16</span>;</span><br><span class="line">			b = input.charCodeAt(++position) &lt;&lt; <span class="number">8</span>;</span><br><span class="line">			c = input.charCodeAt(++position);</span><br><span class="line">			buffer = a + b + c;</span><br><span class="line">			<span class="comment">// Turn the 24 bits into four chunks of 6 bits each, and append the</span></span><br><span class="line">			<span class="comment">// matching character for each of them to the output.</span></span><br><span class="line">			output += (</span><br><span class="line">				TABLE.charAt(buffer &gt;&gt; <span class="number">18</span> &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				TABLE.charAt(buffer &gt;&gt; <span class="number">12</span> &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				TABLE.charAt(buffer &gt;&gt; <span class="number">6</span> &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				TABLE.charAt(buffer &amp; <span class="number">0x3F</span>)</span><br><span class="line">			);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (padding == <span class="number">2</span>) &#123;</span><br><span class="line">			a = input.charCodeAt(position) &lt;&lt; <span class="number">8</span>;</span><br><span class="line">			b = input.charCodeAt(++position);</span><br><span class="line">			buffer = a + b;</span><br><span class="line">			output += (</span><br><span class="line">				TABLE.charAt(buffer &gt;&gt; <span class="number">10</span>) +</span><br><span class="line">				TABLE.charAt((buffer &gt;&gt; <span class="number">4</span>) &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				TABLE.charAt((buffer &lt;&lt; <span class="number">2</span>) &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				<span class="string">'='</span></span><br><span class="line">			);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (padding == <span class="number">1</span>) &#123;</span><br><span class="line">			buffer = input.charCodeAt(position);</span><br><span class="line">			output += (</span><br><span class="line">				TABLE.charAt(buffer &gt;&gt; <span class="number">2</span>) +</span><br><span class="line">				TABLE.charAt((buffer &lt;&lt; <span class="number">4</span>) &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				<span class="string">'=='</span></span><br><span class="line">			);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> output;</span><br><span class="line">	&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>参考：</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvQmFzZTY0">维基百科 - Base64<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>每天学习一丢丢~</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>chrome开发工具timeline使用</title>
+    <url>/2016/06/15/chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7timeline%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vd2ViL3Rvb2xzL2Nocm9tZS1kZXZ0b29scy9wcm9maWxlL2V2YWx1YXRlLXBlcmZvcm1hbmNlL3RpbWVsaW5lLXRvb2w=">原文地址<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
   </entry>
   <entry>
     <title>Understanding ECMAScript6读书笔记</title>
@@ -524,53 +629,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue JSX 属性透传的问题</title>
-    <url>/2020/03/13/Vue%20JSX%20%E5%B1%9E%E6%80%A7%E9%80%8F%E4%BC%A0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>参见以下代码：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createButtons</span> = (<span class="params">h, buttons</span>) =&gt; <span class="title">props</span> =&gt; </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (</span><br><span class="line">    &lt;span style=<span class="string">"display: flex; justify-content: space-between;"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt; </span><br><span class="line">      &#123;buttons.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">        &lt;mtd-button</span><br><span class="line">          &#123;...&#123; <span class="attr">attrs</span>: item &#125;&#125;</span><br><span class="line">          key=&#123;index&#125;</span><br><span class="line">          onClick=&#123;() =&gt; item.onClick(props)&#125;</span><br><span class="line">          disabled=&#123;item.__disabled&#125;</span><br><span class="line">        &gt;</span><br><span class="line">          &#123;item.text&#125;</span><br><span class="line">        &lt;<span class="regexp">/mtd-button&gt;</span></span><br><span class="line"><span class="regexp">      ))&#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>span&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">createButtons(<span class="keyword">this</span>.$createElement, [</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">'修改'</span>,</span><br><span class="line">    onClick: <span class="keyword">this</span>.handleModify,</span><br><span class="line">    size: <span class="string">'small'</span>,</span><br><span class="line">    disabled: <span class="function"><span class="params">props</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> auditStatus.isOffline(props.row.status)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
-
-<p>编译后</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">renderedButtons.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'function'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled(props);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'boolean'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> h(<span class="string">"span"</span>, &#123;</span><br><span class="line">      <span class="string">"style"</span>: <span class="string">"display: flex; justify-content: space-between;"</span></span><br><span class="line">    &#125;, [renderedButtons.map(<span class="function"><span class="keyword">function</span> (<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> h(<span class="string">"mtd-button"</span>, &#123;</span><br><span class="line">        <span class="string">"attrs"</span>: _objectSpread(&#123;&#125;, item, &#123;</span><br><span class="line">          <span class="string">"disabled"</span>: item.__disabled</span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="string">"key"</span>: index,</span><br><span class="line">        <span class="string">"on"</span>: &#123;</span><br><span class="line">          <span class="string">"click"</span>: <span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> item.onClick === <span class="string">'function'</span>) &#123;</span><br><span class="line">              item.onClick(props);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, [item.text]);</span><br><span class="line">    &#125;)]);</span><br></pre></td></tr></table></figure>
-
-<p>最后，在我们点击修改按钮的时候，控制台报错：<br><img align=left height=44 width=661 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069608768-4858754d-5ab5-49f5-9d04-4e7c7f806705.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Uncaught <span class="built_in">SyntaxError</span>: <span class="built_in">Function</span> statements <span class="built_in">require</span> a <span class="function"><span class="keyword">function</span> <span class="title">name</span></span></span><br></pre></td></tr></table></figure>
-
-<p>在这里createButtons 中的某一项传递了onClick这个参数，那么在对应的渲染函数里面，最后传递给组件的是什么样的呢？</p>
-<img align=left height=236 width=458 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069494907-9d16d049-804e-4233-aee2-cd6089530db5.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" />
-
-<p>handleModify 很好理解，就是我们希望绑定的事件，但是在上面的listeners里面，还添加了click事件，其对应的函数为<br><img align=left height=183 width=358 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069576328-6b080a8d-1272-44ed-b2fa-6549000dbc63.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<p>因此，上面的方式，最后会把 onClick 封装到 attrs里面。</p>
-<p>在 Vue 组件挂载会后，首次更新时，Vue 会把相应的属性更新到 DOM 上.<br><img align=left height=566 width=1243 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584094932644-aef4e315-6d46-4990-a672-57ceadae838a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<p>因此，最后会调用 ele.setAttribute(key, value) 来设置组件的属性。这里的key value 都应该是一个<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL0RPTVN0cmluZw==">DOM String<i class="fa fa-external-link-alt"></i></span>。在这里的场景下， key 是对应的 onClick 字符串，而 value 是一个函数，它被定义为了 Vue 组件上的一个方法。而 Vue 在实例化组件的时候，通过initMethods方法，把对应的 method 通过bind 的方式绑定了vm的上下文。因此，这里的 value，最后是一个Bound function。因此这里会把相应的函数转换为DOM String，具体的转换方法没有找到相应的文档，但是从转换结果来看，是调用了函数的toString方法。而bind返回的函数，它的toString方法，最后会返回一个表示native代码的字符串，也就是</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
-
-<p>因此，最后输出到html里的就变成了以下内容：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"function () &#123; [native code] &#125;"</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>我们知道，在一个元素定义了onclick属性的情况下，点击的时候，会将其属性值当作js脚本来执行。因此，当我们点击按钮的时候，会执行上面的脚本</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
-
-<p>然而这个脚本是非法的，不说函数体，定义一个函数有函数表达式和函数声明两种方式，而上面的这种方式只能作为匿名函数被调用，在这里被当成了函数声明，因此就报错了。<br><img align=left height=33 width=721 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584096578955-c936ce31-0948-4739-84c2-f977fa0a900a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>Vue updateAttrs<br>el.setAttribute(key, value)</p>
-<p>总结：<br>当出现问题并且不知道导致问题发生的因素时，应先通过<strong>二分法</strong>快速定位到导致问题的代码，然后通过<strong>控制变量，减少场景的影响因子，在控制变量的时候，更需要注意双边其他因子的一致性，</strong>找到问题出现的原因，待解决问题后，再寻根溯源，找到产生问题的根本因素。</p>
-<p>参考： </p>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9odG1sLnNwZWMud2hhdHdnLm9yZy9tdWx0aXBhZ2Uvd2ViYXBwYXBpcy5odG1sI2hhbmRsZXItb25jbGljaw==">https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly93M2MuZ2l0aHViLmlvL3VpZXZlbnRzLyNldmVudC10eXBlLWNsaWNr">https://w3c.github.io/uievents/#event-type-click<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>每天学习一丢丢~</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>chrome开发工具timeline使用</title>
-    <url>/2016/06/15/chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7timeline%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vd2ViL3Rvb2xzL2Nocm9tZS1kZXZ0b29scy9wcm9maWxlL2V2YWx1YXRlLXBlcmZvcm1hbmNlL3RpbWVsaW5lLXRvb2w=">原文地址<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-  </entry>
-  <entry>
     <title>electron no path.txt的解决办法</title>
     <url>/2016/07/12/electron-no-path-txt%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2VsZWN0cm9uLXVzZXJsYW5kL2VsZWN0cm9uLXByZWJ1aWx0L2lzc3Vlcy83Ng==">原文地址<i class="fa fa-external-link-alt"></i></span></p>
@@ -578,123 +636,6 @@
 ]]></content>
       <tags>
         <tag>electron</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS控制光标移动</title>
-    <url>/2016/07/04/JS%E6%8E%A7%E5%88%B6%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8/</url>
-    <content><![CDATA[<p>网上的那些人也真的是够了， 复制粘贴什么的都习以为常， 就算是抄一个东西， 难道不也该先验证一下人家的是不是对的么， 走网上搜一个光标移动位置的问题， 搜索结果一帕拉， 而且都是惊人地相似， 但是放到浏览器里面， 根本就不能够跑！！！！！！！！！！！！！！</p>
-<a id="more"></a>
-<p>然后自己最后还是老老实实地看书， 恩， 找到了一个方法哈。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> sel = <span class="built_in">window</span>.getSelection(),</span><br><span class="line">  range = <span class="built_in">document</span>.createRange(),</span><br><span class="line">  div = $(<span class="string">'div'</span>);</span><br><span class="line"></span><br><span class="line">range.selectNodeContents(div);</span><br><span class="line">sel.addRange(range);</span><br><span class="line">sel.collapseToEnd();</span><br></pre></td></tr></table></figure>
-
-
-<p>这个针对<code>contenteditable</code>元素是有效的， 但是在<code>textarea</code>下， 使用<code>range</code>好像选不了其范围， 所以不能够操作， 不知道是不是方法错了， 不过在选中了文本框文本的情况下， 还是可以移动光标的。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> textarea = $(<span class="string">'textarea'</span>);</span><br><span class="line">textarea.select();</span><br><span class="line"><span class="comment">// 也可以使用这段代码来设置选中范围， 然后就方便控制其光标位置了。</span></span><br><span class="line"><span class="comment">// textarea.setSelectionRange(0, 12); // 选中文本框内容的0, 12</span></span><br><span class="line"><span class="built_in">window</span>.getSelection().collapseToStart(); <span class="comment">// 光标移动到开始位置</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>base64了解一下</title>
-    <url>/2019/12/22/base64%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B/</url>
-    <content><![CDATA[<p>代码：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Ny9kZW1vcy9ibG9iL21hc3Rlci9lbmNyeXB0L2Jhc2U2NC5qcw==">https://github.com/374632897/demos/blob/master/encrypt/base64.js<i class="fa fa-external-link-alt"></i></span></p>
-<a id="more"></a> 
-
-<p>在平时的工作中，base64使用场景比较多，比如文件上传。那么，base64到底是个什么东西？</p>
-<p>通常来讲，我们平时使用的字符集是utf-8，而对于JavaScript中的binary string 而言，其使用的是ASCII扩展字符集。标准的ASCII字符集只有128个字符（2^7），而ASCII扩展字符集则包含了256个字符。</p>
-<p>使用String.prototype.charCodeAt 方法，可以获取到相应字符的码点。</p>
-<p>而base64，其字面意思就是使用64个字符来对输入内容进行描述（实际上应该是65个字符，A-Za-z0-9，以及+/总共64个字符，但是最后可能还需要使用=进行补位）。对于二进制字符串来说，可能包含256个字符，所以当使用base64来对二进制字符串进行编码的时候，就需要将256个字符描述的内容使用64个字符来进行描述。</p>
-<p>简单来讲，就是<strong>把3个8bit的数据用4个6bit的数据来进行表示。</strong></p>
-<p>我们知道， 256 = 2 ^8，64 = 2 ^6, 因此当我们把二进制字符串的每个字符使用二进制来进行描述，并确保其填充到8位之后，再将相应的字符串以6位为单位进行分组，针对分组后的字符串再进行填充，填充到8位，这样就可以用64位字符编码来对其进行描述了。</p>
-<p><strong>在电子邮件中，每隔76个字符，还需要添加一个回车来进行换行。</strong></p>
-<p>以下以字符串“He”为模板进行步骤描述：</p>
-<ol>
-<li><p>输入字符串 ‘He’</p>
-</li>
-<li><p>针对每个字符串，调用<code>String.prototype.charCodeAt</code>方法，获取其码点   </p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> charsCode = <span class="string">'He'</span>.split(<span class="string">''</span>).map(<span class="function"><span class="params">item</span> =&gt;</span> item.charCodeAt(<span class="number">0</span>))</span><br><span class="line"><span class="comment">// [72, 101]</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将获取到的码点用二进制来表示，并填充成8位</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> binaryAry = charsCode.map(<span class="function"><span class="params">item</span> =&gt;</span> item.toString(<span class="number">2</span>))</span><br><span class="line"><span class="comment">// ["1001000", "1100101"]</span></span><br><span class="line"><span class="comment">// ["01001000", "01100101"]</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将获得的二进制字符串数组进行合并并以6个为单位进行分组，在这里需要注意的是，<strong>如果合并后的二进制字符串不是3的整数的话，那么需要在末尾用0来进行填充</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">"01001000"</span>, <span class="string">"01100101"</span>]</span><br><span class="line"><span class="string">'0100100001100101'</span>.length <span class="comment">// 16</span></span><br><span class="line"><span class="string">'010010000110010100'</span> <span class="comment">// 末尾填充</span></span><br><span class="line"><span class="comment">// 010010 000110 010100</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><del>针对分组后的字符串，使用0将其填充到8位</del></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 010010 000110 010100</span></span><br><span class="line"><span class="comment">// 00010010 00000110 00010100</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将最后得到的二进制字符串转换为十进制</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 010010 000110 010100</span></span><br><span class="line"><span class="string">'010010 000110 010100'</span>.split(<span class="string">' '</span>).map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">parseInt</span>(item, <span class="number">2</span>))</span><br><span class="line"><span class="comment">// [18, 6, 20]</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将得到的十进制数字从base64字母表中进行查找，得到对应的字符</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">a.map(<span class="function"><span class="params">item</span> =&gt;</span> b64Ary[item])</span><br><span class="line"><span class="comment">// ["S", "G", "U"]</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>判断得到的结果是否为4的倍数，如果不是，使用=号进行补位 或者说 原数据的长度是否为3的倍数，如果不是则补位（为1，则为两个==，为2则为1个=）</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ["S", "G", "U"]</span></span><br><span class="line"><span class="comment">// SGU</span></span><br><span class="line"><span class="comment">// SGU=</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>最后，转换完成，将 He 转换为了 SGU=</p>
-<p>从上面的步骤来看，可能我们会有以下疑问：</p>
-<ul>
-<li>第4步中为什么合并后的字符串需要是3的倍数？</li>
-</ul>
-<p>因为需要将3个字节编码为4个字节</p>
-<ul>
-<li>第8步中为什么最后的base64字符串需要为4的倍数？</li>
-</ul>
-<p>同上，最后一段base64编码代表的是若干个字符，而编码规则便是以4为单位的</p>
-<ul>
-<li>以上考虑的是针对二进制的，那么针对utf-8的字符串，要做base64处理的话，应该怎么做呢？</li>
-</ul>
-<p><strong>在使用base64编码后，编码后的数据相比于原数据会多出大概1/3的内容，因为原本的3个字符变成了4个字符，因此（4 - 3）/ 3 = 1/3</strong><br>**<br>另外一种实现方式：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hdGhpYXNieW5lbnMvYmFzZTY0L2Jsb2IvbWFzdGVyL3NyYy9iYXNlNjQuanM=">https://github.com/mathiasbynens/base64/blob/master/src/base64.js<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpYm9va3Mub3JnL3dpa2kvQWxnb3JpdGhtX0ltcGxlbWVudGF0aW9uL01pc2NlbGxhbmVvdXMvQmFzZTY0I0phdmFzY3JpcHQ=">带注释的版本<i class="fa fa-external-link-alt"></i></span></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> encode = <span class="function"><span class="keyword">function</span>(<span class="params">input</span>) </span>&#123;</span><br><span class="line">		input = <span class="built_in">String</span>(input);</span><br><span class="line">		<span class="keyword">if</span> (<span class="regexp">/[^\0-\xFF]/</span>.test(input)) &#123;</span><br><span class="line">			<span class="comment">// Note: no need to special-case astral symbols here, as surrogates are</span></span><br><span class="line">			<span class="comment">// matched, and the input is supposed to only contain ASCII anyway.</span></span><br><span class="line">			error(</span><br><span class="line">				<span class="string">'The string to be encoded contains characters outside of the '</span> +</span><br><span class="line">				<span class="string">'Latin1 range.'</span></span><br><span class="line">			);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">var</span> padding = input.length % <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">var</span> output = <span class="string">''</span>;</span><br><span class="line">		<span class="keyword">var</span> position = <span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">var</span> a;</span><br><span class="line">		<span class="keyword">var</span> b;</span><br><span class="line">		<span class="keyword">var</span> c;</span><br><span class="line">		<span class="keyword">var</span> buffer;</span><br><span class="line">		<span class="comment">// Make sure any padding is handled outside of the loop.</span></span><br><span class="line">		<span class="keyword">var</span> length = input.length - padding;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">while</span> (++position &lt; length) &#123;</span><br><span class="line">			<span class="comment">// Read three bytes, i.e. 24 bits.</span></span><br><span class="line">			a = input.charCodeAt(position) &lt;&lt; <span class="number">16</span>;</span><br><span class="line">			b = input.charCodeAt(++position) &lt;&lt; <span class="number">8</span>;</span><br><span class="line">			c = input.charCodeAt(++position);</span><br><span class="line">			buffer = a + b + c;</span><br><span class="line">			<span class="comment">// Turn the 24 bits into four chunks of 6 bits each, and append the</span></span><br><span class="line">			<span class="comment">// matching character for each of them to the output.</span></span><br><span class="line">			output += (</span><br><span class="line">				TABLE.charAt(buffer &gt;&gt; <span class="number">18</span> &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				TABLE.charAt(buffer &gt;&gt; <span class="number">12</span> &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				TABLE.charAt(buffer &gt;&gt; <span class="number">6</span> &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				TABLE.charAt(buffer &amp; <span class="number">0x3F</span>)</span><br><span class="line">			);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (padding == <span class="number">2</span>) &#123;</span><br><span class="line">			a = input.charCodeAt(position) &lt;&lt; <span class="number">8</span>;</span><br><span class="line">			b = input.charCodeAt(++position);</span><br><span class="line">			buffer = a + b;</span><br><span class="line">			output += (</span><br><span class="line">				TABLE.charAt(buffer &gt;&gt; <span class="number">10</span>) +</span><br><span class="line">				TABLE.charAt((buffer &gt;&gt; <span class="number">4</span>) &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				TABLE.charAt((buffer &lt;&lt; <span class="number">2</span>) &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				<span class="string">'='</span></span><br><span class="line">			);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (padding == <span class="number">1</span>) &#123;</span><br><span class="line">			buffer = input.charCodeAt(position);</span><br><span class="line">			output += (</span><br><span class="line">				TABLE.charAt(buffer &gt;&gt; <span class="number">2</span>) +</span><br><span class="line">				TABLE.charAt((buffer &lt;&lt; <span class="number">4</span>) &amp; <span class="number">0x3F</span>) +</span><br><span class="line">				<span class="string">'=='</span></span><br><span class="line">			);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> output;</span><br><span class="line">	&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>参考：</p>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvQmFzZTY0">维基百科 - Base64<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>每天学习一丢丢~</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于overflow-x的一点小东西</title>
-    <url>/2016/06/12/%E5%85%B3%E4%BA%8Eoverflow-x%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E4%B8%9C%E8%A5%BF/</url>
-    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQv">DEMO地址<i class="fa fa-external-link-alt"></i></span></p>
-<p>绝对定位元素虽然脱离文档流了， 但是依然会受到父元素或者祖先元素的<code>overflow</code>属性的影响。</p>
-<a id="more"></a>
-
-<p>如上面demo中所示， 子元素是绝对定位的， 并且其宽度是超出了父元素的宽度的， 正常情况下， 超出部分是可以看到的， 但是在给父元素设置<code>overflow-auto</code>之后， 父元素便会出现滚动条。</p>
-<p>o(╯□╰)o  至于原因。。 想不通， 如果说<code>overflow:hidden</code>使得子元素超出父元素的部分能够隐藏的话， 还能够理解， 但是<code>overflow-x: auto</code>出现滚动条很明显应该是因为父元素的宽度不够内容宽度，而绝对定位本身是脱离文档流的， 所以不应该会撑开父元素宽度啊。。。。不理解不理解。   </p>
-]]></content>
-      <tags>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于最近的一些事</title>
-    <url>/2016/07/04/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<h1 id="随便写的一些东西"><a href="#随便写的一些东西" class="headerlink" title="随便写的一些东西"></a>随便写的一些东西</h1><h2 id="关于造轮子"><a href="#关于造轮子" class="headerlink" title="关于造轮子"></a>关于造轮子</h2><p>针对造轮子这个问题， 业界的说法是， 永远不要重复造轮子。因为造轮子和维护轮子的过程是相当痛苦和费时的。 当然， 对我来说， 我觉得只是玩一玩的话， 偶尔造几个轮子还是不错的。 最重要的是， 通过造轮子这个过程， 能够学习到很多东西，同时也能巩固自己所学习到的知识 。</p>
-<a id="more"></a>
-
-
-<p>其实我是有强迫症的， 有时候业务上有某个需求了， 虽然有现成的轮子可以用， 但是如果直接引用轮子的话，会造成很多冗余的代码， 毕竟不少的轮子为了满足大众， 功能设计的都是非常全面的， 很多情况下这样都挺不错， 然而偏偏我很挑。</p>
-<p>不过其实关于挑这个话题， 我感觉自己也是在装逼， 毕竟要真说冗余代码的话， 项目里使用<code>babel</code>, 使用<code>webpack</code>之后， 代码覆盖率是明显下降了的， 冗余代码量非常之大。所以就算为了满足需求引入一个轮子的话， 所谓的多余的代码和项目里的冗余代码比起来其实是完全不值一提的， 当然， 更不要说人为的因素了，比如项目里的大量的未抽取出来的重复代码， 以及逻辑的复杂化（明明可以通过更简单的逻辑来达到目的）造成的冗余代码。所以对我来说， 冗余代码东西这个完全就只是一个借口， 我只是单纯地享受那种自己造完一个轮子之后的快感而已（虽然只是小轮子）。值得一提的是， 这种自己造的轮子在稳定性方面肯定是不如现有轮子的， 但是在定制方面却是省事多了， 毕竟造轮子的初衷便是为了满足业务需求， 所以即使后期需求变更了， 改变起来也会比较快。</p>
-<h2 id="关于一个小工具"><a href="#关于一个小工具" class="headerlink" title="关于一个小工具.."></a>关于一个小工具..</h2><p>周末的时候去买了菜买了米， 但是我不知道我的上一袋米是什么时候买的， 吃了多久，我一个月用了多少钱， 怎么花的， 花在了哪些方面。这些我都不知道。 说起来， 其实大学的时候自己每周都会记账的， 那时候还会发在空间里面让小伙伴瞅瞅我到底有多省， 顺带装装逼。 至于到底有多省呢， 我记得最少的一次我一个月只用了300元。也是惭愧， 不是我没钱（不， 确实是没钱）， 是我钱都花去买手机， 还是买游戏装备上去了？ 忘了。 总之就是没钱， 所以才省 。 有人说我咋不去找兼职呢， 其实我是找过的， 大学里面第一次去找兼职还是翘课去的， 像我这种尊重师长从不逃课的好孩纸啊， 要不是真的没钱了是绝对不会逃课的， 所以我这次兼职怎么也得赚回个本儿吧， 兴致冲冲的我就去了。 结果我6点出门， 路上堵啊堵啊堵啊！！！！9点才到那地儿， 打电话给那边， 也不应我， 打了好几次才接，结果告诉我去迟了，人家都已经招满了， 我了个大槽也是醉了， 好歹我是翘课去的， 天公也太不给力了。 于是我便满腹忧伤。后来又尝试去找兼职， 结果都是让半兼职卡的， 我特么有钱办兼职卡还找个毛工作啊！！！！ 一群骗纸。 所以到现在， 我人生里挣的第一笔钱还是小学的时候去抠的扎尔根卖掉赚的钱， 好像还是20块还是多少的来着， 那可是0几年的20块啊， 都够我买200根辣条儿了。</p>
-<p>o(╯□╰)o  貌似扯远了:smirk:。总之我平时候还是比较省钱的， 然而现在我却对自己花了多少钱怎么花的一无所知， 所以我觉得很有必要开始记账， 而使用手机啥的。。太憋屈了， 更别说用word, excel之类的了， 我只是单纯的想记个账而已， 哪里需要用那么高大上的东西， 然后就用周末的时间写了个记账的网页。说起来原本准备用这个周末来好好学习一下<code>canvas</code>的， 结果学着学着就走心了， 然后就折腾起了这玩意儿。最开始的时候是准备用数据库来存放数据的， 但是后来又想到我家里没网， 当然最重要的是我没有钱租主机买空间，光是买个域名我就心疼了好久呢。 所以如果使用数据库的话， 那么就只有在我本地上才能跑了， 这样子显然是不行的， 所以我决定使用<code>localStorage</code>来保存数据， 虽然麻烦了一点， 不过也只是在最开始写的时候会比较麻烦，之后还是比较轻松的。说到这里， 数据结构的设计又是一个问题了， 不过现在随便弄了弄， 将就着用吧。后期直接使用<code>electron</code>来打包成二进制文件了， 其实我现在就想打包， 但是刚换了硬盘， 电脑上也没装<code>electron</code>。  其实弄这个的初衷是， 我想知道5kg的米够我吃多久， 1.8L的油够我用多久， 然后和平时买的菜啊啥的杂七杂八的花费作个对比， 看看下次买米买油的时候是该挑好的买， 还是挑便宜的买。</p>
-<h2 id="关于专注"><a href="#关于专注" class="headerlink" title="关于专注"></a>关于专注</h2><p><code>专注</code>这个话题我已经提了不止一遍了， 每次提到它的时候我总是会提到<code>控制力</code>, 好吧， 再来呻吟一句， 我的控制力是真的真的弱爆了！！！！！ 至于专注力这个东西， 则是要看情况， 如果是在码代码的情况下， 专注度还是比较高的， 而如果是在看书（技术书）的时候， 真的很容易很容易分心。 比如前面提到的， 我这周本来是准备学<code>canvas</code>的， 结果学着学着我就搞起了另外的小玩意儿。 总之看书的时候就是不专注， 这个书专指技术书， 如果是小黄书的话， 我看得可认真了。 我觉得的原因吧， 大概就是自己现在还利用吃饭的时间来看小说， 这样导致的一个问题是， 经常小说看的过瘾了， 再看技术书的话， 感觉就枯燥乏味， 我试了下， 如果吃饭的时候看的是技术书的话， 那么之后几十分钟内一直都会专注于技术书。 所以以后是不是应该禁掉小说， 吃饭的时候也好好看书哪 ？ 刚刚开始接触前端的那段时间， 吃饭的时候就是一直在看<code>JavaScript高级程序设计</code>的来着， 感觉还不错， 我觉得现在也应该好好好好好好看书， 吃饭的时候也看， 不然真怕自己忍不住看了小黄书， 然后忍不住干了坏事。</p>
-<h2 id="关于读书"><a href="#关于读书" class="headerlink" title="关于读书"></a>关于读书</h2><p>我学习的时候， 大概情况是先看一遍基础的知识， 比如走<code>w3school</code>上面看， 然后看一遍视频， 然后再看一遍基础知识， 然后看文档， 中间穿插着码代码。 现在的话， 感觉看视频这东西确实是不如看书。 毕竟看书的话， 上面的知识点会比较全面，当然，前提是选对了书。现在我这书桌上放着这样一些书， 按购买顺序来排列的话<code>JavaScript高级程序设计（第三版）</code>、<code>锋利的jQuery</code>、<code>Javascript设计模式与开发实践</code>、<code>HTTP权威指南</code>、<code>HTML5 Canvas核心技术</code>、<code>算法（第4版）</code>、<code>黑客与画家</code>、<code>数学之美</code>、<code>深入浅出Nodejs</code> 。 其实书这种东西应该按需购买， 买一本看一本， 搞定了之后再谈其他。 如果要是一次性买了比较多的话， 就很容易分心， 一会儿看这本， 一会儿看那本， 然后。。然后。。。反正我这样弄了之后整个人是越来越烦躁了， 总想着， 我还有多少多少书没有看完啊， 好烦啊好烦啊。</p>
-<h2 id="关于语言"><a href="#关于语言" class="headerlink" title="关于语言"></a>关于语言</h2><p>对于这个话题， 我觉得我这种大学毕业之后才开始正式学编程的人是没有资格来讨论的， 但是我还是想说说。 一句话，贪多嚼不烂啊嚼不烂。 但是没办法， 有时候就是想学， 就算自己现在本家语言也还没搞定的情况下也想学。 劝也劝不住， 自个儿就尽管往火坑里跳吧。 我学了啥呢， 其实也不多， 就<code>php</code>, <code>JAVA</code>, 如果<code>mysql</code>和<code>mongodb</code>也算的话，那就勉勉强强加上也成。 当然， 我只是说我学过哈， 真的只是学过而已。 比如你现在要问我<code>JAVA</code>里的泛型是什么， 我这就一脸懵逼了， 更别说<code>php</code>里的几千个内置函数了。 总之总之， 我是把自己推入了一个坑， 这种东西就算当时学了， 但是没有使用场景的话， 还是会很快忘记的。 不过好处也是有的， 我感知最明显的是， 最开始其实我是不喜欢用<code>ES6</code>的<code>class</code>的， 但是现在我没事儿老爱用这破玩意儿了，而且用起来也确实是方便多了。 笑cry.. 关于学<code>JAVA</code>这件事， 其实我一开始是不想学的， 也没准备学，然而买的算法书里面用到的语言就是<code>JAVA</code>， 虽然用<code>JS</code>也能实现大部分的算法， 但是这人强迫症一犯硬要跳坑你是拉也拉不住的。 那当初谁说的来着， 会的语言越多找媳妇儿越容易， 毕竟会的语言多了， 就相当于扩展了找媳妇儿的面向了嘛 ， 我本来是抱着这样的心态去学其他语言的， 然而然而，长相永远是硬伤。</p>
-<h2 id="关于网络"><a href="#关于网络" class="headerlink" title="关于网络"></a>关于网络</h2><p>我断网了， 给自己的理由是能上网的话太容易分心， 难得有个周末应该保持专注好好看书才对。 好吧， 这理由就是用来哄鬼的， 谁要是真信了， 那我罪过可就大了， 其实我就是没钱交网费。手动对眼（换了硬盘之后输入法设置也变了， 打不了对眼了， 其实服务器上保存有我的快捷键的， 可是奈何我没网）。扯远了， 断网了之后怎么说呢， 有好有坏吧。 好的一点在于确实能够在一定程度上保持专注， 不会时不时地刷微博， 刷空间， 看小黄书， 看小黄片儿了， 因为想看也没得看啊， 笑cry 。 不过坏处在于， 哎呀窝草， 想下个包儿还得等去了公司了下到U盘里了再转到我的电脑里。 这就是不方便， 还有查资料查文档方面也是不方便。 总的来说是有好有坏吧， 现阶段看来的话， 还是利大于弊的。</p>
-<h2 id="关于翻译"><a href="#关于翻译" class="headerlink" title="关于翻译"></a>关于翻译</h2><p>发现表达这种东西对我来说实在实在是太困难了。要把自己脑袋里想的东西表述出来让别人知道的话， 真的是太要命了。 我翻译一篇英文文档的时间都够我看四五篇类似的文档了， 因而我每次的翻译都是无疾而终， 翻译到一半就搞不下去了。 知道翻译的困难， 所以特别佩服那些默默为社区翻译文档的童鞋们， 你们真的是我的偶像 + 榜样啊！！！！！听说上次有个哥们儿把<code>W3C</code>的<code>HTML</code>规范给搞出来了， 也是666。 你们都是一群值得尊敬的人。</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>感觉<code>FarBox</code>还是挺不错的， 挺好用的<code>markdown</code>编辑器。</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -1113,6 +1054,102 @@
       </tags>
   </entry>
   <entry>
+    <title>关于overflow-x的一点小东西</title>
+    <url>/2016/06/12/%E5%85%B3%E4%BA%8Eoverflow-x%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E4%B8%9C%E8%A5%BF/</url>
+    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQv">DEMO地址<i class="fa fa-external-link-alt"></i></span></p>
+<p>绝对定位元素虽然脱离文档流了， 但是依然会受到父元素或者祖先元素的<code>overflow</code>属性的影响。</p>
+<a id="more"></a>
+
+<p>如上面demo中所示， 子元素是绝对定位的， 并且其宽度是超出了父元素的宽度的， 正常情况下， 超出部分是可以看到的， 但是在给父元素设置<code>overflow-auto</code>之后， 父元素便会出现滚动条。</p>
+<p>o(╯□╰)o  至于原因。。 想不通， 如果说<code>overflow:hidden</code>使得子元素超出父元素的部分能够隐藏的话， 还能够理解， 但是<code>overflow-x: auto</code>出现滚动条很明显应该是因为父元素的宽度不够内容宽度，而绝对定位本身是脱离文档流的， 所以不应该会撑开父元素宽度啊。。。。不理解不理解。   </p>
+]]></content>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于git diff的eslint代码检测</title>
+    <url>/2016/08/15/%E5%9F%BA%E4%BA%8Egit-diff%E7%9A%84eslint%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/</url>
+    <content><![CDATA[<h1 id="基于git-diff进行的eslint代码检测"><a href="#基于git-diff进行的eslint代码检测" class="headerlink" title="基于git diff进行的eslint代码检测"></a>基于git diff进行的eslint代码检测</h1><p>随着代码的不断增加， eslint进行代码检测的时间也越来越久。每次检测的时候， 需要检测的文件和实际检测的文件极度不对称，所以便基于<code>git diff</code>写了这样一个小工具。</p>
+<a id="more"></a>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><ul>
+<li>启动脚本(<code>lint.sh</code>)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">INFO=<span class="string">'\033[36m'</span>;</span><br><span class="line">NOR=<span class="string">'\033[0m'</span>;</span><br><span class="line">ERR=<span class="string">'\033[31m'</span>;</span><br><span class="line">br=<span class="string">'dev'</span>;</span><br><span class="line"><span class="keyword">if</span> [ ! -z <span class="variable">$1</span> ]; <span class="keyword">then</span></span><br><span class="line">  br=<span class="variable">$1</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>run lint now ... just wait a moment ...<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line">git diff origin/<span class="variable">$&#123;br&#125;</span> &gt; diff.log;</span><br><span class="line"><span class="built_in">log</span>=`cat diff.log | grep <span class="string">'diff --git a/src'</span>`;</span><br><span class="line"><span class="keyword">if</span> [[ -z <span class="variable">$&#123;log&#125;</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>没有文件发生变化<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">echo</span> <span class="string">''</span>;</span><br><span class="line">  node ./lint-by-diff.js;</span><br><span class="line">  <span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>done ...<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line">rm diff.log change.log 2&gt; /dev/null;</span><br><span class="line"><span class="built_in">read</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>检测工具(<code>lint-by-diff.js</code>)</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">const</span> shelljs = <span class="built_in">require</span>(<span class="string">'shelljs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> jsFiles = [],</span><br><span class="line">  LOG__PATH   = <span class="string">'./diff.log'</span>,</span><br><span class="line">  FILE = <span class="regexp">/diff --git a([\s\S]*?) /g</span>,</span><br><span class="line">  data = fs.readFileSync(LOG__PATH).toString(),</span><br><span class="line">  _files = data.match(FILE),</span><br><span class="line">  len = _files.length;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; len) &#123;</span><br><span class="line">  <span class="keyword">const</span> _item = _files[i++].trim();</span><br><span class="line">  <span class="keyword">if</span> (!<span class="regexp">/.js$/</span>.test(_item)) <span class="keyword">continue</span>;</span><br><span class="line">  <span class="keyword">const</span> item = <span class="string">'./'</span> + _item.slice(<span class="number">13</span>);</span><br><span class="line">  <span class="keyword">if</span> (!<span class="regexp">/^\.\/src\//</span>.test(item)) <span class="keyword">continue</span>; <span class="comment">// src为项目需要进行eslint检测的目录</span></span><br><span class="line">  <span class="keyword">if</span> (!fs.existsSync(item)) <span class="keyword">continue</span>;</span><br><span class="line">  jsFiles.push(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'     以下文件发生改变： '</span>);</span><br><span class="line"><span class="built_in">console</span>.log(jsFiles.join(<span class="string">'\n'</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line">shelljs.exec(<span class="string">'node ./node_modules/eslint/bin/eslint.js '</span> + jsFiles.join(<span class="string">' '</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>通过<code>git diff origin/branch</code>获取到和指定分支的不同， 从而知道哪些文件需要进行代码检测（dev上的是通过检测的）， 然后运行eslint的时候就指定这部分文件。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在项目根目录下输入<code>./lint.sh</code>或者<code>bash ./lint.sh</code>, 默认分支为<code>dev</code>分支， 如果需要指定其他分支， 可以在运行的时候传入参数， 如： <code>bash ./lint.sh master</code>.</p>
+<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><ul>
+<li><p>使用了bash导致这个看起来有点不伦不类， 使用纯js也许会更好， 但是我毕竟半吊子， 写不出来→＿←</p>
+</li>
+<li><p>没有对<code>error</code>进行高亮显示， 所以看起来会比较费力</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>对象URL</title>
+    <url>/2019/12/21/%E5%AF%B9%E8%B1%A1URL/</url>
+    <content><![CDATA[<p>学习地址：<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL1VSTA==">https://developer.mozilla.org/zh-CN/docs/Web/API/URL<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a> 
+<p>实例代码地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Ny9kZW1vcy9ibG9iL21hc3Rlci9odG1sL29iamVjdC11cmwvY29tcGFyZS5odG1s">GitHub<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLzM3NDYzMjg5Ny9wZW4vUndOcFhQZD9lZGl0b3JzPTExMTE=">CodePen<i class="fa fa-external-link-alt"></i></span></p>
+<p>URL 为 window 的一个属性， 具有三种用法：</p>
+<ul>
+<li>URL 作为构造函数使用 - new URL(url, [base])</li>
+<li>URL.createObjectURL(blob)</li>
+<li>URL.revokeObjectURL(objectURL)</li>
+</ul>
+<p><a name="1H2Qi"></a></p>
+<h3 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h3><p>作为构造器使用时，可接收两个参数，第一个参数为url，如果url为绝对路径，则第二个参数会被忽略；如果url为相对路径，则需要第二个参数，若缺少第二个参数，那么会报错Invalid URL。<br><img align=left height=244 width=666 data-src="https://cdn.nlark.com/yuque/0/2019/png/434020/1576918708879-8233bb2f-a0ed-4971-91c5-14601026c194.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p>如果要获取 query 值，可以通过url.searchParams.get来获取<br><img align=left height=38 width=217 data-src="https://cdn.nlark.com/yuque/0/2019/png/434020/1576918754116-0d34cee7-5cca-4d8c-a5fb-0f8220577ee6.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p>其兼容性如下所示：<br><img align=left height=403 width=1045 data-src="https://cdn.nlark.com/yuque/0/2019/png/434020/1576918817459-618f459b-c4cf-4206-835b-11f99b5ec447.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>可以看到， IE 系列的浏览器是不支持该属性的。</p>
+<p><a name="00O9z"></a></p>
+<h3 id="URL-createObjectURL-blob"><a href="#URL-createObjectURL-blob" class="headerlink" title="URL.createObjectURL(blob)"></a>URL.createObjectURL(blob)</h3><p>通常来讲， 需要使用本方法的时候是手动在前端进行了文件上传，并且希望及时的进行预览。除了本方法之外，在用户选择文件之后，可以通过FileReader对文件进行阅读， 使用readAsDataURL的方式，将文件内容转换为base64的形式，并将其作为img 的 src 以进行展示。然而该方法具有以下问题：</p>
+<ul>
+<li>需要先使用FileReader对文件进行读取到JavaScript中，当文件内容比较大的时候，中间的时间难以保证（参见<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLzM3NDYzMjg5Ny9wZW4vUndOcFhQZD9lZGl0b3JzPTExMTE=">DEMO<i class="fa fa-external-link-alt"></i></span>，针对4M的文件， base64比object url 慢了10倍左右 )</li>
+<li>生成的base64字符串可能会十分庞大，插入到DOM以后会多了很多无意义的内容</li>
+<li>使用 base64 会占用对应的堆空间（参见<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLzM3NDYzMjg5Ny9wZW4vUndOcFhQZD9lZGl0b3JzPTExMTE=">DEMO<i class="fa fa-external-link-alt"></i></span>）</li>
+</ul>
+<p>因此，针对需要在前端进行展示的场景，应尽可能地使用URL.createObjectURL()的方式来进行展示，而不是使用base64。通过该方式，最后获取到的是一个指向内存的相应地址，因为该字符串是一个URL，因此可以直接在DOM中使用，同时，也不用先将文件读取到JavaScript中。</p>
+<p>兼容性如下：<br><img align=left height=413 width=1031 data-src="https://cdn.nlark.com/yuque/0/2019/png/434020/1576922437474-6d9e345f-cce9-4f8f-b93d-7c49717d55fc.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>可以看到，IE10以上的浏览器均兼容。</p>
+<p><a name="vCnoF"></a></p>
+<h3 id="URL-revokeObjectURL"><a href="#URL-revokeObjectURL" class="headerlink" title="URL.revokeObjectURL()"></a>URL.revokeObjectURL()</h3><p><strong><code>URL.revokeObjectURL()</code> **静态方法用来释放一个之前已经存在的、通过调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/URL/createObjectURL" target="_blank" rel="noopener"><code>URL.createObjectURL()</code></a> 创建的 URL 对象。当你结束使用某个 URL 对象之后，应该通过调用这个方法来让浏览器知道</strong>不用在内存中继续保留对这个文件的引用了**。<br>你可以在 <code>sourceopen</code> 被处理之后的任何时候调用 <code>revokeObjectURL()</code>。这是因为 <code>createObjectURL()</code> 仅仅意味着将一个媒体元素的 <code>src</code> 属性关联到一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MediaSource" target="_blank" rel="noopener"><code>MediaSource</code></a> 对象上去。调用<code>revokeObjectURL()</code> 使这个潜在的对象回到原来的地方，允许平台在合适的时机进行垃圾收集。</p>
+]]></content>
+      <tags>
+        <tag>每天学习一丢丢~</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于最近的一些事</title>
+    <url>/2016/07/04/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
+    <content><![CDATA[<h1 id="随便写的一些东西"><a href="#随便写的一些东西" class="headerlink" title="随便写的一些东西"></a>随便写的一些东西</h1><h2 id="关于造轮子"><a href="#关于造轮子" class="headerlink" title="关于造轮子"></a>关于造轮子</h2><p>针对造轮子这个问题， 业界的说法是， 永远不要重复造轮子。因为造轮子和维护轮子的过程是相当痛苦和费时的。 当然， 对我来说， 我觉得只是玩一玩的话， 偶尔造几个轮子还是不错的。 最重要的是， 通过造轮子这个过程， 能够学习到很多东西，同时也能巩固自己所学习到的知识 。</p>
+<a id="more"></a>
+
+
+<p>其实我是有强迫症的， 有时候业务上有某个需求了， 虽然有现成的轮子可以用， 但是如果直接引用轮子的话，会造成很多冗余的代码， 毕竟不少的轮子为了满足大众， 功能设计的都是非常全面的， 很多情况下这样都挺不错， 然而偏偏我很挑。</p>
+<p>不过其实关于挑这个话题， 我感觉自己也是在装逼， 毕竟要真说冗余代码的话， 项目里使用<code>babel</code>, 使用<code>webpack</code>之后， 代码覆盖率是明显下降了的， 冗余代码量非常之大。所以就算为了满足需求引入一个轮子的话， 所谓的多余的代码和项目里的冗余代码比起来其实是完全不值一提的， 当然， 更不要说人为的因素了，比如项目里的大量的未抽取出来的重复代码， 以及逻辑的复杂化（明明可以通过更简单的逻辑来达到目的）造成的冗余代码。所以对我来说， 冗余代码东西这个完全就只是一个借口， 我只是单纯地享受那种自己造完一个轮子之后的快感而已（虽然只是小轮子）。值得一提的是， 这种自己造的轮子在稳定性方面肯定是不如现有轮子的， 但是在定制方面却是省事多了， 毕竟造轮子的初衷便是为了满足业务需求， 所以即使后期需求变更了， 改变起来也会比较快。</p>
+<h2 id="关于一个小工具"><a href="#关于一个小工具" class="headerlink" title="关于一个小工具.."></a>关于一个小工具..</h2><p>周末的时候去买了菜买了米， 但是我不知道我的上一袋米是什么时候买的， 吃了多久，我一个月用了多少钱， 怎么花的， 花在了哪些方面。这些我都不知道。 说起来， 其实大学的时候自己每周都会记账的， 那时候还会发在空间里面让小伙伴瞅瞅我到底有多省， 顺带装装逼。 至于到底有多省呢， 我记得最少的一次我一个月只用了300元。也是惭愧， 不是我没钱（不， 确实是没钱）， 是我钱都花去买手机， 还是买游戏装备上去了？ 忘了。 总之就是没钱， 所以才省 。 有人说我咋不去找兼职呢， 其实我是找过的， 大学里面第一次去找兼职还是翘课去的， 像我这种尊重师长从不逃课的好孩纸啊， 要不是真的没钱了是绝对不会逃课的， 所以我这次兼职怎么也得赚回个本儿吧， 兴致冲冲的我就去了。 结果我6点出门， 路上堵啊堵啊堵啊！！！！9点才到那地儿， 打电话给那边， 也不应我， 打了好几次才接，结果告诉我去迟了，人家都已经招满了， 我了个大槽也是醉了， 好歹我是翘课去的， 天公也太不给力了。 于是我便满腹忧伤。后来又尝试去找兼职， 结果都是让半兼职卡的， 我特么有钱办兼职卡还找个毛工作啊！！！！ 一群骗纸。 所以到现在， 我人生里挣的第一笔钱还是小学的时候去抠的扎尔根卖掉赚的钱， 好像还是20块还是多少的来着， 那可是0几年的20块啊， 都够我买200根辣条儿了。</p>
+<p>o(╯□╰)o  貌似扯远了:smirk:。总之我平时候还是比较省钱的， 然而现在我却对自己花了多少钱怎么花的一无所知， 所以我觉得很有必要开始记账， 而使用手机啥的。。太憋屈了， 更别说用word, excel之类的了， 我只是单纯的想记个账而已， 哪里需要用那么高大上的东西， 然后就用周末的时间写了个记账的网页。说起来原本准备用这个周末来好好学习一下<code>canvas</code>的， 结果学着学着就走心了， 然后就折腾起了这玩意儿。最开始的时候是准备用数据库来存放数据的， 但是后来又想到我家里没网， 当然最重要的是我没有钱租主机买空间，光是买个域名我就心疼了好久呢。 所以如果使用数据库的话， 那么就只有在我本地上才能跑了， 这样子显然是不行的， 所以我决定使用<code>localStorage</code>来保存数据， 虽然麻烦了一点， 不过也只是在最开始写的时候会比较麻烦，之后还是比较轻松的。说到这里， 数据结构的设计又是一个问题了， 不过现在随便弄了弄， 将就着用吧。后期直接使用<code>electron</code>来打包成二进制文件了， 其实我现在就想打包， 但是刚换了硬盘， 电脑上也没装<code>electron</code>。  其实弄这个的初衷是， 我想知道5kg的米够我吃多久， 1.8L的油够我用多久， 然后和平时买的菜啊啥的杂七杂八的花费作个对比， 看看下次买米买油的时候是该挑好的买， 还是挑便宜的买。</p>
+<h2 id="关于专注"><a href="#关于专注" class="headerlink" title="关于专注"></a>关于专注</h2><p><code>专注</code>这个话题我已经提了不止一遍了， 每次提到它的时候我总是会提到<code>控制力</code>, 好吧， 再来呻吟一句， 我的控制力是真的真的弱爆了！！！！！ 至于专注力这个东西， 则是要看情况， 如果是在码代码的情况下， 专注度还是比较高的， 而如果是在看书（技术书）的时候， 真的很容易很容易分心。 比如前面提到的， 我这周本来是准备学<code>canvas</code>的， 结果学着学着我就搞起了另外的小玩意儿。 总之看书的时候就是不专注， 这个书专指技术书， 如果是小黄书的话， 我看得可认真了。 我觉得的原因吧， 大概就是自己现在还利用吃饭的时间来看小说， 这样导致的一个问题是， 经常小说看的过瘾了， 再看技术书的话， 感觉就枯燥乏味， 我试了下， 如果吃饭的时候看的是技术书的话， 那么之后几十分钟内一直都会专注于技术书。 所以以后是不是应该禁掉小说， 吃饭的时候也好好看书哪 ？ 刚刚开始接触前端的那段时间， 吃饭的时候就是一直在看<code>JavaScript高级程序设计</code>的来着， 感觉还不错， 我觉得现在也应该好好好好好好看书， 吃饭的时候也看， 不然真怕自己忍不住看了小黄书， 然后忍不住干了坏事。</p>
+<h2 id="关于读书"><a href="#关于读书" class="headerlink" title="关于读书"></a>关于读书</h2><p>我学习的时候， 大概情况是先看一遍基础的知识， 比如走<code>w3school</code>上面看， 然后看一遍视频， 然后再看一遍基础知识， 然后看文档， 中间穿插着码代码。 现在的话， 感觉看视频这东西确实是不如看书。 毕竟看书的话， 上面的知识点会比较全面，当然，前提是选对了书。现在我这书桌上放着这样一些书， 按购买顺序来排列的话<code>JavaScript高级程序设计（第三版）</code>、<code>锋利的jQuery</code>、<code>Javascript设计模式与开发实践</code>、<code>HTTP权威指南</code>、<code>HTML5 Canvas核心技术</code>、<code>算法（第4版）</code>、<code>黑客与画家</code>、<code>数学之美</code>、<code>深入浅出Nodejs</code> 。 其实书这种东西应该按需购买， 买一本看一本， 搞定了之后再谈其他。 如果要是一次性买了比较多的话， 就很容易分心， 一会儿看这本， 一会儿看那本， 然后。。然后。。。反正我这样弄了之后整个人是越来越烦躁了， 总想着， 我还有多少多少书没有看完啊， 好烦啊好烦啊。</p>
+<h2 id="关于语言"><a href="#关于语言" class="headerlink" title="关于语言"></a>关于语言</h2><p>对于这个话题， 我觉得我这种大学毕业之后才开始正式学编程的人是没有资格来讨论的， 但是我还是想说说。 一句话，贪多嚼不烂啊嚼不烂。 但是没办法， 有时候就是想学， 就算自己现在本家语言也还没搞定的情况下也想学。 劝也劝不住， 自个儿就尽管往火坑里跳吧。 我学了啥呢， 其实也不多， 就<code>php</code>, <code>JAVA</code>, 如果<code>mysql</code>和<code>mongodb</code>也算的话，那就勉勉强强加上也成。 当然， 我只是说我学过哈， 真的只是学过而已。 比如你现在要问我<code>JAVA</code>里的泛型是什么， 我这就一脸懵逼了， 更别说<code>php</code>里的几千个内置函数了。 总之总之， 我是把自己推入了一个坑， 这种东西就算当时学了， 但是没有使用场景的话， 还是会很快忘记的。 不过好处也是有的， 我感知最明显的是， 最开始其实我是不喜欢用<code>ES6</code>的<code>class</code>的， 但是现在我没事儿老爱用这破玩意儿了，而且用起来也确实是方便多了。 笑cry.. 关于学<code>JAVA</code>这件事， 其实我一开始是不想学的， 也没准备学，然而买的算法书里面用到的语言就是<code>JAVA</code>， 虽然用<code>JS</code>也能实现大部分的算法， 但是这人强迫症一犯硬要跳坑你是拉也拉不住的。 那当初谁说的来着， 会的语言越多找媳妇儿越容易， 毕竟会的语言多了， 就相当于扩展了找媳妇儿的面向了嘛 ， 我本来是抱着这样的心态去学其他语言的， 然而然而，长相永远是硬伤。</p>
+<h2 id="关于网络"><a href="#关于网络" class="headerlink" title="关于网络"></a>关于网络</h2><p>我断网了， 给自己的理由是能上网的话太容易分心， 难得有个周末应该保持专注好好看书才对。 好吧， 这理由就是用来哄鬼的， 谁要是真信了， 那我罪过可就大了， 其实我就是没钱交网费。手动对眼（换了硬盘之后输入法设置也变了， 打不了对眼了， 其实服务器上保存有我的快捷键的， 可是奈何我没网）。扯远了， 断网了之后怎么说呢， 有好有坏吧。 好的一点在于确实能够在一定程度上保持专注， 不会时不时地刷微博， 刷空间， 看小黄书， 看小黄片儿了， 因为想看也没得看啊， 笑cry 。 不过坏处在于， 哎呀窝草， 想下个包儿还得等去了公司了下到U盘里了再转到我的电脑里。 这就是不方便， 还有查资料查文档方面也是不方便。 总的来说是有好有坏吧， 现阶段看来的话， 还是利大于弊的。</p>
+<h2 id="关于翻译"><a href="#关于翻译" class="headerlink" title="关于翻译"></a>关于翻译</h2><p>发现表达这种东西对我来说实在实在是太困难了。要把自己脑袋里想的东西表述出来让别人知道的话， 真的是太要命了。 我翻译一篇英文文档的时间都够我看四五篇类似的文档了， 因而我每次的翻译都是无疾而终， 翻译到一半就搞不下去了。 知道翻译的困难， 所以特别佩服那些默默为社区翻译文档的童鞋们， 你们真的是我的偶像 + 榜样啊！！！！！听说上次有个哥们儿把<code>W3C</code>的<code>HTML</code>规范给搞出来了， 也是666。 你们都是一群值得尊敬的人。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>感觉<code>FarBox</code>还是挺不错的， 挺好用的<code>markdown</code>编辑器。</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>字符串的双重转义</title>
     <url>/2016/07/05/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%8F%8C%E9%87%8D%E8%BD%AC%E4%B9%89/</url>
     <content><![CDATA[<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>习惯了<code>SPA</code>的开发模式， 现在随便弄点什么东西， 渲染<code>HTML</code>什么的也总是通过<code>JS</code>来了， 但是在<code>JS</code>里写<code>HTML</code>总归是影响代码美观的， 虽然有现成的模板工具可以使用， 但是这人一旦任性起来是真的拉都拉不住。 某日闲得飞起， 就准备写这么一个小东西。</p>
@@ -1159,35 +1196,44 @@
       </tags>
   </entry>
   <entry>
-    <title>对象URL</title>
-    <url>/2019/12/21/%E5%AF%B9%E8%B1%A1URL/</url>
-    <content><![CDATA[<p>学习地址：<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL1VSTA==">https://developer.mozilla.org/zh-CN/docs/Web/API/URL<i class="fa fa-external-link-alt"></i></span></p>
-<a id="more"></a> 
-<p>实例代码地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Ny9kZW1vcy9ibG9iL21hc3Rlci9odG1sL29iamVjdC11cmwvY29tcGFyZS5odG1s">GitHub<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLzM3NDYzMjg5Ny9wZW4vUndOcFhQZD9lZGl0b3JzPTExMTE=">CodePen<i class="fa fa-external-link-alt"></i></span></p>
-<p>URL 为 window 的一个属性， 具有三种用法：</p>
-<ul>
-<li>URL 作为构造函数使用 - new URL(url, [base])</li>
-<li>URL.createObjectURL(blob)</li>
-<li>URL.revokeObjectURL(objectURL)</li>
-</ul>
-<p><a name="1H2Qi"></a></p>
-<h3 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h3><p>作为构造器使用时，可接收两个参数，第一个参数为url，如果url为绝对路径，则第二个参数会被忽略；如果url为相对路径，则需要第二个参数，若缺少第二个参数，那么会报错Invalid URL。<br><img align=left height=244 width=666 data-src="https://cdn.nlark.com/yuque/0/2019/png/434020/1576918708879-8233bb2f-a0ed-4971-91c5-14601026c194.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<p>如果要获取 query 值，可以通过url.searchParams.get来获取<br><img align=left height=38 width=217 data-src="https://cdn.nlark.com/yuque/0/2019/png/434020/1576918754116-0d34cee7-5cca-4d8c-a5fb-0f8220577ee6.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<p>其兼容性如下所示：<br><img align=left height=403 width=1045 data-src="https://cdn.nlark.com/yuque/0/2019/png/434020/1576918817459-618f459b-c4cf-4206-835b-11f99b5ec447.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>可以看到， IE 系列的浏览器是不支持该属性的。</p>
-<p><a name="00O9z"></a></p>
-<h3 id="URL-createObjectURL-blob"><a href="#URL-createObjectURL-blob" class="headerlink" title="URL.createObjectURL(blob)"></a>URL.createObjectURL(blob)</h3><p>通常来讲， 需要使用本方法的时候是手动在前端进行了文件上传，并且希望及时的进行预览。除了本方法之外，在用户选择文件之后，可以通过FileReader对文件进行阅读， 使用readAsDataURL的方式，将文件内容转换为base64的形式，并将其作为img 的 src 以进行展示。然而该方法具有以下问题：</p>
-<ul>
-<li>需要先使用FileReader对文件进行读取到JavaScript中，当文件内容比较大的时候，中间的时间难以保证（参见<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLzM3NDYzMjg5Ny9wZW4vUndOcFhQZD9lZGl0b3JzPTExMTE=">DEMO<i class="fa fa-external-link-alt"></i></span>，针对4M的文件， base64比object url 慢了10倍左右 )</li>
-<li>生成的base64字符串可能会十分庞大，插入到DOM以后会多了很多无意义的内容</li>
-<li>使用 base64 会占用对应的堆空间（参见<span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvLzM3NDYzMjg5Ny9wZW4vUndOcFhQZD9lZGl0b3JzPTExMTE=">DEMO<i class="fa fa-external-link-alt"></i></span>）</li>
-</ul>
-<p>因此，针对需要在前端进行展示的场景，应尽可能地使用URL.createObjectURL()的方式来进行展示，而不是使用base64。通过该方式，最后获取到的是一个指向内存的相应地址，因为该字符串是一个URL，因此可以直接在DOM中使用，同时，也不用先将文件读取到JavaScript中。</p>
-<p>兼容性如下：<br><img align=left height=413 width=1031 data-src="https://cdn.nlark.com/yuque/0/2019/png/434020/1576922437474-6d9e345f-cce9-4f8f-b93d-7c49717d55fc.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>可以看到，IE10以上的浏览器均兼容。</p>
-<p><a name="vCnoF"></a></p>
-<h3 id="URL-revokeObjectURL"><a href="#URL-revokeObjectURL" class="headerlink" title="URL.revokeObjectURL()"></a>URL.revokeObjectURL()</h3><p><strong><code>URL.revokeObjectURL()</code> **静态方法用来释放一个之前已经存在的、通过调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/URL/createObjectURL" target="_blank" rel="noopener"><code>URL.createObjectURL()</code></a> 创建的 URL 对象。当你结束使用某个 URL 对象之后，应该通过调用这个方法来让浏览器知道</strong>不用在内存中继续保留对这个文件的引用了**。<br>你可以在 <code>sourceopen</code> 被处理之后的任何时候调用 <code>revokeObjectURL()</code>。这是因为 <code>createObjectURL()</code> 仅仅意味着将一个媒体元素的 <code>src</code> 属性关联到一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MediaSource" target="_blank" rel="noopener"><code>MediaSource</code></a> 对象上去。调用<code>revokeObjectURL()</code> 使这个潜在的对象回到原来的地方，允许平台在合适的时机进行垃圾收集。</p>
+    <title>我的时间都去哪儿了</title>
+    <url>/2016/05/17/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E5%84%BF%E4%BA%86/</url>
+    <content><![CDATA[<p>前段时间把网给停了， 理由是在有网的情况下， 我每天在回到家后都把为数不多的时间浪费在上网上面去了， 虽然能有所收获，但是总体而言是弊大于利的， 毕竟大部分的时间里我都是在做着一些无关紧要的事情。所以我把网停了， 希望能够借助这种手段来强迫自己不断地学习新的东西。 效果是有的， 然而我依然对自己不是很满意。</p>
+<a id="more"></a>
+
+<p>不得不承认， 我是一个自我控制能力很弱的人。 我很容易分心， 很容易感到枯燥。所以采用这样的方法来让自己被动地学习。然而即使这样做了， 却依旧没有达到我想要的效果。 在我的想象中， 每天下班之后， 或者在周末的时候， 我除了买菜做饭和正常的休息时间之外， 其他的时间应该都用来看书， 或者码代码， 毕竟这样才能快速地提高自己。相比于刚刚接触JS（去年9月份的时候）的那段时间， 自己现在真的是弱爆了。 那段时间是我真正的有状态的阶段，连吃饭的时候都是一边吃， 一边看书。 但是现在， 我采用了禁网的方式， 把自己和网络隔离开来， 其实也并没有完全隔离开来， 毕竟还有手机这东西， 说起来我好像也找到了一点原因了， 那就是还有手机。 我现在是没有电脑上网了， 但是手机却还是能够上网， 所以觉得累的时候， 就会打开手机逛逛贴吧， 想象中只是逛逛而已， 结果这一玩儿， 就浪费了大把的时间， 就好像周六周日的午休一样， 不午休还好， 只要一午休， 一般就会从1.30睡到4.00， 我以后大概都不敢再在周末的时候躺在床上午休了吧。 浪费的大把的时间是真的一去不复返了。 </p>
+<p>之前的时候， 我跟朋友说来到北京之后， 胖了不止一圈了。 朋友说她在家的时候每天早上都还跑步呢， 叫我也多锻炼身体， 当时我说我把时间都用来学习了， 腾不出时间来锻炼身体， 等以后有空了再慢慢锻炼吧。 现在想起来也真是讽刺， 每天浪费了大把大把的时间， 却说自己把所有时间都用来学习了。</p>
+<p>提升自我控制能力应该是一件值得我花一辈子的时间去做的事情吧。 我相信做好这件事情给我带来的好处能和每天吃上土豆给我精神上带来的好处相媲美。当然，前提是我真正地把它给做好了。 如果满分是100分的话， 我会毫不留情地给现在的自己打上0分， 弱爆了的自我控制能力。 我是一个自负的人， 任何的事情除了我主观意识上接受了之外， 不会有任何人能够影响我。我认为不对的东西， 即使有人在我耳边吹了一万遍它是正确的 ， 我依然会以为它不对。 我也很讨厌那种洗脑式， 自以为是的真理式的吹风行为。 所以对于那种所谓提升自我控制能力的几个技巧啊， 提升自我控制能力的啥啥书啥的东西， 我是一直持着不屑的态度的， 从来不喜欢看这种类型的书。同理， 对于时间管理方面的培训我也是一万个不愿意， 时间管理嘛， 有了日事清就够了， 还培训个啥， 这破培训才是真的浪费时间。 但是没办法， 领导喜欢玩这一套你就得由着他。  </p>
+<p>突然发现明明自己写的是关于最近的一些事， 但是话题却始终是围绕着时间两个字在转。说起来， 抛开业余时间不谈，工作的时候时间排得倒是挺合理的（在有活儿干的情况下）， 毕竟咱做的软件就是时间管理方面的。当然， 现在做项目的时候， 项目管理流程走得也是挺不错的， 至少不会有各种各样的大会小会充斥着你每一天的时间， 最多也就每个周例行的半个小时的工作安排会议。 所以自己真正应该改变的便是业余时间的控制吧。  </p>
+<p>感觉自己真的是太久没动笔了， 一动笔的时候通篇都是废话， 熬到现在也熬不出几个字儿了。 哎， 曾经的才子如今已是江郎才尽<br>:悲伤。 那就给刚入门的前端小伙伴们一点忠告吧。 在基础没打扎实前， 千万不要折腾除了jQuery之外的其他框架。 讲真， 这段时间里最好的做法就是打好基础打好基础打好基础。 只有JS基础打好了， 后面学框架这些东西的时候才会更快。 血淋淋的教训啊， 当初年轻不懂事， 学了点JS就去折腾框架， 结果浪费了我不少时间不说， 最为悲惨的是到最后真的只是学到了个鸟 →＿← 。 </p>
 ]]></content>
       <tags>
-        <tag>每天学习一丢丢~</tag>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用来放一些tips中的DEMO</title>
+    <url>/2016/05/10/%E7%94%A8%E6%9D%A5%E6%94%BE%E4%B8%80%E4%BA%9Btips%E4%B8%AD%E7%9A%84DEMO/</url>
+    <content><![CDATA[<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ul>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy/mtYvor5XmmL7npLrpmpDol4/nmoTkuKTnp43lrp7njrDmlrnlvI/nmoTmgKfog70uaHRtbA==">测试显示隐藏的两种实现方式的性能<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h2 id="CSS-amp-HTML"><a href="#CSS-amp-HTML" class="headerlink" title="CSS &amp; HTML"></a>CSS &amp; HTML</h2><ul>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vcmdybXMv">仿制的第一个站（前东家官网）<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy90ZXN0R3JhZGludC5odG1s">实现慕课网官网楼层动态效果<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy9pbmRleDEyMy5odG1s">对指定文字设置样式<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy9kcmF3QUVnZy5odG1s">画个鸡蛋吧<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2dhbWVzL2NvbG9yLmh0bWw=">颜色块儿<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2dhbWVzL2JvbnVzLmh0bWw=">点个转盘<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2xheW91dC8zQ29sdW1ucy5odG1s">3列布局， 左右定宽，中间自适应<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL3JpY2hUZXh0RWRpdG9yLmh0bWw=">一个简单的富文本编辑器<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2h0bWw1QVBJcy9GdWxsU2NyZWVuLmh0bWw=">全屏<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL+a1i+ivleWxheS4rS5odG1s">居中<i class="fa fa-external-link-alt"></i></span></li>
+<li><a href="http://noteawesome.com/just-some-tips/src/keyCode.html">键码</a></li>
+<li><a href="http://noteawesome.com/algorithms/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%92%E5%BA%8F/%E5%88%9D%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html">算法学习</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>乱七八糟</tag>
       </tags>
   </entry>
   <entry>
@@ -1242,98 +1288,26 @@
 ]]></content>
   </entry>
   <entry>
-    <title>基于git diff的eslint代码检测</title>
-    <url>/2016/08/15/%E5%9F%BA%E4%BA%8Egit-diff%E7%9A%84eslint%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/</url>
-    <content><![CDATA[<h1 id="基于git-diff进行的eslint代码检测"><a href="#基于git-diff进行的eslint代码检测" class="headerlink" title="基于git diff进行的eslint代码检测"></a>基于git diff进行的eslint代码检测</h1><p>随着代码的不断增加， eslint进行代码检测的时间也越来越久。每次检测的时候， 需要检测的文件和实际检测的文件极度不对称，所以便基于<code>git diff</code>写了这样一个小工具。</p>
-<a id="more"></a>
-<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><ul>
-<li>启动脚本(<code>lint.sh</code>)</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">INFO=<span class="string">'\033[36m'</span>;</span><br><span class="line">NOR=<span class="string">'\033[0m'</span>;</span><br><span class="line">ERR=<span class="string">'\033[31m'</span>;</span><br><span class="line">br=<span class="string">'dev'</span>;</span><br><span class="line"><span class="keyword">if</span> [ ! -z <span class="variable">$1</span> ]; <span class="keyword">then</span></span><br><span class="line">  br=<span class="variable">$1</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>run lint now ... just wait a moment ...<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line">git diff origin/<span class="variable">$&#123;br&#125;</span> &gt; diff.log;</span><br><span class="line"><span class="built_in">log</span>=`cat diff.log | grep <span class="string">'diff --git a/src'</span>`;</span><br><span class="line"><span class="keyword">if</span> [[ -z <span class="variable">$&#123;log&#125;</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>没有文件发生变化<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">echo</span> <span class="string">''</span>;</span><br><span class="line">  node ./lint-by-diff.js;</span><br><span class="line">  <span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>done ...<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line">rm diff.log change.log 2&gt; /dev/null;</span><br><span class="line"><span class="built_in">read</span>;</span><br></pre></td></tr></table></figure>
+    <title>2015小记</title>
+    <url>/2016/02/01/2015%E5%B0%8F%E8%AE%B0/</url>
+    <content><![CDATA[<p>算算日子，从9月份接触前端至今，已经过了有5个月了。到现在，想到自己走上程序员这条路的缘由，都觉得满是惊奇。 </p>
+<p>仔细说起来，还得从大四的那段时间开始说起。原本自己是准备去当兵的，为此，还在大二的时候做了近视手术（话说从来很少向家里开口要钱的我，当初要钱做手术的时候，都觉得脸上烧的不行）。因为有了这样的念想，大四也没怎么找工作，其实也有找过，可是核电几巨头都看不上俺o╯□╰o。虽然传说中大学生当兵，只要没太大的问题，一般都能过的，不过为了以防万一，我还是随便签了一份工作。哦，对了，在3月份的时候，因为觉得没什么事情做，还去考了个公务员，虽然也进面了，但是因为和当兵体检的时间冲突，就没有报名面试。</p>
+<a id="more"></a>  
 
-<ul>
-<li>检测工具(<code>lint-by-diff.js</code>)</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">const</span> shelljs = <span class="built_in">require</span>(<span class="string">'shelljs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> jsFiles = [],</span><br><span class="line">  LOG__PATH   = <span class="string">'./diff.log'</span>,</span><br><span class="line">  FILE = <span class="regexp">/diff --git a([\s\S]*?) /g</span>,</span><br><span class="line">  data = fs.readFileSync(LOG__PATH).toString(),</span><br><span class="line">  _files = data.match(FILE),</span><br><span class="line">  len = _files.length;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; len) &#123;</span><br><span class="line">  <span class="keyword">const</span> _item = _files[i++].trim();</span><br><span class="line">  <span class="keyword">if</span> (!<span class="regexp">/.js$/</span>.test(_item)) <span class="keyword">continue</span>;</span><br><span class="line">  <span class="keyword">const</span> item = <span class="string">'./'</span> + _item.slice(<span class="number">13</span>);</span><br><span class="line">  <span class="keyword">if</span> (!<span class="regexp">/^\.\/src\//</span>.test(item)) <span class="keyword">continue</span>; <span class="comment">// src为项目需要进行eslint检测的目录</span></span><br><span class="line">  <span class="keyword">if</span> (!fs.existsSync(item)) <span class="keyword">continue</span>;</span><br><span class="line">  jsFiles.push(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'     以下文件发生改变： '</span>);</span><br><span class="line"><span class="built_in">console</span>.log(jsFiles.join(<span class="string">'\n'</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line">shelljs.exec(<span class="string">'node ./node_modules/eslint/bin/eslint.js '</span> + jsFiles.join(<span class="string">' '</span>));</span><br></pre></td></tr></table></figure>
 
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>通过<code>git diff origin/branch</code>获取到和指定分支的不同， 从而知道哪些文件需要进行代码检测（dev上的是通过检测的）， 然后运行eslint的时候就指定这部分文件。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在项目根目录下输入<code>./lint.sh</code>或者<code>bash ./lint.sh</code>, 默认分支为<code>dev</code>分支， 如果需要指定其他分支， 可以在运行的时候传入参数， 如： <code>bash ./lint.sh master</code>.</p>
-<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><ul>
-<li><p>使用了bash导致这个看起来有点不伦不类， 使用纯js也许会更好， 但是我毕竟半吊子， 写不出来→＿←</p>
-</li>
-<li><p>没有对<code>error</code>进行高亮显示， 所以看起来会比较费力</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用来放一些tips中的DEMO</title>
-    <url>/2016/05/10/%E7%94%A8%E6%9D%A5%E6%94%BE%E4%B8%80%E4%BA%9Btips%E4%B8%AD%E7%9A%84DEMO/</url>
-    <content><![CDATA[<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ul>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy/mtYvor5XmmL7npLrpmpDol4/nmoTkuKTnp43lrp7njrDmlrnlvI/nmoTmgKfog70uaHRtbA==">测试显示隐藏的两种实现方式的性能<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-<h2 id="CSS-amp-HTML"><a href="#CSS-amp-HTML" class="headerlink" title="CSS &amp; HTML"></a>CSS &amp; HTML</h2><ul>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vcmdybXMv">仿制的第一个站（前东家官网）<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy90ZXN0R3JhZGludC5odG1s">实现慕课网官网楼层动态效果<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy9pbmRleDEyMy5odG1s">对指定文字设置样式<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy9kcmF3QUVnZy5odG1s">画个鸡蛋吧<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2dhbWVzL2NvbG9yLmh0bWw=">颜色块儿<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2dhbWVzL2JvbnVzLmh0bWw=">点个转盘<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2xheW91dC8zQ29sdW1ucy5odG1s">3列布局， 左右定宽，中间自适应<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL3JpY2hUZXh0RWRpdG9yLmh0bWw=">一个简单的富文本编辑器<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2h0bWw1QVBJcy9GdWxsU2NyZWVuLmh0bWw=">全屏<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL+a1i+ivleWxheS4rS5odG1s">居中<i class="fa fa-external-link-alt"></i></span></li>
-<li><a href="http://noteawesome.com/just-some-tips/src/keyCode.html">键码</a></li>
-<li><a href="http://noteawesome.com/algorithms/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%92%E5%BA%8F/%E5%88%9D%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html">算法学习</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>乱七八糟</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的时间都去哪儿了</title>
-    <url>/2016/05/17/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E5%84%BF%E4%BA%86/</url>
-    <content><![CDATA[<p>前段时间把网给停了， 理由是在有网的情况下， 我每天在回到家后都把为数不多的时间浪费在上网上面去了， 虽然能有所收获，但是总体而言是弊大于利的， 毕竟大部分的时间里我都是在做着一些无关紧要的事情。所以我把网停了， 希望能够借助这种手段来强迫自己不断地学习新的东西。 效果是有的， 然而我依然对自己不是很满意。</p>
-<a id="more"></a>
-
-<p>不得不承认， 我是一个自我控制能力很弱的人。 我很容易分心， 很容易感到枯燥。所以采用这样的方法来让自己被动地学习。然而即使这样做了， 却依旧没有达到我想要的效果。 在我的想象中， 每天下班之后， 或者在周末的时候， 我除了买菜做饭和正常的休息时间之外， 其他的时间应该都用来看书， 或者码代码， 毕竟这样才能快速地提高自己。相比于刚刚接触JS（去年9月份的时候）的那段时间， 自己现在真的是弱爆了。 那段时间是我真正的有状态的阶段，连吃饭的时候都是一边吃， 一边看书。 但是现在， 我采用了禁网的方式， 把自己和网络隔离开来， 其实也并没有完全隔离开来， 毕竟还有手机这东西， 说起来我好像也找到了一点原因了， 那就是还有手机。 我现在是没有电脑上网了， 但是手机却还是能够上网， 所以觉得累的时候， 就会打开手机逛逛贴吧， 想象中只是逛逛而已， 结果这一玩儿， 就浪费了大把的时间， 就好像周六周日的午休一样， 不午休还好， 只要一午休， 一般就会从1.30睡到4.00， 我以后大概都不敢再在周末的时候躺在床上午休了吧。 浪费的大把的时间是真的一去不复返了。 </p>
-<p>之前的时候， 我跟朋友说来到北京之后， 胖了不止一圈了。 朋友说她在家的时候每天早上都还跑步呢， 叫我也多锻炼身体， 当时我说我把时间都用来学习了， 腾不出时间来锻炼身体， 等以后有空了再慢慢锻炼吧。 现在想起来也真是讽刺， 每天浪费了大把大把的时间， 却说自己把所有时间都用来学习了。</p>
-<p>提升自我控制能力应该是一件值得我花一辈子的时间去做的事情吧。 我相信做好这件事情给我带来的好处能和每天吃上土豆给我精神上带来的好处相媲美。当然，前提是我真正地把它给做好了。 如果满分是100分的话， 我会毫不留情地给现在的自己打上0分， 弱爆了的自我控制能力。 我是一个自负的人， 任何的事情除了我主观意识上接受了之外， 不会有任何人能够影响我。我认为不对的东西， 即使有人在我耳边吹了一万遍它是正确的 ， 我依然会以为它不对。 我也很讨厌那种洗脑式， 自以为是的真理式的吹风行为。 所以对于那种所谓提升自我控制能力的几个技巧啊， 提升自我控制能力的啥啥书啥的东西， 我是一直持着不屑的态度的， 从来不喜欢看这种类型的书。同理， 对于时间管理方面的培训我也是一万个不愿意， 时间管理嘛， 有了日事清就够了， 还培训个啥， 这破培训才是真的浪费时间。 但是没办法， 领导喜欢玩这一套你就得由着他。  </p>
-<p>突然发现明明自己写的是关于最近的一些事， 但是话题却始终是围绕着时间两个字在转。说起来， 抛开业余时间不谈，工作的时候时间排得倒是挺合理的（在有活儿干的情况下）， 毕竟咱做的软件就是时间管理方面的。当然， 现在做项目的时候， 项目管理流程走得也是挺不错的， 至少不会有各种各样的大会小会充斥着你每一天的时间， 最多也就每个周例行的半个小时的工作安排会议。 所以自己真正应该改变的便是业余时间的控制吧。  </p>
-<p>感觉自己真的是太久没动笔了， 一动笔的时候通篇都是废话， 熬到现在也熬不出几个字儿了。 哎， 曾经的才子如今已是江郎才尽<br>:悲伤。 那就给刚入门的前端小伙伴们一点忠告吧。 在基础没打扎实前， 千万不要折腾除了jQuery之外的其他框架。 讲真， 这段时间里最好的做法就是打好基础打好基础打好基础。 只有JS基础打好了， 后面学框架这些东西的时候才会更快。 血淋淋的教训啊， 当初年轻不懂事， 学了点JS就去折腾框架， 结果浪费了我不少时间不说， 最为悲惨的是到最后真的只是学到了个鸟 →＿← 。 </p>
+<p>毕业之后，等到7月1号体检完了便回了家，然后等啊等，等到了8月3号，通知我去复检。这个时候我还抱着幻想，以为只是上面的抽查而已，应该能过的。 结果去了之后，告诉我心电图不正常，要重新检查一遍，检查完之后又让我回去等消息，这一等便等到了18号，告诉我没有通过体检。当时的心情，怎么说呢，感觉自己整个人一下子就被人给掏空了。盼了这么久，却没盼到自己想要的结果。之后我便慌了， 毕竟已经毕业有一个多月了，原本捉摸着能够成功去部队的话，这段时间我还可以用陪伴家人的理由来宽慰自己。可是现在部队也去不成了，自己也是成年人了，如果继续在家里呆着啃老的话，我是无论如何也不肯的。想起自己当初签的那份工作，便打了电话给那边的HR， 结果HR说她现在不方便，让我直接联系老总（后来才知道，原来她已经辞职走了），我又给老总打了电话，他告诉我这个事情需要公司协商一下，让我等消息。等到了19号的时候，那边通知我过去的时候给他们说一声，随后我便买了21号去北京的票。或许当时也是心里太慌了吧， 做起事情来都是火急火燎的， 巴不得马上离开家出去打拼去。 </p>
+<p>到了这边之后， 因为是刚刚来，没什么事情做，然后整天就在办公室里坐着，看着一大堆的说明书，还全是英文的，头大啊→_→，每天上下班时间也是规定死的，又因为住的地方就在公司楼上，所以一天到晚大把大把的时间。一想到自己都是出来工作的人了，总不能白白虚度光阴吧。然后便开始找东西看。。。忘了是从哪儿听到的网易云课堂，总之是在上面找了一些视频来看，看了许多，最后对十八哥的div + css布局的内容比较感兴趣， 便好好的看了， 结果好像到现在都没把那段视频看完。总之知道了那是web前端的内容之后便直接去了百度贴吧（当初考公务员的时候就是从贴吧里边找资源的来着），希望在里面看看别人是怎么学的。。。结果还淘到了好东西——网易前端微专业的课程， 官方售价好像是1000多， 我是直接用百度云下下来看了。。。 还走w3school上面看了html,css,javascript的教程什么， 现在也时不时地上去看。</p>
+<p>对这个行业接触了一段时间之后， 我发现我是深深的喜欢上了它，甚至有几次因为碰到了问题找不到原因，结果连饭都忘记吃了，等我问题解决完了想起吃饭的时候，饭也已经冷了。在这样一条道路上，最大的问题便是没有人带，靠自己一个人摸索，碰到了问题，也得自己百度， 或者走群里面问或者就是自己改改改，虽然麻烦了点，不过收获也是巨大的，巩固了知识点，同时那种依靠自己成功解决问题之后的快乐也是极为让人享受的。 </p>
+<p>然后9月底的时候买了JAVASCRIPT高级程序设计，原本是准备国庆七天的时间把书给啃完的，结果好像那几天赶上琅琊榜热播？？反正最后7天完了之后我连一半都没啃到， 等到国庆节快结束的时候， 我这心里可是。。。担心不已啊。。</p>
+<p>久了之后， 公司自然也就给安排活儿了。一般就是跑腿儿，不过这一跑跑的有点远，从密云跑到房山，也就是从北京东北方向跑到西南方向，坐车也要坐两三个小时。  其实最开始的时候， 我以为我是能够适应出差的（虽然这只是小差）， 毕竟出差多好啊，公司给报销， 自己还能到处跑，见识各个地方的风土人情，真是爽。可是当自己真正的出过几次之后，就觉得自己实在是不能接受出差了。一来以我这挑食的尿性，出一次差，连吃饭都是个问题了，一般早上随便吃一点儿，然后饿到回来之后自己弄，二来，觉得一出差就得坐车坐车坐车，大好青春就浪费在坐车上了，实在是不划算。再加上那一段时间觉得自己学的前端知识勉勉强强能看了，并且有了瓶颈，心里太浮躁， 并且也找不到学习的方向了， 再这样下去自己也只是重复做着某一件事情而已， 不会有太大的提升的。 于是我便有了辞职的打算。 </p>
+<p>然后我开始投简历啊， 51， 智联，拉勾，周伯通，大街，哦，对了还有个5858这玩意儿响应速度就是快，当天投的，当天就收到了回应，只不过人家不是招你去工作的， 而是招你去培训的， 培训费都得1W+ 呢。。本来对58的印象就不是很好，结果这一来就更讨厌58了。 走智联上投了那么多，是没有一家回我的，毕竟以我这非科班的出身，又才接触行业一个多月的经历，谁会要我呢是吧。了两三天没收到通知之后，自己也就老老实实地跑去搬砖去了（确实是搬砖，铅砖，普通砖头大小，一块儿26斤，o╯□╰o。期间也收到了两次面试通知， 可是人家都只在工作日面试，而我这么一新来的，也不好意思开口跟领导说，领导，我请个小假去面个小试行不行是吧，所以最后这事儿也是不了了之了，我捉摸着还是继续巩固一下知识吧。结果这没过多久自己心里又悸动了，因为觉得自己无法忍受现在这样的重复的看不到未来的工作，并且自己那段时间也确实没学到什么东西，于是便下定决心，破釜沉舟，直接把工作辞掉然后再找工作，因为如果要是像这样继续下去，就算自己再收到面试邀请的话，也没有去面试的时间，所以还不如直接辞了赌一把呢。于是说干就干，当天便开始新一轮投简历攻势，我居然又投了58，没事儿，骚扰电话就骚扰电话吧，万一一不小心，瞎猫碰到死耗子，我真被HR给相中了呢。同时也开始找房子， 毕竟现在住的是公司的房子，而且工作之后也肯定是会换地方的。结果谁曾想，这一次的效率这么高，头一天投了简历，第二天就收到了HR的私信，而且还都是大街上的，让我给他们发自己的个人简历和作品过去，随后我就把自己仿制的公司的官网给打包发了过去。 等了大概有一天左右吧，有一家公司就打电话问我一些问题啊什么的，后来还问我什么时候能够面试，最后约了周六，而另外一家公司就不了了之了。 </p>
+<p>具体的面试过程就不说了， 最后我是来到了这家公司， 也很感谢现东家不嫌弃我这个当时只有两个月的自学经历的小菜鸟。 </p>
+<p>到了这边之后 ， 感觉好像一下子有人引导了（其实也没啥引导，还是自学，只是有了个方向而已，毕竟大家平时都有着自己的事情），总之觉得自己需要学的东西太多太多了，然后就被需求牵着鼻子走，需要什么就补什么。。。其实刚来那段时间都是在学Backbone。值得庆幸的是， 我来到的第一家公司，产品是web应用，做UI的也是用的sketch，因此我并没有沦为一个苦逼的切图仔，所以可以花更多的时间来学习一些必要的东西，而不是重复的切图切图切图，测量测量测量。那段时间，自己整个人都是干劲满满。觉得这样的生活才有意义。 甚至我还因此而为大学四年虚度的光阴懊悔不已，如果我能够早一日接触到前端的话，或许。。或许。。。也没那么多或许。还是老老实实地码代码吧。 </p>
+<p>最近这两天自己的心里又开始浮躁了，因为自己不是科班出身的，觉得自己要比别人更努力才能超越别人，所以总是给自己太多的压力， 想要一口气吃成一个大胖子， 连JS都还没啃完呢， 就想要开始啃php,nodejs了。而只是前端这一块儿，也还有那么多需要学习的东西， 各种框架（虽说原生JS好， 可是框架这玩意儿找工作的时候能加分啊）层出不穷， 还有ES6， 打包管理工具，微信开发， 移动开发 等等等等一大堆东西，所以自己这一口下去，饭是吃到了，却差点把自己给噎死，得不偿失，什么都没学到，反而把自己给折磨得没个人样儿了 。所以这两天心里总是浮躁的紧呢。也就把这一篇自己一直想写却又不知道怎么写的东西给磨出来了。算是借此平息一下自己那悸动的内心吧。 </p>
+<p>每次纳兹碰到比自己强大的对手， 被对方打的不要不要的的时候，总会飚一句，“我燃起来了”。我感觉我现在也燃起来了，只不过我面对的不是对手，而是一个又一个的挑战，是那一个又一个的晋级的阶梯，迈过它们，我的职业技能会有所提升，未来也就会更加明朗。最大的挑战还是自己，别搞到最后，自己把自己给折磨死了，那可就闹了个大笑话了。因为有了渴望拥有和想要守护的东西，所以，2016，加油吧， 希望新的一年里， 自己的能力能有质的提升。 </p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>纯CSS实现单击锚点平滑切换的效果</title>
-    <url>/2016/05/10/%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E5%8D%95%E5%87%BB%E9%94%9A%E7%82%B9%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%9A%84%E6%95%88%E6%9E%9C/</url>
-    <content><![CDATA[<p>有时想实现一个功能，比如想让页面不出现滚动条，但是却能装下更多的东西，这个时候我们会对某个容器设 置<code>overflow: hidden</code>，然后通过锚点来实现单击切换页面（其实只是控制显示的内容）的效果。但是通过锚点来跳到指定内容的不足之处在于，没有什么过渡效果，很突兀的就跳到了目标点。当然，也可以通过JS或者jQuery来实现自己想要的动态切换效果，这一类的文章一搜一大堆，这里就不赘述了。</p>
-<a id="more"></a>
-<p>但是在一些个人主页中，比如github的个人主页（只是主页而已，也就是username.github.io）上会禁止JS脚本的运行，这个时候如果还是想通过单击锚点平滑切换的功能的话，应该怎么办呢？</p>
-<p>原谅我是一个前端初学者，傻想了很久也想不到什么办法，然后就百度谷歌了。</p>
-<p>后来找到了一些方法，比如用radio配合他的check属性来实现，<span class="exturl" data-url="aHR0cDovL3R5bXBhbnVzLm5ldC9jb2Ryb3BzLzIwMTIvMDYvMTIvY3NzLW9ubHktcmVzcG9uc2l2ZS1sYXlvdXQtd2l0aC1zbW9vdGgtdHJhbnNpdGlvbnMv">文章在这里<i class="fa fa-external-link-alt"></i></span>,关于这个方法，<span class="exturl" data-url="aHR0cDovL3d3dy5pbW9vYy5jb20vdmlldy8yNTI=">慕课<i class="fa fa-external-link-alt"></i></span>上也有专门的教程，大家也可以去看看。</p>
-<p>但是可不可以不插入radio就实现对应的效果呢？ 答案是有的。</p>
-<p>那就是利用<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvQ1NTLyUzQXRhcmdldA==">:target<i class="fa fa-external-link-alt"></i></span>伪类，这个选择器可以选择当前活动的锚点,那么利用这个属性我们就可以实现自己想要的效果了。</p>
-<p>代码如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag1"</span>&gt;</span>Tag1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag2"</span>&gt;</span>Tag2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag3"</span>&gt;</span>Tag3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#container</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">outline</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag1</span>, <span class="selector-id">#tag2</span>, <span class="selector-id">#tag3</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: all ease-out .<span class="number">2s</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>:<span class="number">0</span></span><br><span class="line">  left:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag1</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f66</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag2</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag3</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: gray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#container</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:target</span> &#123;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1000</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvMjQza2pMNjAvMi8=">查看DEMO<i class="fa fa-external-link-alt"></i></span></p>
-<p>上面的例子是通过绝对定位配合z-index和透明度来实现的动态效果。先将所有的元素的opacity设为0，然后为了默认显示出来第一个元素，所以第一个元素的opacity为1，z-index为1。然后单击就可以实现动态切换了。</p>
-<p>其实我最先尝试的是通过给<code>#container</code>设置<code>overflow: hidden;</code>, 为它的子元素设置<code>height:100%;</code>，然后给target设置margin-top为负的百分比值来实现相应效果的，毕竟比较喜欢这种从下往上冒或者从上往下掉的感觉嘛。。。但是在实现过程中遇到了一点小问题，那就是当Tag2和Tag3相互切换的时候，居然只会移动到一半就不再动了，如果把<code>overflow: hidden</code>去掉，显示的就是自己期望的效果。<span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvYmV6YnUzajIv">一个有问题的DEMO<i class="fa fa-external-link-alt"></i></span> </p>
-<p>后来自己想到了解决的办法，那就是给container包裹一个div，然后把<code>overflow: hidden</code>设置在这个元素身上，再把container的overflow去掉，设置高度为它子元素的高度，这样就能显示正常了。 <span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvZGMzc3ZkdmYvNC8=">DEMO在这里<i class="fa fa-external-link-alt"></i></span>.</p>
-<p>虽然找到了解决办法，但是对于<span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvYmV6YnUzajIv">问题DEMO<i class="fa fa-external-link-alt"></i></span> 里的这种怪异行为真的不理解，如果各位谁知道的话，还请告知，谢谢。</p>
-<p>参见：<br><span class="exturl" data-url="aHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy8xNzYzMTQxNy9jc3MtcHVyZS1jc3Mtc2Nyb2xsLWFuaW1hdGlvbg==">stackoverflow - 纯CSS滚动效果<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <tags>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -1536,29 +1510,26 @@
       </tags>
   </entry>
   <entry>
-    <title>设置text-overflow為ellipsis后引起的文本对齐问题</title>
-    <url>/2016/05/10/%E8%AE%BE%E7%BD%AE-text-overflow-ellipsis-%E5%90%8E%E5%BC%95%E8%B5%B7%E7%9A%84%E6%96%87%E6%9C%AC%E5%AF%B9%E9%BD%90%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。</p>
+    <title>纯CSS实现单击锚点平滑切换的效果</title>
+    <url>/2016/05/10/%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E5%8D%95%E5%87%BB%E9%94%9A%E7%82%B9%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%9A%84%E6%95%88%E6%9E%9C/</url>
+    <content><![CDATA[<p>有时想实现一个功能，比如想让页面不出现滚动条，但是却能装下更多的东西，这个时候我们会对某个容器设 置<code>overflow: hidden</code>，然后通过锚点来实现单击切换页面（其实只是控制显示的内容）的效果。但是通过锚点来跳到指定内容的不足之处在于，没有什么过渡效果，很突兀的就跳到了目标点。当然，也可以通过JS或者jQuery来实现自己想要的动态切换效果，这一类的文章一搜一大堆，这里就不赘述了。</p>
 <a id="more"></a>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>Hello Hello Hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>xhaha<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>但是在一些个人主页中，比如github的个人主页（只是主页而已，也就是username.github.io）上会禁止JS脚本的运行，这个时候如果还是想通过单击锚点平滑切换的功能的话，应该怎么办呢？</p>
+<p>原谅我是一个前端初学者，傻想了很久也想不到什么办法，然后就百度谷歌了。</p>
+<p>后来找到了一些方法，比如用radio配合他的check属性来实现，<span class="exturl" data-url="aHR0cDovL3R5bXBhbnVzLm5ldC9jb2Ryb3BzLzIwMTIvMDYvMTIvY3NzLW9ubHktcmVzcG9uc2l2ZS1sYXlvdXQtd2l0aC1zbW9vdGgtdHJhbnNpdGlvbnMv">文章在这里<i class="fa fa-external-link-alt"></i></span>,关于这个方法，<span class="exturl" data-url="aHR0cDovL3d3dy5pbW9vYy5jb20vdmlldy8yNTI=">慕课<i class="fa fa-external-link-alt"></i></span>上也有专门的教程，大家也可以去看看。</p>
+<p>但是可不可以不插入radio就实现对应的效果呢？ 答案是有的。</p>
+<p>那就是利用<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvQ1NTLyUzQXRhcmdldA==">:target<i class="fa fa-external-link-alt"></i></span>伪类，这个选择器可以选择当前活动的锚点,那么利用这个属性我们就可以实现自己想要的效果了。</p>
+<p>代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag1"</span>&gt;</span>Tag1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag2"</span>&gt;</span>Tag2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag3"</span>&gt;</span>Tag3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">40%</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">40%</span>;</span><br><span class="line">  <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.right</span>&#123;</span><br><span class="line">  <span class="comment">/* overflow: hidden; */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvcHNrcGNmYzgvMS8=">查看DEMO<i class="fa fa-external-link-alt"></i></span></p>
-<p>按以上代码最后得到的显示效果是，<code>span.left</code>和<code>span.right</code>没有对齐。右边的会沉下去点，这个在demo里面可以看到。</p>
-<p>然后我就想这是什么原因造成的，在调试器里勾选掉<code>.left</code>的<code>overflow: hidden</code>后，就显示正常了（当然，省略号儿也没了），然后我就捉摸着这是不是BFC的问题，因为平时自己清除浮动什么的，都喜欢用<code>overflow:hidden</code>来触发BFC，以便包裹元素的来着。当然了，给.right设置<code>overflow: hidden</code>或者<code>float: right</code>之后，也确实会显示正常（<code>float: right</code>会让文字右浮动，不过对齐的效果确实是达到了)，之后我就在BFC的问题上纠结了好久，因为<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvR3VpZGUvQ1NTL0Jsb2NrX2Zvcm1hdHRpbmdfY29udGV4dA==">MDN<i class="fa fa-external-link-alt"></i></span>上说了，<code>inline-block</code>元素本身就是会触发BFC的，那么前面所说的和BFC有关，就不那么准确了。</p>
-<p>后来在stackoverflow上得到了答案，对<code>span</code>加上一个<code>vertical-align: top</code>然后就会对齐了。</p>
-<p>至于原因，是因为<code>inline-block</code>元素默认的对齐方式是基线对齐，那么基线是什么呢？　如果一个<code>inline-block</code>盒子是空的，或者说他的<code>overflow</code>属性不为<code>visible</code>, 那么他的基线就是其下边距边缘，否则的话，就是其内部最后一个内联元素的基线（文字就是内联元素咯。。）</p>
-<p>如下所示：</p>
-<p><img data-src="http://images2015.cnblogs.com/blog/852232/201601/852232-20160106180012621-339338620.png" alt=""></p>
-<blockquote>
-<p>The baseline of an ‘inline-block’ is the baseline of its last line box in the normal flow, unless it has either no in-flow line boxes or if its ‘overflow’ property has a computed value other than ‘visible’, in which case the baseline is the bottom margin edge.</p>
-</blockquote>
-<p>那么，span.left的基线就是那个背景色的最下边，而右边span.right的基线，就是字符x的底部，基线对齐的意思，就是这两条线是在同一水平线上的，所以，右边的元素为了对齐，就要往下沉咯。现在我们目测的话，也是这两条线貌似也确实是在一条水平线上的。</p>
-<p>所以，设置了<code>vertical-align: top</code>之后，改变了其默认对齐方式，所以就对齐咯。</p>
-<p>然后使用右浮动之后，因为浮动会使盒子的<code>display</code>属性变为<code>block</code>，所以就不是<code>inline-block</code>元素，自然就不会受到前面的规则的影响了。</p>
-<p>之后是使用<code>overflow: hidden</code>，这个属性使得inline-block元素的基线发生了改变，变得和左边元素一样，所以也能对齐。</p>
-<p>最后来个小总结吧： 好的文章一定要多读几遍，每一遍都会有所收获。</p>
-<p>参见：<br><span class="exturl" data-url="aHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy8xMjk1MDQ3OS93aHktZG9lcy1pbmxpbmUtYmxvY2stZWxlbWVudC1oYXZpbmctY29udGVudC1ub3QtdmVydGljYWxseS1hbGlnbmVk">stackoverflow- inline-block元素垂直对齐问题<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cDovL3d3dy56aGFuZ3hpbnh1LmNvbS93b3JkcHJlc3MvMjAxNS8wOC9jc3MtZGVlcC11bmRlcnN0YW5kLXZlcnRpY2FsLWFsaWduLWFuZC1saW5lLWhlaWdodC8=">张鑫旭-CSS深入理解vertical-align和line-height的基友关系<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#container</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">outline</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag1</span>, <span class="selector-id">#tag2</span>, <span class="selector-id">#tag3</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: all ease-out .<span class="number">2s</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>:<span class="number">0</span></span><br><span class="line">  left:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag1</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f66</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag2</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag3</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: gray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#container</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:target</span> &#123;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1000</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvMjQza2pMNjAvMi8=">查看DEMO<i class="fa fa-external-link-alt"></i></span></p>
+<p>上面的例子是通过绝对定位配合z-index和透明度来实现的动态效果。先将所有的元素的opacity设为0，然后为了默认显示出来第一个元素，所以第一个元素的opacity为1，z-index为1。然后单击就可以实现动态切换了。</p>
+<p>其实我最先尝试的是通过给<code>#container</code>设置<code>overflow: hidden;</code>, 为它的子元素设置<code>height:100%;</code>，然后给target设置margin-top为负的百分比值来实现相应效果的，毕竟比较喜欢这种从下往上冒或者从上往下掉的感觉嘛。。。但是在实现过程中遇到了一点小问题，那就是当Tag2和Tag3相互切换的时候，居然只会移动到一半就不再动了，如果把<code>overflow: hidden</code>去掉，显示的就是自己期望的效果。<span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvYmV6YnUzajIv">一个有问题的DEMO<i class="fa fa-external-link-alt"></i></span> </p>
+<p>后来自己想到了解决的办法，那就是给container包裹一个div，然后把<code>overflow: hidden</code>设置在这个元素身上，再把container的overflow去掉，设置高度为它子元素的高度，这样就能显示正常了。 <span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvZGMzc3ZkdmYvNC8=">DEMO在这里<i class="fa fa-external-link-alt"></i></span>.</p>
+<p>虽然找到了解决办法，但是对于<span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvYmV6YnUzajIv">问题DEMO<i class="fa fa-external-link-alt"></i></span> 里的这种怪异行为真的不理解，如果各位谁知道的话，还请告知，谢谢。</p>
+<p>参见：<br><span class="exturl" data-url="aHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy8xNzYzMTQxNy9jc3MtcHVyZS1jc3Mtc2Nyb2xsLWFuaW1hdGlvbg==">stackoverflow - 纯CSS滚动效果<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <tags>
         <tag>css</tag>
@@ -1590,6 +1561,35 @@
 ]]></content>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设置text-overflow為ellipsis后引起的文本对齐问题</title>
+    <url>/2016/05/10/%E8%AE%BE%E7%BD%AE-text-overflow-ellipsis-%E5%90%8E%E5%BC%95%E8%B5%B7%E7%9A%84%E6%96%87%E6%9C%AC%E5%AF%B9%E9%BD%90%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>最近在做网页的时候用到了文本溢出隐藏的功能，但是出现了一些小问题，下面先放上示例代码吧。</p>
+<a id="more"></a>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>Hello Hello Hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>xhaha<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">40%</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">40%</span>;</span><br><span class="line">  <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.right</span>&#123;</span><br><span class="line">  <span class="comment">/* overflow: hidden; */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvcHNrcGNmYzgvMS8=">查看DEMO<i class="fa fa-external-link-alt"></i></span></p>
+<p>按以上代码最后得到的显示效果是，<code>span.left</code>和<code>span.right</code>没有对齐。右边的会沉下去点，这个在demo里面可以看到。</p>
+<p>然后我就想这是什么原因造成的，在调试器里勾选掉<code>.left</code>的<code>overflow: hidden</code>后，就显示正常了（当然，省略号儿也没了），然后我就捉摸着这是不是BFC的问题，因为平时自己清除浮动什么的，都喜欢用<code>overflow:hidden</code>来触发BFC，以便包裹元素的来着。当然了，给.right设置<code>overflow: hidden</code>或者<code>float: right</code>之后，也确实会显示正常（<code>float: right</code>会让文字右浮动，不过对齐的效果确实是达到了)，之后我就在BFC的问题上纠结了好久，因为<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvR3VpZGUvQ1NTL0Jsb2NrX2Zvcm1hdHRpbmdfY29udGV4dA==">MDN<i class="fa fa-external-link-alt"></i></span>上说了，<code>inline-block</code>元素本身就是会触发BFC的，那么前面所说的和BFC有关，就不那么准确了。</p>
+<p>后来在stackoverflow上得到了答案，对<code>span</code>加上一个<code>vertical-align: top</code>然后就会对齐了。</p>
+<p>至于原因，是因为<code>inline-block</code>元素默认的对齐方式是基线对齐，那么基线是什么呢？　如果一个<code>inline-block</code>盒子是空的，或者说他的<code>overflow</code>属性不为<code>visible</code>, 那么他的基线就是其下边距边缘，否则的话，就是其内部最后一个内联元素的基线（文字就是内联元素咯。。）</p>
+<p>如下所示：</p>
+<p><img data-src="http://images2015.cnblogs.com/blog/852232/201601/852232-20160106180012621-339338620.png" alt=""></p>
+<blockquote>
+<p>The baseline of an ‘inline-block’ is the baseline of its last line box in the normal flow, unless it has either no in-flow line boxes or if its ‘overflow’ property has a computed value other than ‘visible’, in which case the baseline is the bottom margin edge.</p>
+</blockquote>
+<p>那么，span.left的基线就是那个背景色的最下边，而右边span.right的基线，就是字符x的底部，基线对齐的意思，就是这两条线是在同一水平线上的，所以，右边的元素为了对齐，就要往下沉咯。现在我们目测的话，也是这两条线貌似也确实是在一条水平线上的。</p>
+<p>所以，设置了<code>vertical-align: top</code>之后，改变了其默认对齐方式，所以就对齐咯。</p>
+<p>然后使用右浮动之后，因为浮动会使盒子的<code>display</code>属性变为<code>block</code>，所以就不是<code>inline-block</code>元素，自然就不会受到前面的规则的影响了。</p>
+<p>之后是使用<code>overflow: hidden</code>，这个属性使得inline-block元素的基线发生了改变，变得和左边元素一样，所以也能对齐。</p>
+<p>最后来个小总结吧： 好的文章一定要多读几遍，每一遍都会有所收获。</p>
+<p>参见：<br><span class="exturl" data-url="aHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy8xMjk1MDQ3OS93aHktZG9lcy1pbmxpbmUtYmxvY2stZWxlbWVudC1oYXZpbmctY29udGVudC1ub3QtdmVydGljYWxseS1hbGlnbmVk">stackoverflow- inline-block元素垂直对齐问题<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cDovL3d3dy56aGFuZ3hpbnh1LmNvbS93b3JkcHJlc3MvMjAxNS8wOC9jc3MtZGVlcC11bmRlcnN0YW5kLXZlcnRpY2FsLWFsaWduLWFuZC1saW5lLWhlaWdodC8=">张鑫旭-CSS深入理解vertical-align和line-height的基友关系<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <tags>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
