@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>git bash 设置别名</title>
+    <url>/2016/08/09/Bash-for-windows-%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</url>
+    <content><![CDATA[<p>平时在windows上做开发的时候， 总觉得其命令行不好用， 所以使用命令行的时候， 都是用的<code>git bash</code>。然后每次需要提交代码的时候， 总是会<code>git add .</code>, <code>git commit -m &#39;..&#39;</code> , <code>git push</code>, 至少都要输入这么三条命令，实在是麻烦。 那么有没有什么办法可以简化操作呢？</p>
+<a id="more"></a>
+<p>最开始的时候我用的<code>shell</code>， 在每个仓库的根目录下都建立一个<code>all.sh</code>， 长相大概就是这样：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">dm=<span class="string">':smirk:'</span>;</span><br><span class="line"><span class="keyword">if</span> [ ! -z <span class="variable">$1</span> ]; <span class="keyword">then</span></span><br><span class="line">  dm=<span class="variable">$1</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line">git add --all;</span><br><span class="line">git commit -m <span class="string">"<span class="variable">$dm</span>"</span>;</span><br><span class="line">git push;</span><br></pre></td></tr></table></figure>
+<p>然后每次提交的时候直接运行<code>bash ./all.sh</code>就行了， 那么问题来了， 这样一来的话， 每次创建一个仓库， 就要复制一下这个文件，还是麻烦。</p>
+<p><code>linux</code>下可以给<code>bash</code>设置别名， 比如通过修改<code>/etc/.bashrc</code>， 但是在<code>bash for windows</code>下应该怎么做呢？</p>
+<p>其实吧。。 <code>bash for windows</code>也是有类似的文件的， 只不过不叫<code>.bashrc</code>而是<code>bash.bashrc</code>, 位置在<code>/etc/bash.bashrc</code>那里，当然， 具体的位置可能会因为git版本的不同而有所不同， windows下没有<code>etc</code> ? 没事儿， 在bash下直接cd就进去了。</p>
+<p>然后就加了别名</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># alias</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> ls=<span class="string">'ls --color=auto'</span>;</span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">'ls -lh'</span>;</span><br><span class="line"><span class="built_in">alias</span> all=<span class="string">'git add --all &amp;&amp; git commit -m ":smirk:" &amp;&amp; git push'</span>;</span><br><span class="line"><span class="built_in">alias</span> ..=<span class="string">'cd ..'</span>;</span><br><span class="line"><span class="built_in">alias</span> ....=<span class="string">'cd ../../'</span>;</span><br><span class="line"><span class="built_in">alias</span> ld=<span class="string">'ll | grep "^d"'</span>;</span><br><span class="line"><span class="built_in">alias</span> psw=<span class="string">'ps -a --windows'</span>;</span><br><span class="line"><span class="built_in">alias</span> vi=<span class="string">'vim'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下是cygwin下针对快速切换到挂载目录设置的别名</span></span><br><span class="line"><span class="built_in">alias</span> d=<span class="string">'cd /cygdrive/d'</span>;</span><br><span class="line"><span class="built_in">alias</span> ng=<span class="string">'cd /cygdrive/d/nginx-1.6.0'</span>;</span><br><span class="line"><span class="built_in">alias</span> gi=<span class="string">'cd /cygdrive/d/JGX/GitHub'</span>;</span><br></pre></td></tr></table></figure>
+<p>重启下bash , 然后就能够使用了。</p>
+<p>虽然<code>git bash</code>用着也还行， 不过还是对不少的linux命令没有提供支持， 另外一个软件<code>cygwin</code>也挺不错， 支持也挺多的， 如果安装<code>cygwin</code>的话， 需要注意一点， 也就是它默认不会安装<code>vim</code>， 所以在选择软件的时候需要留意一下。另外， <code>git bash</code>好像会比<code>cygwin</code>快一点， <code>cygwin</code>在运行未运行过的程序的时候， 反应会比较慢（查找去了？）， 另外， 关于<code>git</code>, 在<code>cygwin</code>下好像也需要重新配置。</p>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2015小记</title>
     <url>/2016/02/01/2015%E5%B0%8F%E8%AE%B0/</url>
     <content><![CDATA[<p>算算日子，从9月份接触前端至今，已经过了有5个月了。到现在，想到自己走上程序员这条路的缘由，都觉得满是惊奇。 </p>
@@ -21,26 +40,6 @@
 ]]></content>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub仓库绑定二级域名</title>
-    <url>/2016/06/03/GitHub%E4%BB%93%E5%BA%93%E7%BB%91%E5%AE%9A%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/</url>
-    <content><![CDATA[<ol>
-<li><p>在仓库创建<code>gh-pages</code>分支</p>
-</li>
-<li><p>在该分支根目录下添加<code>CNAME</code>文件，文件内容是你希望指向的域名，需要注意的是不需要加协议，如期望网址是<code>http://algorithms.noteawesome.com</code>的话， 就直接写<code>algorithms.noteawesome.com</code>.</p>
-<a id="more"></a>
-<p><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603130619.png" alt="创建CNAME文件"><br>在完成创建之后可以前往仓库设置查看是否设置成功<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131423.png" alt="检验是否设置成功"></p>
-</li>
-<li><p>前往域名控制中心添加域名解析<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131304.png" alt="添加解析"></p>
-</li>
-<li><p>慢慢等， 也可以用<code>ping &#39;your site&#39;</code>来查看是否成功设置<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131646.png" alt="是否解析成功"></p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>GitHub Pages</tag>
       </tags>
   </entry>
   <entry>
@@ -80,22 +79,23 @@
       </tags>
   </entry>
   <entry>
-    <title>git bash 设置别名</title>
-    <url>/2016/08/09/Bash-for-windows-%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</url>
-    <content><![CDATA[<p>平时在windows上做开发的时候， 总觉得其命令行不好用， 所以使用命令行的时候， 都是用的<code>git bash</code>。然后每次需要提交代码的时候， 总是会<code>git add .</code>, <code>git commit -m &#39;..&#39;</code> , <code>git push</code>, 至少都要输入这么三条命令，实在是麻烦。 那么有没有什么办法可以简化操作呢？</p>
+    <title>GitHub仓库绑定二级域名</title>
+    <url>/2016/06/03/GitHub%E4%BB%93%E5%BA%93%E7%BB%91%E5%AE%9A%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<ol>
+<li><p>在仓库创建<code>gh-pages</code>分支</p>
+</li>
+<li><p>在该分支根目录下添加<code>CNAME</code>文件，文件内容是你希望指向的域名，需要注意的是不需要加协议，如期望网址是<code>http://algorithms.noteawesome.com</code>的话， 就直接写<code>algorithms.noteawesome.com</code>.</p>
 <a id="more"></a>
-<p>最开始的时候我用的<code>shell</code>， 在每个仓库的根目录下都建立一个<code>all.sh</code>， 长相大概就是这样：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">dm=<span class="string">':smirk:'</span>;</span><br><span class="line"><span class="keyword">if</span> [ ! -z <span class="variable">$1</span> ]; <span class="keyword">then</span></span><br><span class="line">  dm=<span class="variable">$1</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line">git add --all;</span><br><span class="line">git commit -m <span class="string">"<span class="variable">$dm</span>"</span>;</span><br><span class="line">git push;</span><br></pre></td></tr></table></figure>
-<p>然后每次提交的时候直接运行<code>bash ./all.sh</code>就行了， 那么问题来了， 这样一来的话， 每次创建一个仓库， 就要复制一下这个文件，还是麻烦。</p>
-<p><code>linux</code>下可以给<code>bash</code>设置别名， 比如通过修改<code>/etc/.bashrc</code>， 但是在<code>bash for windows</code>下应该怎么做呢？</p>
-<p>其实吧。。 <code>bash for windows</code>也是有类似的文件的， 只不过不叫<code>.bashrc</code>而是<code>bash.bashrc</code>, 位置在<code>/etc/bash.bashrc</code>那里，当然， 具体的位置可能会因为git版本的不同而有所不同， windows下没有<code>etc</code> ? 没事儿， 在bash下直接cd就进去了。</p>
-<p>然后就加了别名</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># alias</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> ls=<span class="string">'ls --color=auto'</span>;</span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">'ls -lh'</span>;</span><br><span class="line"><span class="built_in">alias</span> all=<span class="string">'git add --all &amp;&amp; git commit -m ":smirk:" &amp;&amp; git push'</span>;</span><br><span class="line"><span class="built_in">alias</span> ..=<span class="string">'cd ..'</span>;</span><br><span class="line"><span class="built_in">alias</span> ....=<span class="string">'cd ../../'</span>;</span><br><span class="line"><span class="built_in">alias</span> ld=<span class="string">'ll | grep "^d"'</span>;</span><br><span class="line"><span class="built_in">alias</span> psw=<span class="string">'ps -a --windows'</span>;</span><br><span class="line"><span class="built_in">alias</span> vi=<span class="string">'vim'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下是cygwin下针对快速切换到挂载目录设置的别名</span></span><br><span class="line"><span class="built_in">alias</span> d=<span class="string">'cd /cygdrive/d'</span>;</span><br><span class="line"><span class="built_in">alias</span> ng=<span class="string">'cd /cygdrive/d/nginx-1.6.0'</span>;</span><br><span class="line"><span class="built_in">alias</span> gi=<span class="string">'cd /cygdrive/d/JGX/GitHub'</span>;</span><br></pre></td></tr></table></figure>
-<p>重启下bash , 然后就能够使用了。</p>
-<p>虽然<code>git bash</code>用着也还行， 不过还是对不少的linux命令没有提供支持， 另外一个软件<code>cygwin</code>也挺不错， 支持也挺多的， 如果安装<code>cygwin</code>的话， 需要注意一点， 也就是它默认不会安装<code>vim</code>， 所以在选择软件的时候需要留意一下。另外， <code>git bash</code>好像会比<code>cygwin</code>快一点， <code>cygwin</code>在运行未运行过的程序的时候， 反应会比较慢（查找去了？）， 另外， 关于<code>git</code>, 在<code>cygwin</code>下好像也需要重新配置。</p>
+<p><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603130619.png" alt="创建CNAME文件"><br>在完成创建之后可以前往仓库设置查看是否设置成功<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131423.png" alt="检验是否设置成功"></p>
+</li>
+<li><p>前往域名控制中心添加域名解析<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131304.png" alt="添加解析"></p>
+</li>
+<li><p>慢慢等， 也可以用<code>ping &#39;your site&#39;</code>来查看是否成功设置<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131646.png" alt="是否解析成功"></p>
+</li>
+</ol>
 ]]></content>
       <tags>
-        <tag>git</tag>
+        <tag>GitHub Pages</tag>
       </tags>
   </entry>
   <entry>
@@ -540,6 +540,47 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue JSX 属性透传的问题</title>
+    <url>/2020/03/13/Vue%20JSX%20%E5%B1%9E%E6%80%A7%E9%80%8F%E4%BC%A0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>参见以下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createButtons</span> = (<span class="params">h, buttons</span>) =&gt; <span class="title">props</span> =&gt; </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (</span><br><span class="line">    &lt;span style=<span class="string">"display: flex; justify-content: space-between;"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt; </span><br><span class="line">      &#123;buttons.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">        &lt;mtd-button</span><br><span class="line">          &#123;...&#123; <span class="attr">attrs</span>: item &#125;&#125;</span><br><span class="line">          key=&#123;index&#125;</span><br><span class="line">          onClick=&#123;() =&gt; item.onClick(props)&#125;</span><br><span class="line">          disabled=&#123;item.__disabled&#125;</span><br><span class="line">        &gt;</span><br><span class="line">          &#123;item.text&#125;</span><br><span class="line">        &lt;<span class="regexp">/mtd-button&gt;</span></span><br><span class="line"><span class="regexp">      ))&#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>span&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">createButtons(<span class="keyword">this</span>.$createElement, [</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">'修改'</span>,</span><br><span class="line">    onClick: <span class="keyword">this</span>.handleModify,</span><br><span class="line">    size: <span class="string">'small'</span>,</span><br><span class="line">    disabled: <span class="function"><span class="params">props</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> auditStatus.isOffline(props.row.status)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
+<p>编译后</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">renderedButtons.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'function'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled(props);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'boolean'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> h(<span class="string">"span"</span>, &#123;</span><br><span class="line">      <span class="string">"style"</span>: <span class="string">"display: flex; justify-content: space-between;"</span></span><br><span class="line">    &#125;, [renderedButtons.map(<span class="function"><span class="keyword">function</span> (<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> h(<span class="string">"mtd-button"</span>, &#123;</span><br><span class="line">        <span class="string">"attrs"</span>: _objectSpread(&#123;&#125;, item, &#123;</span><br><span class="line">          <span class="string">"disabled"</span>: item.__disabled</span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="string">"key"</span>: index,</span><br><span class="line">        <span class="string">"on"</span>: &#123;</span><br><span class="line">          <span class="string">"click"</span>: <span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> item.onClick === <span class="string">'function'</span>) &#123;</span><br><span class="line">              item.onClick(props);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, [item.text]);</span><br><span class="line">    &#125;)]);</span><br></pre></td></tr></table></figure>
+
+<p>最后，在我们点击修改按钮的时候，控制台报错：<br><img align=left height=44 width=661 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069608768-4858754d-5ab5-49f5-9d04-4e7c7f806705.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Uncaught <span class="built_in">SyntaxError</span>: <span class="built_in">Function</span> statements <span class="built_in">require</span> a <span class="function"><span class="keyword">function</span> <span class="title">name</span></span></span><br></pre></td></tr></table></figure>
+
+<p>在这里createButtons 中的某一项传递了onClick这个参数，那么在对应的渲染函数里面，最后传递给组件的是什么样的呢？</p>
+<img align=left height=236 width=458 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069494907-9d16d049-804e-4233-aee2-cd6089530db5.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" />
+
+<p>handleModify 很好理解，就是我们希望绑定的事件，但是在上面的listeners里面，还添加了click事件，其对应的函数为<br><img align=left height=183 width=358 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069576328-6b080a8d-1272-44ed-b2fa-6549000dbc63.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p>因此，上面的方式，最后会把 onClick 封装到 attrs里面。</p>
+<p>在 Vue 组件挂载会后，首次更新时，Vue 会把相应的属性更新到 DOM 上.<br><img align=left height=566 width=1243 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584094932644-aef4e315-6d46-4990-a672-57ceadae838a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p>因此，最后会调用 ele.setAttribute(key, value) 来设置组件的属性。这里的key value 都应该是一个<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL0RPTVN0cmluZw==">DOM String<i class="fa fa-external-link-alt"></i></span>。在这里的场景下， key 是对应的 onClick 字符串，而 value 是一个函数，它被定义为了 Vue 组件上的一个方法。而 Vue 在实例化组件的时候，通过initMethods方法，把对应的 method 通过bind 的方式绑定了vm的上下文。因此，这里的 value，最后是一个Bound function。因此这里会把相应的函数转换为DOM String，具体的转换方法没有找到相应的文档，但是从转换结果来看，是调用了函数的toString方法。而bind返回的函数，它的toString方法，最后会返回一个表示native代码的字符串，也就是</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
+
+<p>因此，最后输出到html里的就变成了以下内容：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"function () &#123; [native code] &#125;"</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>我们知道，在一个元素定义了onclick属性的情况下，点击的时候，会将其属性值当作js脚本来执行。因此，当我们点击按钮的时候，会执行上面的脚本</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
+
+<p>然而这个脚本是非法的，不说函数体，定义一个函数有函数表达式和函数声明两种方式，而上面的这种方式只能作为匿名函数被调用，在这里被当成了函数声明，因此就报错了。<br><img align=left height=33 width=721 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584096578955-c936ce31-0948-4739-84c2-f977fa0a900a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>Vue updateAttrs<br>el.setAttribute(key, value)</p>
+<p>总结：<br>当出现问题并且不知道导致问题发生的因素时，应先通过<strong>二分法</strong>快速定位到导致问题的代码，然后通过<strong>控制变量，减少场景的影响因子，在控制变量的时候，更需要注意双边其他因子的一致性，</strong>找到问题出现的原因，待解决问题后，再寻根溯源，找到产生问题的根本因素。</p>
+<p>参考： </p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9odG1sLnNwZWMud2hhdHdnLm9yZy9tdWx0aXBhZ2Uvd2ViYXBwYXBpcy5odG1sI2hhbmRsZXItb25jbGljaw==">https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93M2MuZ2l0aHViLmlvL3VpZXZlbnRzLyNldmVudC10eXBlLWNsaWNr">https://w3c.github.io/uievents/#event-type-click<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>每天学习一丢丢~</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>base64了解一下</title>
     <url>/2019/12/22/base64%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B/</url>
     <content><![CDATA[<p>代码：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Ny9kZW1vcy9ibG9iL21hc3Rlci9lbmNyeXB0L2Jhc2U2NC5qcw==">https://github.com/374632897/demos/blob/master/encrypt/base64.js<i class="fa fa-external-link-alt"></i></span></p>
@@ -605,53 +646,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue JSX 属性透传的问题</title>
-    <url>/2020/03/13/Vue%20JSX%20%E5%B1%9E%E6%80%A7%E9%80%8F%E4%BC%A0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>参见以下代码：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createButtons</span> = (<span class="params">h, buttons</span>) =&gt; <span class="title">props</span> =&gt; </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (</span><br><span class="line">    &lt;span style=<span class="string">"display: flex; justify-content: space-between;"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt; </span><br><span class="line">      &#123;buttons.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">        &lt;mtd-button</span><br><span class="line">          &#123;...&#123; <span class="attr">attrs</span>: item &#125;&#125;</span><br><span class="line">          key=&#123;index&#125;</span><br><span class="line">          onClick=&#123;() =&gt; item.onClick(props)&#125;</span><br><span class="line">          disabled=&#123;item.__disabled&#125;</span><br><span class="line">        &gt;</span><br><span class="line">          &#123;item.text&#125;</span><br><span class="line">        &lt;<span class="regexp">/mtd-button&gt;</span></span><br><span class="line"><span class="regexp">      ))&#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>span&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">createButtons(<span class="keyword">this</span>.$createElement, [</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">'修改'</span>,</span><br><span class="line">    onClick: <span class="keyword">this</span>.handleModify,</span><br><span class="line">    size: <span class="string">'small'</span>,</span><br><span class="line">    disabled: <span class="function"><span class="params">props</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> auditStatus.isOffline(props.row.status)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
-
-<p>编译后</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">renderedButtons.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'function'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled(props);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'boolean'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> h(<span class="string">"span"</span>, &#123;</span><br><span class="line">      <span class="string">"style"</span>: <span class="string">"display: flex; justify-content: space-between;"</span></span><br><span class="line">    &#125;, [renderedButtons.map(<span class="function"><span class="keyword">function</span> (<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> h(<span class="string">"mtd-button"</span>, &#123;</span><br><span class="line">        <span class="string">"attrs"</span>: _objectSpread(&#123;&#125;, item, &#123;</span><br><span class="line">          <span class="string">"disabled"</span>: item.__disabled</span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="string">"key"</span>: index,</span><br><span class="line">        <span class="string">"on"</span>: &#123;</span><br><span class="line">          <span class="string">"click"</span>: <span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> item.onClick === <span class="string">'function'</span>) &#123;</span><br><span class="line">              item.onClick(props);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, [item.text]);</span><br><span class="line">    &#125;)]);</span><br></pre></td></tr></table></figure>
-
-<p>最后，在我们点击修改按钮的时候，控制台报错：<br><img align=left height=44 width=661 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069608768-4858754d-5ab5-49f5-9d04-4e7c7f806705.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Uncaught <span class="built_in">SyntaxError</span>: <span class="built_in">Function</span> statements <span class="built_in">require</span> a <span class="function"><span class="keyword">function</span> <span class="title">name</span></span></span><br></pre></td></tr></table></figure>
-
-<p>在这里createButtons 中的某一项传递了onClick这个参数，那么在对应的渲染函数里面，最后传递给组件的是什么样的呢？</p>
-<img align=left height=236 width=458 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069494907-9d16d049-804e-4233-aee2-cd6089530db5.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" />
-
-<p>handleModify 很好理解，就是我们希望绑定的事件，但是在上面的listeners里面，还添加了click事件，其对应的函数为<br><img align=left height=183 width=358 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069576328-6b080a8d-1272-44ed-b2fa-6549000dbc63.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<p>因此，上面的方式，最后会把 onClick 封装到 attrs里面。</p>
-<p>在 Vue 组件挂载会后，首次更新时，Vue 会把相应的属性更新到 DOM 上.<br><img align=left height=566 width=1243 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584094932644-aef4e315-6d46-4990-a672-57ceadae838a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<p>因此，最后会调用 ele.setAttribute(key, value) 来设置组件的属性。这里的key value 都应该是一个<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL0RPTVN0cmluZw==">DOM String<i class="fa fa-external-link-alt"></i></span>。在这里的场景下， key 是对应的 onClick 字符串，而 value 是一个函数，它被定义为了 Vue 组件上的一个方法。而 Vue 在实例化组件的时候，通过initMethods方法，把对应的 method 通过bind 的方式绑定了vm的上下文。因此，这里的 value，最后是一个Bound function。因此这里会把相应的函数转换为DOM String，具体的转换方法没有找到相应的文档，但是从转换结果来看，是调用了函数的toString方法。而bind返回的函数，它的toString方法，最后会返回一个表示native代码的字符串，也就是</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
-
-<p>因此，最后输出到html里的就变成了以下内容：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"function () &#123; [native code] &#125;"</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>我们知道，在一个元素定义了onclick属性的情况下，点击的时候，会将其属性值当作js脚本来执行。因此，当我们点击按钮的时候，会执行上面的脚本</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
-
-<p>然而这个脚本是非法的，不说函数体，定义一个函数有函数表达式和函数声明两种方式，而上面的这种方式只能作为匿名函数被调用，在这里被当成了函数声明，因此就报错了。<br><img align=left height=33 width=721 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584096578955-c936ce31-0948-4739-84c2-f977fa0a900a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>Vue updateAttrs<br>el.setAttribute(key, value)</p>
-<p>总结：<br>当出现问题并且不知道导致问题发生的因素时，应先通过<strong>二分法</strong>快速定位到导致问题的代码，然后通过<strong>控制变量，减少场景的影响因子，在控制变量的时候，更需要注意双边其他因子的一致性，</strong>找到问题出现的原因，待解决问题后，再寻根溯源，找到产生问题的根本因素。</p>
-<p>参考： </p>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9odG1sLnNwZWMud2hhdHdnLm9yZy9tdWx0aXBhZ2Uvd2ViYXBwYXBpcy5odG1sI2hhbmRsZXItb25jbGljaw==">https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly93M2MuZ2l0aHViLmlvL3VpZXZlbnRzLyNldmVudC10eXBlLWNsaWNr">https://w3c.github.io/uievents/#event-type-click<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>每天学习一丢丢~</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>chrome开发工具timeline使用</title>
-    <url>/2016/06/15/chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7timeline%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vd2ViL3Rvb2xzL2Nocm9tZS1kZXZ0b29scy9wcm9maWxlL2V2YWx1YXRlLXBlcmZvcm1hbmNlL3RpbWVsaW5lLXRvb2w=">原文地址<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-  </entry>
-  <entry>
     <title>electron no path.txt的解决办法</title>
     <url>/2016/07/12/electron-no-path-txt%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2VsZWN0cm9uLXVzZXJsYW5kL2VsZWN0cm9uLXByZWJ1aWx0L2lzc3Vlcy83Ng==">原文地址<i class="fa fa-external-link-alt"></i></span></p>
@@ -660,6 +654,26 @@
       <tags>
         <tag>electron</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>关于overflow-x的一点小东西</title>
+    <url>/2016/06/12/%E5%85%B3%E4%BA%8Eoverflow-x%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E4%B8%9C%E8%A5%BF/</url>
+    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQv">DEMO地址<i class="fa fa-external-link-alt"></i></span></p>
+<p>绝对定位元素虽然脱离文档流了， 但是依然会受到父元素或者祖先元素的<code>overflow</code>属性的影响。</p>
+<a id="more"></a>
+
+<p>如上面demo中所示， 子元素是绝对定位的， 并且其宽度是超出了父元素的宽度的， 正常情况下， 超出部分是可以看到的， 但是在给父元素设置<code>overflow-auto</code>之后， 父元素便会出现滚动条。</p>
+<p>o(╯□╰)o  至于原因。。 想不通， 如果说<code>overflow:hidden</code>使得子元素超出父元素的部分能够隐藏的话， 还能够理解， 但是<code>overflow-x: auto</code>出现滚动条很明显应该是因为父元素的宽度不够内容宽度，而绝对定位本身是脱离文档流的， 所以不应该会撑开父元素宽度啊。。。。不理解不理解。   </p>
+]]></content>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>chrome开发工具timeline使用</title>
+    <url>/2016/06/15/chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7timeline%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vd2ViL3Rvb2xzL2Nocm9tZS1kZXZ0b29scy9wcm9maWxlL2V2YWx1YXRlLXBlcmZvcm1hbmNlL3RpbWVsaW5lLXRvb2w=">原文地址<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
   </entry>
   <entry>
     <title>伪类和伪元素的区别</title>
@@ -1077,48 +1091,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于overflow-x的一点小东西</title>
-    <url>/2016/06/12/%E5%85%B3%E4%BA%8Eoverflow-x%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E4%B8%9C%E8%A5%BF/</url>
-    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQv">DEMO地址<i class="fa fa-external-link-alt"></i></span></p>
-<p>绝对定位元素虽然脱离文档流了， 但是依然会受到父元素或者祖先元素的<code>overflow</code>属性的影响。</p>
-<a id="more"></a>
-
-<p>如上面demo中所示， 子元素是绝对定位的， 并且其宽度是超出了父元素的宽度的， 正常情况下， 超出部分是可以看到的， 但是在给父元素设置<code>overflow-auto</code>之后， 父元素便会出现滚动条。</p>
-<p>o(╯□╰)o  至于原因。。 想不通， 如果说<code>overflow:hidden</code>使得子元素超出父元素的部分能够隐藏的话， 还能够理解， 但是<code>overflow-x: auto</code>出现滚动条很明显应该是因为父元素的宽度不够内容宽度，而绝对定位本身是脱离文档流的， 所以不应该会撑开父元素宽度啊。。。。不理解不理解。   </p>
-]]></content>
-      <tags>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基于git diff的eslint代码检测</title>
-    <url>/2016/08/15/%E5%9F%BA%E4%BA%8Egit-diff%E7%9A%84eslint%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/</url>
-    <content><![CDATA[<h1 id="基于git-diff进行的eslint代码检测"><a href="#基于git-diff进行的eslint代码检测" class="headerlink" title="基于git diff进行的eslint代码检测"></a>基于git diff进行的eslint代码检测</h1><p>随着代码的不断增加， eslint进行代码检测的时间也越来越久。每次检测的时候， 需要检测的文件和实际检测的文件极度不对称，所以便基于<code>git diff</code>写了这样一个小工具。</p>
-<a id="more"></a>
-<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><ul>
-<li>启动脚本(<code>lint.sh</code>)</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">INFO=<span class="string">'\033[36m'</span>;</span><br><span class="line">NOR=<span class="string">'\033[0m'</span>;</span><br><span class="line">ERR=<span class="string">'\033[31m'</span>;</span><br><span class="line">br=<span class="string">'dev'</span>;</span><br><span class="line"><span class="keyword">if</span> [ ! -z <span class="variable">$1</span> ]; <span class="keyword">then</span></span><br><span class="line">  br=<span class="variable">$1</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>run lint now ... just wait a moment ...<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line">git diff origin/<span class="variable">$&#123;br&#125;</span> &gt; diff.log;</span><br><span class="line"><span class="built_in">log</span>=`cat diff.log | grep <span class="string">'diff --git a/src'</span>`;</span><br><span class="line"><span class="keyword">if</span> [[ -z <span class="variable">$&#123;log&#125;</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>没有文件发生变化<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">echo</span> <span class="string">''</span>;</span><br><span class="line">  node ./lint-by-diff.js;</span><br><span class="line">  <span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>done ...<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line">rm diff.log change.log 2&gt; /dev/null;</span><br><span class="line"><span class="built_in">read</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>检测工具(<code>lint-by-diff.js</code>)</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">const</span> shelljs = <span class="built_in">require</span>(<span class="string">'shelljs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> jsFiles = [],</span><br><span class="line">  LOG__PATH   = <span class="string">'./diff.log'</span>,</span><br><span class="line">  FILE = <span class="regexp">/diff --git a([\s\S]*?) /g</span>,</span><br><span class="line">  data = fs.readFileSync(LOG__PATH).toString(),</span><br><span class="line">  _files = data.match(FILE),</span><br><span class="line">  len = _files.length;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; len) &#123;</span><br><span class="line">  <span class="keyword">const</span> _item = _files[i++].trim();</span><br><span class="line">  <span class="keyword">if</span> (!<span class="regexp">/.js$/</span>.test(_item)) <span class="keyword">continue</span>;</span><br><span class="line">  <span class="keyword">const</span> item = <span class="string">'./'</span> + _item.slice(<span class="number">13</span>);</span><br><span class="line">  <span class="keyword">if</span> (!<span class="regexp">/^\.\/src\//</span>.test(item)) <span class="keyword">continue</span>; <span class="comment">// src为项目需要进行eslint检测的目录</span></span><br><span class="line">  <span class="keyword">if</span> (!fs.existsSync(item)) <span class="keyword">continue</span>;</span><br><span class="line">  jsFiles.push(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'     以下文件发生改变： '</span>);</span><br><span class="line"><span class="built_in">console</span>.log(jsFiles.join(<span class="string">'\n'</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line">shelljs.exec(<span class="string">'node ./node_modules/eslint/bin/eslint.js '</span> + jsFiles.join(<span class="string">' '</span>));</span><br></pre></td></tr></table></figure>
-
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>通过<code>git diff origin/branch</code>获取到和指定分支的不同， 从而知道哪些文件需要进行代码检测（dev上的是通过检测的）， 然后运行eslint的时候就指定这部分文件。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在项目根目录下输入<code>./lint.sh</code>或者<code>bash ./lint.sh</code>, 默认分支为<code>dev</code>分支， 如果需要指定其他分支， 可以在运行的时候传入参数， 如： <code>bash ./lint.sh master</code>.</p>
-<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><ul>
-<li><p>使用了bash导致这个看起来有点不伦不类， 使用纯js也许会更好， 但是我毕竟半吊子， 写不出来→＿←</p>
-</li>
-<li><p>没有对<code>error</code>进行高亮显示， 所以看起来会比较费力</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于最近的一些事</title>
     <url>/2016/07/04/%E5%85%B3%E4%BA%8E%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
     <content><![CDATA[<h1 id="随便写的一些东西"><a href="#随便写的一些东西" class="headerlink" title="随便写的一些东西"></a>随便写的一些东西</h1><h2 id="关于造轮子"><a href="#关于造轮子" class="headerlink" title="关于造轮子"></a>关于造轮子</h2><p>针对造轮子这个问题， 业界的说法是， 永远不要重复造轮子。因为造轮子和维护轮子的过程是相当痛苦和费时的。 当然， 对我来说， 我觉得只是玩一玩的话， 偶尔造几个轮子还是不错的。 最重要的是， 通过造轮子这个过程， 能够学习到很多东西，同时也能巩固自己所学习到的知识 。</p>
@@ -1173,6 +1145,34 @@
       </tags>
   </entry>
   <entry>
+    <title>基于git diff的eslint代码检测</title>
+    <url>/2016/08/15/%E5%9F%BA%E4%BA%8Egit-diff%E7%9A%84eslint%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B/</url>
+    <content><![CDATA[<h1 id="基于git-diff进行的eslint代码检测"><a href="#基于git-diff进行的eslint代码检测" class="headerlink" title="基于git diff进行的eslint代码检测"></a>基于git diff进行的eslint代码检测</h1><p>随着代码的不断增加， eslint进行代码检测的时间也越来越久。每次检测的时候， 需要检测的文件和实际检测的文件极度不对称，所以便基于<code>git diff</code>写了这样一个小工具。</p>
+<a id="more"></a>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><ul>
+<li>启动脚本(<code>lint.sh</code>)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">INFO=<span class="string">'\033[36m'</span>;</span><br><span class="line">NOR=<span class="string">'\033[0m'</span>;</span><br><span class="line">ERR=<span class="string">'\033[31m'</span>;</span><br><span class="line">br=<span class="string">'dev'</span>;</span><br><span class="line"><span class="keyword">if</span> [ ! -z <span class="variable">$1</span> ]; <span class="keyword">then</span></span><br><span class="line">  br=<span class="variable">$1</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>run lint now ... just wait a moment ...<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line">git diff origin/<span class="variable">$&#123;br&#125;</span> &gt; diff.log;</span><br><span class="line"><span class="built_in">log</span>=`cat diff.log | grep <span class="string">'diff --git a/src'</span>`;</span><br><span class="line"><span class="keyword">if</span> [[ -z <span class="variable">$&#123;log&#125;</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>没有文件发生变化<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">echo</span> <span class="string">''</span>;</span><br><span class="line">  node ./lint-by-diff.js;</span><br><span class="line">  <span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;INFO&#125;</span>done ...<span class="variable">$&#123;NOR&#125;</span>"</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line">rm diff.log change.log 2&gt; /dev/null;</span><br><span class="line"><span class="built_in">read</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>检测工具(<code>lint-by-diff.js</code>)</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">const</span> shelljs = <span class="built_in">require</span>(<span class="string">'shelljs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> jsFiles = [],</span><br><span class="line">  LOG__PATH   = <span class="string">'./diff.log'</span>,</span><br><span class="line">  FILE = <span class="regexp">/diff --git a([\s\S]*?) /g</span>,</span><br><span class="line">  data = fs.readFileSync(LOG__PATH).toString(),</span><br><span class="line">  _files = data.match(FILE),</span><br><span class="line">  len = _files.length;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; len) &#123;</span><br><span class="line">  <span class="keyword">const</span> _item = _files[i++].trim();</span><br><span class="line">  <span class="keyword">if</span> (!<span class="regexp">/.js$/</span>.test(_item)) <span class="keyword">continue</span>;</span><br><span class="line">  <span class="keyword">const</span> item = <span class="string">'./'</span> + _item.slice(<span class="number">13</span>);</span><br><span class="line">  <span class="keyword">if</span> (!<span class="regexp">/^\.\/src\//</span>.test(item)) <span class="keyword">continue</span>; <span class="comment">// src为项目需要进行eslint检测的目录</span></span><br><span class="line">  <span class="keyword">if</span> (!fs.existsSync(item)) <span class="keyword">continue</span>;</span><br><span class="line">  jsFiles.push(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'     以下文件发生改变： '</span>);</span><br><span class="line"><span class="built_in">console</span>.log(jsFiles.join(<span class="string">'\n'</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line">shelljs.exec(<span class="string">'node ./node_modules/eslint/bin/eslint.js '</span> + jsFiles.join(<span class="string">' '</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>通过<code>git diff origin/branch</code>获取到和指定分支的不同， 从而知道哪些文件需要进行代码检测（dev上的是通过检测的）， 然后运行eslint的时候就指定这部分文件。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在项目根目录下输入<code>./lint.sh</code>或者<code>bash ./lint.sh</code>, 默认分支为<code>dev</code>分支， 如果需要指定其他分支， 可以在运行的时候传入参数， 如： <code>bash ./lint.sh master</code>.</p>
+<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><ul>
+<li><p>使用了bash导致这个看起来有点不伦不类， 使用纯js也许会更好， 但是我毕竟半吊子， 写不出来→＿←</p>
+</li>
+<li><p>没有对<code>error</code>进行高亮显示， 所以看起来会比较费力</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>字符串的双重转义</title>
     <url>/2016/07/05/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%8F%8C%E9%87%8D%E8%BD%AC%E4%B9%89/</url>
     <content><![CDATA[<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>习惯了<code>SPA</code>的开发模式， 现在随便弄点什么东西， 渲染<code>HTML</code>什么的也总是通过<code>JS</code>来了， 但是在<code>JS</code>里写<code>HTML</code>总归是影响代码美观的， 虽然有现成的模板工具可以使用， 但是这人一旦任性起来是真的拉都拉不住。 某日闲得飞起， 就准备写这么一个小东西。</p>
@@ -1216,6 +1216,73 @@
 ]]></content>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的时间都去哪儿了</title>
+    <url>/2016/05/17/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E5%84%BF%E4%BA%86/</url>
+    <content><![CDATA[<p>前段时间把网给停了， 理由是在有网的情况下， 我每天在回到家后都把为数不多的时间浪费在上网上面去了， 虽然能有所收获，但是总体而言是弊大于利的， 毕竟大部分的时间里我都是在做着一些无关紧要的事情。所以我把网停了， 希望能够借助这种手段来强迫自己不断地学习新的东西。 效果是有的， 然而我依然对自己不是很满意。</p>
+<a id="more"></a>
+
+<p>不得不承认， 我是一个自我控制能力很弱的人。 我很容易分心， 很容易感到枯燥。所以采用这样的方法来让自己被动地学习。然而即使这样做了， 却依旧没有达到我想要的效果。 在我的想象中， 每天下班之后， 或者在周末的时候， 我除了买菜做饭和正常的休息时间之外， 其他的时间应该都用来看书， 或者码代码， 毕竟这样才能快速地提高自己。相比于刚刚接触JS（去年9月份的时候）的那段时间， 自己现在真的是弱爆了。 那段时间是我真正的有状态的阶段，连吃饭的时候都是一边吃， 一边看书。 但是现在， 我采用了禁网的方式， 把自己和网络隔离开来， 其实也并没有完全隔离开来， 毕竟还有手机这东西， 说起来我好像也找到了一点原因了， 那就是还有手机。 我现在是没有电脑上网了， 但是手机却还是能够上网， 所以觉得累的时候， 就会打开手机逛逛贴吧， 想象中只是逛逛而已， 结果这一玩儿， 就浪费了大把的时间， 就好像周六周日的午休一样， 不午休还好， 只要一午休， 一般就会从1.30睡到4.00， 我以后大概都不敢再在周末的时候躺在床上午休了吧。 浪费的大把的时间是真的一去不复返了。 </p>
+<p>之前的时候， 我跟朋友说来到北京之后， 胖了不止一圈了。 朋友说她在家的时候每天早上都还跑步呢， 叫我也多锻炼身体， 当时我说我把时间都用来学习了， 腾不出时间来锻炼身体， 等以后有空了再慢慢锻炼吧。 现在想起来也真是讽刺， 每天浪费了大把大把的时间， 却说自己把所有时间都用来学习了。</p>
+<p>提升自我控制能力应该是一件值得我花一辈子的时间去做的事情吧。 我相信做好这件事情给我带来的好处能和每天吃上土豆给我精神上带来的好处相媲美。当然，前提是我真正地把它给做好了。 如果满分是100分的话， 我会毫不留情地给现在的自己打上0分， 弱爆了的自我控制能力。 我是一个自负的人， 任何的事情除了我主观意识上接受了之外， 不会有任何人能够影响我。我认为不对的东西， 即使有人在我耳边吹了一万遍它是正确的 ， 我依然会以为它不对。 我也很讨厌那种洗脑式， 自以为是的真理式的吹风行为。 所以对于那种所谓提升自我控制能力的几个技巧啊， 提升自我控制能力的啥啥书啥的东西， 我是一直持着不屑的态度的， 从来不喜欢看这种类型的书。同理， 对于时间管理方面的培训我也是一万个不愿意， 时间管理嘛， 有了日事清就够了， 还培训个啥， 这破培训才是真的浪费时间。 但是没办法， 领导喜欢玩这一套你就得由着他。  </p>
+<p>突然发现明明自己写的是关于最近的一些事， 但是话题却始终是围绕着时间两个字在转。说起来， 抛开业余时间不谈，工作的时候时间排得倒是挺合理的（在有活儿干的情况下）， 毕竟咱做的软件就是时间管理方面的。当然， 现在做项目的时候， 项目管理流程走得也是挺不错的， 至少不会有各种各样的大会小会充斥着你每一天的时间， 最多也就每个周例行的半个小时的工作安排会议。 所以自己真正应该改变的便是业余时间的控制吧。  </p>
+<p>感觉自己真的是太久没动笔了， 一动笔的时候通篇都是废话， 熬到现在也熬不出几个字儿了。 哎， 曾经的才子如今已是江郎才尽<br>:悲伤。 那就给刚入门的前端小伙伴们一点忠告吧。 在基础没打扎实前， 千万不要折腾除了jQuery之外的其他框架。 讲真， 这段时间里最好的做法就是打好基础打好基础打好基础。 只有JS基础打好了， 后面学框架这些东西的时候才会更快。 血淋淋的教训啊， 当初年轻不懂事， 学了点JS就去折腾框架， 结果浪费了我不少时间不说， 最为悲惨的是到最后真的只是学到了个鸟 →＿← 。 </p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用来放一些tips中的DEMO</title>
+    <url>/2016/05/10/%E7%94%A8%E6%9D%A5%E6%94%BE%E4%B8%80%E4%BA%9Btips%E4%B8%AD%E7%9A%84DEMO/</url>
+    <content><![CDATA[<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ul>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy/mtYvor5XmmL7npLrpmpDol4/nmoTkuKTnp43lrp7njrDmlrnlvI/nmoTmgKfog70uaHRtbA==">测试显示隐藏的两种实现方式的性能<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h2 id="CSS-amp-HTML"><a href="#CSS-amp-HTML" class="headerlink" title="CSS &amp; HTML"></a>CSS &amp; HTML</h2><ul>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vcmdybXMv">仿制的第一个站（前东家官网）<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy90ZXN0R3JhZGludC5odG1s">实现慕课网官网楼层动态效果<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy9pbmRleDEyMy5odG1s">对指定文字设置样式<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy9kcmF3QUVnZy5odG1s">画个鸡蛋吧<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2dhbWVzL2NvbG9yLmh0bWw=">颜色块儿<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2dhbWVzL2JvbnVzLmh0bWw=">点个转盘<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2xheW91dC8zQ29sdW1ucy5odG1s">3列布局， 左右定宽，中间自适应<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL3JpY2hUZXh0RWRpdG9yLmh0bWw=">一个简单的富文本编辑器<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2h0bWw1QVBJcy9GdWxsU2NyZWVuLmh0bWw=">全屏<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL+a1i+ivleWxheS4rS5odG1s">居中<i class="fa fa-external-link-alt"></i></span></li>
+<li><a href="http://noteawesome.com/just-some-tips/src/keyCode.html">键码</a></li>
+<li><a href="http://noteawesome.com/algorithms/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%92%E5%BA%8F/%E5%88%9D%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html">算法学习</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>乱七八糟</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>纯CSS实现单击锚点平滑切换的效果</title>
+    <url>/2016/05/10/%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E5%8D%95%E5%87%BB%E9%94%9A%E7%82%B9%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%9A%84%E6%95%88%E6%9E%9C/</url>
+    <content><![CDATA[<p>有时想实现一个功能，比如想让页面不出现滚动条，但是却能装下更多的东西，这个时候我们会对某个容器设 置<code>overflow: hidden</code>，然后通过锚点来实现单击切换页面（其实只是控制显示的内容）的效果。但是通过锚点来跳到指定内容的不足之处在于，没有什么过渡效果，很突兀的就跳到了目标点。当然，也可以通过JS或者jQuery来实现自己想要的动态切换效果，这一类的文章一搜一大堆，这里就不赘述了。</p>
+<a id="more"></a>
+<p>但是在一些个人主页中，比如github的个人主页（只是主页而已，也就是username.github.io）上会禁止JS脚本的运行，这个时候如果还是想通过单击锚点平滑切换的功能的话，应该怎么办呢？</p>
+<p>原谅我是一个前端初学者，傻想了很久也想不到什么办法，然后就百度谷歌了。</p>
+<p>后来找到了一些方法，比如用radio配合他的check属性来实现，<span class="exturl" data-url="aHR0cDovL3R5bXBhbnVzLm5ldC9jb2Ryb3BzLzIwMTIvMDYvMTIvY3NzLW9ubHktcmVzcG9uc2l2ZS1sYXlvdXQtd2l0aC1zbW9vdGgtdHJhbnNpdGlvbnMv">文章在这里<i class="fa fa-external-link-alt"></i></span>,关于这个方法，<span class="exturl" data-url="aHR0cDovL3d3dy5pbW9vYy5jb20vdmlldy8yNTI=">慕课<i class="fa fa-external-link-alt"></i></span>上也有专门的教程，大家也可以去看看。</p>
+<p>但是可不可以不插入radio就实现对应的效果呢？ 答案是有的。</p>
+<p>那就是利用<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvQ1NTLyUzQXRhcmdldA==">:target<i class="fa fa-external-link-alt"></i></span>伪类，这个选择器可以选择当前活动的锚点,那么利用这个属性我们就可以实现自己想要的效果了。</p>
+<p>代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag1"</span>&gt;</span>Tag1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag2"</span>&gt;</span>Tag2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag3"</span>&gt;</span>Tag3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#container</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">outline</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag1</span>, <span class="selector-id">#tag2</span>, <span class="selector-id">#tag3</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: all ease-out .<span class="number">2s</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>:<span class="number">0</span></span><br><span class="line">  left:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag1</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f66</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag2</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag3</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: gray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#container</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:target</span> &#123;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1000</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvMjQza2pMNjAvMi8=">查看DEMO<i class="fa fa-external-link-alt"></i></span></p>
+<p>上面的例子是通过绝对定位配合z-index和透明度来实现的动态效果。先将所有的元素的opacity设为0，然后为了默认显示出来第一个元素，所以第一个元素的opacity为1，z-index为1。然后单击就可以实现动态切换了。</p>
+<p>其实我最先尝试的是通过给<code>#container</code>设置<code>overflow: hidden;</code>, 为它的子元素设置<code>height:100%;</code>，然后给target设置margin-top为负的百分比值来实现相应效果的，毕竟比较喜欢这种从下往上冒或者从上往下掉的感觉嘛。。。但是在实现过程中遇到了一点小问题，那就是当Tag2和Tag3相互切换的时候，居然只会移动到一半就不再动了，如果把<code>overflow: hidden</code>去掉，显示的就是自己期望的效果。<span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvYmV6YnUzajIv">一个有问题的DEMO<i class="fa fa-external-link-alt"></i></span> </p>
+<p>后来自己想到了解决的办法，那就是给container包裹一个div，然后把<code>overflow: hidden</code>设置在这个元素身上，再把container的overflow去掉，设置高度为它子元素的高度，这样就能显示正常了。 <span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvZGMzc3ZkdmYvNC8=">DEMO在这里<i class="fa fa-external-link-alt"></i></span>.</p>
+<p>虽然找到了解决办法，但是对于<span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvYmV6YnUzajIv">问题DEMO<i class="fa fa-external-link-alt"></i></span> 里的这种怪异行为真的不理解，如果各位谁知道的话，还请告知，谢谢。</p>
+<p>参见：<br><span class="exturl" data-url="aHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy8xNzYzMTQxNy9jc3MtcHVyZS1jc3Mtc2Nyb2xsLWFuaW1hdGlvbg==">stackoverflow - 纯CSS滚动效果<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <tags>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -1268,31 +1335,6 @@
 </ul>
 <p>参见  <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvR2xvYmFsX09iamVjdHMvUmVnRXhw">MDN – 正则表达式<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>用来放一些tips中的DEMO</title>
-    <url>/2016/05/10/%E7%94%A8%E6%9D%A5%E6%94%BE%E4%B8%80%E4%BA%9Btips%E4%B8%AD%E7%9A%84DEMO/</url>
-    <content><![CDATA[<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ul>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy/mtYvor5XmmL7npLrpmpDol4/nmoTkuKTnp43lrp7njrDmlrnlvI/nmoTmgKfog70uaHRtbA==">测试显示隐藏的两种实现方式的性能<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-<h2 id="CSS-amp-HTML"><a href="#CSS-amp-HTML" class="headerlink" title="CSS &amp; HTML"></a>CSS &amp; HTML</h2><ul>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vcmdybXMv">仿制的第一个站（前东家官网）<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy90ZXN0R3JhZGludC5odG1s">实现慕课网官网楼层动态效果<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy9pbmRleDEyMy5odG1s">对指定文字设置样式<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvREVNTy9kcmF3QUVnZy5odG1s">画个鸡蛋吧<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2dhbWVzL2NvbG9yLmh0bWw=">颜色块儿<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2dhbWVzL2JvbnVzLmh0bWw=">点个转盘<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2xheW91dC8zQ29sdW1ucy5odG1s">3列布局， 左右定宽，中间自适应<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL3JpY2hUZXh0RWRpdG9yLmh0bWw=">一个简单的富文本编辑器<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL2h0bWw1QVBJcy9GdWxsU2NyZWVuLmh0bWw=">全屏<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovLzM3NDYzMjg5Ny5naXRodWIuaW8vanVzdC1zb21lLXRpcHMvc3JjL+a1i+ivleWxheS4rS5odG1s">居中<i class="fa fa-external-link-alt"></i></span></li>
-<li><a href="http://noteawesome.com/just-some-tips/src/keyCode.html">键码</a></li>
-<li><a href="http://noteawesome.com/algorithms/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%92%E5%BA%8F/%E5%88%9D%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html">算法学习</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>乱七八糟</tag>
-      </tags>
   </entry>
   <entry>
     <title>聊一聊 Same-Site</title>
@@ -1420,19 +1462,31 @@
       </tags>
   </entry>
   <entry>
-    <title>我的时间都去哪儿了</title>
-    <url>/2016/05/17/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E5%84%BF%E4%BA%86/</url>
-    <content><![CDATA[<p>前段时间把网给停了， 理由是在有网的情况下， 我每天在回到家后都把为数不多的时间浪费在上网上面去了， 虽然能有所收获，但是总体而言是弊大于利的， 毕竟大部分的时间里我都是在做着一些无关紧要的事情。所以我把网停了， 希望能够借助这种手段来强迫自己不断地学习新的东西。 效果是有的， 然而我依然对自己不是很满意。</p>
+    <title>记一次事件捕获的妙用</title>
+    <url>/2016/06/03/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E7%9A%84%E5%A6%99%E7%94%A8/</url>
+    <content><![CDATA[<p><code>JavaScript</code>事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用<code>addEventListener</code>注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 平时我们事件大多都是注册在冒泡阶段的， 所以第三个参数一般都是传递的<code>false</code>， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。  </p>
 <a id="more"></a>
 
-<p>不得不承认， 我是一个自我控制能力很弱的人。 我很容易分心， 很容易感到枯燥。所以采用这样的方法来让自己被动地学习。然而即使这样做了， 却依旧没有达到我想要的效果。 在我的想象中， 每天下班之后， 或者在周末的时候， 我除了买菜做饭和正常的休息时间之外， 其他的时间应该都用来看书， 或者码代码， 毕竟这样才能快速地提高自己。相比于刚刚接触JS（去年9月份的时候）的那段时间， 自己现在真的是弱爆了。 那段时间是我真正的有状态的阶段，连吃饭的时候都是一边吃， 一边看书。 但是现在， 我采用了禁网的方式， 把自己和网络隔离开来， 其实也并没有完全隔离开来， 毕竟还有手机这东西， 说起来我好像也找到了一点原因了， 那就是还有手机。 我现在是没有电脑上网了， 但是手机却还是能够上网， 所以觉得累的时候， 就会打开手机逛逛贴吧， 想象中只是逛逛而已， 结果这一玩儿， 就浪费了大把的时间， 就好像周六周日的午休一样， 不午休还好， 只要一午休， 一般就会从1.30睡到4.00， 我以后大概都不敢再在周末的时候躺在床上午休了吧。 浪费的大把的时间是真的一去不复返了。 </p>
-<p>之前的时候， 我跟朋友说来到北京之后， 胖了不止一圈了。 朋友说她在家的时候每天早上都还跑步呢， 叫我也多锻炼身体， 当时我说我把时间都用来学习了， 腾不出时间来锻炼身体， 等以后有空了再慢慢锻炼吧。 现在想起来也真是讽刺， 每天浪费了大把大把的时间， 却说自己把所有时间都用来学习了。</p>
-<p>提升自我控制能力应该是一件值得我花一辈子的时间去做的事情吧。 我相信做好这件事情给我带来的好处能和每天吃上土豆给我精神上带来的好处相媲美。当然，前提是我真正地把它给做好了。 如果满分是100分的话， 我会毫不留情地给现在的自己打上0分， 弱爆了的自我控制能力。 我是一个自负的人， 任何的事情除了我主观意识上接受了之外， 不会有任何人能够影响我。我认为不对的东西， 即使有人在我耳边吹了一万遍它是正确的 ， 我依然会以为它不对。 我也很讨厌那种洗脑式， 自以为是的真理式的吹风行为。 所以对于那种所谓提升自我控制能力的几个技巧啊， 提升自我控制能力的啥啥书啥的东西， 我是一直持着不屑的态度的， 从来不喜欢看这种类型的书。同理， 对于时间管理方面的培训我也是一万个不愿意， 时间管理嘛， 有了日事清就够了， 还培训个啥， 这破培训才是真的浪费时间。 但是没办法， 领导喜欢玩这一套你就得由着他。  </p>
-<p>突然发现明明自己写的是关于最近的一些事， 但是话题却始终是围绕着时间两个字在转。说起来， 抛开业余时间不谈，工作的时候时间排得倒是挺合理的（在有活儿干的情况下）， 毕竟咱做的软件就是时间管理方面的。当然， 现在做项目的时候， 项目管理流程走得也是挺不错的， 至少不会有各种各样的大会小会充斥着你每一天的时间， 最多也就每个周例行的半个小时的工作安排会议。 所以自己真正应该改变的便是业余时间的控制吧。  </p>
-<p>感觉自己真的是太久没动笔了， 一动笔的时候通篇都是废话， 熬到现在也熬不出几个字儿了。 哎， 曾经的才子如今已是江郎才尽<br>:悲伤。 那就给刚入门的前端小伙伴们一点忠告吧。 在基础没打扎实前， 千万不要折腾除了jQuery之外的其他框架。 讲真， 这段时间里最好的做法就是打好基础打好基础打好基础。 只有JS基础打好了， 后面学框架这些东西的时候才会更快。 血淋淋的教训啊， 当初年轻不懂事， 学了点JS就去折腾框架， 结果浪费了我不少时间不说， 最为悲惨的是到最后真的只是学到了个鸟 →＿← 。 </p>
+
+<p>在之前的业务中， 碰到了一个关于弹窗的关闭顺序的问题。 </p>
+<p>由于在系统中使用了<code>popover</code>， <code>inside-modal</code>, <code>modal</code>, <code>dropdown</code>等弹窗， 并且存在级联<code>popover</code>， 然后为了方便管理<code>esc</code>关闭弹窗的功能， 同事做了一个<code>esc</code>事件队列管理器， 其原理就是对<code>document</code>进行代理， 在按下<code>esc</code>的时候， 优先触发最后绑定的事件。</p>
+<p>本来这个功能用的好好的， 但是后来发现了一个问题。我们系统中所使用的第三方的文件预览插件<code>Magnific-Popup</code>所附带的弹窗也是在<code>document</code>上绑定了<code>esc</code>退出功能的， 但是由于该插件并没有具体地集成到系统中， 所以他绑定的事件是没有加入到事件队列管理器里面的。这样造成的问题是， 在文件（<code>inside-modal</code>弹窗）中点击文件预览的时候， 打开了弹窗， 当按下<code>esc</code>的时候， 本来期望的只是关闭预览弹窗， 但是由于队列管理器对事件触发顺序进行了处理， 最后结果是先关闭了文件（<code>inside-modal</code>）弹窗， 然后才会关闭预览弹窗。毫无疑问， 这个问题的影响是比较严重的。</p>
+<p>文件弹窗 ：<br><img data-src="http://o869zxhjd.bkt.clouddn.com/inside-modal.png" alt="inside-modal"></p>
+<p>文件预览弹窗：<br><img data-src="http://o869zxhjd.bkt.clouddn.com/%E6%96%87%E4%BB%B6%E9%A2%84%E8%A7%88.png" alt="文件预览弹窗"></p>
+<p>在这种情况下，直接阻止事件冒泡是没有效果的， 因为事件冒泡只是阻止事件的传递而已， 并且由于两者事件都是注册在<code>document</code>上的， 而这里涉及到的是事件触发顺序的问题（管理器里的事件优先触发）。 </p>
+<p>所以， 这个时候就可以用到事件捕获了。 我们知道， 事件捕获是从最外层向最里层传递的， 也就是从<code>window</code>上面开始传递， 所以这里可以对<code>window</code>绑定文件预览弹窗的<code>esc</code>事件： </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'keydown'</span>, _closeDialog, <span class="literal">true</span>); <span class="comment">// 注意第三个参数是true</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_closeDialog</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(e &amp;&amp; e.keyCode === <span class="number">27</span>) &#123;</span><br><span class="line">    <span class="built_in">window</span>.removeEventListener(<span class="string">'keydown'</span>, _closeDialog, <span class="literal">true</span>);</span><br><span class="line">    mfp.close();</span><br><span class="line">    e.stopPropagation();</span><br><span class="line">    e.preventDefault();</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!e) &#123;</span><br><span class="line">    <span class="built_in">window</span>.removeEventListener(<span class="string">'keydown'</span>, _closeDialog, <span class="literal">true</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>在其事件处理程序中， 调用事件对象的<code>stopPropagation()</code>来阻止事件向下一层元素传递， 这样一来<code>document</code>上就不能接收到该事件了， 从而使得在文件预览弹窗里按下<code>esc</code>的时候， 事件队列处理器不能够接收到相应事件，保证了预期效果。</p>
+<p>最后总结一下， 这里总共做了两个操作： </p>
+<ul>
+<li>将预览弹窗的<code>keydown</code>事件注册到<code>window</code>上面</li>
+<li>将该事件注册在事件捕获阶段</li>
+</ul>
+<p>需要注意的是， 移除事件所用的参数只有和绑定事件的参数一致的时候才能够准确地移除事件哈。</p>
+<p>当然，也许针对这个问题还会有更好的解决方案， 只是当时为了保证开发效率， 就直接采用能够想到的方案了。 </p>
 ]]></content>
       <tags>
-        <tag>随笔</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -1507,60 +1561,6 @@
 ]]></content>
       <tags>
         <tag>每天学习一丢丢~</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记一次事件捕获的妙用</title>
-    <url>/2016/06/03/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7%E7%9A%84%E5%A6%99%E7%94%A8/</url>
-    <content><![CDATA[<p><code>JavaScript</code>事件流有事件捕获， 处于目标及事件冒泡三个阶段。 在使用<code>addEventListener</code>注册事件的时候, 其第三个参数也可以选择将事件注册在哪个阶段。 平时我们事件大多都是注册在冒泡阶段的， 所以第三个参数一般都是传递的<code>false</code>， 由于很少使用到事件捕获， 所以久而久之也就忘了还有这一茬了。但是其实在某些特定的场景下， 事件捕获还是挺有用的。  </p>
-<a id="more"></a>
-
-
-<p>在之前的业务中， 碰到了一个关于弹窗的关闭顺序的问题。 </p>
-<p>由于在系统中使用了<code>popover</code>， <code>inside-modal</code>, <code>modal</code>, <code>dropdown</code>等弹窗， 并且存在级联<code>popover</code>， 然后为了方便管理<code>esc</code>关闭弹窗的功能， 同事做了一个<code>esc</code>事件队列管理器， 其原理就是对<code>document</code>进行代理， 在按下<code>esc</code>的时候， 优先触发最后绑定的事件。</p>
-<p>本来这个功能用的好好的， 但是后来发现了一个问题。我们系统中所使用的第三方的文件预览插件<code>Magnific-Popup</code>所附带的弹窗也是在<code>document</code>上绑定了<code>esc</code>退出功能的， 但是由于该插件并没有具体地集成到系统中， 所以他绑定的事件是没有加入到事件队列管理器里面的。这样造成的问题是， 在文件（<code>inside-modal</code>弹窗）中点击文件预览的时候， 打开了弹窗， 当按下<code>esc</code>的时候， 本来期望的只是关闭预览弹窗， 但是由于队列管理器对事件触发顺序进行了处理， 最后结果是先关闭了文件（<code>inside-modal</code>）弹窗， 然后才会关闭预览弹窗。毫无疑问， 这个问题的影响是比较严重的。</p>
-<p>文件弹窗 ：<br><img data-src="http://o869zxhjd.bkt.clouddn.com/inside-modal.png" alt="inside-modal"></p>
-<p>文件预览弹窗：<br><img data-src="http://o869zxhjd.bkt.clouddn.com/%E6%96%87%E4%BB%B6%E9%A2%84%E8%A7%88.png" alt="文件预览弹窗"></p>
-<p>在这种情况下，直接阻止事件冒泡是没有效果的， 因为事件冒泡只是阻止事件的传递而已， 并且由于两者事件都是注册在<code>document</code>上的， 而这里涉及到的是事件触发顺序的问题（管理器里的事件优先触发）。 </p>
-<p>所以， 这个时候就可以用到事件捕获了。 我们知道， 事件捕获是从最外层向最里层传递的， 也就是从<code>window</code>上面开始传递， 所以这里可以对<code>window</code>绑定文件预览弹窗的<code>esc</code>事件： </p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'keydown'</span>, _closeDialog, <span class="literal">true</span>); <span class="comment">// 注意第三个参数是true</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_closeDialog</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(e &amp;&amp; e.keyCode === <span class="number">27</span>) &#123;</span><br><span class="line">    <span class="built_in">window</span>.removeEventListener(<span class="string">'keydown'</span>, _closeDialog, <span class="literal">true</span>);</span><br><span class="line">    mfp.close();</span><br><span class="line">    e.stopPropagation();</span><br><span class="line">    e.preventDefault();</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!e) &#123;</span><br><span class="line">    <span class="built_in">window</span>.removeEventListener(<span class="string">'keydown'</span>, _closeDialog, <span class="literal">true</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>在其事件处理程序中， 调用事件对象的<code>stopPropagation()</code>来阻止事件向下一层元素传递， 这样一来<code>document</code>上就不能接收到该事件了， 从而使得在文件预览弹窗里按下<code>esc</code>的时候， 事件队列处理器不能够接收到相应事件，保证了预期效果。</p>
-<p>最后总结一下， 这里总共做了两个操作： </p>
-<ul>
-<li>将预览弹窗的<code>keydown</code>事件注册到<code>window</code>上面</li>
-<li>将该事件注册在事件捕获阶段</li>
-</ul>
-<p>需要注意的是， 移除事件所用的参数只有和绑定事件的参数一致的时候才能够准确地移除事件哈。</p>
-<p>当然，也许针对这个问题还会有更好的解决方案， 只是当时为了保证开发效率， 就直接采用能够想到的方案了。 </p>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>纯CSS实现单击锚点平滑切换的效果</title>
-    <url>/2016/05/10/%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E5%8D%95%E5%87%BB%E9%94%9A%E7%82%B9%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%9A%84%E6%95%88%E6%9E%9C/</url>
-    <content><![CDATA[<p>有时想实现一个功能，比如想让页面不出现滚动条，但是却能装下更多的东西，这个时候我们会对某个容器设 置<code>overflow: hidden</code>，然后通过锚点来实现单击切换页面（其实只是控制显示的内容）的效果。但是通过锚点来跳到指定内容的不足之处在于，没有什么过渡效果，很突兀的就跳到了目标点。当然，也可以通过JS或者jQuery来实现自己想要的动态切换效果，这一类的文章一搜一大堆，这里就不赘述了。</p>
-<a id="more"></a>
-<p>但是在一些个人主页中，比如github的个人主页（只是主页而已，也就是username.github.io）上会禁止JS脚本的运行，这个时候如果还是想通过单击锚点平滑切换的功能的话，应该怎么办呢？</p>
-<p>原谅我是一个前端初学者，傻想了很久也想不到什么办法，然后就百度谷歌了。</p>
-<p>后来找到了一些方法，比如用radio配合他的check属性来实现，<span class="exturl" data-url="aHR0cDovL3R5bXBhbnVzLm5ldC9jb2Ryb3BzLzIwMTIvMDYvMTIvY3NzLW9ubHktcmVzcG9uc2l2ZS1sYXlvdXQtd2l0aC1zbW9vdGgtdHJhbnNpdGlvbnMv">文章在这里<i class="fa fa-external-link-alt"></i></span>,关于这个方法，<span class="exturl" data-url="aHR0cDovL3d3dy5pbW9vYy5jb20vdmlldy8yNTI=">慕课<i class="fa fa-external-link-alt"></i></span>上也有专门的教程，大家也可以去看看。</p>
-<p>但是可不可以不插入radio就实现对应的效果呢？ 答案是有的。</p>
-<p>那就是利用<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvQ1NTLyUzQXRhcmdldA==">:target<i class="fa fa-external-link-alt"></i></span>伪类，这个选择器可以选择当前活动的锚点,那么利用这个属性我们就可以实现自己想要的效果了。</p>
-<p>代码如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag1"</span>&gt;</span>Tag1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag2"</span>&gt;</span>Tag2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tag3"</span>&gt;</span>Tag3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tag3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#container</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">outline</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag1</span>, <span class="selector-id">#tag2</span>, <span class="selector-id">#tag3</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: all ease-out .<span class="number">2s</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>:<span class="number">0</span></span><br><span class="line">  left:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag1</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f66</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag2</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tag3</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: gray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#container</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:target</span> &#123;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1000</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvMjQza2pMNjAvMi8=">查看DEMO<i class="fa fa-external-link-alt"></i></span></p>
-<p>上面的例子是通过绝对定位配合z-index和透明度来实现的动态效果。先将所有的元素的opacity设为0，然后为了默认显示出来第一个元素，所以第一个元素的opacity为1，z-index为1。然后单击就可以实现动态切换了。</p>
-<p>其实我最先尝试的是通过给<code>#container</code>设置<code>overflow: hidden;</code>, 为它的子元素设置<code>height:100%;</code>，然后给target设置margin-top为负的百分比值来实现相应效果的，毕竟比较喜欢这种从下往上冒或者从上往下掉的感觉嘛。。。但是在实现过程中遇到了一点小问题，那就是当Tag2和Tag3相互切换的时候，居然只会移动到一半就不再动了，如果把<code>overflow: hidden</code>去掉，显示的就是自己期望的效果。<span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvYmV6YnUzajIv">一个有问题的DEMO<i class="fa fa-external-link-alt"></i></span> </p>
-<p>后来自己想到了解决的办法，那就是给container包裹一个div，然后把<code>overflow: hidden</code>设置在这个元素身上，再把container的overflow去掉，设置高度为它子元素的高度，这样就能显示正常了。 <span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvZGMzc3ZkdmYvNC8=">DEMO在这里<i class="fa fa-external-link-alt"></i></span>.</p>
-<p>虽然找到了解决办法，但是对于<span class="exturl" data-url="aHR0cHM6Ly9qc2ZpZGRsZS5uZXQvYmV6YnUzajIv">问题DEMO<i class="fa fa-external-link-alt"></i></span> 里的这种怪异行为真的不理解，如果各位谁知道的话，还请告知，谢谢。</p>
-<p>参见：<br><span class="exturl" data-url="aHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy8xNzYzMTQxNy9jc3MtcHVyZS1jc3Mtc2Nyb2xsLWFuaW1hdGlvbg==">stackoverflow - 纯CSS滚动效果<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <tags>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
