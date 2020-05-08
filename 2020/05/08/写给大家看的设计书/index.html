@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+<link rel="dns-prefetch" href="https://zz.bdstatic.com" >
+<link rel="preconnect" href="https://hm.baidu.com" >
+<link rel="preconnect" href="https://www.google-analytics.com" >
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="preload" href="/lib/font-awesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"noteawesome.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="豆瓣链接：https:&#x2F;&#x2F;book.douban.com&#x2F;subject&#x2F;3323633&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写给大家看的设计书">
+<meta property="og:url" content="https://noteawesome.com/2020/05/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/index.html">
+<meta property="og:site_name" content="藏虚">
+<meta property="og:description" content="豆瓣链接：https:&#x2F;&#x2F;book.douban.com&#x2F;subject&#x2F;3323633&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/434020/1588944067793-c0b93205-a535-4766-89ff-440f56871be7.png">
+<meta property="article:published_time" content="2020-05-08T04:37:24.000Z">
+<meta property="article:modified_time" content="2020-05-08T14:17:49.302Z">
+<meta property="article:author" content="前端小虾蟹">
+<meta property="article:tag" content="每天学习一丢丢~">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/434020/1588944067793-c0b93205-a535-4766-89ff-440f56871be7.png">
+
+<link rel="canonical" href="https://noteawesome.com/2020/05/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>写给大家看的设计书 | 藏虚</title>
+  <meta name="description" content="前端小虾蟹" />
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76738066-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-76738066-1');
+      }
+    </script>
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cd1cd3c88114aca3024ab82ac56492d0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">藏虚</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://noteawesome.com/2020/05/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="前端小虾蟹">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏虚">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          写给大家看的设计书
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-08 12:37:24 / 修改时间：22:17:49" itemprop="dateCreated datePublished" datetime="2020-05-08T12:37:24+08:00">2020-05-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>豆瓣链接：<span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8zMzIzNjMzLw==">https://book.douban.com/subject/3323633/<i class="fa fa-external-link-alt"></i></span></p>
+<p><a name="Hr7PR"></a></p>
+<a id="more"></a> 
+<h2 id="4大基本原则"><a href="#4大基本原则" class="headerlink" title="4大基本原则"></a>4大基本原则</h2><ul>
+<li>亲密性</li>
+<li>对齐</li>
+<li>重复</li>
+<li>对比</li>
+</ul>
+<p><a name="gUwE0"></a></p>
+<h2 id="亲密性"><a href="#亲密性" class="headerlink" title="亲密性"></a>亲密性</h2><p><a name="TEsYj"></a></p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>将相关的项组织在一起，从物理位置上使它们互相靠近。物理位置的接近意味着存在关联。其根本目的是实现<strong>组织性。</strong></p>
+<p><a name="LRup5"></a></p>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
+<li>布局的时候一定要明确元素和其所属元素是否在一起，留意无关元素</li>
+<li>将有关联的元素放在一起，然后在不同单元间增加合适的空间，就能让信息变得更加直观</li>
+<li>并不意味着一切都要更加靠近 —— 如果某些元素在理解上存在关联，或者相互之间存在某种关系，那么这些元素在视觉上也应当有关联</li>
+</ul>
+<p><a name="9KNWa"></a></p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>避免一个页面上有太多孤立的元素</li>
+<li>不要再元素之间留出同样大小的空白，除非各组同属于一个子集</li>
+<li>不同属一组的元素之间不要建立关系。如果元素彼此无关，要把它们分开</li>
+<li>不要仅仅因为有空白就把元素放在角落或中央</li>
+</ul>
+<p><a name="baazr"></a></p>
+<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><p><a name="cagVe"></a></p>
+<h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p><strong>任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系。</strong>其根本目的是使页面<strong>统一而且有条理。</strong>如果页面上的一些项是对齐的，这会得到一个更加内聚的单元。要让页面上的所有元素看上去统一、有联系而且彼此相关，需要在各个单独的元素之间存在某种视觉纽带。</p>
+<p><a name="nSems"></a></p>
+<h3 id="应用-1"><a href="#应用-1" class="headerlink" title="应用"></a>应用</h3><ul>
+<li><strong>统一对齐方式</strong> —— 如页面内的所有元素统一使用左对齐或者右对齐，以便增加边界强度，为布局提供力度</li>
+<li><strong>非刻意的情况下，永远不要使用居中对齐</strong> —— 居中对齐会创建一种更正式、更稳重的外观，这种外观显得中规中矩，但通常也很乏味。大多数精巧的设计都没有采用居中对齐</li>
+<li>*<em>一定要确保每一项都与页面上的其他项存在某种对齐 *</em><ul>
+<li>文本行水平摆放 —— 按基线对齐</li>
+<li>多个单独的文本块 —— 按左边界或者右边界对齐</li>
+<li>图片 —— 将图片边界与页面的其他边界对齐</li>
+</ul>
+</li>
+<li><strong>刻意寻找对齐线</strong> —— 优秀的设计中都可以在对齐的对象间画出“对齐线”</li>
+<li>如果设计中的对齐很明确，那么可以有意识地打破对齐</li>
+</ul>
+<p><a name="0vcj1"></a></p>
+<h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>避免在页面上混用多种文本对齐方式</li>
+<li>避免居中对齐</li>
+</ul>
+<p><a name="7Xxue"></a></p>
+<h2 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h2><p><a name="CSqLL"></a></p>
+<h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><p><strong>设计的某些方面需要在整个作品中重复。</strong>其根本目的是统一、并增强视觉效果。</p>
+<p><a name="yIZ6g"></a></p>
+<h3 id="应用-2"><a href="#应用-2" class="headerlink" title="应用"></a>应用</h3><ul>
+<li>粗体的重复有助于统一整个设计</li>
+<li>把已有的重复元素取出，让这些元素效果更强、更生动。通过把重复表现得很明显，这样不仅页面看上去更有趣，还能再视觉上增强其条理性和一致性</li>
+<li>重复有助于组织信息，帮助读者浏览各个页面</li>
+<li>重复的项不一定完全相同，可能只是存在明确关联的紧密相关的对象</li>
+<li>重复的最大好处是使各项看起来同属一组</li>
+</ul>
+<p><a name="4GnwV"></a></p>
+<h3 id="注意事项-2"><a href="#注意事项-2" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>避免太多地重复一个元素，重复太多会让人讨厌</li>
+<li>过多的重复会混淆重点</li>
+</ul>
+<p><a name="04mA7"></a></p>
+<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><p><a name="LJ6b5"></a></p>
+<h3 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h3><p><strong>页面上的不同元素之间要有对比效果，达到吸引读者的对比效果。</strong>其根本目的有两个，一是<strong>增强页面效果，</strong>二是<strong>有助于信息的组织。</strong>如果两个项不完全相同，就应当使之不同，而且<strong>应当是截然不同。</strong></p>
+<p><a name="AkIHZ"></a></p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>对比是为页面增加视觉效果的最有效的途径，也是在不同元素之间建立一种有组织的层次结构的最有效的方法。<strong>要想实现有效的对比，对比就必须强烈。</strong>此外，对比可以用来在页面上指引读者、制造焦点。</p>
+<p><a name="FJhA4"></a></p>
+<h3 id="应用-3"><a href="#应用-3" class="headerlink" title="应用"></a>应用</h3><ul>
+<li>如果使用了又高又窄的列，就应当在水平方向有一些突出的标题</li>
+<li>可以通过字体选择、线宽、颜色、形状、大小、空间等因素来增加对比</li>
+</ul>
+<p><a name="T8h5A"></a></p>
+<h3 id="注意事项-3"><a href="#注意事项-3" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>不要将深棕色和黑色进行对比</li>
+<li>不要将一种粗线于一种更粗的线进行对比</li>
+<li>避免使用两种或多种类似的字体</li>
+<li>如果各个项不完全一样，<strong>干脆让他们截然不同</strong></li>
+</ul>
+<p>**</p>
+<p><a name="6qIlD"></a></p>
+<h2 id="颜色运用"><a href="#颜色运用" class="headerlink" title="颜色运用"></a>颜色运用</h2><p><a name="sh87Z"></a></p>
+<h3 id="色轮"><a href="#色轮" class="headerlink" title="色轮"></a><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU4JTg5JUIyJUU3JTkyJUIw">色轮<i class="fa fa-external-link-alt"></i></span></h3><p><a name="NpvXZ"></a></p>
+<h4 id="三原色"><a href="#三原色" class="headerlink" title="三原色"></a>三原色</h4><p>色轮的基础是黄、红和蓝三种颜色。这些颜色称之为三原色(美术三原色)。</p>
+<p><a name="myS4c"></a></p>
+<h4 id="三间色（secondary-color）"><a href="#三间色（secondary-color）" class="headerlink" title="三间色（secondary color）"></a>三间色（secondary color）</h4><p>三原色两两均匀混合得到的颜色为三间色。</p>
+<ul>
+<li>黄色 + 蓝色 = 绿色</li>
+<li>蓝色 + 红色 = 紫色</li>
+<li>红色 + 黄色 = 橙色</li>
+</ul>
+<p><a name="o6c74"></a></p>
+<h4 id="第三色"><a href="#第三色" class="headerlink" title="第三色"></a>第三色</h4><p>将色轮的空白填满，得到的颜色称之为第三色。<br><img align=left height=331 width=330 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1588944067793-c0b93205-a535-4766-89ff-440f56871be7.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p><a name="vEras"></a></p>
+<h3 id="颜色关系"><a href="#颜色关系" class="headerlink" title="颜色关系"></a>颜色关系</h3><p><a name="VZvg4"></a></p>
+<h4 id="互补色"><a href="#互补色" class="headerlink" title="互补色"></a>互补色</h4><p>色轮上相对（完全对立、对面）的颜色即为互补色。因为其对立关系，所以最佳搭配是一种作为主色，另一种用于强调。</p>
+<p><a name="FSfm3"></a></p>
+<h4 id="三色组"><a href="#三色组" class="headerlink" title="三色组"></a>三色组</h4><p>彼此等距的三种颜色会形成三色组（如红黄蓝）。因为红黄蓝是三基色，所以红黄蓝的颜色组合也被称之外基色三色组（常用于儿童用品）。</p>
+<p><a name="6hwA5"></a></p>
+<h4 id="分裂互补三色组"><a href="#分裂互补三色组" class="headerlink" title="分裂互补三色组"></a>分裂互补三色组</h4><p>从色轮的一边选择一种颜色，再在色轮上找出它对面的互补色两侧的颜色。这样的组合会有一种更为细致的颜色边界。</p>
+<p><a name="cffgN"></a></p>
+<h4 id="类似色"><a href="#类似色" class="headerlink" title="类似色"></a>类似色</h4><p>由色轮上彼此响铃的颜色组成。它们都有相同的基础色，从而构成了一个协调的组合。用不同的亮色和暗色构成一组类似色，效果相当醒目。</p>
+<p><a name="8w0po"></a></p>
+<h3 id="暗色和亮色"><a href="#暗色和亮色" class="headerlink" title="暗色和亮色"></a>暗色和亮色</h3><ul>
+<li>纯色就是色调</li>
+<li>向色调增加黑色构成一个<strong>暗色</strong></li>
+<li>向色调增加白色构成一个<strong>亮色</strong></li>
+</ul>
+<p><a name="pJdgP"></a></p>
+<h4 id="单色"><a href="#单色" class="headerlink" title="单色"></a>单色</h4><p>单色组合是由一种色调及其对应点蛾多种亮色和暗色组成。</p>
+<p><a name="0YfZp"></a></p>
+<h4 id="暗色和亮色的组合"><a href="#暗色和亮色的组合" class="headerlink" title="暗色和亮色的组合"></a>暗色和亮色的组合</h4><p>选择上文提到的四种颜色关系之一，不过并不适用色调，而是使用这些颜色的不同亮色和暗色。这种组合能够极大地丰富选择，并且可以完全放心颜色的协调性。</p>
+<p><a name="P10Mc"></a></p>
+<h3 id="色质"><a href="#色质" class="headerlink" title="色质"></a>色质</h3><p>色质是指某种颜色的特定明暗度、深浅度或色调。色质过于接近的颜色组合会发生视觉抖动（如暗色的背景上使用暗色字体）</p>
+<p><a name="qYesi"></a></p>
+<h3 id="暖色与冷色"><a href="#暖色与冷色" class="headerlink" title="暖色与冷色"></a>暖色与冷色</h3><ul>
+<li>暖色 —— 红色或黄色（趋近型）</li>
+<li>冷色 —— 蓝色（后退型，趋于做背景色），更多的冷色才能产生效果或形成有效的对比</li>
+<li>如果要组合暖色和冷色，一定要少用些暖色</li>
+</ul>
+<p><a name="w8kna"></a></p>
+<h3 id="颜色模型"><a href="#颜色模型" class="headerlink" title="颜色模型"></a>颜色模型</h3><p><a name="bvSKC"></a></p>
+<h4 id="CMYK"><a href="#CMYK" class="headerlink" title="CMYK"></a>CMYK</h4><p>Cyan（青色）、Magenta（玫瑰色）、Yellow（黄色）、Key（通常是黑色）</p>
+<p><a name="rgO74"></a></p>
+<h4 id="RGB"><a href="#RGB" class="headerlink" title="RGB"></a>RGB</h4><p>Red（红色）、Green（绿色）、Blue（蓝色）</p>
+<p><a name="36VwO"></a></p>
+<h4 id="抉择"><a href="#抉择" class="headerlink" title="抉择"></a>抉择</h4><p>需要印刷的项目应该使用CMYK，需要在屏幕上看的内容则应该使用RGB。</p>
+<p><a name="rU0VL"></a></p>
+<h2 id="字体基本规则"><a href="#字体基本规则" class="headerlink" title="字体基本规则"></a>字体基本规则</h2><ul>
+<li>标点（英文）后面有且只有一个空格</li>
+<li>避免错误地使用打印机引号（””）而不是印刷引号（“”）</li>
+<li>撇号是一个单独的闭引号，避免使用打印机撇号和印刷撇号</li>
+<li>避免使用全大写字母</li>
+<li>不要使用下划线</li>
+<li>字号越大，就越需要空间调整</li>
+<li>避免出现寡妇和孤儿<ul>
+<li>当一段文字的最后一行的字符数少于7个的时候，最后一行就称之为寡妇</li>
+<li>当一段的最后一行由于太长而和其他文字分开，在下一栏或下一页的最上面结束时，就称之为孤儿</li>
+<li>解决方案：重写文本、增加或减少一些词语、增减字母单词或者行之间的空隙、增加或减少页面的空白</li>
+</ul>
+</li>
+<li>跟随在有样式的文字背后的标点，其样式应该和前面的文本样式保持一致</li>
+<li>把文字放进方框中的时候，要在四周都留足空间</li>
+</ul>
+<p><a name="nHaPd"></a></p>
+<h2 id="字体应用原则"><a href="#字体应用原则" class="headerlink" title="字体应用原则"></a>字体应用原则</h2><p><strong>协调是一个稳妥有用的概念，但冲突务必要避免。</strong></p>
+<p><a name="ifrLo"></a></p>
+<h3 id="协调"><a href="#协调" class="headerlink" title="协调"></a>协调</h3><p>如果只使用一种字体，页面上的所有元素都采用同样性质的字体，这种设计就是协调的。大多数协调的设计都相当平和正式。</p>
+<p><a name="F3NsJ"></a></p>
+<h3 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h3><p>如果在同一个页面上设置了两个或多个类似的字体，他们并非完全不同，但也不完全相同，这个设计就是冲突的。<strong>相似性是互相冲突的。</strong></p>
+<p><a name="xvsAw"></a></p>
+<h3 id="对比-1"><a href="#对比-1" class="headerlink" title="对比"></a>对比</h3><p>强烈的对比能够有效地吸引我们的视线，而在字体中应用对比则是最有效、最简单而且最让人满意的方法。字体对比有六种明确的不同方式 —— <strong>大小、粗细、结构、形状、方向和颜色。</strong></p>
+<p><a name="iiKLr"></a></p>
+<h2 id="字体类别"><a href="#字体类别" class="headerlink" title="字体类别"></a>字体类别</h2><p><a name="koY2Q"></a></p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li>强调线：在曲线笔画的最细部分画一条对角线</li>
+</ul>
+<p><a name="wUjPc"></a></p>
+<h3 id="旧式体（Oldstyle）"><a href="#旧式体（Oldstyle）" class="headerlink" title="旧式体（Oldstyle）"></a>旧式体（Oldstyle）</h3><p>该字体基于手写体创建的。其特征如下：</p>
+<ul>
+<li>衬线（Serif, 读作 sair iff： 倾斜</li>
+<li>强调线：倾斜</li>
+<li>粗/细过渡：缓和</li>
+</ul>
+<p><strong>这类字体适合阅读。</strong></p>
+<p><a name="2smOW"></a></p>
+<h3 id="现代体（Modern）"><a href="#现代体（Modern）" class="headerlink" title="现代体（Modern）"></a>现代体（Modern）</h3><p>其特征如下：</p>
+<ul>
+<li>衬线：水平，而且很细</li>
+<li>强调线：垂直</li>
+<li>粗/细过渡：剧烈</li>
+</ul>
+<p>现代体外观很醒目，特别是设置得非常大时有一种让人震撼的感觉。然而由于其强烈的粗细过渡，在显示大量正文时，大多数现代体都不是很好的选择。</p>
+<p><a name="eaaKZ"></a></p>
+<h3 id="粗衬线体（Slab-serif）"><a href="#粗衬线体（Slab-serif）" class="headerlink" title="粗衬线体（Slab serif）"></a>粗衬线体（Slab serif）</h3><p>其特征如下：</p>
+<ul>
+<li>衬线：水平，而且比较粗</li>
+<li>强调线：垂直</li>
+<li>粗/细过渡：很小或没有</li>
+</ul>
+<p>这种字体可以很好地用于显示大量文本，适合阅读。设置为这种字体的页面更暗，因为它们的笔划比较粗，而且粗细相对单一。由于其简洁、直接的外观，粗衬线体在儿童图书中经常使用。</p>
+<p><a name="cIs6B"></a></p>
+<h3 id="无衬线体（Sans-serif）"><a href="#无衬线体（Sans-serif）" class="headerlink" title="无衬线体（Sans serif）"></a>无衬线体（Sans serif）</h3><p>其特征如下：</p>
+<ul>
+<li>衬线：无</li>
+<li>强调线：无（没有粗细变化）</li>
+<li>粗/细过渡：无</li>
+</ul>
+<p>无衬线体及笔划末端没有衬线的字体。要想更好地设计页面，最好的做法就是引入包括一个很粗很黑字体的无衬线体系列。</p>
+<p><a name="SdJDr"></a></p>
+<h3 id="手写体（Script）"><a href="#手写体（Script）" class="headerlink" title="手写体（Script）"></a>手写体（Script）</h3><p>尽量少用，并且在使用的时候<strong>不要大写，</strong>可设置较大字号，引人注意。</p>
+<p><a name="8ISWJ"></a></p>
+<h3 id="花体（Decorative）"><a href="#花体（Decorative）" class="headerlink" title="花体（Decorative）"></a>花体（Decorative）</h3><p>就是很花的字体。</p>
+<p><a name="B5DEW"></a></p>
+<h2 id="字体对比"><a href="#字体对比" class="headerlink" title="字体对比"></a>字体对比</h2><p><a name="Q5zlD"></a></p>
+<h3 id="大小"><a href="#大小" class="headerlink" title="大小"></a>大小</h3><p>相比于全部大写，将文本设置为小写，并使用更大的字体，一方面能够吸引注意，另一方面可读性更好。</p>
+<p><a name="PvD3t"></a></p>
+<h3 id="粗细"><a href="#粗细" class="headerlink" title="粗细"></a>粗细</h3><p>粗细对比是为页面增加视觉效果最容易而且最有效的方法之一。不仅能够使页面更引人注目，也是组织信息的最有效的方式之一。</p>
+<p><a name="eWc4D"></a></p>
+<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>字体的结构是指这种字体是如何建立的。如果要使用来自两种不同字体系列中的字体，<strong>就要使用不同结构的字体系列。</strong>比较容易的是，选择一个衬线体和一个无衬线体。全大写 VS 全小写；罗马体（垂直）VS 斜体；</p>
+<p><a name="JzHSg"></a></p>
+<h3 id="方向"><a href="#方向" class="headerlink" title="方向"></a>方向</h3><p><a name="j9tIH"></a></p>
+<h3 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h3><p>重复前面的内容，暖色（红色、橙色）是前进型的，很少的一点红色就可以产生对比；冷色（蓝色、绿色）是远离型的，需要更多的冷色才能产生有效的对比。</p>
+<p><a name="pH9WX"></a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>字母的使用尽量不要采用全部大写的方式 —— 可读性非常差</li>
+<li>避免多个回车的使用 —— 不同分组之间的分隔通常只需要1个回车即可</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%AF%8F%E5%A4%A9%E5%AD%A6%E4%B9%A0%E4%B8%80%E4%B8%A2%E4%B8%A2/" rel="tag"># 每天学习一丢丢~</a>
+          </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/26/DON'T%20MAKE%20ME%20THINK/" rel="prev" title="DON'T MAKE ME THINK">
+      <i class="fa fa-chevron-left"></i> DON'T MAKE ME THINK
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#4大基本原则"><span class="nav-number">1.</span> <span class="nav-text">4大基本原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#亲密性"><span class="nav-number">2.</span> <span class="nav-text">亲密性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用"><span class="nav-number">2.2.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">2.3.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对齐"><span class="nav-number">3.</span> <span class="nav-text">对齐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用-1"><span class="nav-number">3.2.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项-1"><span class="nav-number">3.3.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重复"><span class="nav-number">4.</span> <span class="nav-text">重复</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2"><span class="nav-number">4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用-2"><span class="nav-number">4.2.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项-2"><span class="nav-number">4.3.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对比"><span class="nav-number">5.</span> <span class="nav-text">对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-3"><span class="nav-number">5.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用"><span class="nav-number">5.2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用-3"><span class="nav-number">5.3.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项-3"><span class="nav-number">5.4.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#颜色运用"><span class="nav-number">6.</span> <span class="nav-text">颜色运用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#色轮"><span class="nav-number">6.1.</span> <span class="nav-text">色轮</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#三原色"><span class="nav-number">6.1.1.</span> <span class="nav-text">三原色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三间色（secondary-color）"><span class="nav-number">6.1.2.</span> <span class="nav-text">三间色（secondary color）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三色"><span class="nav-number">6.1.3.</span> <span class="nav-text">第三色</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#颜色关系"><span class="nav-number">6.2.</span> <span class="nav-text">颜色关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#互补色"><span class="nav-number">6.2.1.</span> <span class="nav-text">互补色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三色组"><span class="nav-number">6.2.2.</span> <span class="nav-text">三色组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分裂互补三色组"><span class="nav-number">6.2.3.</span> <span class="nav-text">分裂互补三色组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类似色"><span class="nav-number">6.2.4.</span> <span class="nav-text">类似色</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#暗色和亮色"><span class="nav-number">6.3.</span> <span class="nav-text">暗色和亮色</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单色"><span class="nav-number">6.3.1.</span> <span class="nav-text">单色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#暗色和亮色的组合"><span class="nav-number">6.3.2.</span> <span class="nav-text">暗色和亮色的组合</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#色质"><span class="nav-number">6.4.</span> <span class="nav-text">色质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#暖色与冷色"><span class="nav-number">6.5.</span> <span class="nav-text">暖色与冷色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#颜色模型"><span class="nav-number">6.6.</span> <span class="nav-text">颜色模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CMYK"><span class="nav-number">6.6.1.</span> <span class="nav-text">CMYK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RGB"><span class="nav-number">6.6.2.</span> <span class="nav-text">RGB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抉择"><span class="nav-number">6.6.3.</span> <span class="nav-text">抉择</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体基本规则"><span class="nav-number">7.</span> <span class="nav-text">字体基本规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体应用原则"><span class="nav-number">8.</span> <span class="nav-text">字体应用原则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#协调"><span class="nav-number">8.1.</span> <span class="nav-text">协调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冲突"><span class="nav-number">8.2.</span> <span class="nav-text">冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对比-1"><span class="nav-number">8.3.</span> <span class="nav-text">对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体类别"><span class="nav-number">9.</span> <span class="nav-text">字体类别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">9.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#旧式体（Oldstyle）"><span class="nav-number">9.2.</span> <span class="nav-text">旧式体（Oldstyle）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现代体（Modern）"><span class="nav-number">9.3.</span> <span class="nav-text">现代体（Modern）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#粗衬线体（Slab-serif）"><span class="nav-number">9.4.</span> <span class="nav-text">粗衬线体（Slab serif）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无衬线体（Sans-serif）"><span class="nav-number">9.5.</span> <span class="nav-text">无衬线体（Sans serif）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手写体（Script）"><span class="nav-number">9.6.</span> <span class="nav-text">手写体（Script）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#花体（Decorative）"><span class="nav-number">9.7.</span> <span class="nav-text">花体（Decorative）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体对比"><span class="nav-number">10.</span> <span class="nav-text">字体对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#大小"><span class="nav-number">10.1.</span> <span class="nav-text">大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#粗细"><span class="nav-number">10.2.</span> <span class="nav-text">粗细</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构"><span class="nav-number">10.3.</span> <span class="nav-text">结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方向"><span class="nav-number">10.4.</span> <span class="nav-text">方向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#颜色"><span class="nav-number">10.5.</span> <span class="nav-text">颜色</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">11.</span> <span class="nav-text">其他</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="前端小虾蟹"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">前端小虾蟹</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLzM3NDYzMjg5Nw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;374632897"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMzc0NjMyODk3" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;374632897"><i class="fab fa-weibo fa-fw"></i>Weibo</span>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">前端小虾蟹</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly9waXNjZXMudGhlbWUtbmV4dC5vcmc=">NexT.Pisces</span> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id    : 22652,
+      el    : 'wpac-rating',
+      color : 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'c6d5a9589cebe7e64c62',
+      clientSecret: '1c8d945d937fad172818708c39870c08acb43616',
+      repo        : 'star',
+      owner       : '374632897',
+      admin       : ['374632897'],
+      id          : '776cb417a5457dc464c22e0bc6b25b72',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+  <script>
+
+  </script>
+</body>
+</html>

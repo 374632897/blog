@@ -24,23 +24,146 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub仓库绑定二级域名</title>
-    <url>/2016/06/03/GitHub%E4%BB%93%E5%BA%93%E7%BB%91%E5%AE%9A%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/</url>
-    <content><![CDATA[<ol>
-<li><p>在仓库创建<code>gh-pages</code>分支</p>
-</li>
-<li><p>在该分支根目录下添加<code>CNAME</code>文件，文件内容是你希望指向的域名，需要注意的是不需要加协议，如期望网址是<code>http://algorithms.noteawesome.com</code>的话， 就直接写<code>algorithms.noteawesome.com</code>.</p>
+    <title>git bash 设置别名</title>
+    <url>/2016/08/09/Bash-for-windows-%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</url>
+    <content><![CDATA[<p>平时在windows上做开发的时候， 总觉得其命令行不好用， 所以使用命令行的时候， 都是用的<code>git bash</code>。然后每次需要提交代码的时候， 总是会<code>git add .</code>, <code>git commit -m &#39;..&#39;</code> , <code>git push</code>, 至少都要输入这么三条命令，实在是麻烦。 那么有没有什么办法可以简化操作呢？</p>
 <a id="more"></a>
-<p><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603130619.png" alt="创建CNAME文件"><br>在完成创建之后可以前往仓库设置查看是否设置成功<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131423.png" alt="检验是否设置成功"></p>
-</li>
-<li><p>前往域名控制中心添加域名解析<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131304.png" alt="添加解析"></p>
-</li>
-<li><p>慢慢等， 也可以用<code>ping &#39;your site&#39;</code>来查看是否成功设置<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131646.png" alt="是否解析成功"></p>
-</li>
-</ol>
+<p>最开始的时候我用的<code>shell</code>， 在每个仓库的根目录下都建立一个<code>all.sh</code>， 长相大概就是这样：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">dm=<span class="string">':smirk:'</span>;</span><br><span class="line"><span class="keyword">if</span> [ ! -z <span class="variable">$1</span> ]; <span class="keyword">then</span></span><br><span class="line">  dm=<span class="variable">$1</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line">git add --all;</span><br><span class="line">git commit -m <span class="string">"<span class="variable">$dm</span>"</span>;</span><br><span class="line">git push;</span><br></pre></td></tr></table></figure>
+<p>然后每次提交的时候直接运行<code>bash ./all.sh</code>就行了， 那么问题来了， 这样一来的话， 每次创建一个仓库， 就要复制一下这个文件，还是麻烦。</p>
+<p><code>linux</code>下可以给<code>bash</code>设置别名， 比如通过修改<code>/etc/.bashrc</code>， 但是在<code>bash for windows</code>下应该怎么做呢？</p>
+<p>其实吧。。 <code>bash for windows</code>也是有类似的文件的， 只不过不叫<code>.bashrc</code>而是<code>bash.bashrc</code>, 位置在<code>/etc/bash.bashrc</code>那里，当然， 具体的位置可能会因为git版本的不同而有所不同， windows下没有<code>etc</code> ? 没事儿， 在bash下直接cd就进去了。</p>
+<p>然后就加了别名</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># alias</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> ls=<span class="string">'ls --color=auto'</span>;</span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">'ls -lh'</span>;</span><br><span class="line"><span class="built_in">alias</span> all=<span class="string">'git add --all &amp;&amp; git commit -m ":smirk:" &amp;&amp; git push'</span>;</span><br><span class="line"><span class="built_in">alias</span> ..=<span class="string">'cd ..'</span>;</span><br><span class="line"><span class="built_in">alias</span> ....=<span class="string">'cd ../../'</span>;</span><br><span class="line"><span class="built_in">alias</span> ld=<span class="string">'ll | grep "^d"'</span>;</span><br><span class="line"><span class="built_in">alias</span> psw=<span class="string">'ps -a --windows'</span>;</span><br><span class="line"><span class="built_in">alias</span> vi=<span class="string">'vim'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下是cygwin下针对快速切换到挂载目录设置的别名</span></span><br><span class="line"><span class="built_in">alias</span> d=<span class="string">'cd /cygdrive/d'</span>;</span><br><span class="line"><span class="built_in">alias</span> ng=<span class="string">'cd /cygdrive/d/nginx-1.6.0'</span>;</span><br><span class="line"><span class="built_in">alias</span> gi=<span class="string">'cd /cygdrive/d/JGX/GitHub'</span>;</span><br></pre></td></tr></table></figure>
+<p>重启下bash , 然后就能够使用了。</p>
+<p>虽然<code>git bash</code>用着也还行， 不过还是对不少的linux命令没有提供支持， 另外一个软件<code>cygwin</code>也挺不错， 支持也挺多的， 如果安装<code>cygwin</code>的话， 需要注意一点， 也就是它默认不会安装<code>vim</code>， 所以在选择软件的时候需要留意一下。另外， <code>git bash</code>好像会比<code>cygwin</code>快一点， <code>cygwin</code>在运行未运行过的程序的时候， 反应会比较慢（查找去了？）， 另外， 关于<code>git</code>, 在<code>cygwin</code>下好像也需要重新配置。</p>
 ]]></content>
       <tags>
-        <tag>GitHub Pages</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DON&#39;T MAKE ME THINK</title>
+    <url>/2020/04/26/DON&#39;T%20MAKE%20ME%20THINK/</url>
+    <content><![CDATA[<p><a name="DroOD"></a></p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Don’t Make Me Think，中文译名，点石成金 - 访客至上的 Web 和移动可用性设计秘笈。全书围绕了“别让我思考”这一主题，提出了网页的可用性设计需要注意的地方。</p>
+<a id="more"></a> 
+
+
+
+
+<p><a name="ZtfaG"></a></p>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>作为一个用户，永远不应该让我花费时间去思考某个东西是否能点击 —— <strong>能点击的东西需要特殊标记，可能是一个按钮的形状、有可能是区别于正文的颜色背景，而不仅仅是鼠标移动过去之后会变成小手的形状，至少后者需要你先移动过去，而不能直接一眼看出来</strong></li>
+<li>让一切不言而喻 —— <strong>通过页面元素的外观（尺寸、颜色、布局等）、精心选择的明明、少量仔细斟酌的文字，综合在一起将创造出一种接近瞬间的识别效果。如果前面的方式也不能做到，那至少需要做到自我解释。</strong></li>
+<li>用户的阅读是扫描式的，从上到下从左到右（ltr的场景下）</li>
+<li><strong>满意策略（stisfice）：绝大多数时间里，我们不会选择最好的，而是选择第一个过得去的。</strong>为什么不选择最佳选择？<ul>
+<li>用户总是处于忙碌中</li>
+<li>如果猜错了，也不会产生什么严重的后果</li>
+<li>对选择进行权衡并不会改善用户的机会</li>
+<li>猜测更有意思</li>
+</ul>
+</li>
+<li><strong>用户不会追根究底，而是勉强应付</strong><ul>
+<li>这对用户来说并不重要，他们只要能使用就行了，至于怎么实现的，机制是什么，他们并不关心</li>
+<li>如果发现某个东西能用，就会一直使用它</li>
+</ul>
+</li>
+<li><strong>设计法则</strong><ul>
+<li>尽量利用习惯用法 —— 站点图标可点击、页面导航在站点顶部或左边，如果准备创新，那必须要理解你准备取代的设计的价值</li>
+<li>简洁胜过一致</li>
+<li>建立有效的视觉层次 —— 确保内容的外观能准确地表述内容之间的关系<ul>
+<li>越重要的部分越突出</li>
+<li>逻辑上相关的部分，在视觉上也相关，如相近的内容可以分为一组</li>
+<li>逻辑上包含的部分，在视觉上进行嵌套</li>
+</ul>
+</li>
+<li>把页面划分成明确定义的区域 —— 方便用户快速确定聚焦点以及可以跳过的区域</li>
+<li>明显标识可以点击的地方 —— 大多数情况下，用户行为是基于点击进行的</li>
+<li>最小化干扰，降低视觉噪声 —— 它会让页面变得不易理解，分散用户的注意力，有以下几种噪声类型：<ul>
+<li>眼花缭乱 —— 影响合适的视觉层次结构的创建</li>
+<li>组织不当</li>
+<li>太过密集 —— 过多的噪声淹没了原本有价值的信息</li>
+</ul>
+</li>
+<li>为内容创建清楚的格式，以便（用户）扫描，可参阅书籍《消除文字》(Letting Go of the Words)<ul>
+<li>充分使用标题 —— 不要让标题浮在空中，确保它们更靠近由它们引导的内容</li>
+<li>保持段落简短</li>
+<li>使用符号列表</li>
+<li>突出关键词语</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>用户不介意有多少次点击，只要每次点击都是毫不费力的</li>
+<li>表单的填写 —— 《有效的表单：为可用性设计 Web 表单》（Forms that Work: Designing Web Forms for Usability）</li>
+<li>信息指引：<ul>
+<li>简短：只需要提供最少的信息来帮助用户</li>
+<li>及时：放在用户正好需要它的地方</li>
+<li>不会错过：设置合适的格式，保证用户一定能够注意到它</li>
+</ul>
+</li>
+<li>去掉多余的文字 —— 有力的文字都很简练<ul>
+<li>降低页面的噪声</li>
+<li>让有用的内容更加突出</li>
+<li>让页面更加简短，用户在每个页面上一眼就能看到更多的内容</li>
+</ul>
+</li>
+<li>网络导航101法则<ul>
+<li>你通常是为了寻找某个目标</li>
+<li>你会决定先询问还是先浏览 —— 如果选择浏览，将会通过标志的引导，在层次结构中穿行</li>
+</ul>
+</li>
+<li>导航的用途：帮助我们找到想要的东西，以及告诉我们现在在哪里<ul>
+<li>告诉我们这里有什么</li>
+<li>告诉我们应该如何使用网站</li>
+<li>给了我们对网站建设者的信心</li>
+</ul>
+</li>
+<li>习惯用法<ul>
+<li>左上角 logo （网站 ID ），右上角实用工具（注册登录等）、搜索</li>
+<li>下方为一级栏目</li>
+<li>左侧页内导航</li>
+<li>右侧顶部为标题</li>
+</ul>
+</li>
+<li>持久导航（Persistent Navigation），应该包含四个元素：<ul>
+<li>热点ID</li>
+<li>栏目（Section） —— 主导航条（Primary Navigation），到达该站点主要栏目的链接，即站点层次结构的最顶层</li>
+<li>实用工具（Utility）：最多放置 4 - 5 个</li>
+<li>搜索</li>
+<li>表单场景下可能会例外</li>
+</ul>
+</li>
+<li>页面名称<ul>
+<li>每个页面都需要一个名称</li>
+<li>页面名称需要出现在合适的位置</li>
+<li>名称要引人注目（视觉层面）</li>
+<li>名称要和点击的链接进入的页面标题一致</li>
+</ul>
+</li>
+<li>面包屑导航<ul>
+<li>把它们放在最顶层</li>
+<li>使用 “&gt;” 对层级进行间隔</li>
+<li>加粗最后一个元素</li>
+</ul>
+</li>
+<li>标签页<ul>
+<li>它们不言而喻</li>
+<li>它们很难错过</li>
+<li>它们很灵活</li>
+<li>激活的标签页要突出，并且与下方内容在视觉上连接起来</li>
+</ul>
+</li>
+<li>访问一个新网站的时候，最初的那几秒特别重要</li>
+<li>共有区域悲剧（The Tragedy of the Commons）：任何共享的资源（共有区域）都会因为过度使用而遭到破坏</li>
+<li>可访问性</li>
+</ul>
+<p><a name="WR8xF"></a></p>
+<h2 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h2><p>最大的收获在于站在用户角度去思考问题，什么样的设计能最大化地获得用户的认可、节省用户的时间、提高用户的使用效率？作为与用户距离最近的开发人员，这些都是我们需要考虑的。也许仅仅是因为我们在开发时的一点偷工减料或者随心而为的一些想法，就会让我们的用户在使用我们的产品时痛苦万分，最后或者切换到别人的产品，或者继续忍痛使用 —— 然而这些都是在扼杀用户对我们的认可。所以，在开发中甚至开发前的时候，我们就需要去理解用户行为背后的逻辑，他真正的目的是什么，为了达到这个目的，现有的方式就是最优的吗？有没有更好的方式能够让用户更高效更便捷地实现相同的目的？所以归根结底，作为前端开发，我们需要站在用户的角度去思考问题。</p>
+]]></content>
+      <tags>
+        <tag>每天学习一丢丢~</tag>
       </tags>
   </entry>
   <entry>
@@ -80,6 +203,26 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub仓库绑定二级域名</title>
+    <url>/2016/06/03/GitHub%E4%BB%93%E5%BA%93%E7%BB%91%E5%AE%9A%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<ol>
+<li><p>在仓库创建<code>gh-pages</code>分支</p>
+</li>
+<li><p>在该分支根目录下添加<code>CNAME</code>文件，文件内容是你希望指向的域名，需要注意的是不需要加协议，如期望网址是<code>http://algorithms.noteawesome.com</code>的话， 就直接写<code>algorithms.noteawesome.com</code>.</p>
+<a id="more"></a>
+<p><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603130619.png" alt="创建CNAME文件"><br>在完成创建之后可以前往仓库设置查看是否设置成功<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131423.png" alt="检验是否设置成功"></p>
+</li>
+<li><p>前往域名控制中心添加域名解析<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131304.png" alt="添加解析"></p>
+</li>
+<li><p>慢慢等， 也可以用<code>ping &#39;your site&#39;</code>来查看是否成功设置<br><img data-src="http://o869zxhjd.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720160603131646.png" alt="是否解析成功"></p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>GitHub Pages</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML5 Canvas核心技术读书感悟</title>
     <url>/2016/07/04/HTML5-Canvas%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E8%AF%BB%E4%B9%A6%E6%84%9F%E6%82%9F/</url>
     <content><![CDATA[<p><code>HTML5 Canvas核心技术</code>读书感悟</p>
@@ -109,25 +252,6 @@
 ]]></content>
       <tags>
         <tag>读书</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git bash 设置别名</title>
-    <url>/2016/08/09/Bash-for-windows-%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</url>
-    <content><![CDATA[<p>平时在windows上做开发的时候， 总觉得其命令行不好用， 所以使用命令行的时候， 都是用的<code>git bash</code>。然后每次需要提交代码的时候， 总是会<code>git add .</code>, <code>git commit -m &#39;..&#39;</code> , <code>git push</code>, 至少都要输入这么三条命令，实在是麻烦。 那么有没有什么办法可以简化操作呢？</p>
-<a id="more"></a>
-<p>最开始的时候我用的<code>shell</code>， 在每个仓库的根目录下都建立一个<code>all.sh</code>， 长相大概就是这样：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">dm=<span class="string">':smirk:'</span>;</span><br><span class="line"><span class="keyword">if</span> [ ! -z <span class="variable">$1</span> ]; <span class="keyword">then</span></span><br><span class="line">  dm=<span class="variable">$1</span>;</span><br><span class="line"><span class="keyword">fi</span>;</span><br><span class="line">git add --all;</span><br><span class="line">git commit -m <span class="string">"<span class="variable">$dm</span>"</span>;</span><br><span class="line">git push;</span><br></pre></td></tr></table></figure>
-<p>然后每次提交的时候直接运行<code>bash ./all.sh</code>就行了， 那么问题来了， 这样一来的话， 每次创建一个仓库， 就要复制一下这个文件，还是麻烦。</p>
-<p><code>linux</code>下可以给<code>bash</code>设置别名， 比如通过修改<code>/etc/.bashrc</code>， 但是在<code>bash for windows</code>下应该怎么做呢？</p>
-<p>其实吧。。 <code>bash for windows</code>也是有类似的文件的， 只不过不叫<code>.bashrc</code>而是<code>bash.bashrc</code>, 位置在<code>/etc/bash.bashrc</code>那里，当然， 具体的位置可能会因为git版本的不同而有所不同， windows下没有<code>etc</code> ? 没事儿， 在bash下直接cd就进去了。</p>
-<p>然后就加了别名</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># alias</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> ls=<span class="string">'ls --color=auto'</span>;</span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">'ls -lh'</span>;</span><br><span class="line"><span class="built_in">alias</span> all=<span class="string">'git add --all &amp;&amp; git commit -m ":smirk:" &amp;&amp; git push'</span>;</span><br><span class="line"><span class="built_in">alias</span> ..=<span class="string">'cd ..'</span>;</span><br><span class="line"><span class="built_in">alias</span> ....=<span class="string">'cd ../../'</span>;</span><br><span class="line"><span class="built_in">alias</span> ld=<span class="string">'ll | grep "^d"'</span>;</span><br><span class="line"><span class="built_in">alias</span> psw=<span class="string">'ps -a --windows'</span>;</span><br><span class="line"><span class="built_in">alias</span> vi=<span class="string">'vim'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下是cygwin下针对快速切换到挂载目录设置的别名</span></span><br><span class="line"><span class="built_in">alias</span> d=<span class="string">'cd /cygdrive/d'</span>;</span><br><span class="line"><span class="built_in">alias</span> ng=<span class="string">'cd /cygdrive/d/nginx-1.6.0'</span>;</span><br><span class="line"><span class="built_in">alias</span> gi=<span class="string">'cd /cygdrive/d/JGX/GitHub'</span>;</span><br></pre></td></tr></table></figure>
-<p>重启下bash , 然后就能够使用了。</p>
-<p>虽然<code>git bash</code>用着也还行， 不过还是对不少的linux命令没有提供支持， 另外一个软件<code>cygwin</code>也挺不错， 支持也挺多的， 如果安装<code>cygwin</code>的话， 需要注意一点， 也就是它默认不会安装<code>vim</code>， 所以在选择软件的时候需要留意一下。另外， <code>git bash</code>好像会比<code>cygwin</code>快一点， <code>cygwin</code>在运行未运行过的程序的时候， 反应会比较慢（查找去了？）， 另外， 关于<code>git</code>, 在<code>cygwin</code>下好像也需要重新配置。</p>
-]]></content>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -540,45 +664,10 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue JSX 属性透传的问题</title>
-    <url>/2020/03/13/Vue%20JSX%20%E5%B1%9E%E6%80%A7%E9%80%8F%E4%BC%A0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>参见以下代码：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createButtons</span> = (<span class="params">h, buttons</span>) =&gt; <span class="title">props</span> =&gt; </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (</span><br><span class="line">    &lt;span style=<span class="string">"display: flex; justify-content: space-between;"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt; </span><br><span class="line">      &#123;buttons.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">        &lt;mtd-button</span><br><span class="line">          &#123;...&#123; <span class="attr">attrs</span>: item &#125;&#125;</span><br><span class="line">          key=&#123;index&#125;</span><br><span class="line">          onClick=&#123;() =&gt; item.onClick(props)&#125;</span><br><span class="line">          disabled=&#123;item.__disabled&#125;</span><br><span class="line">        &gt;</span><br><span class="line">          &#123;item.text&#125;</span><br><span class="line">        &lt;<span class="regexp">/mtd-button&gt;</span></span><br><span class="line"><span class="regexp">      ))&#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>span&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">createButtons(<span class="keyword">this</span>.$createElement, [</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">'修改'</span>,</span><br><span class="line">    onClick: <span class="keyword">this</span>.handleModify,</span><br><span class="line">    size: <span class="string">'small'</span>,</span><br><span class="line">    disabled: <span class="function"><span class="params">props</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> auditStatus.isOffline(props.row.status)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
-
-<p>编译后</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">renderedButtons.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'function'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled(props);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'boolean'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> h(<span class="string">"span"</span>, &#123;</span><br><span class="line">      <span class="string">"style"</span>: <span class="string">"display: flex; justify-content: space-between;"</span></span><br><span class="line">    &#125;, [renderedButtons.map(<span class="function"><span class="keyword">function</span> (<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> h(<span class="string">"mtd-button"</span>, &#123;</span><br><span class="line">        <span class="string">"attrs"</span>: _objectSpread(&#123;&#125;, item, &#123;</span><br><span class="line">          <span class="string">"disabled"</span>: item.__disabled</span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="string">"key"</span>: index,</span><br><span class="line">        <span class="string">"on"</span>: &#123;</span><br><span class="line">          <span class="string">"click"</span>: <span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> item.onClick === <span class="string">'function'</span>) &#123;</span><br><span class="line">              item.onClick(props);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, [item.text]);</span><br><span class="line">    &#125;)]);</span><br></pre></td></tr></table></figure>
-
-<p>最后，在我们点击修改按钮的时候，控制台报错：<br><img align=left height=44 width=661 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069608768-4858754d-5ab5-49f5-9d04-4e7c7f806705.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Uncaught <span class="built_in">SyntaxError</span>: <span class="built_in">Function</span> statements <span class="built_in">require</span> a <span class="function"><span class="keyword">function</span> <span class="title">name</span></span></span><br></pre></td></tr></table></figure>
-
-<p>在这里createButtons 中的某一项传递了onClick这个参数，那么在对应的渲染函数里面，最后传递给组件的是什么样的呢？</p>
-<img align=left height=236 width=458 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069494907-9d16d049-804e-4233-aee2-cd6089530db5.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" />
-
-<p>handleModify 很好理解，就是我们希望绑定的事件，但是在上面的listeners里面，还添加了click事件，其对应的函数为<br><img align=left height=183 width=358 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069576328-6b080a8d-1272-44ed-b2fa-6549000dbc63.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<p>因此，上面的方式，最后会把 onClick 封装到 attrs里面。</p>
-<p>在 Vue 组件挂载会后，首次更新时，Vue 会把相应的属性更新到 DOM 上.<br><img align=left height=566 width=1243 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584094932644-aef4e315-6d46-4990-a672-57ceadae838a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
-<p>因此，最后会调用 ele.setAttribute(key, value) 来设置组件的属性。这里的key value 都应该是一个<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL0RPTVN0cmluZw==">DOM String<i class="fa fa-external-link-alt"></i></span>。在这里的场景下， key 是对应的 onClick 字符串，而 value 是一个函数，它被定义为了 Vue 组件上的一个方法。而 Vue 在实例化组件的时候，通过initMethods方法，把对应的 method 通过bind 的方式绑定了vm的上下文。因此，这里的 value，最后是一个Bound function。因此这里会把相应的函数转换为DOM String，具体的转换方法没有找到相应的文档，但是从转换结果来看，是调用了函数的toString方法。而bind返回的函数，它的toString方法，最后会返回一个表示native代码的字符串，也就是</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
-
-<p>因此，最后输出到html里的就变成了以下内容：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"function () &#123; [native code] &#125;"</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>我们知道，在一个元素定义了onclick属性的情况下，点击的时候，会将其属性值当作js脚本来执行。因此，当我们点击按钮的时候，会执行上面的脚本</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
-
-<p>然而这个脚本是非法的，不说函数体，定义一个函数有函数表达式和函数声明两种方式，而上面的这种方式只能作为匿名函数被调用，在这里被当成了函数声明，因此就报错了。<br><img align=left height=33 width=721 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584096578955-c936ce31-0948-4739-84c2-f977fa0a900a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>Vue updateAttrs<br>el.setAttribute(key, value)</p>
-<p>总结：<br>当出现问题并且不知道导致问题发生的因素时，应先通过<strong>二分法</strong>快速定位到导致问题的代码，然后通过<strong>控制变量，减少场景的影响因子，在控制变量的时候，更需要注意双边其他因子的一致性，</strong>找到问题出现的原因，待解决问题后，再寻根溯源，找到产生问题的根本因素。</p>
-<p>参考： </p>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9odG1sLnNwZWMud2hhdHdnLm9yZy9tdWx0aXBhZ2Uvd2ViYXBwYXBpcy5odG1sI2hhbmRsZXItb25jbGljaw==">https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly93M2MuZ2l0aHViLmlvL3VpZXZlbnRzLyNldmVudC10eXBlLWNsaWNr">https://w3c.github.io/uievents/#event-type-click<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
+    <title>chrome开发工具timeline使用</title>
+    <url>/2016/06/15/chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7timeline%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vd2ViL3Rvb2xzL2Nocm9tZS1kZXZ0b29scy9wcm9maWxlL2V2YWx1YXRlLXBlcmZvcm1hbmNlL3RpbWVsaW5lLXRvb2w=">原文地址<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
-      <tags>
-        <tag>每天学习一丢丢~</tag>
-      </tags>
   </entry>
   <entry>
     <title>base64了解一下</title>
@@ -646,10 +735,45 @@
       </tags>
   </entry>
   <entry>
-    <title>chrome开发工具timeline使用</title>
-    <url>/2016/06/15/chrome%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7timeline%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vd2ViL3Rvb2xzL2Nocm9tZS1kZXZ0b29scy9wcm9maWxlL2V2YWx1YXRlLXBlcmZvcm1hbmNlL3RpbWVsaW5lLXRvb2w=">原文地址<i class="fa fa-external-link-alt"></i></span></p>
+    <title>Vue JSX 属性透传的问题</title>
+    <url>/2020/03/13/Vue%20JSX%20%E5%B1%9E%E6%80%A7%E9%80%8F%E4%BC%A0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>参见以下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createButtons</span> = (<span class="params">h, buttons</span>) =&gt; <span class="title">props</span> =&gt; </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (</span><br><span class="line">    &lt;span style=<span class="string">"display: flex; justify-content: space-between;"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt; </span><br><span class="line">      &#123;buttons.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">        &lt;mtd-button</span><br><span class="line">          &#123;...&#123; <span class="attr">attrs</span>: item &#125;&#125;</span><br><span class="line">          key=&#123;index&#125;</span><br><span class="line">          onClick=&#123;() =&gt; item.onClick(props)&#125;</span><br><span class="line">          disabled=&#123;item.__disabled&#125;</span><br><span class="line">        &gt;</span><br><span class="line">          &#123;item.text&#125;</span><br><span class="line">        &lt;<span class="regexp">/mtd-button&gt;</span></span><br><span class="line"><span class="regexp">      ))&#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>span&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">createButtons(<span class="keyword">this</span>.$createElement, [</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">'修改'</span>,</span><br><span class="line">    onClick: <span class="keyword">this</span>.handleModify,</span><br><span class="line">    size: <span class="string">'small'</span>,</span><br><span class="line">    disabled: <span class="function"><span class="params">props</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> auditStatus.isOffline(props.row.status)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
+<p>编译后</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">renderedButtons.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'function'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled(props);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> item.disabled === <span class="string">'boolean'</span>) &#123;</span><br><span class="line">        item.__disabled = item.disabled;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> h(<span class="string">"span"</span>, &#123;</span><br><span class="line">      <span class="string">"style"</span>: <span class="string">"display: flex; justify-content: space-between;"</span></span><br><span class="line">    &#125;, [renderedButtons.map(<span class="function"><span class="keyword">function</span> (<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> h(<span class="string">"mtd-button"</span>, &#123;</span><br><span class="line">        <span class="string">"attrs"</span>: _objectSpread(&#123;&#125;, item, &#123;</span><br><span class="line">          <span class="string">"disabled"</span>: item.__disabled</span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="string">"key"</span>: index,</span><br><span class="line">        <span class="string">"on"</span>: &#123;</span><br><span class="line">          <span class="string">"click"</span>: <span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> item.onClick === <span class="string">'function'</span>) &#123;</span><br><span class="line">              item.onClick(props);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, [item.text]);</span><br><span class="line">    &#125;)]);</span><br></pre></td></tr></table></figure>
+
+<p>最后，在我们点击修改按钮的时候，控制台报错：<br><img align=left height=44 width=661 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069608768-4858754d-5ab5-49f5-9d04-4e7c7f806705.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Uncaught <span class="built_in">SyntaxError</span>: <span class="built_in">Function</span> statements <span class="built_in">require</span> a <span class="function"><span class="keyword">function</span> <span class="title">name</span></span></span><br></pre></td></tr></table></figure>
+
+<p>在这里createButtons 中的某一项传递了onClick这个参数，那么在对应的渲染函数里面，最后传递给组件的是什么样的呢？</p>
+<img align=left height=236 width=458 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069494907-9d16d049-804e-4233-aee2-cd6089530db5.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" />
+
+<p>handleModify 很好理解，就是我们希望绑定的事件，但是在上面的listeners里面，还添加了click事件，其对应的函数为<br><img align=left height=183 width=358 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584069576328-6b080a8d-1272-44ed-b2fa-6549000dbc63.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p>因此，上面的方式，最后会把 onClick 封装到 attrs里面。</p>
+<p>在 Vue 组件挂载会后，首次更新时，Vue 会把相应的属性更新到 DOM 上.<br><img align=left height=566 width=1243 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584094932644-aef4e315-6d46-4990-a672-57ceadae838a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p>因此，最后会调用 ele.setAttribute(key, value) 来设置组件的属性。这里的key value 都应该是一个<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL0RPTVN0cmluZw==">DOM String<i class="fa fa-external-link-alt"></i></span>。在这里的场景下， key 是对应的 onClick 字符串，而 value 是一个函数，它被定义为了 Vue 组件上的一个方法。而 Vue 在实例化组件的时候，通过initMethods方法，把对应的 method 通过bind 的方式绑定了vm的上下文。因此，这里的 value，最后是一个Bound function。因此这里会把相应的函数转换为DOM String，具体的转换方法没有找到相应的文档，但是从转换结果来看，是调用了函数的toString方法。而bind返回的函数，它的toString方法，最后会返回一个表示native代码的字符串，也就是</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
+
+<p>因此，最后输出到html里的就变成了以下内容：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"function () &#123; [native code] &#125;"</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>我们知道，在一个元素定义了onclick属性的情况下，点击的时候，会将其属性值当作js脚本来执行。因此，当我们点击按钮的时候，会执行上面的脚本</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
+
+<p>然而这个脚本是非法的，不说函数体，定义一个函数有函数表达式和函数声明两种方式，而上面的这种方式只能作为匿名函数被调用，在这里被当成了函数声明，因此就报错了。<br><img align=left height=33 width=721 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1584096578955-c936ce31-0948-4739-84c2-f977fa0a900a.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /><br>Vue updateAttrs<br>el.setAttribute(key, value)</p>
+<p>总结：<br>当出现问题并且不知道导致问题发生的因素时，应先通过<strong>二分法</strong>快速定位到导致问题的代码，然后通过<strong>控制变量，减少场景的影响因子，在控制变量的时候，更需要注意双边其他因子的一致性，</strong>找到问题出现的原因，待解决问题后，再寻根溯源，找到产生问题的根本因素。</p>
+<p>参考： </p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9odG1sLnNwZWMud2hhdHdnLm9yZy9tdWx0aXBhZ2Uvd2ViYXBwYXBpcy5odG1sI2hhbmRsZXItb25jbGljaw==">https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93M2MuZ2l0aHViLmlvL3VpZXZlbnRzLyNldmVudC10eXBlLWNsaWNr">https://w3c.github.io/uievents/#event-type-click<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
 ]]></content>
+      <tags>
+        <tag>每天学习一丢丢~</tag>
+      </tags>
   </entry>
   <entry>
     <title>electron no path.txt的解决办法</title>
@@ -1187,6 +1311,238 @@
       </tags>
   </entry>
   <entry>
+    <title>写给大家看的设计书</title>
+    <url>/2020/05/08/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6/</url>
+    <content><![CDATA[<p>豆瓣链接：<span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8zMzIzNjMzLw==">https://book.douban.com/subject/3323633/<i class="fa fa-external-link-alt"></i></span></p>
+<p><a name="Hr7PR"></a></p>
+<a id="more"></a> 
+<h2 id="4大基本原则"><a href="#4大基本原则" class="headerlink" title="4大基本原则"></a>4大基本原则</h2><ul>
+<li>亲密性</li>
+<li>对齐</li>
+<li>重复</li>
+<li>对比</li>
+</ul>
+<p><a name="gUwE0"></a></p>
+<h2 id="亲密性"><a href="#亲密性" class="headerlink" title="亲密性"></a>亲密性</h2><p><a name="TEsYj"></a></p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>将相关的项组织在一起，从物理位置上使它们互相靠近。物理位置的接近意味着存在关联。其根本目的是实现<strong>组织性。</strong></p>
+<p><a name="LRup5"></a></p>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
+<li>布局的时候一定要明确元素和其所属元素是否在一起，留意无关元素</li>
+<li>将有关联的元素放在一起，然后在不同单元间增加合适的空间，就能让信息变得更加直观</li>
+<li>并不意味着一切都要更加靠近 —— 如果某些元素在理解上存在关联，或者相互之间存在某种关系，那么这些元素在视觉上也应当有关联</li>
+</ul>
+<p><a name="9KNWa"></a></p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>避免一个页面上有太多孤立的元素</li>
+<li>不要再元素之间留出同样大小的空白，除非各组同属于一个子集</li>
+<li>不同属一组的元素之间不要建立关系。如果元素彼此无关，要把它们分开</li>
+<li>不要仅仅因为有空白就把元素放在角落或中央</li>
+</ul>
+<p><a name="baazr"></a></p>
+<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><p><a name="cagVe"></a></p>
+<h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p><strong>任何元素都不能在页面上随意安放。每一项都应当与页面上的某个内容存在某种视觉联系。</strong>其根本目的是使页面<strong>统一而且有条理。</strong>如果页面上的一些项是对齐的，这会得到一个更加内聚的单元。要让页面上的所有元素看上去统一、有联系而且彼此相关，需要在各个单独的元素之间存在某种视觉纽带。</p>
+<p><a name="nSems"></a></p>
+<h3 id="应用-1"><a href="#应用-1" class="headerlink" title="应用"></a>应用</h3><ul>
+<li><strong>统一对齐方式</strong> —— 如页面内的所有元素统一使用左对齐或者右对齐，以便增加边界强度，为布局提供力度</li>
+<li><strong>非刻意的情况下，永远不要使用居中对齐</strong> —— 居中对齐会创建一种更正式、更稳重的外观，这种外观显得中规中矩，但通常也很乏味。大多数精巧的设计都没有采用居中对齐</li>
+<li>*<em>一定要确保每一项都与页面上的其他项存在某种对齐 *</em><ul>
+<li>文本行水平摆放 —— 按基线对齐</li>
+<li>多个单独的文本块 —— 按左边界或者右边界对齐</li>
+<li>图片 —— 将图片边界与页面的其他边界对齐</li>
+</ul>
+</li>
+<li><strong>刻意寻找对齐线</strong> —— 优秀的设计中都可以在对齐的对象间画出“对齐线”</li>
+<li>如果设计中的对齐很明确，那么可以有意识地打破对齐</li>
+</ul>
+<p><a name="0vcj1"></a></p>
+<h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>避免在页面上混用多种文本对齐方式</li>
+<li>避免居中对齐</li>
+</ul>
+<p><a name="7Xxue"></a></p>
+<h2 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h2><p><a name="CSqLL"></a></p>
+<h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><p><strong>设计的某些方面需要在整个作品中重复。</strong>其根本目的是统一、并增强视觉效果。</p>
+<p><a name="yIZ6g"></a></p>
+<h3 id="应用-2"><a href="#应用-2" class="headerlink" title="应用"></a>应用</h3><ul>
+<li>粗体的重复有助于统一整个设计</li>
+<li>把已有的重复元素取出，让这些元素效果更强、更生动。通过把重复表现得很明显，这样不仅页面看上去更有趣，还能再视觉上增强其条理性和一致性</li>
+<li>重复有助于组织信息，帮助读者浏览各个页面</li>
+<li>重复的项不一定完全相同，可能只是存在明确关联的紧密相关的对象</li>
+<li>重复的最大好处是使各项看起来同属一组</li>
+</ul>
+<p><a name="4GnwV"></a></p>
+<h3 id="注意事项-2"><a href="#注意事项-2" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>避免太多地重复一个元素，重复太多会让人讨厌</li>
+<li>过多的重复会混淆重点</li>
+</ul>
+<p><a name="04mA7"></a></p>
+<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><p><a name="LJ6b5"></a></p>
+<h3 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h3><p><strong>页面上的不同元素之间要有对比效果，达到吸引读者的对比效果。</strong>其根本目的有两个，一是<strong>增强页面效果，</strong>二是<strong>有助于信息的组织。</strong>如果两个项不完全相同，就应当使之不同，而且<strong>应当是截然不同。</strong></p>
+<p><a name="AkIHZ"></a></p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>对比是为页面增加视觉效果的最有效的途径，也是在不同元素之间建立一种有组织的层次结构的最有效的方法。<strong>要想实现有效的对比，对比就必须强烈。</strong>此外，对比可以用来在页面上指引读者、制造焦点。</p>
+<p><a name="FJhA4"></a></p>
+<h3 id="应用-3"><a href="#应用-3" class="headerlink" title="应用"></a>应用</h3><ul>
+<li>如果使用了又高又窄的列，就应当在水平方向有一些突出的标题</li>
+<li>可以通过字体选择、线宽、颜色、形状、大小、空间等因素来增加对比</li>
+</ul>
+<p><a name="T8h5A"></a></p>
+<h3 id="注意事项-3"><a href="#注意事项-3" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>不要将深棕色和黑色进行对比</li>
+<li>不要将一种粗线于一种更粗的线进行对比</li>
+<li>避免使用两种或多种类似的字体</li>
+<li>如果各个项不完全一样，<strong>干脆让他们截然不同</strong></li>
+</ul>
+<p>**</p>
+<p><a name="6qIlD"></a></p>
+<h2 id="颜色运用"><a href="#颜色运用" class="headerlink" title="颜色运用"></a>颜色运用</h2><p><a name="sh87Z"></a></p>
+<h3 id="色轮"><a href="#色轮" class="headerlink" title="色轮"></a><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU4JTg5JUIyJUU3JTkyJUIw">色轮<i class="fa fa-external-link-alt"></i></span></h3><p><a name="NpvXZ"></a></p>
+<h4 id="三原色"><a href="#三原色" class="headerlink" title="三原色"></a>三原色</h4><p>色轮的基础是黄、红和蓝三种颜色。这些颜色称之为三原色(美术三原色)。</p>
+<p><a name="myS4c"></a></p>
+<h4 id="三间色（secondary-color）"><a href="#三间色（secondary-color）" class="headerlink" title="三间色（secondary color）"></a>三间色（secondary color）</h4><p>三原色两两均匀混合得到的颜色为三间色。</p>
+<ul>
+<li>黄色 + 蓝色 = 绿色</li>
+<li>蓝色 + 红色 = 紫色</li>
+<li>红色 + 黄色 = 橙色</li>
+</ul>
+<p><a name="o6c74"></a></p>
+<h4 id="第三色"><a href="#第三色" class="headerlink" title="第三色"></a>第三色</h4><p>将色轮的空白填满，得到的颜色称之为第三色。<br><img align=left height=331 width=330 data-src="https://cdn.nlark.com/yuque/0/2020/png/434020/1588944067793-c0b93205-a535-4766-89ff-440f56871be7.png" style="margin: 0 10px 0 0;" referrerpolicy="no-referrer" /></p>
+<p><a name="vEras"></a></p>
+<h3 id="颜色关系"><a href="#颜色关系" class="headerlink" title="颜色关系"></a>颜色关系</h3><p><a name="VZvg4"></a></p>
+<h4 id="互补色"><a href="#互补色" class="headerlink" title="互补色"></a>互补色</h4><p>色轮上相对（完全对立、对面）的颜色即为互补色。因为其对立关系，所以最佳搭配是一种作为主色，另一种用于强调。</p>
+<p><a name="FSfm3"></a></p>
+<h4 id="三色组"><a href="#三色组" class="headerlink" title="三色组"></a>三色组</h4><p>彼此等距的三种颜色会形成三色组（如红黄蓝）。因为红黄蓝是三基色，所以红黄蓝的颜色组合也被称之外基色三色组（常用于儿童用品）。</p>
+<p><a name="6hwA5"></a></p>
+<h4 id="分裂互补三色组"><a href="#分裂互补三色组" class="headerlink" title="分裂互补三色组"></a>分裂互补三色组</h4><p>从色轮的一边选择一种颜色，再在色轮上找出它对面的互补色两侧的颜色。这样的组合会有一种更为细致的颜色边界。</p>
+<p><a name="cffgN"></a></p>
+<h4 id="类似色"><a href="#类似色" class="headerlink" title="类似色"></a>类似色</h4><p>由色轮上彼此响铃的颜色组成。它们都有相同的基础色，从而构成了一个协调的组合。用不同的亮色和暗色构成一组类似色，效果相当醒目。</p>
+<p><a name="8w0po"></a></p>
+<h3 id="暗色和亮色"><a href="#暗色和亮色" class="headerlink" title="暗色和亮色"></a>暗色和亮色</h3><ul>
+<li>纯色就是色调</li>
+<li>向色调增加黑色构成一个<strong>暗色</strong></li>
+<li>向色调增加白色构成一个<strong>亮色</strong></li>
+</ul>
+<p><a name="pJdgP"></a></p>
+<h4 id="单色"><a href="#单色" class="headerlink" title="单色"></a>单色</h4><p>单色组合是由一种色调及其对应点蛾多种亮色和暗色组成。</p>
+<p><a name="0YfZp"></a></p>
+<h4 id="暗色和亮色的组合"><a href="#暗色和亮色的组合" class="headerlink" title="暗色和亮色的组合"></a>暗色和亮色的组合</h4><p>选择上文提到的四种颜色关系之一，不过并不适用色调，而是使用这些颜色的不同亮色和暗色。这种组合能够极大地丰富选择，并且可以完全放心颜色的协调性。</p>
+<p><a name="P10Mc"></a></p>
+<h3 id="色质"><a href="#色质" class="headerlink" title="色质"></a>色质</h3><p>色质是指某种颜色的特定明暗度、深浅度或色调。色质过于接近的颜色组合会发生视觉抖动（如暗色的背景上使用暗色字体）</p>
+<p><a name="qYesi"></a></p>
+<h3 id="暖色与冷色"><a href="#暖色与冷色" class="headerlink" title="暖色与冷色"></a>暖色与冷色</h3><ul>
+<li>暖色 —— 红色或黄色（趋近型）</li>
+<li>冷色 —— 蓝色（后退型，趋于做背景色），更多的冷色才能产生效果或形成有效的对比</li>
+<li>如果要组合暖色和冷色，一定要少用些暖色</li>
+</ul>
+<p><a name="w8kna"></a></p>
+<h3 id="颜色模型"><a href="#颜色模型" class="headerlink" title="颜色模型"></a>颜色模型</h3><p><a name="bvSKC"></a></p>
+<h4 id="CMYK"><a href="#CMYK" class="headerlink" title="CMYK"></a>CMYK</h4><p>Cyan（青色）、Magenta（玫瑰色）、Yellow（黄色）、Key（通常是黑色）</p>
+<p><a name="rgO74"></a></p>
+<h4 id="RGB"><a href="#RGB" class="headerlink" title="RGB"></a>RGB</h4><p>Red（红色）、Green（绿色）、Blue（蓝色）</p>
+<p><a name="36VwO"></a></p>
+<h4 id="抉择"><a href="#抉择" class="headerlink" title="抉择"></a>抉择</h4><p>需要印刷的项目应该使用CMYK，需要在屏幕上看的内容则应该使用RGB。</p>
+<p><a name="rU0VL"></a></p>
+<h2 id="字体基本规则"><a href="#字体基本规则" class="headerlink" title="字体基本规则"></a>字体基本规则</h2><ul>
+<li>标点（英文）后面有且只有一个空格</li>
+<li>避免错误地使用打印机引号（””）而不是印刷引号（“”）</li>
+<li>撇号是一个单独的闭引号，避免使用打印机撇号和印刷撇号</li>
+<li>避免使用全大写字母</li>
+<li>不要使用下划线</li>
+<li>字号越大，就越需要空间调整</li>
+<li>避免出现寡妇和孤儿<ul>
+<li>当一段文字的最后一行的字符数少于7个的时候，最后一行就称之为寡妇</li>
+<li>当一段的最后一行由于太长而和其他文字分开，在下一栏或下一页的最上面结束时，就称之为孤儿</li>
+<li>解决方案：重写文本、增加或减少一些词语、增减字母单词或者行之间的空隙、增加或减少页面的空白</li>
+</ul>
+</li>
+<li>跟随在有样式的文字背后的标点，其样式应该和前面的文本样式保持一致</li>
+<li>把文字放进方框中的时候，要在四周都留足空间</li>
+</ul>
+<p><a name="nHaPd"></a></p>
+<h2 id="字体应用原则"><a href="#字体应用原则" class="headerlink" title="字体应用原则"></a>字体应用原则</h2><p><strong>协调是一个稳妥有用的概念，但冲突务必要避免。</strong></p>
+<p><a name="ifrLo"></a></p>
+<h3 id="协调"><a href="#协调" class="headerlink" title="协调"></a>协调</h3><p>如果只使用一种字体，页面上的所有元素都采用同样性质的字体，这种设计就是协调的。大多数协调的设计都相当平和正式。</p>
+<p><a name="F3NsJ"></a></p>
+<h3 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h3><p>如果在同一个页面上设置了两个或多个类似的字体，他们并非完全不同，但也不完全相同，这个设计就是冲突的。<strong>相似性是互相冲突的。</strong></p>
+<p><a name="xvsAw"></a></p>
+<h3 id="对比-1"><a href="#对比-1" class="headerlink" title="对比"></a>对比</h3><p>强烈的对比能够有效地吸引我们的视线，而在字体中应用对比则是最有效、最简单而且最让人满意的方法。字体对比有六种明确的不同方式 —— <strong>大小、粗细、结构、形状、方向和颜色。</strong></p>
+<p><a name="iiKLr"></a></p>
+<h2 id="字体类别"><a href="#字体类别" class="headerlink" title="字体类别"></a>字体类别</h2><p><a name="koY2Q"></a></p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li>强调线：在曲线笔画的最细部分画一条对角线</li>
+</ul>
+<p><a name="wUjPc"></a></p>
+<h3 id="旧式体（Oldstyle）"><a href="#旧式体（Oldstyle）" class="headerlink" title="旧式体（Oldstyle）"></a>旧式体（Oldstyle）</h3><p>该字体基于手写体创建的。其特征如下：</p>
+<ul>
+<li>衬线（Serif, 读作 sair iff： 倾斜</li>
+<li>强调线：倾斜</li>
+<li>粗/细过渡：缓和</li>
+</ul>
+<p><strong>这类字体适合阅读。</strong></p>
+<p><a name="2smOW"></a></p>
+<h3 id="现代体（Modern）"><a href="#现代体（Modern）" class="headerlink" title="现代体（Modern）"></a>现代体（Modern）</h3><p>其特征如下：</p>
+<ul>
+<li>衬线：水平，而且很细</li>
+<li>强调线：垂直</li>
+<li>粗/细过渡：剧烈</li>
+</ul>
+<p>现代体外观很醒目，特别是设置得非常大时有一种让人震撼的感觉。然而由于其强烈的粗细过渡，在显示大量正文时，大多数现代体都不是很好的选择。</p>
+<p><a name="eaaKZ"></a></p>
+<h3 id="粗衬线体（Slab-serif）"><a href="#粗衬线体（Slab-serif）" class="headerlink" title="粗衬线体（Slab serif）"></a>粗衬线体（Slab serif）</h3><p>其特征如下：</p>
+<ul>
+<li>衬线：水平，而且比较粗</li>
+<li>强调线：垂直</li>
+<li>粗/细过渡：很小或没有</li>
+</ul>
+<p>这种字体可以很好地用于显示大量文本，适合阅读。设置为这种字体的页面更暗，因为它们的笔划比较粗，而且粗细相对单一。由于其简洁、直接的外观，粗衬线体在儿童图书中经常使用。</p>
+<p><a name="cIs6B"></a></p>
+<h3 id="无衬线体（Sans-serif）"><a href="#无衬线体（Sans-serif）" class="headerlink" title="无衬线体（Sans serif）"></a>无衬线体（Sans serif）</h3><p>其特征如下：</p>
+<ul>
+<li>衬线：无</li>
+<li>强调线：无（没有粗细变化）</li>
+<li>粗/细过渡：无</li>
+</ul>
+<p>无衬线体及笔划末端没有衬线的字体。要想更好地设计页面，最好的做法就是引入包括一个很粗很黑字体的无衬线体系列。</p>
+<p><a name="SdJDr"></a></p>
+<h3 id="手写体（Script）"><a href="#手写体（Script）" class="headerlink" title="手写体（Script）"></a>手写体（Script）</h3><p>尽量少用，并且在使用的时候<strong>不要大写，</strong>可设置较大字号，引人注意。</p>
+<p><a name="8ISWJ"></a></p>
+<h3 id="花体（Decorative）"><a href="#花体（Decorative）" class="headerlink" title="花体（Decorative）"></a>花体（Decorative）</h3><p>就是很花的字体。</p>
+<p><a name="B5DEW"></a></p>
+<h2 id="字体对比"><a href="#字体对比" class="headerlink" title="字体对比"></a>字体对比</h2><p><a name="Q5zlD"></a></p>
+<h3 id="大小"><a href="#大小" class="headerlink" title="大小"></a>大小</h3><p>相比于全部大写，将文本设置为小写，并使用更大的字体，一方面能够吸引注意，另一方面可读性更好。</p>
+<p><a name="PvD3t"></a></p>
+<h3 id="粗细"><a href="#粗细" class="headerlink" title="粗细"></a>粗细</h3><p>粗细对比是为页面增加视觉效果最容易而且最有效的方法之一。不仅能够使页面更引人注目，也是组织信息的最有效的方式之一。</p>
+<p><a name="eWc4D"></a></p>
+<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>字体的结构是指这种字体是如何建立的。如果要使用来自两种不同字体系列中的字体，<strong>就要使用不同结构的字体系列。</strong>比较容易的是，选择一个衬线体和一个无衬线体。全大写 VS 全小写；罗马体（垂直）VS 斜体；</p>
+<p><a name="JzHSg"></a></p>
+<h3 id="方向"><a href="#方向" class="headerlink" title="方向"></a>方向</h3><p><a name="j9tIH"></a></p>
+<h3 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h3><p>重复前面的内容，暖色（红色、橙色）是前进型的，很少的一点红色就可以产生对比；冷色（蓝色、绿色）是远离型的，需要更多的冷色才能产生有效的对比。</p>
+<p><a name="pH9WX"></a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>字母的使用尽量不要采用全部大写的方式 —— 可读性非常差</li>
+<li>避免多个回车的使用 —— 不同分组之间的分隔通常只需要1个回车即可</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>每天学习一丢丢~</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的时间都去哪儿了</title>
+    <url>/2016/05/17/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E5%84%BF%E4%BA%86/</url>
+    <content><![CDATA[<p>前段时间把网给停了， 理由是在有网的情况下， 我每天在回到家后都把为数不多的时间浪费在上网上面去了， 虽然能有所收获，但是总体而言是弊大于利的， 毕竟大部分的时间里我都是在做着一些无关紧要的事情。所以我把网停了， 希望能够借助这种手段来强迫自己不断地学习新的东西。 效果是有的， 然而我依然对自己不是很满意。</p>
+<a id="more"></a>
+
+<p>不得不承认， 我是一个自我控制能力很弱的人。 我很容易分心， 很容易感到枯燥。所以采用这样的方法来让自己被动地学习。然而即使这样做了， 却依旧没有达到我想要的效果。 在我的想象中， 每天下班之后， 或者在周末的时候， 我除了买菜做饭和正常的休息时间之外， 其他的时间应该都用来看书， 或者码代码， 毕竟这样才能快速地提高自己。相比于刚刚接触JS（去年9月份的时候）的那段时间， 自己现在真的是弱爆了。 那段时间是我真正的有状态的阶段，连吃饭的时候都是一边吃， 一边看书。 但是现在， 我采用了禁网的方式， 把自己和网络隔离开来， 其实也并没有完全隔离开来， 毕竟还有手机这东西， 说起来我好像也找到了一点原因了， 那就是还有手机。 我现在是没有电脑上网了， 但是手机却还是能够上网， 所以觉得累的时候， 就会打开手机逛逛贴吧， 想象中只是逛逛而已， 结果这一玩儿， 就浪费了大把的时间， 就好像周六周日的午休一样， 不午休还好， 只要一午休， 一般就会从1.30睡到4.00， 我以后大概都不敢再在周末的时候躺在床上午休了吧。 浪费的大把的时间是真的一去不复返了。 </p>
+<p>之前的时候， 我跟朋友说来到北京之后， 胖了不止一圈了。 朋友说她在家的时候每天早上都还跑步呢， 叫我也多锻炼身体， 当时我说我把时间都用来学习了， 腾不出时间来锻炼身体， 等以后有空了再慢慢锻炼吧。 现在想起来也真是讽刺， 每天浪费了大把大把的时间， 却说自己把所有时间都用来学习了。</p>
+<p>提升自我控制能力应该是一件值得我花一辈子的时间去做的事情吧。 我相信做好这件事情给我带来的好处能和每天吃上土豆给我精神上带来的好处相媲美。当然，前提是我真正地把它给做好了。 如果满分是100分的话， 我会毫不留情地给现在的自己打上0分， 弱爆了的自我控制能力。 我是一个自负的人， 任何的事情除了我主观意识上接受了之外， 不会有任何人能够影响我。我认为不对的东西， 即使有人在我耳边吹了一万遍它是正确的 ， 我依然会以为它不对。 我也很讨厌那种洗脑式， 自以为是的真理式的吹风行为。 所以对于那种所谓提升自我控制能力的几个技巧啊， 提升自我控制能力的啥啥书啥的东西， 我是一直持着不屑的态度的， 从来不喜欢看这种类型的书。同理， 对于时间管理方面的培训我也是一万个不愿意， 时间管理嘛， 有了日事清就够了， 还培训个啥， 这破培训才是真的浪费时间。 但是没办法， 领导喜欢玩这一套你就得由着他。  </p>
+<p>突然发现明明自己写的是关于最近的一些事， 但是话题却始终是围绕着时间两个字在转。说起来， 抛开业余时间不谈，工作的时候时间排得倒是挺合理的（在有活儿干的情况下）， 毕竟咱做的软件就是时间管理方面的。当然， 现在做项目的时候， 项目管理流程走得也是挺不错的， 至少不会有各种各样的大会小会充斥着你每一天的时间， 最多也就每个周例行的半个小时的工作安排会议。 所以自己真正应该改变的便是业余时间的控制吧。  </p>
+<p>感觉自己真的是太久没动笔了， 一动笔的时候通篇都是废话， 熬到现在也熬不出几个字儿了。 哎， 曾经的才子如今已是江郎才尽<br>:悲伤。 那就给刚入门的前端小伙伴们一点忠告吧。 在基础没打扎实前， 千万不要折腾除了jQuery之外的其他框架。 讲真， 这段时间里最好的做法就是打好基础打好基础打好基础。 只有JS基础打好了， 后面学框架这些东西的时候才会更快。 血淋淋的教训啊， 当初年轻不懂事， 学了点JS就去折腾框架， 结果浪费了我不少时间不说， 最为悲惨的是到最后真的只是学到了个鸟 →＿← 。 </p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>对象URL</title>
     <url>/2019/12/21/%E5%AF%B9%E8%B1%A1URL/</url>
     <content><![CDATA[<p>学习地址：<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvQVBJL1VSTA==">https://developer.mozilla.org/zh-CN/docs/Web/API/URL<i class="fa fa-external-link-alt"></i></span></p>
@@ -1216,22 +1572,6 @@
 ]]></content>
       <tags>
         <tag>每天学习一丢丢~</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的时间都去哪儿了</title>
-    <url>/2016/05/17/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E5%84%BF%E4%BA%86/</url>
-    <content><![CDATA[<p>前段时间把网给停了， 理由是在有网的情况下， 我每天在回到家后都把为数不多的时间浪费在上网上面去了， 虽然能有所收获，但是总体而言是弊大于利的， 毕竟大部分的时间里我都是在做着一些无关紧要的事情。所以我把网停了， 希望能够借助这种手段来强迫自己不断地学习新的东西。 效果是有的， 然而我依然对自己不是很满意。</p>
-<a id="more"></a>
-
-<p>不得不承认， 我是一个自我控制能力很弱的人。 我很容易分心， 很容易感到枯燥。所以采用这样的方法来让自己被动地学习。然而即使这样做了， 却依旧没有达到我想要的效果。 在我的想象中， 每天下班之后， 或者在周末的时候， 我除了买菜做饭和正常的休息时间之外， 其他的时间应该都用来看书， 或者码代码， 毕竟这样才能快速地提高自己。相比于刚刚接触JS（去年9月份的时候）的那段时间， 自己现在真的是弱爆了。 那段时间是我真正的有状态的阶段，连吃饭的时候都是一边吃， 一边看书。 但是现在， 我采用了禁网的方式， 把自己和网络隔离开来， 其实也并没有完全隔离开来， 毕竟还有手机这东西， 说起来我好像也找到了一点原因了， 那就是还有手机。 我现在是没有电脑上网了， 但是手机却还是能够上网， 所以觉得累的时候， 就会打开手机逛逛贴吧， 想象中只是逛逛而已， 结果这一玩儿， 就浪费了大把的时间， 就好像周六周日的午休一样， 不午休还好， 只要一午休， 一般就会从1.30睡到4.00， 我以后大概都不敢再在周末的时候躺在床上午休了吧。 浪费的大把的时间是真的一去不复返了。 </p>
-<p>之前的时候， 我跟朋友说来到北京之后， 胖了不止一圈了。 朋友说她在家的时候每天早上都还跑步呢， 叫我也多锻炼身体， 当时我说我把时间都用来学习了， 腾不出时间来锻炼身体， 等以后有空了再慢慢锻炼吧。 现在想起来也真是讽刺， 每天浪费了大把大把的时间， 却说自己把所有时间都用来学习了。</p>
-<p>提升自我控制能力应该是一件值得我花一辈子的时间去做的事情吧。 我相信做好这件事情给我带来的好处能和每天吃上土豆给我精神上带来的好处相媲美。当然，前提是我真正地把它给做好了。 如果满分是100分的话， 我会毫不留情地给现在的自己打上0分， 弱爆了的自我控制能力。 我是一个自负的人， 任何的事情除了我主观意识上接受了之外， 不会有任何人能够影响我。我认为不对的东西， 即使有人在我耳边吹了一万遍它是正确的 ， 我依然会以为它不对。 我也很讨厌那种洗脑式， 自以为是的真理式的吹风行为。 所以对于那种所谓提升自我控制能力的几个技巧啊， 提升自我控制能力的啥啥书啥的东西， 我是一直持着不屑的态度的， 从来不喜欢看这种类型的书。同理， 对于时间管理方面的培训我也是一万个不愿意， 时间管理嘛， 有了日事清就够了， 还培训个啥， 这破培训才是真的浪费时间。 但是没办法， 领导喜欢玩这一套你就得由着他。  </p>
-<p>突然发现明明自己写的是关于最近的一些事， 但是话题却始终是围绕着时间两个字在转。说起来， 抛开业余时间不谈，工作的时候时间排得倒是挺合理的（在有活儿干的情况下）， 毕竟咱做的软件就是时间管理方面的。当然， 现在做项目的时候， 项目管理流程走得也是挺不错的， 至少不会有各种各样的大会小会充斥着你每一天的时间， 最多也就每个周例行的半个小时的工作安排会议。 所以自己真正应该改变的便是业余时间的控制吧。  </p>
-<p>感觉自己真的是太久没动笔了， 一动笔的时候通篇都是废话， 熬到现在也熬不出几个字儿了。 哎， 曾经的才子如今已是江郎才尽<br>:悲伤。 那就给刚入门的前端小伙伴们一点忠告吧。 在基础没打扎实前， 千万不要折腾除了jQuery之外的其他框架。 讲真， 这段时间里最好的做法就是打好基础打好基础打好基础。 只有JS基础打好了， 后面学框架这些东西的时候才会更快。 血淋淋的教训啊， 当初年轻不懂事， 学了点JS就去折腾框架， 结果浪费了我不少时间不说， 最为悲惨的是到最后真的只是学到了个鸟 →＿← 。 </p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
